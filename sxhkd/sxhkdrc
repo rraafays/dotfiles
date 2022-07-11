@@ -1,0 +1,49 @@
+# spawns terminal (kitty)
+super + shift + Return
+	kitty
+
+# launches application launcher (rofi)
+super + @space
+	rofi -show run
+
+# launches application switcher
+super + Tab
+    rofi -show window
+
+# reloads sxhkd
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# quits or reloads bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# closes or kills window
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# navigates bspwm
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# i3 like resizing
+super + alt + Right
+    /bin/sh $HOME/.config/bspwm/resize/shrinkx.sh
+super + alt + Left
+    /bin/sh $HOME/.config/bspwm/resize/expandx.sh
+super + alt + Down
+    /bin/sh $HOME/.config/bspwm/resize/shrinky.sh
+super + alt + Up
+    /bin/sh $HOME/.config/bspwm/resize/expandy.sh
+
+# sets master
+super + Return
+    bspc node -s biggest.window
+
+# toggles window tiling
+super + t
+    bspc node -t ~floating
+
+# toggles monocle layout
+super + f
+    bspc desktop -l next

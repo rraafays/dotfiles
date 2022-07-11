@@ -1,0 +1,29 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+[character] 
+success_symbol = "[\\$](bold blue)"
+error_symbol = "[\\$](bold blue)"
+
+[line_break]
+disabled = true
+
+[username]
+style_root = "bold red"
+style_user = "bold green"
+format = "[$user]($style)"
+show_always = true
+disabled = false
+
+[hostname]
+ssh_only = false
+format = "[@]($style)[$hostname ]($style)"
+style = "bold green"
+disabled = false
+
+[directory]
+style = "bold blue"
+
+[cmd_duration]
+disabled = true
