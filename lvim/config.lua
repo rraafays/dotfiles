@@ -147,7 +147,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  { "folke/tokyonight.nvim" },
+  { "rraafays/saga.nvim" },
   --     {
   --       "folke/trouble.nvim",
   --       cmd = "TroubleToggle",
