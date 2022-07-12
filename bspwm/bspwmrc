@@ -10,3 +10,4 @@ bspc config gapless_monocle true
 
 bspc config split_ratio		0.5
 
+hsetroot -solid "#dccff2"
