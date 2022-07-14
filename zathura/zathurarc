@@ -1,35 +1,35 @@
 # Base16 Nord
 # Author: arcticicestudio
 
-set default-bg                  "#1a1b26"
-set default-fg                  "#a9b1d6"
+set default-bg                  "#05080a"
+set default-fg                  "#fff7ff"
 
-set statusbar-fg                "#a9b1d6"
-set statusbar-bg                "#1a1b26"
+set statusbar-fg                "#fff7ff"
+set statusbar-bg                "#05080a"
 
-set inputbar-fg                 "#a9b1d6"
-set inputbar-bg                 "#1a1b26"
+set inputbar-fg                 "#fff7ff"
+set inputbar-bg                 "#05080a"
 
-set notification-fg             "#a9b1d6"
-set notification-bg             "#1a1b26"
+set notification-fg             "#fff7ff"
+set notification-bg             "#05080a"
 
-set notification-error-bg       "#2E3440"
-set notification-error-fg       "#88C0D0"
+set notification-error-bg       "#05080a"
+set notification-error-fg       "#ffb7b2"
 
-set notification-warning-bg     "#2E3440"
-set notification-warning-fg     "#88C0D0"
+set notification-warning-bg     "#05080a"
+set notification-warning-fg     "#ffe1b1"
 
-set highlight-color             "#24283b"
-set highlight-active-color      "#EBCB8B"
+set highlight-color             "#fff7ff"
+set highlight-active-color      "#dccff2"
 
-set completion-bg               "#1a1b26"
-set completion-fg               "#a9b1d6"
+set completion-bg               "#05080a"
+set completion-fg               "#b9fdcd"
 
-set completion-highlight-fg     "#1a1b26"
-set completion-highlight-bg     "#7aa2f7"
+set completion-highlight-fg     "#fff7ff"
+set completion-highlight-bg     "#05080a"
 
-set recolor-lightcolor          "#1a1b26"
-set recolor-darkcolor           "#ECEFF4"
+set recolor-lightcolor          "#05080a"
+set recolor-darkcolor           "#fff7ff"
 
 set recolor                     "true"
 set recolor-keephue             "false"
