@@ -4,7 +4,7 @@ super + shift + Return
 
 # launches application launcher (rofi)
 super + @space
-	rofi -show run
+	rofi -show drun
 
 # launches application switcher
 super + Tab
