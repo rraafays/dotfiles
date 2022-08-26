@@ -27,3 +27,6 @@ style = "bold blue"
 
 [cmd_duration]
 disabled = true
+
+[git_metrics]
+disabled = false
