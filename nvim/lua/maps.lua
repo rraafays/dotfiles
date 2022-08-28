@@ -1,3 +1,4 @@
+-- shortens vim.keymap to just keymap by redifining it in lua
 local keymap = vim.keymap
 
 -- don't yank with x in normal mode
@@ -20,7 +21,7 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 keymap.set('n', 'sh', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
--- move window
+-- navigate window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 's<left>', '<C-w>h')
 keymap.set('', 's<up>', '<C-w>k')
