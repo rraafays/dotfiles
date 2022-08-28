@@ -8,5 +8,5 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  
+  use 'hoob3rt/lualine.nvim'
 end)
