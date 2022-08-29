@@ -12,12 +12,12 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_command [[augroup END]]
   end
 end
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
-
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {
@@ -34,3 +34,6 @@ nvim_lsp.sumneko_lua.setup {
     }
   }
 }
+nvim_lsp.bashls.setup {}
+nvim_lsp.clangd.setup {}
+nvim_lsp.jdtls.setup {}
