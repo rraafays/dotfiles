@@ -19,7 +19,7 @@ if is_unix then
   require('unix')
 end
 
-if is_mac then 
+if is_mac then
   require('macos')
 end
 
