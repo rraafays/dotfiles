@@ -22,4 +22,7 @@ packer.startup(function(use)
   use { 'windwp/nvim-ts-autotag' } -- auto closing typescript tags
   use { 'ellisonleao/gruvbox.nvim' } -- gruvbox theme
   use { 'nvim-treesitter/nvim-treesitter' } -- accurate code tree highlighting
+  use { 'nvim-lua/plenary.nvim' } -- common file utilities
+  use { 'nvim-telescope/telescope.nvim' } -- fuzzy finder
+  use { 'nvim-telescope/telescope-file-browser.nvim' } -- companion file explorer for telescope
 end)
