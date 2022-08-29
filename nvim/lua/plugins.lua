@@ -13,5 +13,5 @@ packer.startup(function(use)
   use { 'hoob3rt/lualine.nvim' } -- statusline
   use { 'neovim/nvim-lspconfig' } -- language server protocol
   use { 'williamboman/mason.nvim' }
-  use { 'catppuccin/nvim', as = 'catppuccin' } -- catppuccin theme
+  use { 'ellisonleao/gruvbox.nvim' } -- gruvbox theme
 end)
