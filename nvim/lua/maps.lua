@@ -1,6 +1,9 @@
 -- shortens vim.keymap to just keymap by redifining it in lua
 local keymap = vim.keymap
 
+-- lazy command entry
+keymap.set('n', ';', ':')
+
 -- don't yank with x in normal mode
 keymap.set('n', 'x', '"_x')
 
@@ -33,5 +36,3 @@ keymap.set('n', '<C-w><left>', '<C-w><')
 keymap.set('n', '<C-w><right>', '<C-w>>')
 keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
-
-
