@@ -26,4 +26,5 @@ packer.startup(function(use)
   use { 'nvim-telescope/telescope.nvim' } -- fuzzy finder
   use { 'nvim-telescope/telescope-file-browser.nvim' } -- companion file explorer for telescope
   use { 'kyazdani42/nvim-web-devicons' } -- file icons
+  use { 'norcalli/nvim-colorizer.lua' } -- colour highlights hex, rgb and more
 end)
