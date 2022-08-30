@@ -28,4 +28,5 @@ packer.startup(function(use)
   use { 'kyazdani42/nvim-web-devicons' } -- file icons
   use { 'norcalli/nvim-colorizer.lua' } -- colour highlights hex, rgb and more
   use { 'glepnir/lspsaga.nvim' } -- lsp uis
+  use { 'lukas-reineke/indent-blankline.nvim' } -- indentation guides
 end)
