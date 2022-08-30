@@ -25,4 +25,5 @@ packer.startup(function(use)
   use { 'nvim-lua/plenary.nvim' } -- common file utilities
   use { 'nvim-telescope/telescope.nvim' } -- fuzzy finder
   use { 'nvim-telescope/telescope-file-browser.nvim' } -- companion file explorer for telescope
+  use { 'kyazdani42/nvim-web-devicons' } -- file icons
 end)
