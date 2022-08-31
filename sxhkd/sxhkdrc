@@ -1,6 +1,5 @@
 # reload bspwm & sxhkd
 super + Escape
-  bspc wm -r; \
   pkill -USR1 -x sxhkd
 
 # terminal emulator (kitty)
@@ -23,3 +22,5 @@ super + Return
 super + {_,shift + }{Up,Right,Down,Left}
   bspc node -{f,s} {north,east,south,west}
 
+super + alt + {Up,Right,Down,Left} 
+  $HOME/.config/sxhkd/bspwm_resize {north,east,south,west}
