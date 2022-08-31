@@ -3,7 +3,9 @@ if status is-interactive
 end
 
 set -gx BAT_THEME "gruvbox-dark"
-set -gx PNPM_HOME "/home/raf/.local/share/pnpm"
-set -gx YARN_HOME "/home/raf/.yarn/bin"
-set -gx PATH /opt/Min $YARN_HOME $PNPM_HOME $PATH 
 
+set -gx BUN_INSTALL "$HOME/.bun"
+set -gx YARN_INSTALL "$HOME/.yarn"
+set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+
+set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin $PNPM_HOME $PATH 
