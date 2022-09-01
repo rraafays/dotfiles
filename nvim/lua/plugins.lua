@@ -29,4 +29,6 @@ packer.startup(function(use)
   use { 'norcalli/nvim-colorizer.lua' } -- colour highlights hex, rgb and more
   use { 'glepnir/lspsaga.nvim' } -- lsp uis
   use { 'lukas-reineke/indent-blankline.nvim' } -- indentation guides
+  use { 'lewis6991/gitsigns.nvim' } -- git markers
+  use { 'dinhhuy258/git.nvim' } -- git blame & browse
 end)
