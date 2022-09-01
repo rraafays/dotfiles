@@ -32,7 +32,7 @@ keymap.set('', 's<down>', '<C-w>j')
 keymap.set('', 's<right>', '<C-w>l')
 
 -- resize window
-keymap.set('n', '<C-w><left>', '<C-w><')
-keymap.set('n', '<C-w><right>', '<C-w>>')
-keymap.set('n', '<C-w><up>', '<C-w>+')
-keymap.set('n', '<C-w><down>', '<C-w>-')
+keymap.set('n', '<A-left>', '<C-w><')
+keymap.set('n', '<A-right>', '<C-w>>')
+keymap.set('n', '<A-up>', '<C-w>+')
+keymap.set('n', '<A-down>', '<C-w>-')
