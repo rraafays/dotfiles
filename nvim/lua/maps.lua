@@ -21,18 +21,17 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 
 -- split window
-keymap.set('n', 'sh', ':split<Return><C-w>w', { silent = true })
-keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+keymap.set('', 'sh', ':split<Return><C-w>w', { silent = true })
+keymap.set('', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
 -- navigate window
-keymap.set('n', '<Space>', '<C-w>w')
-keymap.set('', 's<left>', '<C-w>h')
-keymap.set('', 's<up>', '<C-w>k')
-keymap.set('', 's<down>', '<C-w>j')
-keymap.set('', 's<right>', '<C-w>l')
+keymap.set('', '<C-left>', '<C-w>h')
+keymap.set('', '<C-up>', '<C-w>k')
+keymap.set('', '<C-down>', '<C-w>j')
+keymap.set('', '<C-right>', '<C-w>l')
 
 -- resize window
-keymap.set('n', '<A-left>', '<C-w><')
-keymap.set('n', '<A-right>', '<C-w>>')
-keymap.set('n', '<A-up>', '<C-w>+')
-keymap.set('n', '<A-down>', '<C-w>-')
+keymap.set('n', '<C-A-left>', '<C-w><')
+keymap.set('n', '<C-A-right>', '<C-w>>')
+keymap.set('n', '<C-A-up>', '<C-w>+')
+keymap.set('n', '<C-A-down>', '<C-w>-')
