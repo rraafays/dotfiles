@@ -29,5 +29,4 @@ packer.startup(function(use)
   use { 'norcalli/nvim-colorizer.lua' } -- colour highlights hex, rgb and more
   use { 'glepnir/lspsaga.nvim' } -- lsp uis
   use { 'lukas-reineke/indent-blankline.nvim' } -- indentation guides
-  use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
 end)
