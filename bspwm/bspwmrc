@@ -1,6 +1,7 @@
 #! /bin/sh
 
 xsetroot -cursor_name left_ptr &
+xrdb ~/.Xresources
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc config border_width 2
