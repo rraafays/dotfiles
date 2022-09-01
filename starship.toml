@@ -5,6 +5,10 @@ add_newline = false
 [character] 
 success_symbol = "[\\$](bold blue)"
 error_symbol = "[\\$](bold blue)"
+vimcmd_symbol = "[\\$](bold white)"
+vimcmd_replace_one_symbol = "[\\$](bold red)"
+vimcmd_replace_symbol = "[\\$](bold red)"
+vimcmd_visual_symbol = "[\\$](bold yellow)"
 
 [line_break]
 disabled = true
