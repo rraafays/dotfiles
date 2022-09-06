@@ -22,8 +22,10 @@ set fish_greeting           ''
 
 if string match -q "dark" $theme
   kitty @ set-colors -a '~/.config/kitty/gruvbox_dark.conf'
+  bash -c '$HOME/.config/bspwm/bspwmrc'
 end
 
 if string match -q "light" $theme
   kitty @ set-colors -a '~/.config/kitty/gruvbox_light.conf'
+  bash -c '$HOME/.config/bspwm/bspwmrc'
 end
