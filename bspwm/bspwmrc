@@ -11,14 +11,14 @@ if [ "$theme" == "dark" ]
 then
   bspc config focused_border_color "#EBDBB2"
   bspc config normal_border_color "#A89983"
-  exec feh --bg-scale ~/.config/wallpapers/gruvbox-dark.jpeg
+  feh --bg-scale ~/.config/wallpapers/gruvbox-dark.jpeg
 fi
 
 if [ "$theme" == "light" ]
 then
   bspc config focused_border_color "#3C3836"
   bspc config normal_border_color "#7C6F64"
-  exec feh --bg-scale ~/.config/wallpapers/gruvbox-light.jpeg
+  feh --bg-scale ~/.config/wallpapers/gruvbox-light.jpeg
 fi
 
 bspc rule -a Zathura state=tiled

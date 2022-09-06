@@ -1,10 +1,12 @@
+#! /bin/fish
+
 # reload bspwm & sxhkd
 super + Escape
   pkill -USR1 -x sxhkd
 
 # terminal emulator (kitty)
 super + shift + Return
-  kitty $HOME
+  kitty
 
 # application launcher
 super + @space

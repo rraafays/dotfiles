@@ -18,3 +18,12 @@ set fish_cursor_insert      line        blink
 set fish_cursor_replace_one underscore  blink
 set fish_cursor_visual      block
 set fish_greeting           ''
+
+if string match -q "xterm-kitty" $TERM
+  if string match -q "dark" $theme
+    kitty @ set-colors --all --configured '~/.config/kitty/gruvbox_dark.conf'
+  end
+  if string match -q "light" $theme
+    kitty @ set-colors --all --configured '~/.config/kitty/gruvbox_light.conf'
+  end
+end
