@@ -6,7 +6,7 @@ super + Escape
 
 # terminal emulator (kitty)
 super + shift + Return
-  fish -c kitty
+  kitty --single-instance
 
 # application launcher
 super + @space
