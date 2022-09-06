@@ -4,11 +4,11 @@ super + Escape
 
 # terminal emulator (kitty)
 super + shift + Return
-  kitty
+  kitty $HOME
 
 # application launcher
 super + @space
-  rofi -show drun
+  rofi -show drun -theme ~/.config/rofi/gruvbox-$theme.rasi
 
 # close or kill window
 super + {_,shift+}w
