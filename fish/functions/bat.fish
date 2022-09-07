@@ -1,3 +1,3 @@
 function bat -d 'Calls bat with arguments'
-  command bat --theme gruvbox-$theme $argv
+  command bat --theme gruvbox-dark $argv
 end

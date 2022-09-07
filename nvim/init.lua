@@ -26,11 +26,3 @@ end
 if is_win then
   require('windows')
 end
-
-if os.getenv('theme') == 'light' then
-  vim.o.background = 'light'
-end
-
-if os.getenv('theme') == 'dark' then
-  vim.o.background = 'dark'
-end

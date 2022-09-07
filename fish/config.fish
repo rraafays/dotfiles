@@ -9,10 +9,6 @@ if status is-interactive
   set fish_cursor_replace_one underscore  blink
   set fish_cursor_visual      block
   set fish_greeting           ''
-
-  if string match -q "xterm-kitty" $TERM
-    kitty @ set-colors --all --configured "~/.config/kitty/gruvbox_$theme.conf"
-  end
 end
 
 # directories to add to path
