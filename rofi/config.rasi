@@ -1,0 +1,5 @@
+configuration {
+  modi: "window,drun,ssh,combi";
+  font: "Liga SFMono Nerd Font 10";
+  combi-modi: "window,drun,ssh";
+ }
