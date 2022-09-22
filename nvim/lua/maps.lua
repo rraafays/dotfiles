@@ -10,9 +10,9 @@ keymap.set('n', 'x', '"_x')
 -- increment & decrement value in normal mode
 keymap.set('n', '=', '<C-a>')
 keymap.set('n', '-', '<C-x>')
-
--- delete a word backwards
-keymap.set('n', 'dw', 'vb"_d')
+-- increment & decrement value by 10 in normal mode
+keymap.set('n', '+', '10<C-a>')
+keymap.set('n', '_', '10<C-x>')
 
 -- select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
