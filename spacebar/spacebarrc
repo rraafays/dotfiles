@@ -1,0 +1,29 @@
+
+#!/usr/bin/env sh
+
+spacebar -m config position             top
+spacebar -m config height               20
+spacebar -m config spaces               on
+spacebar -m config title                on
+spacebar -m config clock                on
+spacebar -m config power                on
+spacebar -m config padding_left         20
+spacebar -m config padding_right        20
+spacebar -m config spacing_left         20
+spacebar -m config spacing_right        10
+spacebar -m config text_font            "Liga SFMono Nerd Font:10.0"
+spacebar -m config icon_font            "Liga SFMono Nerd Font:10.0"
+spacebar -m config background_color     0xff282828
+spacebar -m config foreground_color     0xffEBDBB2
+spacebar -m config space_icon_color     0xffD79920
+spacebar -m config power_icon_color     0xffcd950c
+spacebar -m config battery_icon_color   0xffCC231C
+spacebar -m config dnd_icon_color       0xffa8a8a8
+spacebar -m config clock_icon_color     0xffa8a8a8
+spacebar -m config power_icon_strip      
+spacebar -m config space_icon_strip     1 2 3 4
+spacebar -m config space_icon           
+spacebar -m config clock_icon           " "
+spacebar -m config dnd_icon             
+spacebar -m config clock_format         "%d/%m/%y %R"
+spacebar -m config right_shell          off
