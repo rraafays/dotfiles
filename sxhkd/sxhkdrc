@@ -26,3 +26,6 @@ super + {_,shift + }{Up,Right,Down,Left}
 
 super + alt + {Up,Right,Down,Left} 
   $HOME/.config/sxhkd/bspwm_resize {north,east,south,west}
+
+super + {_,shift + }{1-9}
+  bspc {desktop -f, node -d} '^{1-9}'
