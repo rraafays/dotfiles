@@ -10,7 +10,7 @@ super + shift + Return
 
 # application launcher
 super + @space
-  rofi -auto-select -show drun -theme ~/.config/rofi/gruvbox-dark.rasi
+  rofi -show drun -theme ~/.config/rofi/gruvbox-dark.rasi
 
 # close or kill window
 super + {_,shift+}w
