@@ -24,8 +24,14 @@ super + Return
 super + {_,shift + }{Up,Right,Down,Left}
   bspc node -{f,s} {north,east,south,west}
 
+# uses script to resize window
 super + alt + {Up,Right,Down,Left} 
   $HOME/.config/sxhkd/bspwm_resize {north,east,south,west}
 
+# focuses spaces 1 - 9 or moves window to said space
 super + {_,shift + }{1-9}
   bspc {desktop -f, node -d} '^{1-9}'
+
+# fullscreens current window
+super + f
+  bspc node -t \~fullscreen
