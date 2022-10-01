@@ -14,7 +14,8 @@ end
 # directories to add to path
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx YARN_INSTALL "$HOME/.yarn"
+set -gx CARGO_INSTALL "$HOME/.cargo"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 
 # sets the final path variable
-set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin $PNPM_HOME $PATH 
+set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin $CARGO_INSTALL/bin $PNPM_HOME $PATH 
