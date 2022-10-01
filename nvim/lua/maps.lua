@@ -13,6 +13,9 @@ keymap.set('n', '-', '<C-x>')
 -- increment & decrement value by 10 in normal mode
 keymap.set('n', '+', '10<C-a>')
 keymap.set('n', '_', '10<C-x>')
+-- increment & decrement value by 2 in normal mode
+keymap.set('n', '<C-=>', '2<C-a>')
+keymap.set('n', '<C-->', '2<C-x>')
 
 -- select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
