@@ -2,7 +2,10 @@ local status, lspsaga = pcall(require, 'lspsaga')
 if (not status) then return end
 
 lspsaga.init_lsp_saga {
-  server_filetype_map = {}
+  server_filetype_map = {},
+  symbol_in_winbar = {
+    enable = false
+  }
 }
 
 local opts = { noremap = true, silent = true }
