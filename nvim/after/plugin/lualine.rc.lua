@@ -1,11 +1,13 @@
 local status, lualine = pcall(require, 'lualine')
 if (not status) then return end
 
+vim.o.cmdheight = 0
+
 lualine.setup {
   options = {
     icons_enabled = true,
-    component_separators = { left = '|', right = '|'},
-    section_separators = { left = '', right = ''},
+    component_separators = { left = '|', right = '|' },
+    section_separators = { left = '', right = '' },
     disabled_filetypes = {}
   },
   sections = {
@@ -17,7 +19,8 @@ lualine.setup {
       path = 0 -- 0 = just filename, 1 = relative path, 2 = absolute path
     } },
     lualine_x = {
-      { 'diagnostics', sources = { "nvim_diagnostic" }, symbols = { error = ' ', warn = ' ', info = ' ', hint = ' ' } },
+      { 'diagnostics', sources = { "nvim_diagnostic" }, symbols = { error = ' ', warn = ' ', info = ' ',
+        hint = ' ' } },
       'encoding',
       'filetype'
     },
@@ -27,11 +30,11 @@ lualine.setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {},
-    lualine_c = {{
+    lualine_c = { {
       'filename',
       file_status = true,
       path = 1
-    }},
+    } },
     lualine_x = { 'location' },
     lualine_y = {},
     lualine_z = {}
