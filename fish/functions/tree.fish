@@ -1,3 +1,3 @@
-function lt --wraps='tree -C' --description 'tree=tree -C'
-  tree -C $argv; 
+function tree --wraps='command tree -C -L 2' --description 'tree=command tree -C -L 2'
+  command tree -C -L 2 $argv; 
 end
