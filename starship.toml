@@ -34,8 +34,3 @@ disabled = true
 
 [git_metrics]
 disabled = false
-
-[git_status]
-# ahead = "↑"
-# behind = "↓"
-diverged = "↕"
