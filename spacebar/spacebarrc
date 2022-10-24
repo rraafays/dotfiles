@@ -11,8 +11,8 @@ spacebar -m config padding_left         20
 spacebar -m config padding_right        20
 spacebar -m config spacing_left         20
 spacebar -m config spacing_right        10
-spacebar -m config text_font            "Iosevka Term Medium:10.0"
-spacebar -m config icon_font            "Iosevka Term Medium:10.0"
+spacebar -m config text_font            "Iosevka Term Bold:10.0"
+spacebar -m config icon_font            "Iosevka Term Bold:10.0"
 spacebar -m config background_color     0xff282828
 spacebar -m config foreground_color     0xffEBDBB2
 spacebar -m config space_icon_color     0xffD79920
