@@ -1,5 +1,5 @@
 configuration {
   modi: "window,drun,ssh,combi";
-  font: "Iosevka Term Medium 10";
+  font: "Iosevka Term Bold 10";
   combi-modi: "window,drun,ssh";
  }
