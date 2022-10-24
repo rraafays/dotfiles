@@ -5,6 +5,9 @@ lspsaga.init_lsp_saga {
   server_filetype_map = {},
   symbol_in_winbar = {
     enable = false
+  },
+  code_action_lightbulb = {
+    enable = false
   }
 }
 
