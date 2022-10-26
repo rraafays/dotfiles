@@ -39,10 +39,6 @@ keymap.set('n', '<C-A-right>', '<C-w>>')
 keymap.set('n', '<C-A-up>', '<C-w>+')
 keymap.set('n', '<C-A-down>', '<C-w>-')
 
--- navigate search occurances easier
-keymap.set('n', '.', 'n')
-keymap.set('n', ',', 'N')
-
 -- navigate current word occurances easier
-keymap.set('n', 'n', '*')
-keymap.set('n', 'N', '#')
+keymap.set('n', '.', '*')
+keymap.set('n', ',', '#')
