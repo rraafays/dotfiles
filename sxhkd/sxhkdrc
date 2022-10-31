@@ -35,3 +35,6 @@ super + {_,shift + }{1-9}
 # fullscreens current window
 super + f
   bspc node -t \~fullscreen
+
+super + t 
+  bspc node -t \~floating
