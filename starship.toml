@@ -35,21 +35,3 @@ disabled = true
 
 [git_metrics]
 disabled = false
-
-[[battery.display]]
-threshold = 20
-style = "bold red"
-discharging_symbol = " "
-charging_symbol = " "
-
-[[battery.display]]
-threshold = 60
-style = "bold yellow"
-discharging_symbol = " "
-charging_symbol = " "
-
-[[battery.display]]
-threshold = 100
-style = "bold green"
-discharging_symbol = " "
-charging_symbol = " "
