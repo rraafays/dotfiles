@@ -2,17 +2,18 @@
 #!/usr/bin/env sh
 
 spacebar -m config position             top
-spacebar -m config height               20
+spacebar -m config height               30
 spacebar -m config spaces               on
-spacebar -m config title                on
 spacebar -m config clock                on
-spacebar -m config power                off
-spacebar -m config padding_left         20
-spacebar -m config padding_right        20
-spacebar -m config spacing_left         20
-spacebar -m config spacing_right        10
-spacebar -m config text_font            "Iosevka Term:Bold:11.0"
-spacebar -m config icon_font            "Iosevka Term:Bold:11.0"
+spacebar -m config power                on
+spacebar -m config title                off
+
+spacebar -m config spacing_left         25
+spacebar -m config spacing_right        25
+
+spacebar -m config text_font            "Iosevka Nerd Font:Bold:11.0"
+spacebar -m config icon_font            "Iosevka Nerd Font:Bold:11.0"
+
 spacebar -m config background_color     0xff282828
 spacebar -m config foreground_color     0xffEBDBB2
 spacebar -m config space_icon_color     0xffD79920
@@ -20,10 +21,11 @@ spacebar -m config power_icon_color     0xffcd950c
 spacebar -m config battery_icon_color   0xffCC231C
 spacebar -m config dnd_icon_color       0xffa8a8a8
 spacebar -m config clock_icon_color     0xffa8a8a8
-spacebar -m config power_icon_strip       
-spacebar -m config space_icon_strip     1 2 3 4 5 6 7 8 9
-spacebar -m config space_icon           .
-spacebar -m config clock_icon           " "
-spacebar -m config dnd_icon              
-spacebar -m config clock_format         "%d/%m/%y %R"
-spacebar -m config right_shell          off
+
+spacebar -m config display_separator_icon 
+spacebar -m config space_icon_strip     I II III IV V VI VII VIII IX X
+spacebar -m config power_icon_strip   
+spacebar -m config clock_icon        
+spacebar -m config dnd_icon          
+spacebar -m config clock_format       "%d/%m/%Y  %R"
+
