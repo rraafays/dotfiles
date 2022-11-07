@@ -18,7 +18,7 @@ yabai -m config                           \
   window_topmost on                       \
   window_shadow off                       \
   window_border on                        \
-  window_border_width 2                   \
+  window_border_width 1                   \
   window_border_radius -1                 \
   active_window_border_color 0xffebdbb2   \
   normal_window_border_color 0xffa89983   \

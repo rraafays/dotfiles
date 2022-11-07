@@ -11,8 +11,8 @@ spacebar -m config title                off
 spacebar -m config spacing_left         25
 spacebar -m config spacing_right        25
 
-spacebar -m config text_font            "Iosevka Nerd Font:Bold:11.0"
-spacebar -m config icon_font            "Iosevka Nerd Font:Bold:11.0"
+spacebar -m config text_font            "Iosevka Nerd Font:11.0"
+spacebar -m config icon_font            "Iosevka Nerd Font:11.0"
 
 spacebar -m config background_color     0xff282828
 spacebar -m config foreground_color     0xffEBDBB2
