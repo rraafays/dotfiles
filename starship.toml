@@ -29,6 +29,8 @@ disabled = false
 
 [directory]
 style = "bold blue"
+read_only = " "
+read_only_style = "white"
 
 [cmd_duration]
 disabled = true
