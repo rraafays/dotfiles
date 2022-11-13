@@ -27,13 +27,11 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 keymap.set('', 'sh', ':split<Return><C-w>w', { silent = true })
 keymap.set('', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
--- swap j & k
-keymap.set('', 'j', 'k')
-keymap.set('', 'k', 'j')
-
--- swap j & k navigation
-keymap.set('', '<C-j>', '<C-w>k')
-keymap.set('', '<C-k>', '<C-w>j')
+-- window navigation
+keymap.set('', '<C-k>', '<C-w>k')
+keymap.set('', '<C-l>', '<C-w>l')
+keymap.set('', '<C-j>', '<C-w>j')
+keymap.set('', '<C-h>', '<C-w>h')
 
 -- navigate current word occurances easier
 keymap.set('n', '.', '*')

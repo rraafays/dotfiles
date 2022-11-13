@@ -21,7 +21,7 @@ super + Return
   bspc node -s biggest.window
 
 # focus or swap in given direction
-super + {_,shift + }{Up,Right,Down,Left}
+super + {_,shift + }{k,l,j,h}
   bspc node -{f,s} {north,east,south,west}
 
 # uses script to resize window
