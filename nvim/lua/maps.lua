@@ -27,17 +27,13 @@ keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 keymap.set('', 'sh', ':split<Return><C-w>w', { silent = true })
 keymap.set('', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
--- navigate window
-keymap.set('', '<C-left>', '<C-w>h')
-keymap.set('', '<C-up>', '<C-w>k')
-keymap.set('', '<C-down>', '<C-w>j')
-keymap.set('', '<C-right>', '<C-w>l')
+-- swap j & k
+keymap.set('', 'j', 'k')
+keymap.set('', 'k', 'j')
 
--- resize window
-keymap.set('n', '<C-A-left>', '<C-w><')
-keymap.set('n', '<C-A-right>', '<C-w>>')
-keymap.set('n', '<C-A-up>', '<C-w>+')
-keymap.set('n', '<C-A-down>', '<C-w>-')
+-- swap j & k navigation
+keymap.set('', '<C-j>', '<C-w>k')
+keymap.set('', '<C-k>', '<C-w>j')
 
 -- navigate current word occurances easier
 keymap.set('n', '.', '*')
