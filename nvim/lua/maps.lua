@@ -36,3 +36,13 @@ keymap.set('', '<C-h>', '<C-w>h')
 -- navigate current word occurances easier
 keymap.set('n', '.', '*')
 keymap.set('n', ',', '#')
+
+-- unmap arrow keys
+keymap.set('', '<Up>', '<Nop>')
+keymap.set('', '<Right>', '<Nop>')
+keymap.set('', '<Down>', '<Nop>')
+keymap.set('', '<Left>', '<Nop>')
+keymap.set('i', '<Up>', '<Nop>')
+keymap.set('i', '<Right>', '<Nop>')
+keymap.set('i', '<Down>', '<Nop>')
+keymap.set('i', '<Left>', '<Nop>')
