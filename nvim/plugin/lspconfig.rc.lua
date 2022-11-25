@@ -55,4 +55,4 @@ nvim_lsp.bashls.setup {}
 nvim_lsp.clangd.setup {}
 nvim_lsp.jdtls.setup {}
 nvim_lsp.csharp_ls.setup {}
-nvim_lsp.groovyls.setup {}
+nvim_lsp.gradle_ls.setup {}
