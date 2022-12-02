@@ -17,6 +17,7 @@ set -gx YARN_INSTALL "$HOME/.yarn"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 set -gx CARGO_INSTALL "$HOME/.cargo"
 set -gx DOTNET_INSTALL "$HOME/.dotnet"
+set -gx BREW_INSTALL "/opt/homebrew"
 
 # sets the final path variable
-set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $PATH 
+set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $PATH 
