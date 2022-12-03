@@ -5,7 +5,7 @@ spacebar -m config height               30
 spacebar -m config spaces               on
 spacebar -m config clock                on
 spacebar -m config power                on
-spacebar -m config title                off
+spacebar -m config title                on
 
 spacebar -m config spacing_left         25
 spacebar -m config spacing_right        25
