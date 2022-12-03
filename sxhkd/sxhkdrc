@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# reload bspwm & sxhkd
+# reload sxhkd
 super + Escape
   pkill -USR1 -x sxhkd
 
@@ -25,7 +25,7 @@ super + {_,shift + }{k,l,j,h}
   bspc node -{f,s} {north,east,south,west}
 
 # uses script to resize window
-super + alt + {Up,Right,Down,Left} 
+super + alt + {k,l,j,h} 
   $HOME/.config/sxhkd/bspwm_resize {north,east,south,west}
 
 # focuses spaces 1 - 9 or moves window to said space
