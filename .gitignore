@@ -1,3 +1,4 @@
+Code/
 nvim/plugin/packer_compiled.lua
 ranger/plugins/*/.git
 ranger/plugins/__pycache__
