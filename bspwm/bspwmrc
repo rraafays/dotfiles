@@ -3,7 +3,7 @@
 xrdb ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-scale ~/.config/wallpapers/gruvbox-dark.jpeg &
+feh --bg-scale ~/.config/wallpapers/2560x1440-dark-gentoo.png &
 polybar &
 picom &
 gentoo-pipewire-launcher &
