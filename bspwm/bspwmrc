@@ -6,7 +6,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-scale ~/.config/wallpapers/2560x1440-dark-gentoo.png &
 polybar &
 picom &
-gentoo-pipewire-launcher &
+pulseaudio &
 
 bspc monitor -d '1' '2' '3' '4' '5'
 
