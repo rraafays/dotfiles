@@ -23,3 +23,10 @@ yabai -m config                           \
   active_window_border_color 0xffebdbb2   \
   normal_window_border_color 0xffa89983   \
   external_bar all:20:0                   
+
+yabai -m space                            \
+  1                                       \
+  2                                       \
+  3                                       \
+  4                                       \
+  5                                       
