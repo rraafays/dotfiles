@@ -27,5 +27,5 @@ function scrcpy --wraps='scrcpy --shortcut-mod lctrl --disable-screensaver' --de
 end
 
 function py -d 'py=python3'
-  python3
+  python3 $argv
 end
