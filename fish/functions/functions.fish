@@ -1,31 +1,31 @@
-function transmission --wraps='transmission-remote' --description 'transmission=transmission-remote'
+function transmission -d 'shorten command to transmission-remote'
   transmission-remote $argv; 
 end
 
-function bat -d 'Calls bat with arguments'
+function bat -d 'bat with gruvbox-dark theme'
   command bat --theme gruvbox-dark $argv
 end
 
-function meh --wraps='open -b "drabweb.macfeh"' --description 'alias meh=open -b "drabweb.macfeh"'
-  open -b "drabweb.macfeh" $argv; 
+function meh -d 'feh for mac by drabweb'
+  open -b "drabweb.macfeh" $argv
 end
 
-function tree --wraps='command tree -C -L 2' --description 'tree=command tree -C -L 2'
-  command tree -C $argv; 
+function tree -d 'tree with colour'
+  command tree -C $argv
 end
 
-function vi --wraps='nvim' --description 'vi=nvim'
-  nvim $argv; 
+function vi -d 'launch neovim'
+  nvim $argv
 end
 
-function onefetch --wraps='command onefetch --true-color never' --description 'onefetch=command onefetch --true-color never'
-  command onefetch --true-color never;
+function onefetch -d 'onefetch withouut true colour'
+  command onefetch --true-color never
 end
 
-function scrcpy --wraps='scrcpy --shortcut-mod lctrl --disable-screensaver' --description 'alias for scrcpy preferences'
-  command scrcpy --shortcut-mod lctrl --disable-screensaver $argv;
+function scrcpy -d 'scrcpy with mod set to left control and with screen timeout disabled'
+  command scrcpy --shortcut-mod lctrl --disable-screensaver $argv
 end
 
-function py -d 'py=python3'
+function py -d 'launch python3'
   python3 $argv
 end
