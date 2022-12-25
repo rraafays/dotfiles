@@ -29,3 +29,8 @@ end
 function py -d 'launch python3'
   python3 $argv
 end
+
+function startx -d 'warn that you can\t start X while tmux is running'
+  if [ "$TERM_PROGRAM" = "tmux" ]; echo "you must exit tmux first!"; end
+  if [ "$TERM_PROGRAM" != "tmux" ]; command startx; end
+end
