@@ -20,19 +20,6 @@ keymap.set('n', '<C-->', '2<C-x>')
 -- select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- new tab
-keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
-
--- split window
-keymap.set('', 'sh', ':split<Return><C-w>w', { silent = true })
-keymap.set('', 'sv', ':vsplit<Return><C-w>w', { silent = true })
-
--- window navigation
-keymap.set('', '<C-k>', '<C-w>k')
-keymap.set('', '<C-l>', '<C-w>l')
-keymap.set('', '<C-j>', '<C-w>j')
-keymap.set('', '<C-h>', '<C-w>h')
-
 -- navigate current word occurances easier
 keymap.set('n', '.', '*')
 keymap.set('n', ',', '#')

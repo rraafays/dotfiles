@@ -31,7 +31,6 @@ packer.startup(function(use)
   use { 'lukas-reineke/indent-blankline.nvim' } -- indentation guides
   use { 'lewis6991/gitsigns.nvim' } -- git markers
   use { 'dinhhuy258/git.nvim' } -- git blame & browse
-  use { 'akinsho/toggleterm.nvim' } -- ergonomic nvim terminal
   use { 'kevinhwang91/promise-async' } -- promise and async
   use { 'kevinhwang91/nvim-ufo' } -- modern folding
 end)
