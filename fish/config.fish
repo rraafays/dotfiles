@@ -9,7 +9,7 @@ end
 
 if status is-interactive # if fish is in interactive mode
 	starship init fish | source # start starship
-  if [ "$TERM_PROGRAM" != "tmux" ]; tmux; end # if TERM_PROGRAM is not tmux then start tmux which will also set TERM_PROGRAM to tmux
+  if [ "$TERM_PROGRAM" != "tmux" ]; tmux -2; end # if TERM_PROGRAM is not tmux then start tmux which will also set TERM_PROGRAM to tmux
 end
 
 fish_vi_key_bindings # enable vim mode
