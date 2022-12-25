@@ -1,17 +1,19 @@
-if status is-interactive
-  # starship prompt
-	starship init fish | source
-  
-  # various fish preferences
-  fish_vi_key_bindings
-  set fish_cursor_default     block       blink
-  set fish_cursor_insert      line        blink
-  set fish_cursor_replace_one underscore  blink
-  set fish_cursor_visual      block
-  set fish_greeting           ''
+set fish_greeting '' # disable greeting
+
+if status is-interactive # if fish is in interactive mode
+	starship init fish | source # start starship
+  if not set -q TERM_PROGRAM # if the term program is not set
+    tmux # start tmux which also sets TERM_PROGRAM to tmux
+  end
 end
 
-# directories to add to path
+fish_vi_key_bindings # enable vim mode
+set fish_cursor_default block blink
+set fish_cursor_insert line blink
+set fish_cursor_replace_one underscore blink
+set fish_cursor_visual block
+
+# install directories
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx YARN_INSTALL "$HOME/.yarn"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
