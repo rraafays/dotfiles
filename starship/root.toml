@@ -1,0 +1,35 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+format = "$username$hostname$battery$all"
+
+[character] 
+success_symbol = "[#](bold blue)"
+error_symbol = "[#](bold blue)"
+vimcmd_symbol = "[#](bold white)"
+vimcmd_replace_one_symbol = "[#](bold red)"
+vimcmd_replace_symbol = "[#](bold red)"
+vimcmd_visual_symbol = "[#](bold yellow)"
+
+[line_break]
+disabled = true
+
+[username]
+disabled = true
+
+[hostname]
+ssh_only = false
+format = "[$hostname ]($style)"
+style = "bold red"
+disabled = false
+
+[directory]
+style = "bold blue"
+read_only = " "
+read_only_style = "white"
+
+[cmd_duration]
+disabled = true
+
+[git_metrics]
+disabled = false

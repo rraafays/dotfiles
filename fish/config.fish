@@ -1,5 +1,12 @@
 set fish_greeting '' # disable greeting
 
+if not fish_is_root_user # if the user is not root
+  set -gx STARSHIP_CONFIG "$HOME/.config/starship/default.toml" # set starship config to default
+end
+if fish_is_root_user # if the user is root
+  set -gx STARSHIP_CONFIG "$HOME/.config/starship/root.toml" # set the starship config to root
+end
+
 if status is-interactive # if fish is in interactive mode
 	starship init fish | source # start starship
   if [ "$TERM_PROGRAM" != "tmux" ]; tmux; end # if TERM_PROGRAM is not tmux then start tmux which will also set TERM_PROGRAM to tmux
