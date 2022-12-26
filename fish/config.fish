@@ -1,5 +1,6 @@
 set fish_greeting '' # disable greeting
-set -gx EDITOR nvim
+
+if [ "$EDITOR" != "nvim" ]; set -gx EDITOR nvim; end
 
 if not fish_is_root_user # if the user is not root
   set -gx STARSHIP_CONFIG "$HOME/.config/starship/default.toml" # set starship config to default
@@ -20,12 +21,12 @@ set fish_cursor_replace_one underscore blink
 set fish_cursor_visual block
 
 # install directories
-set -gx BUN_INSTALL "$HOME/.bun"
-set -gx YARN_INSTALL "$HOME/.yarn"
-set -gx PNPM_HOME "$HOME/.local/share/pnpm"
-set -gx CARGO_INSTALL "$HOME/.cargo"
-set -gx DOTNET_INSTALL "$HOME/.dotnet"
-set -gx BREW_INSTALL "/opt/homebrew"
+if [ "$BUN_INSTALL" != "$HOME/.bun" ]; set -gx BUN_INSTALL "$HOME/.bun"; end
+if [ "$YARN_INSTALL" != "$HOME/.yarn" ]; set -gx YARN_INSTALL "$HOME/.yarn"; end
+if [ "$CARGO_INSTALL" != "$HOME/.cargo" ]; set -gx CARGO_INSTALL "$HOME/.cargo"; end
+if [ "$DOTNET_INSTALL" != "$HOME/.dotnet" ]; set -gx DOTNET_INSTALL "$HOME/.dotnet"; end
+if [ "$BREW_INSTALL" != "/opt/homebrew" ]; set -gx BREW_INSTALL "/opt/homebrew"; end
+if [ "$PNPM_HOME" != "$HOME/.local/share/pnpm" ]; set -gx PNPM_HOME "$HOME/.local/share/pnpm"; end
 
 # sets the final path variable
 set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $PATH 
