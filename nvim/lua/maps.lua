@@ -4,6 +4,9 @@ local keymap = vim.keymap
 -- lazy command entry
 keymap.set('n', ';', ':')
 
+-- lazy leave
+keymap.set('n', 'q', ':q<CR>')
+
 -- don't yank with x in normal mode
 keymap.set('n', 'x', '"_x')
 
