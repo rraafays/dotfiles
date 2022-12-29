@@ -34,3 +34,7 @@ function startx -d 'warn that you can\t start X while tmux is running'
   if [ "$TERM_PROGRAM" = "tmux" ]; echo "you must exit tmux first!"; end
   if [ "$TERM_PROGRAM" != "tmux" ]; command startx; end
 end
+
+function muc -d 'muc with prefs'
+  command muc --file ~/.local/share/fish/fish_history --count 10 --pretty --shell="fish"
+end
