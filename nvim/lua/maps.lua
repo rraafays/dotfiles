@@ -7,6 +7,10 @@ keymap.set('n', ';', ':')
 -- lazy leave
 keymap.set('n', 'q', ':q<CR>')
 
+-- force quit
+keymap.set('n', '<C-c>', '<Esc>:qa!<CR>')
+keymap.set('i', '<C-c>', '<Esc>:qa!<CR>')
+
 -- don't yank with x in normal mode
 keymap.set('n', 'x', '"_x')
 
