@@ -30,4 +30,4 @@ if [ "$BREW_INSTALL" != "/opt/homebrew" ]; set -gx BREW_INSTALL "/opt/homebrew";
 if [ "$PNPM_HOME" != "$HOME/.local/share/pnpm" ]; set -gx PNPM_HOME "$HOME/.local/share/pnpm"; end
 
 # sets the final path variable
-set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $PATH 
+set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $HOME/.local/bin $PATH 
