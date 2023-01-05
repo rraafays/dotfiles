@@ -54,6 +54,7 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.omnisharp.setup {
   cmd = { "dotnet", "/home/raf/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" }
 }
+nvim_lsp.clangd.setup {}
 nvim_lsp.bashls.setup {}
 nvim_lsp.jdtls.setup {}
 nvim_lsp.gradle_ls.setup {}
