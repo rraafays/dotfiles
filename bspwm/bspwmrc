@@ -3,7 +3,7 @@
 xrdb ~/.Xresources &
 xsetroot -cursor_name left_ptr &
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-scale ~/.config/wallpapers/2560x1440-dark-gentoo.png &
+feh --bg-scale ~/.config/wallpapers/\#282828.jpg &
 polybar &
 picom &
 pulseaudio &
