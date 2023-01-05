@@ -1,3 +1,6 @@
+gtk-3.0/
+nvtop/
+calcurse/
 Code/
 nvim/plugin/packer_compiled.lua
 ranger/plugins/*/.git
