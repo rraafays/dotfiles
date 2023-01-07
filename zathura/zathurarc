@@ -40,3 +40,5 @@ set recolor-darkcolor           "#ebdbb2" # fg
 set recolor                     "true"
 
 set guioptions none
+
+map c recolor
