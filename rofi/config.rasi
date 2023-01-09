@@ -1,5 +1,0 @@
-configuration {
-  modi: "window,drun,ssh,combi";
-  font: "Iosevka Term Bold 11";
-  combi-modi: "window,drun,ssh";
- }
