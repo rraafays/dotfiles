@@ -38,3 +38,7 @@ end
 function muc -d 'muc with prefs'
   command muc --file ~/.local/share/fish/fish_history --count 10 --pretty --shell="fish"
 end
+
+function fzf -d 'launch fzf'
+  command fzf --color=16
+end
