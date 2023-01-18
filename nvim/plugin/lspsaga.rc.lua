@@ -8,6 +8,21 @@ lspsaga.setup({
   },
   code_action_lightbulb = {
     enable = false
+  },
+  ui = {
+    border = 'single',
+    colors = {
+      normal_bg = '#282828',
+      title_bg = '#EBDBB2',
+      red = '#fb4833',
+      green = '#b8ba25',
+      yellow = '#fabc2e',
+      blue = '#83a597',
+      magenta = '#d3859a',
+      cyan = '#8ec07b',
+      white = '#ebdbb2',
+      black = '#282828',
+    }
   }
 })
 
