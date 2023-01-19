@@ -1,6 +1,7 @@
 set fish_greeting '' # disable greeting
 
 if [ "$EDITOR" != "nvim" ]; set -gx EDITOR nvim; end
+set -gx WLR_NO_HARDWARE_CURSORS 1
 
 if not fish_is_root_user # if the user is not root
   set -gx STARSHIP_CONFIG "$HOME/.config/starship/default.toml" # set starship config to default
