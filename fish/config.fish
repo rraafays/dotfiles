@@ -26,8 +26,9 @@ if [ "$YARN_INSTALL" != "$HOME/.yarn" ]; set -gx YARN_INSTALL "$HOME/.yarn"; end
 if [ "$CARGO_INSTALL" != "$HOME/.cargo" ]; set -gx CARGO_INSTALL "$HOME/.cargo"; end
 if [ "$DOTNET_INSTALL" != "$HOME/.dotnet" ]; set -gx DOTNET_INSTALL "$HOME/.dotnet"; end
 if [ "$GO_INSTALL" != "$HOME/go" ]; set -gx GO_INSTALL "$HOME/go"; end
+if [ "$RBENV_INSTALL" != "$HOME/.rbenv" ]; set -gx RBENV_INSTALL "$HOME/.rbenv"; end
 if [ "$BREW_INSTALL" != "/opt/homebrew" ]; set -gx BREW_INSTALL "/opt/homebrew"; end
 if [ "$PNPM_HOME" != "$HOME/.local/share/pnpm" ]; set -gx PNPM_HOME "$HOME/.local/share/pnpm"; end
 
 # sets the final path variable
-set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $HOME/.local/bin $PATH 
+set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $RBENV_INSTALL/bin $RBENV_INSTALL/shims $HOME/.local/bin $PATH 
