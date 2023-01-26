@@ -1,6 +1,6 @@
 #!/bin/bash
 
-shift + cmd - return : kitty ~/
+shift + cmd - return : kitty ~/ --single-instance
 
 cmd - space : open /Applications/dmenu-mac.app
 
