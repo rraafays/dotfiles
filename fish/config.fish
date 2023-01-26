@@ -1,7 +1,16 @@
 set fish_greeting '' # disable greeting
 
 if [ "$EDITOR" != "nvim" ]; set -gx EDITOR nvim; end
+
 set -gx WLR_NO_HARDWARE_CURSORS 1
+set -gx GBM_BACKEND nvidia-drm
+set -gx __GLX_VENDOR_LIBRARY_NAME nvidia
+set -gx LIBVA_DRIVER_NAME nvidia
+set -gx __GL_GSYNC_ALLOWED 1
+set -gx __GL_VRR_ALLOWED 0
+set -gx LIBVA_DRIVER_NAME nvidia
+set -gx XDG_SESSION_TYPE wayland
+set -gx GBM_BACKEND nvidia
 
 if not fish_is_root_user # if the user is not root
   set -gx STARSHIP_CONFIG "$HOME/.config/starship/default.toml" # set starship config to default
