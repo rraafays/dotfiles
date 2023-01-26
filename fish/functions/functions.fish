@@ -1,5 +1,9 @@
-function transmission -d 'shorten command to transmission-remote'
+function t -d 'shorthand transmission-remote'
   transmission-remote $argv; 
+end
+
+function td -d 'shorthand transmission-daemon'
+  transmission-daemon $argv; 
 end
 
 function bat -d 'bat with gruvbox-dark theme'
