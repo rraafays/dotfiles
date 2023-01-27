@@ -12,6 +12,8 @@ set -gx LIBVA_DRIVER_NAME nvidia
 set -gx XDG_SESSION_TYPE wayland
 set -gx GBM_BACKEND nvidia
 
+set -gx BEMENU_OPTS "--fn 'Iosevka Term 11' --prompt > --tb #282828FF --tf #D65C0DFF --fb #282828FF --ff #EBDBB2FF --cb #EBDBB2FF --cf #EBDBB2FF --nb #282828FF --nf #928373FF --ab #282828FF --af #928373FF --hb #282828FF --hf #EBDBB2FF"
+
 if not fish_is_root_user # if the user is not root
   set -gx STARSHIP_CONFIG "$HOME/.config/starship/default.toml" # set starship config to default
 end
