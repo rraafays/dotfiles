@@ -5,7 +5,6 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
-vim.wo.fillchars = 'eob: '
 
 vim.opt.swapfile = false
 vim.opt.title = true
@@ -30,6 +29,16 @@ vim.opt.si = true
 vim.opt.wrap = false
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' }
+vim.opt.fillchars = {
+  horiz     = ' ',
+  horizup   = ' ',
+  horizdown = ' ',
+  vert      = ' ',
+  vertleft  = ' ',
+  vertright = ' ',
+  verthoriz = ' ',
+  eob       = ' ',
+}
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
