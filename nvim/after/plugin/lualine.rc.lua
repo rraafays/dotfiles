@@ -3,12 +3,19 @@ if (not status) then return end
 
 vim.o.cmdheight = 0
 
+local theme = require('lualine.themes.gruvbox')
+theme.normal.c.bg = '#282828'
+theme.insert.c.bg = '#282828'
+theme.replace.c.bg = '#282828'
+theme.visual.c.bg = '#282828'
+
 lualine.setup {
   options = {
     icons_enabled = true,
     component_separators = { left = '|', right = '|' },
     section_separators = { left = '', right = '' },
-    disabled_filetypes = {}
+    disabled_filetypes = {},
+    theme = theme
   },
   sections = {
     lualine_a = { 'mode' },
