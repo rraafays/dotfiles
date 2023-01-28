@@ -26,7 +26,8 @@ yabai -m config                           \
   normal_window_border_color 0xffa89983   \
   external_bar all:20:0                   \
   window_animation_duration 0.2           \
-  window_animation_frame_rate 60          
+  window_animation_frame_rate 60          \
+  window_border_blur off
 
 yabai -m space                            \
   1                                       \
