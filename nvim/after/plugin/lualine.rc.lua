@@ -8,6 +8,7 @@ theme.normal.c.bg = '#282828'
 theme.insert.c.bg = '#282828'
 theme.replace.c.bg = '#282828'
 theme.visual.c.bg = '#282828'
+theme.insert.a.bg = '#8EC07C'
 
 lualine.setup {
   options = {
