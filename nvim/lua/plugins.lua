@@ -32,6 +32,5 @@ packer.startup(function(use)
   use { 'lewis6991/gitsigns.nvim' } -- git markers
   use { 'dinhhuy258/git.nvim' } -- git blame & browse
   use { 'kevinhwang91/promise-async' } -- promise and async
-  use { 'kevinhwang91/nvim-ufo' } -- modern folding
   use { 'lervag/vimtex' } -- latex auto compiler
 end)
