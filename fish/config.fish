@@ -46,6 +46,10 @@ switch (uname)
   case Darwin
     set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 end
+switch (uname)
+  case Linux
+    set -gx ANDROID_HOME "$HOME/Android/Sdk"
+end
 
 # sets the final path variable
 set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $RBENV_INSTALL/bin $RBENV_INSTALL/shims $HOME/.local/bin $PATH 
