@@ -48,5 +48,5 @@ function fzf -d 'launch fzf'
 end
 
 function qr -d 'quickly generate qrcode'
-  command qrencode -t ANSIUTF8 -m 2 $argv
+  command qrencode -t UTF8 -m 2 $argv
 end
