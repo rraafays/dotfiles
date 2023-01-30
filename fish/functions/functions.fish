@@ -46,3 +46,7 @@ end
 function fzf -d 'launch fzf'
   command fzf --color=16
 end
+
+function qr -d 'quickly generate qrcode'
+  command qrencode -t ANSIUTF8 -m 2 $argv
+end
