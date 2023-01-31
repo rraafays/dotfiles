@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+while true; do gentoo-pipewire-launcher && break; done
