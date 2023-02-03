@@ -28,7 +28,7 @@ keymap.set('n', '<C-->', '2<C-x>')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- unhighlight search
-keymap.set('n', '÷', ':nohlsearch<CR>')
+keymap.set('n', '\\', ':nohlsearch<CR>')
 
 -- navigate current word occurances easier
 keymap.set('n', '.', '*')
