@@ -6,7 +6,13 @@ lspsaga.setup({
   symbol_in_winbar = {
     enable = false
   },
-  code_action_lightbulb = {
+  beacon = {
+    enable = false
+  },
+  code_action = {
+    show_server_name = false
+  },
+  lightbulb = {
     enable = false
   },
   ui = {
