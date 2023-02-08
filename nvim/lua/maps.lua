@@ -11,8 +11,9 @@ keymap.set('n', 'q', ':q<CR>')
 keymap.set('n', '<C-c>', '<Esc>:qa!<CR>')
 keymap.set('i', '<C-c>', '<Esc>:qa!<CR>')
 
--- don't yank with x in normal mode
+-- don't yank on delete
 keymap.set('n', 'x', '"_x')
+keymap.set('n', 'd', '"_d')
 
 -- increment & decrement value in normal mode
 keymap.set('n', '=', '<C-a>')
