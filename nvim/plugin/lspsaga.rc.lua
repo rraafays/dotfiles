@@ -13,7 +13,9 @@ lspsaga.setup({
     show_server_name = false
   },
   lightbulb = {
-    enable = false
+    enable = false,
+    enable_in_insert = false,
+    sign = false
   },
   ui = {
     border = 'single',
