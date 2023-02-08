@@ -1,36 +1,48 @@
--- function used to check if packer is installed
-local status, packer = pcall(require, 'packer')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- function used to check if lazy is installed
+local status, lazy = pcall(require, 'lazy')
 if (not status) then
-  print("Packer is not installed")
+  print("Lazy is not installed")
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
-
--- starts packer and includes my plugins
-packer.startup(function(use)
-  use { 'wbthomason/packer.nvim' }
-  use { 'l3mon4d3/luasnip' } --snippets for completions
-  use { 'hoob3rt/lualine.nvim' } -- replacement statusline
-  use { 'onsails/lspkind-nvim' } -- vscode style pictograms
-  use { 'hrsh7th/cmp-buffer' } -- nvim-cmp source for buffer words
-  use { 'hrsh7th/cmp-nvim-lsp' } -- nvim-cmp source for neovim's built in lsp
-  use { 'hrsh7th/nvim-cmp' } -- language completions
-  use { 'neovim/nvim-lspconfig' } -- language server protocol
-  use { 'williamboman/mason.nvim' } -- language server installer
-  use { 'windwp/nvim-autopairs' } -- auto closing brackets and quotations
-  use { 'windwp/nvim-ts-autotag' } -- auto closing typescript tags
-  use { 'ellisonleao/gruvbox.nvim' } -- gruvbox theme
-  use { 'nvim-treesitter/nvim-treesitter' } -- accurate code tree highlighting
-  use { 'nvim-lua/plenary.nvim' } -- common file utilities
-  use { 'nvim-telescope/telescope.nvim' } -- fuzzy finder
-  use { 'nvim-telescope/telescope-file-browser.nvim' } -- companion file explorer for telescope
-  use { 'kyazdani42/nvim-web-devicons' } -- file icons
-  use { 'norcalli/nvim-colorizer.lua' } -- colour highlights hex, rgb and more
-  use { 'glepnir/lspsaga.nvim' } -- lsp uis
-  use { 'lukas-reineke/indent-blankline.nvim' } -- indentation guides
-  use { 'lewis6991/gitsigns.nvim' } -- git markers
-  use { 'dinhhuy258/git.nvim' } -- git blame & browse
-  use { 'kevinhwang91/promise-async' } -- promise and async
-  use { 'lervag/vimtex' } -- latex auto compiler
-end)
+-- starts lazy
+lazy.setup({
+  'l3mon4d3/luasnip', --snippets for completions
+  'hoob3rt/lualine.nvim', -- replacement statusline
+  'onsails/lspkind-nvim', -- vscode style pictograms
+  'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
+  'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built in lsp
+  'hrsh7th/nvim-cmp', -- language completions
+  'neovim/nvim-lspconfig', -- language server protocol
+  'williamboman/mason.nvim', -- language server installer
+  'windwp/nvim-autopairs', -- auto closing brackets and quotations
+  'windwp/nvim-ts-autotag', -- auto closing typescript tags
+  'ellisonleao/gruvbox.nvim', -- gruvbox theme
+  'nvim-treesitter/nvim-treesitter', -- accurate code tree highlighting
+  'nvim-lua/plenary.nvim', -- common file utilities
+  'nvim-telescope/telescope.nvim', -- fuzzy finder
+  'nvim-telescope/telescope-file-browser.nvim', -- companion file explorer for telescope
+  'kyazdani42/nvim-web-devicons', -- file icons
+  'norcalli/nvim-colorizer.lua', -- colour highlights hex, rgb and more
+  'glepnir/lspsaga.nvim', -- lsp uis
+  'lukas-reineke/indent-blankline.nvim', -- indentation guides
+  'lewis6991/gitsigns.nvim', -- git markers
+  'dinhhuy258/git.nvim', -- git blame & browse
+  'kevinhwang91/promise-async', -- promise and async
+  'lervag/vimtex' -- latex auto compiler
+})
