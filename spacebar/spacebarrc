@@ -11,8 +11,8 @@ spacebar -m config right_shell          on
 spacebar -m config spacing_left         20
 spacebar -m config spacing_right        20
 
-spacebar -m config text_font            "Iosevka Nerd Font:11.0"
-spacebar -m config icon_font            "Iosevka Nerd Font:11.0"
+spacebar -m config text_font            "Iosevka:11.0"
+spacebar -m config icon_font            "Symbols Nerd Font:11.0"
 
 spacebar -m config background_color     0xff282828
 spacebar -m config foreground_color     0xffEBDBB2
@@ -23,7 +23,7 @@ spacebar -m config dnd_icon_color       0xffa8a8a8
 spacebar -m config clock_icon_color     0xffd79921
 
 spacebar -m config display_separator_icon 
-spacebar -m config space_icon_strip     1 2 3 4 5 6 7 8 9 0
+spacebar -m config space_icon_strip     一 二 三 四 五 六 七 八 九 十
 spacebar -m config power_icon_strip      
 spacebar -m config clock_icon           
 spacebar -m config dnd_icon             
