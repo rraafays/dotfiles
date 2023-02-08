@@ -17,4 +17,4 @@ zen.setup {
   }
 }
 
-vim.keymap.set('n', 'z', ':TZAtaraxis<CR>:IndentBlanklineToggle<CR>')
+vim.keymap.set('n', 'z', ':TZAtaraxis<CR>:IndentBlanklineToggle<CR>', { silent = true })
