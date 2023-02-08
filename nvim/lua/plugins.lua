@@ -45,5 +45,6 @@ lazy.setup({
   'lewis6991/gitsigns.nvim', -- git markers
   'dinhhuy258/git.nvim', -- git blame & browse
   'kevinhwang91/promise-async', -- promise and async
-  'lervag/vimtex' -- latex auto compiler
+  'lervag/vimtex', -- latex auto compiler
+  'pocco81/true-zen.nvim' -- zen mode
 })
