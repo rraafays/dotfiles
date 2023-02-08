@@ -22,6 +22,7 @@ end
 
 -- starts lazy
 lazy.setup({
+  defaults = { lazy = true },
   'l3mon4d3/luasnip', --snippets for completions
   'hoob3rt/lualine.nvim', -- replacement statusline
   'onsails/lspkind-nvim', -- vscode style pictograms
