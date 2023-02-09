@@ -46,5 +46,6 @@ lazy.setup({
   'dinhhuy258/git.nvim', -- git blame & browse
   'kevinhwang91/promise-async', -- promise and async
   'lervag/vimtex', -- latex auto compiler
-  'pocco81/true-zen.nvim' -- zen mode
+  'pocco81/true-zen.nvim', -- zen mode
+  'kevinhwang91/nvim-ufo' -- treesitter fold
 })
