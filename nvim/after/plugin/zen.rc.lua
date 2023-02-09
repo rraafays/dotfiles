@@ -15,9 +15,13 @@ zen.setup {
         right = 100,
         top = 0,
         bottom = 0
+      },
+      callbacks = {
+        open_pre = function() vim.api.nvim_command('IndentBlanklineDisable') end,
+        close_pre = function() vim.api.nvim_command('IndentBlanklineEnable') end,
       }
     }
   }
 }
 
-vim.keymap.set('n', 'z', ':TZAtaraxis<CR>:IndentBlanklineToggle<CR>', { silent = true })
+vim.keymap.set('n', 'z', ':TZAtaraxis<CR>', { silent = true })
