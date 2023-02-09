@@ -7,6 +7,9 @@ zen.setup {
   },
   modes = {
     ataraxis = {
+      minimum_writing_area = {
+        width = 100,
+      },
       padding = {
         left = 100,
         right = 100,
