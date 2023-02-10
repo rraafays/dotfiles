@@ -43,10 +43,12 @@ nvim_lsp.sumneko_lua.setup {
         -- get the language server to recognise the 'vim' global
         globals = { 'vim' }
       },
-
       workspace = {
         -- make the server aware of neovim runtime files
         library = vim.api.nvim_get_runtime_file("", true)
+      },
+      format = {
+        enable = false
       }
     }
   }
