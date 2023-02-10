@@ -22,7 +22,6 @@ cmd + alt - h : yabai -m window --resize left:-25:0; \
                   yabai -m window --resize right:-25:0
 
 cmd - f : yabai -m window --toggle zoom-fullscreen; \
-          yabai -m window --toggle border; \
           yabai -m space --toggle padding
 
 cmd - t : yabai -m window --toggle float;\
