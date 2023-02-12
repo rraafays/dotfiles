@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-format = "$username$hostname$battery$all"
+format = "$status$username$hostname$battery$all"
 
 [character] 
 success_symbol = "[\\$](bold blue)"
