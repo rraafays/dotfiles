@@ -34,6 +34,18 @@ disabled = true
 [git_metrics]
 disabled = false
 
+[status]
+disabled = false
+format = '[$symbol$status]($style) '
+map_symbol = true
+pipestatus = true
+symbol = ' '
+not_executable_symbol = ' '
+not_found_symbol = '󰦀 '
+sigint_symbol = '󰚌 '
+signal_symbol = '󱐋 '
+
+
 [aws]
 symbol = "  "
 [buf]
