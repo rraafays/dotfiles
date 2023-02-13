@@ -50,5 +50,10 @@ switch (uname)
     set -gx ANDROID_HOME "$HOME/Android/Sdk"
 end
 
+bind --mode default 'l' up-line
+bind --mode default ';' forward-char
+bind --mode default 'k' down-line
+bind --mode default 'j' backward-char
+
 # sets the final path variable
 set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $RBENV_INSTALL/bin $RBENV_INSTALL/shims $HOME/.local/bin $PATH 
