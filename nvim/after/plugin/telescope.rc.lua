@@ -13,7 +13,11 @@ telescope.setup {
   defaults = {
     mappings = {
       n = {
-        ['q'] = actions.close
+        ['q'] = actions.close,
+        ['l'] = actions.move_selection_previous,
+        [';'] = actions.move_selection_previous,
+        ['k'] = actions.move_selection_next,
+        ['j'] = actions.move_selection_next
       }
     }
   },
