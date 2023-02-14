@@ -2,10 +2,10 @@
 
 shift + cmd - return : kitty ~/ --single-instance
 
-cmd - l : yabai -m window --focus north
-cmd - 0x29 : yabai -m window --focus east
-cmd - k : yabai -m window --focus south
-cmd - j : yabai -m window --focus west
+cmd - k : yabai -m window --focus north
+cmd - l : yabai -m window --focus east
+cmd - j : yabai -m window --focus south
+cmd - h : yabai -m window --focus west
 
 cmd + shift - k : yabai -m window --swap north
 cmd + shift - l : yabai -m window --swap east

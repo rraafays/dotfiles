@@ -1,12 +1,6 @@
 -- shortens vim.keymap to just keymap by redifining it in lua
 local keymap = vim.keymap
 
--- shifted hjkl by one for 40% comfort
-keymap.set('n', 'l', 'k')
-keymap.set('n', ';', 'l')
-keymap.set('n', 'k', 'j')
-keymap.set('n', 'j', 'h')
-
 -- lazy leave
 keymap.set('n', 'q', ':q<CR>')
 
