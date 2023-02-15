@@ -74,7 +74,7 @@ format = '$symbol($version)]($style) '
 symbol = " "
 [c]
 symbol = " "
-format = '$symbol($version(-$name))]($style) '
+format = '[$symbol($version(-$name))]($style) '
 [cmake]
 format = '$symbol($version)]($style) '
 [cobol]
