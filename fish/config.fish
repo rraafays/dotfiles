@@ -42,6 +42,9 @@ if [ "$RBENV_INSTALL" != "$HOME/.rbenv" ]; set -gx RBENV_INSTALL "$HOME/.rbenv";
 if [ "$BREW_INSTALL" != "/opt/homebrew" ]; set -gx BREW_INSTALL "/opt/homebrew"; end
 if [ "$PNPM_HOME" != "$HOME/.local/share/pnpm" ]; set -gx PNPM_HOME "$HOME/.local/share/pnpm"; end
 
+# api keys
+set -gx OPENAI_API_KEY (cat $HOME/.config/fish/keys/openai)
+
 # platform specific directories
 switch (uname)
   case Darwin 
@@ -49,6 +52,7 @@ switch (uname)
   case Linux
     set -gx ANDROID_HOME "$HOME/Android/Sdk"
 end
+
 
 # sets the final path variable
 set -gx PATH $BUN_INSTALL/bin $YARN_INSTALL/bin  $PNPM_HOME $CARGO_INSTALL/bin $DOTNET_INSTALL/tools $BREW_INSTALL/bin $GO_INSTALL/bin $RBENV_INSTALL/bin $RBENV_INSTALL/shims $HOME/.local/bin $PATH 
