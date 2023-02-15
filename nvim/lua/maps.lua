@@ -1,6 +1,9 @@
 -- shortens vim.keymap to just keymap by redifining it in lua
 local keymap = vim.keymap
 
+-- lazy command
+keymap.set('n', ';', ':')
+
 -- lazy leave
 keymap.set('n', 'q', ':q<CR>')
 
