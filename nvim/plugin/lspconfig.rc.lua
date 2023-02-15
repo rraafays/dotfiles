@@ -35,7 +35,7 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
