@@ -47,5 +47,7 @@ lazy.setup({
     'kevinhwang91/promise-async', -- promise and async
     'lervag/vimtex', -- latex auto compiler
     'pocco81/true-zen.nvim', -- zen mode
-    'elkowar/yuck.vim' -- yuck lsp
+    'elkowar/yuck.vim', -- yuck lsp
+    'muniftanjim/nui.nvim', -- ui library
+    'jackmort/chatgpt.nvim' -- chatgpt querying
 })
