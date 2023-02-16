@@ -26,7 +26,7 @@ lazy.setup({
      'l3mon4d3/luasnip', --snippets for completions
      'hoob3rt/lualine.nvim', -- replacement statusline
      'onsails/lspkind-nvim', -- vscode style pictograms
-    'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
+     'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
      'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built in lsp
      'hrsh7th/nvim-cmp', -- language completions
      'neovim/nvim-lspconfig', -- language server protocol
@@ -45,7 +45,7 @@ lazy.setup({
      'dinhhuy258/git.nvim', -- git blame & browse
      'kevinhwang91/promise-async', -- promise and async
      'lervag/vimtex', -- latex auto compiler
-     'pocco81/true-zen.nvim', -- zen mode
+     'folke/zen-mode.nvim', -- zen mode
      'elkowar/yuck.vim', -- yuck lsp
      'muniftanjim/nui.nvim', -- ui library
      'jackmort/chatgpt.nvim', -- chatgpt querying

@@ -1,25 +1,24 @@
-local status, zen = pcall(require, 'true-zen')
+local status, zen = pcall(require, 'zen-mode')
 if (not status) then return end
 
-local width = vim.api.nvim_win_get_width(0)
-
 zen.setup {
-  integrations = {
-    lualine = true
-  },
-  modes = {
-    ataraxis = {
-      minimum_writing_area = {
-        width = width / 3
-      },
-      padding = {
-        left = 10^10,
-        right = 10^10,
-        top = 0,
-        bottom = 0
-      },
+  window = {
+    backdrop = 1,
+    width = .3,
+    height = 1,
+    options = {
+      number = false,
+      signcolumn = 'no'
     }
+  },
+  plugins = {
+    options = { showcmd = false, ruler = false},
+    twilight = { enabled = false },
+    gitsigns = { enabled = false },
+    tmux = { enabled = false },
+    kitty = { enabled = false },
+    alacritty = { enabled = false }
   }
 }
 
-vim.keymap.set('n', 'z', ':TZAtaraxis<CR>', { silent = true })
+vim.keymap.set('n', 'z', ':ZenMode<CR>', { silent = true })
