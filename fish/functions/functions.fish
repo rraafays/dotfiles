@@ -50,3 +50,7 @@ end
 function qr -d 'quickly generate qrcode'
   command qrencode -t UTF8 -m 2 $argv
 end
+
+function ai -d 'launch chatgpt'
+  nvim -c 'ChatGPT'
+end
