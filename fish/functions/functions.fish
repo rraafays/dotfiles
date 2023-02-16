@@ -22,6 +22,18 @@ function vi -d 'launch neovim'
   nvim $argv
 end
 
+function ai -d 'launch chatgpt'
+  nvim -c 'ChatGPT'
+end
+
+function fi -d 'launch telescope find'
+  nvim -c 'Telescope find_files'
+end
+
+function gi -d 'launch telescope live grep'
+  nvim -c 'Telescope live_grep'
+end
+
 function onefetch -d 'onefetch withouut true colour'
   command onefetch --true-color never
 end
@@ -49,8 +61,4 @@ end
 
 function qr -d 'quickly generate qrcode'
   command qrencode -t UTF8 -m 2 $argv
-end
-
-function ai -d 'launch chatgpt'
-  nvim -c 'ChatGPT'
 end
