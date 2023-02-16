@@ -27,7 +27,7 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.ai = true
 vim.opt.si = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' }
 vim.opt.fillchars = {

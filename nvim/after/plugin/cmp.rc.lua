@@ -11,8 +11,8 @@ cmp.setup({
   mapping = cmp.mapping.preset.insert({
     ['<Tab>'] = cmp.mapping.select_next_item(),
     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-    ['∆'] = cmp.mapping.scroll_docs(4),
-    ['˚'] = cmp.mapping.scroll_docs(-4),
+    ['<A-Tab>'] = cmp.mapping.scroll_docs(4),
+    ['<A-S-Tab>'] = cmp.mapping.scroll_docs(-4),
     ['<Esc>'] = cmp.mapping.close(),
     ['<CR>'] = cmp.mapping.confirm({
       behavior = cmp.ConfirmBehavior.Replace,
