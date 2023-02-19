@@ -1,1 +1,1 @@
-set OPENAI_API_KEY (cat $HOME/.config/fish/keys/openai)
+set -x OPENAI_API_KEY (cat $HOME/.config/fish/keys/openai)
