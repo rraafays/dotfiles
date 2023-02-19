@@ -5,7 +5,7 @@ vim.keymap.set('n', '<A-g>', ':ChatGPT<CR>')
 vim.keymap.set('n', '<A-i>', ':ChatGPTEditWithInstructions<CR>')
 
 chatgpt.setup({
-  welcome_message = WELCOME_MESSAGE, 
+  welcome_message = WELCOME_MESSAGE,
   loading_text = "loading",
   question_sign = ">",
   answer_sign = "<",
