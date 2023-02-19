@@ -1,6 +1,7 @@
 set fish_greeting '' # disable greeting
 
 if [ "$EDITOR" != "nvim" ]; set -gx EDITOR nvim; end # set editor to neovim
+if [ "$MANPAGER" != "nvim -c 'Man! -o -" ]; set -gx MANPAGER "nvim -c 'Man! -o -'"; end # set manpager to neovim
 
 # various wayland options
 set -gx WLR_NO_HARDWARE_CURSORS 1
