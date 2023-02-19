@@ -14,10 +14,6 @@ function meh -d 'feh for mac by drabweb'
   open -b "drabweb.macfeh" $argv
 end
 
-function tree -d 'tree with colour'
-  command tree -C $argv
-end
-
 function vi -d 'launch neovim'
   nvim $argv
 end
@@ -51,14 +47,18 @@ function startx -d 'warn that you can\t start X while tmux is running'
   if [ "$TERM_PROGRAM" != "tmux" ]; command startx; end
 end
 
-function muc -d 'muc with prefs'
-  command muc --file ~/.local/share/fish/fish_history --count 10 --pretty --shell="fish"
-end
-
 function fzf -d 'launch fzf'
   command fzf --color=16
 end
 
 function qr -d 'quickly generate qrcode'
-  command qrencode -t UTF8 -m 2 $argv
+  qrencode -t UTF8 -m 2 $argv
+end
+
+function ls -d 'replace ls with lsd'
+  lsd $argv
+end
+
+function tree -d 'tree using lsd'
+  lsd --tree $argv
 end
