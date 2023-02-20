@@ -35,6 +35,6 @@ lspsaga.setup({
 })
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', 'e', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-vim.keymap.set('n', 'E', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+vim.keymap.set('n', '<Tab>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+vim.keymap.set('n', '<S-Tab>', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.keymap.set('n', '?', '<Cmd>Lspsaga hover_doc<CR>', opts)

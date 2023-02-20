@@ -10,8 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- function used to check if lazy is installed
 local status, lazy = pcall(require, 'lazy')

@@ -35,6 +35,12 @@ keymap.set('n', '\\', ':nohlsearch<CR>')
 keymap.set('n', '.', '*')
 keymap.set('n', ',', '#')
 
+-- go down one page on space
+keymap.set('n', '<Space>', '<C-d>')
+
+-- quick line del in normal mode
+keymap.set('n', '<BS>', 'dd')
+
 -- unmap arrow keys
 keymap.set('', '<Up>', '<Nop>')
 keymap.set('', '<Right>', '<Nop>')
