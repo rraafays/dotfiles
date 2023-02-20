@@ -7,6 +7,7 @@ function gi -d 'launch telescope live grep'; nvim -c 'Telescope live_grep'; end
 # shorthand transmission and transmission-daemon
 function t -d 'shorthand transmission-remote'; transmission-remote $argv; end
 function td -d 'shorthand transmission-daemon'; transmission-daemon $argv; end
+function tv -d 'watch transmissions'; watch -n 1 transmission-remote -l; end
 
 # shorthand python3
 function py -d 'launch python3'; python3 $argv; end
