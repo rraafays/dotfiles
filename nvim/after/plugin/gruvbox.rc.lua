@@ -7,4 +7,4 @@ require('gruvbox').setup({
   italic = false,
   invert_selection = true,
 })
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[ colorscheme gruvbox ]]
