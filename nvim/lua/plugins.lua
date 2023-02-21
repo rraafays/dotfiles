@@ -48,5 +48,6 @@ lazy.setup({
      'muniftanjim/nui.nvim', -- ui library
      'jackmort/chatgpt.nvim', -- chatgpt querying
      'kylechui/nvim-surround', -- surround items
-     'johmsalas/text-case.nvim' -- snake case everything
+     'johmsalas/text-case.nvim', -- snake case everything
+     'folke/noice.nvim' 
 })
