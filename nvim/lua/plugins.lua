@@ -47,5 +47,6 @@ lazy.setup({
      'elkowar/yuck.vim', -- yuck lsp
      'muniftanjim/nui.nvim', -- ui library
      'jackmort/chatgpt.nvim', -- chatgpt querying
-     'kylechui/nvim-surround' -- surround items
+     'kylechui/nvim-surround', -- surround items
+     'johmsalas/text-case.nvim' -- snake case everything
 })
