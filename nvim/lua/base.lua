@@ -13,7 +13,6 @@ vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 0
-vim.opt.laststatus = 0
 vim.opt.statusline = '%{repeat(\'─\',winwidth(\'.\'))}'
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
@@ -51,3 +50,4 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 vim.opt.formatoptions:append { 'r' }
+vim.api.nvim_set_option("showmode", false)
