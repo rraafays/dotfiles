@@ -41,6 +41,9 @@ keymap.set('n', '<Space>', '<C-d>')
 -- quick line del in normal mode
 keymap.set('n', '<BS>', 'dd')
 
+-- join to line above
+keymap.set('n', 'K', 'kJ')
+
 -- unmap arrow keys
 keymap.set('', '<Up>', '<Nop>')
 keymap.set('', '<Right>', '<Nop>')
