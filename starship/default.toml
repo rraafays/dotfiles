@@ -98,7 +98,8 @@ format = '$symbol($version)]($style) '
 symbol = " "
 format = '$symbol$context]($style) '
 [dotnet]
-format = '$symbol($version)(🎯 $tfm)]($style) '
+symbol = '󰌛 '
+format = '[$symbol($version)(🎯 $tfm)]($style) '
 [elixir]
 symbol = " "
 format = '$symbol($version \(OTP $otp_version\))]($style) '
