@@ -36,7 +36,7 @@ disabled = true
 [hostname]
 ssh_only = false
 format = "[$hostname ]($style)"
-style = "bold red"
+style = "bold fg:9"
 disabled = false
 
 [directory]

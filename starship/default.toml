@@ -31,8 +31,7 @@ vimcmd_visual_symbol = "[\\$](bold yellow)"
 disabled = true
 
 [username]
-style_root = "bold red"
-style_user = "bold green"
+style_user = "bold fg:10"
 format = "[$user]($style)"
 show_always = true
 disabled = false
@@ -40,7 +39,7 @@ disabled = false
 [hostname]
 ssh_only = false
 format = "[@]($style)[$hostname ]($style)"
-style = "bold green"
+style = "bold fg:10"
 disabled = false
 
 [directory]
