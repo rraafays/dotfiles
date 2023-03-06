@@ -26,3 +26,6 @@ function duf -d 'command'; command duf -theme ansi $argv; end
 function grep -d 'replace grep with ripgrep'; rg $argv; end
 function ls -d 'replace ls with lsd'; lsd $argv; end
 function tree -d 'tree using lsd'; lsd --tree $argv; end
+
+# translate in shell
+function trans -d 'translate briefly'; command trans -b $argv; end
