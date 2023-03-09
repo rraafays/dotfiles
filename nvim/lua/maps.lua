@@ -35,12 +35,6 @@ keymap.set('n', '\\', ':nohlsearch<CR>')
 keymap.set('n', '.', '*')
 keymap.set('n', ',', '#')
 
--- space on steroids
-keymap.set('n', '<Space>k', ':call append(line(".")-1,   repeat([""], v:count1))<CR>')
-keymap.set('n', '<Space>l', '>>')
-keymap.set('n', '<Space>j', ':call append(line("."),   repeat([""], v:count1))<CR>')
-keymap.set('n', '<Space>h', '<<')
-
 -- quick line del in normal mode
 keymap.set('n', '<BS>', 'dd')
 
