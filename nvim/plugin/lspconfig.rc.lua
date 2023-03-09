@@ -24,6 +24,7 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
+
 nvim_lsp.lua_ls.setup {
   settings = {
     Lua = {
@@ -41,9 +42,11 @@ nvim_lsp.lua_ls.setup {
     }
   }
 }
+
 nvim_lsp.omnisharp.setup {
   cmd = { "dotnet", os.getenv("HOME") .. "/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" }
 }
+
 nvim_lsp.clangd.setup {}
 nvim_lsp.bashls.setup {}
 nvim_lsp.jdtls.setup {}
