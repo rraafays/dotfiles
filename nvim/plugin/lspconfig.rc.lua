@@ -51,3 +51,4 @@ nvim_lsp.gradle_ls.setup {}
 nvim_lsp.pylsp.setup {}
 nvim_lsp.ltex.setup {}
 nvim_lsp.astro.setup {}
+nvim_lsp.rust_analyzer.setup {}
