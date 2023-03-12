@@ -245,3 +245,5 @@ format = '[$symbol($version)]($style) '
 format = '[$symbol($version)]($style) '
 [zig]
 format = '[$symbol($version)]($style) '
+[gradle]
+format = '[$symbol($version)]($style) '
