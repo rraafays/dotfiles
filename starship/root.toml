@@ -52,7 +52,7 @@ disabled = true
 disabled = false
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) ' 	
+format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [status]
 disabled = false
@@ -65,11 +65,6 @@ not_executable_symbol = '󰍶 '
 not_found_symbol = '󰋗 '
 sigint_symbol = '󰙦 '
 signal_symbol = '󰝥 '
-
-[env_var.MODE]
-default = ''
-format = '[$env_value]($style) '
-style = 'bold fg:14'
 
 [bun]
 format = '[$symbol]($style) '
