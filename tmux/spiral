@@ -1,0 +1,6 @@
+#! /usr/bin/env fish
+if [ "$SPLIT" = "" ]; tmux split-window -e "SPLIT=h" -v; end
+if [ "$SPLIT" = "h" ]; tmux split-window -e "SPLIT=v" -h; end
+if [ "$SPLIT" = "v" ]; tmux split-window -e "SPLIT=h" -v; end
+
+# bind -n M-p display-popup -E -w 70% -h 60% -e "TMUX_POPUP=true"
