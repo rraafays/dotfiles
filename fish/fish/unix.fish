@@ -1,3 +1,5 @@
+if [ "$MANPAGER" != "nvim -c 'Man! -o -'" ]; set MANPAGER "nvim -c 'Man! -o -'"; end
+
 set -x WLR_NO_HARDWARE_CURSORS 1
 set -x GBM_BACKEND nvidia-drm
 set -x __GLX_VENDOR_LIBRARY_NAME nvidia

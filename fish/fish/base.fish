@@ -1,8 +1,6 @@
 set fish_greeting ''
 
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
-if [ "$MANPAGER" != "nvim -c 'Man! -o -" ]; set MANPAGER "nvim -c 'Man! -o -'"; end # set manpager to neovim
-
 set FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # fzf prefs
 
 if status is-interactive; starship init fish | source; end # drop into starship
