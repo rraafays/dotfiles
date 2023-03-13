@@ -1,49 +1,37 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-format = "$status$username$hostname$battery$all"
+format = "$status$all"
 
 [battery]
-disabled = false
-format = '[$percentage]($style) '
-[[battery.display]]
-threshold = 20
-style = 'bold red'
-[[battery.display]]
-threshold = 50
-style = 'bold yellow'
-[[battery.display]]
-threshold = 99
-style = 'bold blue'
-[[battery.display]]
-threshold = 100
-style = 'bold green'
+disabled = true
 
 [character] 
-success_symbol = "[#](bold fg:4)"
-error_symbol = "[#](bold fg:4)"
-vimcmd_symbol = "[#](bold white)"
-vimcmd_replace_one_symbol = "[#](bold fg:9)"
-vimcmd_replace_symbol = "[#](bold fg:9)"
-vimcmd_visual_symbol = "[#](bold fg:11)"
+success_symbol = "[\\$](bold fg:4)"
+error_symbol = "[\\$](bold fg:4)"
+vimcmd_symbol = "[\\$](bold white)"
+vimcmd_replace_one_symbol = "[\\$](bold fg:9)"
+vimcmd_replace_symbol = "[\\$](bold fg:9)"
+vimcmd_visual_symbol = "[\\$](bold fg:11)"
 
 [line_break]
 disabled = true
 
 [username]
-disabled = true
+style_user = "bold fg:10"
+style_root = "bold fg:9"
+format = "[$user]($style) "
+show_always = true
+disabled = false
 
 [hostname]
-ssh_only = false
-format = "[$hostname ]($style)"
-style = "bold fg:9"
-disabled = false
+disabled = true
 
 [directory]
 style = "bold blue"
 read_only = " "
 read_only_style = "white"
-truncation_length = 3
+truncation_length = 1
 
 [cmd_duration]
 disabled = true
@@ -52,7 +40,7 @@ disabled = true
 disabled = false
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) ' 	
+format = '[$symbol]($style)' 	
 
 [status]
 disabled = false
