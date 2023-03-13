@@ -44,12 +44,14 @@ keymap.set('n', 'K', 'kJ')
 -- v-block on alt
 keymap.set('n', '<A-v>', '<C-v>')
 
--- unmap arrow keys
-keymap.set('', '<Up>', '<Nop>')
-keymap.set('', '<Right>', '<Nop>')
-keymap.set('', '<Down>', '<Nop>')
-keymap.set('', '<Left>', '<Nop>')
-keymap.set('i', '<Up>', '<Nop>')
-keymap.set('i', '<Right>', '<Nop>')
-keymap.set('i', '<Down>', '<Nop>')
-keymap.set('i', '<Left>', '<Nop>')
+-- unmap arrows
+keymap.set('n', '<Up>', '<Nop>')
+keymap.set('n', '<Right>', '<Nop>')
+keymap.set('n', '<Down>', '<Nop>')
+keymap.set('n', '<Left>', '<Nop>')
+
+-- insert arrows
+keymap.set('i', '<Up>', '￪')
+keymap.set('i', '<Right>', '->')
+keymap.set('i', '<Down>', '￬')
+keymap.set('i', '<Left>', '<-')
