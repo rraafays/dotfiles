@@ -41,6 +41,9 @@ keymap.set('n', '<BS>', 'dd')
 -- join to line above
 keymap.set('n', 'K', 'kJ')
 
+-- v-block on alt
+keymap.set('n', '<A-v>', '<C-v>')
+
 -- unmap arrow keys
 keymap.set('', '<Up>', '<Nop>')
 keymap.set('', '<Right>', '<Nop>')
