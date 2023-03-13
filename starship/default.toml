@@ -69,6 +69,11 @@ not_found_symbol = '󰋗 '
 sigint_symbol = '󰙦 '
 signal_symbol = '󰝥 '
 
+[env_var.MODE]
+default = ''
+format = '[$env_value]($style) '
+style = 'bold fg:14'
+
 
 [aws]
 symbol = "  "
