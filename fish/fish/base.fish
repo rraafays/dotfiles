@@ -11,6 +11,7 @@ if status is-interactive; starship init fish | source; end # drop into starship
 # different prompt for root
 if not fish_is_root_user; set -x STARSHIP_CONFIG "$HOME/.config/starship/default.toml"; end
 if fish_is_root_user; set -x STARSHIP_CONFIG "$HOME/.config/starship/root.toml"; end
+if [ "$TMUX_POPUP" = "true" ]; set -x STARSHIP_CONFIG "$HOME/.config/starship/condensed.toml"; end
 
 # fish vi mode
 fish_vi_key_bindings 
