@@ -62,6 +62,9 @@ format = '[$symbol]($style) '
 [dotnet]
 symbol = '󰌛 '
 format = '[$symbol($tfm)]($style) '
+[gradle]
+symbol = " "
+format = '[$symbol]($style) '
 [java]
 symbol = " "
 format = '[$symbol]($style) '
@@ -79,7 +82,4 @@ symbol = " "
 format = '[${symbol}${pyenv_prefix}(\($virtualenv\))]($style) '
 [rust]
 symbol = " "
-format = '[$symbol]($style) '
-[gradle]
-symbol = " "
 format = '[$symbol]($style) '
