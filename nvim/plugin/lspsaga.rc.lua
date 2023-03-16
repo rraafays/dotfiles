@@ -10,7 +10,7 @@ lspsaga.setup({
     enable = false
   },
   code_action = {
-    show_server_name = false
+    show_server_name = true,
   },
   lightbulb = {
     enable = false,
@@ -18,7 +18,7 @@ lspsaga.setup({
     sign = false
   },
   ui = {
-    border = 'single',
+    border = 'rounded',
     colors = {
       normal_bg = '#282828',
       title_bg = '#EBDBB2',

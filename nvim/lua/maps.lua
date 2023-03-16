@@ -44,11 +44,11 @@ keymap.set('n', 'K', 'kJ')
 -- v-block on alt
 keymap.set('n', '<A-v>', '<C-v>')
 
--- unmap arrows
-keymap.set('n', '<Up>', '<Nop>')
-keymap.set('n', '<Right>', '<Nop>')
-keymap.set('n', '<Down>', '<Nop>')
-keymap.set('n', '<Left>', '<Nop>')
+-- map arrows to pane nav
+keymap.set('n', '<Up>', ':wincmd k<CR>')
+keymap.set('n', '<Right>', ':wincmd l<CR>')
+keymap.set('n', '<Down>', ':wincmd j<CR>')
+keymap.set('n', '<Left>', ':wincmd h<CR>')
 
 -- insert arrows
 keymap.set('i', '<Up>', '￪')
