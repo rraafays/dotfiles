@@ -28,19 +28,21 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.lua_ls.setup {
   settings = {
     Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
       diagnostics = {
-        -- get the language server to recognise the 'vim' global
-        globals = { 'vim' }
+        globals = {'vim'},
       },
       workspace = {
-        -- make the server aware of neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true)
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false
       },
-      format = {
-        enable = false
-      }
-    }
-  }
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }
 
 nvim_lsp.omnisharp.setup {
