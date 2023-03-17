@@ -7,7 +7,7 @@ sudo yabai --load-sa
 yabai -m config                           \
   layout bsp                              \
   window_placement second_child           \
-  top_padding    40                       \
+  top_padding    20                       \
   bottom_padding 20                       \
   left_padding   20                       \
   right_padding  20                       \
