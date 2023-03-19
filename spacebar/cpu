@@ -1,1 +1,0 @@
-top -l1 | grep -E "CPU usage:" |  awk -v FS="CPU usage: | user, | sys, | idle" '{print $3}'
