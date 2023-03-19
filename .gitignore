@@ -2,26 +2,26 @@
 !.gitignore
 
 # multiplatform
-!fish
-!kitty
-!latexmk
-!lsd
-!neofetch
-!nvim
-!starship
-!tmux
-!xplr
-!zathura
+!fish/*
+!kitty/*
+!latexmk/*
+!lsd/*
+!neofetch/*
+!nvim/*
+!starship/*
+!tmux/*
+!xplr/*
+!zathura/*
 
 # linux
-!hypr
+!hypr/*
 
 # macos
-!karabiner
-!skhd
-!yabai
+!karabiner/*
+!skhd/*
+!yabai/*
 
 # misc
-!qmk
-!src
-!wallpapers
+!qmk/*
+!src/*
+!wallpapers/*
