@@ -6,9 +6,15 @@ set FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # fzf prefs
 if status is-interactive; starship init fish | source; end # drop into starship
 
 # different prompt for root
-if not fish_is_root_user; set -x STARSHIP_CONFIG "$HOME/.config/starship/default.toml"; end
-if fish_is_root_user; set -x STARSHIP_CONFIG "$HOME/.config/starship/root.toml"; end
-if [ "$TMUX_POPUP" = "true" ]; set -x STARSHIP_CONFIG "$HOME/.config/starship/condensed.toml"; end
+if not fish_is_root_user; 
+  cat "$STARSHIP_HOME/base.toml" "$STARSHIP_HOME/user.toml" > "$STARSHIP_HOME/.user"
+  set -x STARSHIP_CONFIG "$STARSHIP_HOME/.user"
+end
+
+if fish_is_root_user; 
+  cat "$STARSHIP_HOME/base.toml" "$STARSHIP_HOME/root.toml" > "$STARSHIP_HOME/.root"
+  set -x STARSHIP_CONFIG "$STARSHIP_HOME/.root"
+end
 
 # fish vi mode
 fish_vi_key_bindings 
