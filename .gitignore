@@ -1,2 +1,27 @@
 *
 !.gitignore
+
+# multiplatform
+!fish
+!kitty
+!latexmk
+!lsd
+!neofetch
+!nvim
+!starship
+!tmux
+!xplr
+!zathura
+
+# linux
+!hypr
+
+# macos
+!karabiner
+!skhd
+!yabai
+
+# misc
+!qmk
+!src
+!wallpapers
