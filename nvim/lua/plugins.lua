@@ -45,8 +45,6 @@ lazy.setup({
   'lervag/vimtex', -- latex auto compiler
   'folke/zen-mode.nvim', -- zen mode
   'elkowar/yuck.vim', -- yuck lsp
-  'muniftanjim/nui.nvim', -- ui library
   'kylechui/nvim-surround', -- surround items
-  'johmsalas/text-case.nvim', -- snake case everything
   'nvim-tree/nvim-tree.lua' -- file tree
 })

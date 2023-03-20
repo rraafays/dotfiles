@@ -4,7 +4,7 @@ if (not status) then return end
 zen.setup {
   window = {
     backdrop = 1,
-    width = .3,
+    width = .4,
     height = 1,
     options = {
       number = false,
