@@ -46,5 +46,6 @@ lazy.setup({
   'folke/zen-mode.nvim', -- zen mode
   'elkowar/yuck.vim', -- yuck lsp
   'kylechui/nvim-surround', -- surround items
-  'nvim-tree/nvim-tree.lua' -- file tree
+  'nvim-tree/nvim-tree.lua', -- file tree
+  'mfussenegger/nvim-dap' -- debug adapter protocol
 })
