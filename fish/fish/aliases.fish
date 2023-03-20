@@ -1,8 +1,12 @@
-# various vi related aliases
+# various vi aliases 
 function vi -d 'launch neovim'; nvim $argv; end
-function ai -d 'launch chatgpt'; nvim -c 'ChatGPT'; end
 function fi -d 'launch telescope find'; nvim -c 'Telescope find_files'; end
 function gi -d 'launch telescope live grep'; nvim -c 'Telescope live_grep'; end
+
+# separate vi plugins into commands
+function mason -d 'launch mason for neovim'; nvim -c 'Mason'; end
+function lazy -d 'launch lazy for neovim'; nvim -c 'Lazy'; end
+function tsupdate -d 'launch tsupdate for neovim'; nvim -c 'TSUpdateSync'; end
 
 # shorthand transmission and transmission-daemon
 function t -d 'shorthand transmission-remote'; transmission-remote $argv; end
