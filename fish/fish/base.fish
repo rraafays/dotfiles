@@ -7,13 +7,13 @@ if status is-interactive; starship init fish | source; end # drop into starship
 
 # different prompt for root
 if not fish_is_root_user; 
-  cat "$STARSHIP_HOME/base.toml" "$STARSHIP_HOME/user.toml" > "$STARSHIP_HOME/.user"
-  set -x STARSHIP_CONFIG "$STARSHIP_HOME/.user"
+  cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/user.toml" > "$HOME/.config/starship/.user"
+  set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
 end
 
 if fish_is_root_user; 
-  cat "$STARSHIP_HOME/base.toml" "$STARSHIP_HOME/root.toml" > "$STARSHIP_HOME/.root"
-  set -x STARSHIP_CONFIG "$STARSHIP_HOME/.root"
+  cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/root.toml" > "$HOME/.config/starship/.root"
+  set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
 end
 
 # fish vi mode
