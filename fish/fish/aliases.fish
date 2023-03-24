@@ -33,3 +33,6 @@ function tree -d 'tree using lsd'; lsd --tree $argv; end
 
 # translate in shell
 function trans -d 'translate briefly'; command trans -b $argv; end
+
+# image in kitty
+function icat -d 'image in kitty'; kitty +kitten icat --align left $argv ; end
