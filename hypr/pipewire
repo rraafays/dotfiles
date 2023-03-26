@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-pipewire & wireplumber &
+pipewire & pipewire-pulse & wireplumber &
