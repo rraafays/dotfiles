@@ -39,12 +39,11 @@ lazy.setup({
   'hrsh7th/nvim-cmp', -- language completions
   'glepnir/lspsaga.nvim', -- lsp uis
   'lervag/vimtex', -- latex auto compiler
-  'elkowar/yuck.vim', -- yuck lsp
   'windwp/nvim-autopairs', -- auto closing brackets and quotations
   'windwp/nvim-ts-autotag', -- auto closing typescript tags
   'kylechui/nvim-surround', -- surround items
+  'numtostr/comment.nvim', -- toggle comments
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-telescope/telescope-file-browser.nvim', -- file explorer
-  'nvim-lua/plenary.nvim', -- common file utilities
-  'mfussenegger/nvim-dap' -- debug adapter protocol
+  'nvim-lua/plenary.nvim' -- common file utilities
 })
