@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-pipewire & pipewire-pulse & wireplumber &
+while true; do gentoo-pipewire-launcher && break; done
