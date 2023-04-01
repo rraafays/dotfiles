@@ -3,7 +3,11 @@ set fish_greeting ''
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
 set FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # fzf prefs
 
-if status is-interactive; starship init fish | source; end # drop into starship
+# drop into starship and initialise zoxide
+if status is-interactive; 
+  starship init fish | source
+  zoxide init fish | source
+end 
 
 # different prompt for root
 if not fish_is_root_user; 
