@@ -35,4 +35,7 @@ function tree -d 'tree using lsd'; lsd --tree $argv; end
 function trans -d 'translate briefly'; command trans -b $argv; end
 
 # image in kitty
-function icat -d 'image in kitty'; kitty +kitten icat --align left $argv ; end
+function icat -d 'image in kitty'; kitty +kitten icat --align left $argv; end
+
+# visit the graveyard
+function graveyard -d 'visit the graveyard'; z $HOME/.graveyard; end
