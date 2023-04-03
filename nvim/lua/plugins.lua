@@ -27,7 +27,6 @@ lazy.setup({
   'norcalli/nvim-colorizer.lua', -- colour highlights hex, rgb and more
   'lewis6991/gitsigns.nvim', -- git markers
   'folke/zen-mode.nvim', -- zen mode
-  'nvim-tree/nvim-tree.lua', -- file tree
   'nvim-treesitter/nvim-treesitter', -- accurate code tree highlighting
   'neovim/nvim-lspconfig', -- language server protocol
   'williamboman/mason.nvim', -- lsp installer
