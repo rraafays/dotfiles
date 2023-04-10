@@ -26,7 +26,10 @@ lazy.setup({
   'kyazdani42/nvim-web-devicons', -- file icons
   'norcalli/nvim-colorizer.lua', -- colour highlights hex, rgb and more
   'lewis6991/gitsigns.nvim', -- git markers
+  'muniftanjim/nui.nvim', -- ui library
+  'rcarriga/nvim-notify', -- notification replacement  
   'folke/zen-mode.nvim', -- zen mode
+  'folke/noice.nvim', -- ui replacement
   'nvim-treesitter/nvim-treesitter', -- accurate code tree highlighting
   'neovim/nvim-lspconfig', -- language server protocol
   'williamboman/mason.nvim', -- lsp installer
