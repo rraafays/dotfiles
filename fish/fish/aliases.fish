@@ -37,9 +37,10 @@ function trans -d 'translate briefly'; command trans -b $argv; end
 # image in kitty
 function icat -d 'image in kitty'; kitty +kitten icat --align left $argv; end
 
-# visit the graveyard or view graves
+# various aliases for rip functions
 function graveyard -d 'visit the graveyard'; z $HOME/.graveyard; end
 function graves -d 'view graves'; tree $HOME/.graveyard; end
+function decompose -d 'decompose the graveyard'; rip --decompose; end
 
 # shorthand zathura
 function za -d 'launch zathura'; zathura $argv &; end
