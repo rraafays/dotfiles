@@ -40,7 +40,6 @@ lazy.setup({
   'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built in lsp
   'hrsh7th/nvim-cmp', -- language completions
   'glepnir/lspsaga.nvim', -- lsp uis
-  'lervag/vimtex', -- latex auto compiler
   'windwp/nvim-autopairs', -- auto closing brackets and quotations
   'windwp/nvim-ts-autotag', -- auto closing typescript tags
   'kylechui/nvim-surround', -- surround items
