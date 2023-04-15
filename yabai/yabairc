@@ -34,7 +34,12 @@ yabai -m space                            \
   2                                       \
   3                                       \
   4                                       \
-  5                                       
+  5                                       \
+  6                                       \
+  7                                       \
+  8                                       \
+  9                                       \
+  10                                       
 
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
