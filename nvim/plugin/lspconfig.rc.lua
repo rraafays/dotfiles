@@ -20,11 +20,17 @@ vim.fn.sign_define(
   { texthl = "DiagnosticSignInfo", text = "", numhl = "DiagnosticSignInfo" }
 )
 
+vim.g.rust_recommended_style = false
+nvim_lsp.rust_analyzer.setup {}
+nvim_lsp.csharp_ls.setup { }
+nvim_lsp.clangd.setup {}
+nvim_lsp.bashls.setup {}
+nvim_lsp.pylsp.setup {}
+nvim_lsp.ltex.setup {}
 nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   cmd = { "typescript-language-server", "--stdio" }
 }
-
 nvim_lsp.lua_ls.setup {
   settings = {
     Lua = {
@@ -44,14 +50,3 @@ nvim_lsp.lua_ls.setup {
     },
   },
 }
-
-vim.g.rust_recommended_style = false
-nvim_lsp.rust_analyzer.setup {}
-nvim_lsp.csharp_ls.setup { }
-nvim_lsp.clangd.setup {}
-nvim_lsp.bashls.setup {}
-nvim_lsp.jdtls.setup {}
-nvim_lsp.gradle_ls.setup {}
-nvim_lsp.pylsp.setup {}
-nvim_lsp.ltex.setup {}
-nvim_lsp.astro.setup {}
