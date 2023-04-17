@@ -45,12 +45,9 @@ nvim_lsp.lua_ls.setup {
   },
 }
 
-nvim_lsp.omnisharp.setup {
-  cmd = { "dotnet", os.getenv("HOME") .. "/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll" }
-}
 vim.g.rust_recommended_style = false
 nvim_lsp.rust_analyzer.setup {}
-
+nvim_lsp.csharp_ls.setup { }
 nvim_lsp.clangd.setup {}
 nvim_lsp.bashls.setup {}
 nvim_lsp.jdtls.setup {}
