@@ -37,8 +37,10 @@ function trans -d 'translate briefly'; command trans -b $argv; end
 # image in kitty
 function icat -d 'image in kitty'; kitty +kitten icat --align left $argv; end
 
-# use mpv as image viewer
-function imv -d 'mpv as image viewer'; mpv --loop --window-maximized --no-terminal $argv &; end
+# use mpv to handle media
+function mpv -d 'mpv as image viewer'; command mpv --no-terminal $argv &; end
+function imv -d 'mpv as image viewer'; command mpv --loop --window-maximized --no-terminal $argv &; end
+function play -d 'mpv as audio player'; command mpv --no-audio-display $argv; end
 
 # various aliases for rip functions
 function graveyard -d 'visit the graveyard'; z $HOME/.graveyard; end
