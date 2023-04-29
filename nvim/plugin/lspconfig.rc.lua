@@ -21,8 +21,12 @@ vim.fn.sign_define(
 )
 
 vim.g.rust_recommended_style = false
-nvim_lsp.rust_analyzer.setup {}
-nvim_lsp.csharp_ls.setup { }
+nvim_lsp.rust_analyzer.setup {
+  settings = {
+    [ "rust-analyzer" ] = { diagnostics = { disabled = { "unresolved-proc-macro" } } }
+  }
+}
+nvim_lsp.csharp_ls.setup {}
 nvim_lsp.clangd.setup {}
 nvim_lsp.bashls.setup {}
 nvim_lsp.pylsp.setup {}
