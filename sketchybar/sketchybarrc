@@ -7,7 +7,7 @@ sketchybar --bar height=40        \
                  sticky=off       \
                  padding_left=10  \
                  padding_right=10 \
-                 color=0x00282828
+                 color=0xFF282828
 
 sketchybar --default icon.font="Symbols Nerd Font:1000-em:12.0" \
                      icon.color=0xFFEBDBB2                      \
