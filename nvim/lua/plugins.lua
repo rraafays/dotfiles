@@ -46,5 +46,6 @@ lazy.setup({
   'numtostr/comment.nvim', -- toggle comments
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-telescope/telescope-file-browser.nvim', -- file explorer
-  'nvim-lua/plenary.nvim' -- common file utilities
+  'nvim-lua/plenary.nvim', -- common file utilities
+  'lervag/vimtex' -- live tex compiling
 })
