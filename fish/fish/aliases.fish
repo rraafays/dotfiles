@@ -49,3 +49,6 @@ function decompose -d 'decompose the graveyard'; rip --decompose; end
 
 # shorthand zathura
 function za -d 'launch zathura'; zathura $argv &; end
+
+# flashfetch -> neofetch
+function neofetch -d 'command'; flashfetch; end
