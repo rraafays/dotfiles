@@ -6,7 +6,7 @@ function neofetch -d 'command'; flashfetch; end
 
 # rm -> rip
 function graveyard -d 'visit the graveyard'; z $HOME/.graveyard; end
-function graves -d 'view graves'; tree $HOME/.graveyard; end
+function graves -d 'view graves'; tree -a $HOME/.graveyard; end
 function decompose -d 'decompose the graveyard'; rip --decompose; end
 
 # shorthands
