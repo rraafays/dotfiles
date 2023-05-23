@@ -33,6 +33,7 @@ lazy.setup({
     'folke/zen-mode.nvim', -- zen coding
     'nvim-treesitter/nvim-treesitter', -- code highlighting
     'l3mon4d3/luasnip', -- code snippets
+    'nvim-telescope/telescope.nvim', -- fuzzy finder
 
     -- language server
     'neovim/nvim-lspconfig', -- language servers
@@ -55,11 +56,8 @@ lazy.setup({
     'kylechui/nvim-surround', -- surround function
     'numtostr/comment.nvim', -- comment manipulation
 
-    -- file exploring
-    'nvim-telescope/telescope.nvim', -- fuzzy finder
-    'nvim-telescope/telescope-file-browser.nvim', -- file explorer
-    'nvim-lua/plenary.nvim', -- file utilities
-
     -- miscellaneous
-    'lervag/vimtex' -- live tex compiling
+    'lervag/vimtex', -- live tex compiling
+    'nvim-telescope/telescope-file-browser.nvim', -- file explorer
+    'nvim-lua/plenary.nvim' -- file utilities
 })
