@@ -1,8 +1,6 @@
 local status, lualine = pcall(require, 'lualine')
 if (not status) then return end
 
-vim.o.cmdheight = 0
-
 local theme = require('lualine.themes.gruvbox')
 theme.normal.c.bg = '#282828'
 theme.insert.c.bg = '#282828'
