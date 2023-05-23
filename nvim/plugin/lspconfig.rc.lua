@@ -2,13 +2,8 @@ local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
 
 vim.g.rust_recommended_style = true
-nvim_lsp.rust_analyzer.setup {
-  settings = {
-    [ "rust-analyzer" ] = {
-      diagnostics = { disabled = { "unresolved-proc-macro" } }
-    }
-  }
-}
+vim.g.rustfmt_autosave = 1
+
 nvim_lsp.lua_ls.setup {
   settings = {
     Lua = {

@@ -19,10 +19,12 @@ cmp.setup({
       select = true
     }),
   }),
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'buffer' }
-  }),
+  sources = {
+        { name = "path" },
+        { name = "buffer" },
+        { name = "nvim_lsp" },
+        { name = "crates" }
+  },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
   }
