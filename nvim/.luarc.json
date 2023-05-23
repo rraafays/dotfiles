@@ -35,6 +35,7 @@
         "/home/raf/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp/after",
         "/home/raf/.config/nvim/after",
         "${3rd}/luassert/library",
-        "/home/raf/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/767edc42"
+        "/home/raf/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/767edc42",
+        "/Users/raf/.local/share/nvim/mason/packages/lua-language-server/libexec/meta/430a575b"
     ]
 }
