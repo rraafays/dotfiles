@@ -21,31 +21,28 @@ end
 -- starts lazy
 lazy.setup({
   defaults = { lazy = true },
-  'hoob3rt/lualine.nvim', -- replacement statusline
-  'ellisonleao/gruvbox.nvim', -- gruvbox theme
-  'kyazdani42/nvim-web-devicons', -- file icons
-  'norcalli/nvim-colorizer.lua', -- colour highlights hex, rgb and more
-  'lewis6991/gitsigns.nvim', -- git markers
-  'muniftanjim/nui.nvim', -- ui library
-  'rcarriga/nvim-notify', -- notification replacement  
-  'folke/zen-mode.nvim', -- zen mode
-  'folke/noice.nvim', -- ui replacement
-  'nvim-treesitter/nvim-treesitter', -- accurate code tree highlighting
-  'neovim/nvim-lspconfig', -- language server protocol
-  'williamboman/mason.nvim', -- lsp installer
+  'hoob3rt/lualine.nvim', -- statusline
+  'ellisonleao/gruvbox.nvim', -- theme
+  'kyazdani42/nvim-web-devicons', -- icons
+  'norcalli/nvim-colorizer.lua', -- colour highlights
+  'lewis6991/gitsigns.nvim', -- git changes
+  'folke/zen-mode.nvim', -- zen coding
+  'nvim-treesitter/nvim-treesitter', -- code highlighting
+  'neovim/nvim-lspconfig', -- language servers
+  'williamboman/mason.nvim', -- language server installer
   'williamboman/mason-lspconfig.nvim', -- lsp configurator
-  'l3mon4d3/luasnip', --snippets for completions
-  'onsails/lspkind-nvim', -- vscode style pictograms
-  'hrsh7th/cmp-buffer', -- nvim-cmp source for buffer words
-  'hrsh7th/cmp-nvim-lsp', -- nvim-cmp source for neovim's built in lsp
+  'l3mon4d3/luasnip', -- code snippets
+  'onsails/lspkind-nvim', -- pictograms
   'hrsh7th/nvim-cmp', -- language completions
-  'glepnir/lspsaga.nvim', -- lsp uis
-  'windwp/nvim-autopairs', -- auto closing brackets and quotations
-  'windwp/nvim-ts-autotag', -- auto closing typescript tags
-  'kylechui/nvim-surround', -- surround items
-  'numtostr/comment.nvim', -- toggle comments
+  'hrsh7th/cmp-buffer', -- cmp buffer words
+  'hrsh7th/cmp-nvim-lsp', -- cmp lsp
+  'glepnir/lspsaga.nvim', -- language server uis
+  'windwp/nvim-autopairs', -- auto closing marks
+  'windwp/nvim-ts-autotag', -- auto closing tags
+  'kylechui/nvim-surround', -- surround function
+  'numtostr/comment.nvim', -- comment manipulation
   'nvim-telescope/telescope.nvim', -- fuzzy finder
   'nvim-telescope/telescope-file-browser.nvim', -- file explorer
-  'nvim-lua/plenary.nvim', -- common file utilities
+  'nvim-lua/plenary.nvim', -- file utilities
   'lervag/vimtex' -- live tex compiling
 })
