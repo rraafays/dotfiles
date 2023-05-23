@@ -22,6 +22,7 @@ yabai -m config                           \
   mouse_action1 move                      \
   mouse_action2 resize                    \
   focus_follows_mouse off                 \
+  mouse_follows_focus on                  \
   window_topmost on                       \
   window_shadow off                       \
   window_border on                        \
