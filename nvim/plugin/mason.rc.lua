@@ -13,6 +13,8 @@ mason_lsp.setup {
         'csharp_ls',
         'ltex',
         'lua_ls',
-        'tsserver'
+        'tsserver',
+        'taplo',
+        'pylsp'
     }
 }
