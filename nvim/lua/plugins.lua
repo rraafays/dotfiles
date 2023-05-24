@@ -43,7 +43,6 @@ lazy.setup({
     'hrsh7th/cmp-buffer', -- cmp buffer words
     'hrsh7th/cmp-nvim-lsp', -- cmp lsp
     'glepnir/lspsaga.nvim', -- language server uis
-    'mfussenegger/nvim-dap', -- debug adaptor
 
     -- rust
     'rust-lang/rust.vim', --
