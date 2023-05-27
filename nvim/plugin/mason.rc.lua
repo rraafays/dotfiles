@@ -15,6 +15,7 @@ mason_lsp.setup {
         'lua_ls',
         'tsserver',
         'taplo',
-        'pylsp'
+        'pylsp',
+        'astro'
     }
 }
