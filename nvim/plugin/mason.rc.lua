@@ -16,6 +16,7 @@ mason_lsp.setup {
         'tsserver',
         'taplo',
         'pylsp',
-        'astro'
+        'astro',
+        'cssls'
     }
 }
