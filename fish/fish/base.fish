@@ -3,6 +3,7 @@ set fish_greeting ''
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # fzf prefs
 set -x GRAVEYARD "$HOME/.graveyard" # set graveyard
+set -x ELINKS_CONFDIR "$HOME/.config/elinks"
 
 # drop into starship and initialise zoxide
 if status is-interactive; 
