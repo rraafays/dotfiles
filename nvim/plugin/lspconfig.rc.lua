@@ -1,6 +1,10 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
 
+vim.diagnostic.config({
+    update_in_insert = true;
+})
+
 vim.g.rust_recommended_style = true
 vim.g.rustfmt_autosave = 1
 

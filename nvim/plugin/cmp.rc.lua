@@ -27,7 +27,11 @@ cmp.setup({
   },
   formatting = {
     format = lspkind.cmp_format({ with_text = true, maxwidth = 50 })
-  }
+  },
+    window = {
+        completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+        documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+    }
 })
 
 vim.cmd [[

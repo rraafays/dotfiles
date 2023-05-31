@@ -2,10 +2,11 @@ local status, lualine = pcall(require, 'lualine')
 if (not status) then return end
 
 local theme = require('lualine.themes.gruvbox')
-theme.normal.c.bg = '#282828'
-theme.insert.c.bg = '#282828'
-theme.replace.c.bg = '#282828'
-theme.visual.c.bg = '#282828'
+theme.inactive.c.bg = '#000000'
+theme.normal.c.bg = '#000000'
+theme.insert.c.bg = '#000000'
+theme.replace.c.bg = '#000000'
+theme.visual.c.bg = '#000000'
 theme.insert.a.bg = '#8EC07C'
 
 lualine.setup {
