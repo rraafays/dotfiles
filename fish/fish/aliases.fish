@@ -26,7 +26,6 @@ function play -d 'mpv as audio player'; command mpv --no-audio-display $argv; en
 
 # preference flags
 function bat -d 'command'; command bat --theme gruvbox-dark $argv; end
-function onefetch -d 'command'; command onefetch --true-color never; end
 function scrcpy -d 'command'; command scrcpy --shortcut-mod lctrl --disable-screensaver $argv; end
 function fzf -d 'command'; command fzf --color=16; end
 function duf -d 'command'; command duf -theme ansi $argv; end
