@@ -34,6 +34,7 @@ lazy.setup({
     'nvim-treesitter/nvim-treesitter', -- code highlighting
     'l3mon4d3/luasnip', -- code snippets
     'nvim-telescope/telescope.nvim', -- fuzzy finder
+    'goolord/alpha-nvim', -- startpage
 
     -- language server
     'neovim/nvim-lspconfig', -- language servers
