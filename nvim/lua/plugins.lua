@@ -59,5 +59,6 @@ lazy.setup({
     -- miscellaneous
     'lervag/vimtex', -- live tex compiling
     'nvim-telescope/telescope-file-browser.nvim', -- file explorer
-    'nvim-lua/plenary.nvim' -- file utilities
+    'nvim-lua/plenary.nvim', -- file utilities
+    'RaafatTurki/hex.nvim', -- hex editor
 })
