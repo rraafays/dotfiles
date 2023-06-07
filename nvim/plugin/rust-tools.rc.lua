@@ -1,5 +1,4 @@
-local status, rust_tools = pcall(require, 'rust-tools')
-if (not status) then return end
+local rust_tools = require("rust-tools")
 
 rust_tools.setup {
 	server = {

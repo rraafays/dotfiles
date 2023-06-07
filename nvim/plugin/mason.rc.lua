@@ -1,8 +1,5 @@
-local status, mason = pcall(require, 'mason')
-if (not status) then return end
-
-local status, mason_lsp = pcall(require, 'mason-lspconfig')
-if (not status) then return end
+local mason = require("mason")
+local mason_lsp = require("mason-lspconfig")
 
 mason.setup { }
 mason_lsp.setup {

@@ -1,7 +1,6 @@
-local status, gruvbox = pcall(require, 'gruvbox')
-if (not status) then return end
+local gruvbox = require("gruvbox")
 
-gruvbox.setup({
+gruvbox.setup{
     italic = { strings = false, operators = false, comments = false },
     invert_selection = true,
     palette_overrides = {
@@ -9,6 +8,6 @@ gruvbox.setup({
         dark1 = "#000000",
         dark2 = "#000000"
     }
-})
+}
 
 vim.cmd [[ colorscheme gruvbox ]]

@@ -1,5 +1,4 @@
-local status, crates = pcall(require, 'crates')
-if (not status) then return end
+local crates = require("crates")
 
 crates.setup {
     smart_insert = true,

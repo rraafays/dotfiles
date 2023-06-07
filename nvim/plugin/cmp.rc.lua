@@ -1,8 +1,7 @@
-local status, cmp = pcall(require, "cmp")
-if (not status) then return end
+local cmp = require("cmp")
 local lspkind = require 'lspkind'
 
-cmp.setup({
+cmp.setup {
     snippet = {
         expand = function(args)
         require('luasnip').lsp_expand(args.body)
@@ -32,7 +31,7 @@ cmp.setup({
         completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
         documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
     }
-})
+}
 
 vim.cmd [[
     set completeopt=menuone,noinsert,noselect
