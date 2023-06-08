@@ -49,7 +49,7 @@ vim.fn.sign_define(
 )
 vim.fn.sign_define(
   "DiagnosticSignHint",
-    { texthl = "DiagnosticSignHint", text = "", numhl = "DiagnosticSignHint" }
+    { texthl = "DiagnosticSignHint", text = "󰌵", numhl = "DiagnosticSignHint" }
 )
 vim.fn.sign_define(
     "DiagnosticSignInfo",

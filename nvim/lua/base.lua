@@ -34,6 +34,7 @@ vim.opt.si = true
 vim.opt.wrap = true
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append { '**' }
+vim.opt.pumblend = 0
 vim.opt.fillchars = {
   horiz     = ' ',
   horizup   = ' ',
