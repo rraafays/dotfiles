@@ -4,7 +4,38 @@ add_newline = false
 format = "$status$username$hostname$battery$all"
 
 [battery]
-disabled = true
+disabled = false
+
+[[battery.display]]
+threshold = 0
+discharging_symbol = '󰂎 '
+charging_symbol = '󰢟 '
+style = 'fg:8'
+[[battery.display]]
+threshold = 20
+discharging_symbol = '󰁻 '
+charging_symbol = '󰂆 '
+style = 'fg:8'
+[[battery.display]]
+threshold = 40
+discharging_symbol = '󰁽 '
+charging_symbol = '󰂈 '
+style = 'fg:8'
+[[battery.display]]
+threshold = 60
+discharging_symbol = '󰁿 '
+charging_symbol = '󰂉 '
+style = 'fg:8'
+[[battery.display]]
+threshold = 80
+discharging_symbol = '󰂁 '
+charging_symbol = '󰂊 '
+style = 'fg:8'
+[[battery.display]]
+threshold = 100
+discharging_symbol = '󰁹 '
+charging_symbol = '󰂅 '
+style = 'fg:8'
 
 [character] 
 success_symbol = "[\\$](bold blue)"
