@@ -33,7 +33,7 @@ yabai -m config                           \
   window_animation_duration 0.1           \
   window_animation_frame_rate 60          \
   window_border_blur off                  \
-  external_bar all:20:0
+  external_bar all:0:0
 
 yabai -m space                            \
   1                                       \
