@@ -23,8 +23,14 @@ telescope.setup {
                     ['<C-w>'] = function() vim.cmd('normal vbd') end,
                 },
                 ['n'] = {
-                    ['N'] = fb_actions.create,
+                    ['n'] = fb_actions.create,
+                    ['m'] = fb_actions.move,
+                    ['r'] = fb_actions.rename,
+                    ['c'] = fb_actions.copy,
+                    ['x'] = fb_actions.remove,
                     ['h'] = fb_actions.goto_parent_dir,
+                    ['l'] = fb_actions.change_cwd,
+                    ['~'] = fb_actions.goto_cwd,
                     ['/'] = function()
                         vim.cmd('startinsert')
                     end
