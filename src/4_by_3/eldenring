@@ -1,5 +1,3 @@
 open eldenring.exe with hex editor
 
 change 74 4F 45 8B 94 CC -> EB 4F 45 8B 94 CC
-
-this will remove black bars
