@@ -20,9 +20,19 @@ cmp.setup {
     }),
     sources = {
         { name = "path" },
-        { name = "buffer" },
-        { name = "nvim_lsp" },
-        { name = "crates" }
+        { name = "crates" },
+        {
+            name = "buffer",
+            entry_filter = function(entry, ctx)
+                return require('cmp.types').lsp.CompletionItemKind[entry:get_kind()] ~= 'Text'
+            end
+        },
+        {
+            name = 'nvim_lsp',
+            entry_filter = function(entry, ctx)
+                return require('cmp.types').lsp.CompletionItemKind[entry:get_kind()] ~= 'Text'
+            end
+        }
     },
     formatting = {
         format = lspkind.cmp_format({
