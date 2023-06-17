@@ -1,12 +1,15 @@
 local lualine = require("lualine")
 local theme = require('lualine.themes.gruvbox')
 
+theme.insert.a.bg = '#8EC07C'
 theme.inactive.c.bg = '#000000'
 theme.normal.c.bg = '#000000'
 theme.insert.c.bg = '#000000'
 theme.replace.c.bg = '#000000'
 theme.visual.c.bg = '#000000'
-theme.insert.a.bg = '#8EC07C'
+theme.visual.c.fg = '#EBDBB2'
+theme.replace.c.fg = '#EBDBB2'
+theme.insert.c.fg = '#EBDBB2'
 
 lualine.setup {
     options = {
