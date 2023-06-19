@@ -61,4 +61,5 @@ lazy.setup({
     'nvim-telescope/telescope-file-browser.nvim', -- file explorer
     'nvim-lua/plenary.nvim', -- file utilities
     'RaafatTurki/hex.nvim', -- hex editor
+    'akinsho/toggleterm.nvim', -- toggle terminal
 })

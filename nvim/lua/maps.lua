@@ -49,6 +49,10 @@ keymap.set('n', '<Up>', ':wincmd k<CR>')
 keymap.set('n', '<Right>', ':wincmd l<CR>')
 keymap.set('n', '<Down>', ':wincmd j<CR>')
 keymap.set('n', '<Left>', ':wincmd h<CR>')
+keymap.set('t', '<Up>', '<cmd> wincmd k<CR>')
+keymap.set('t', '<Right>', '<cmd> wincmd l<CR>')
+keymap.set('t', '<Down>', '<cmd> wincmd j<CR>')
+keymap.set('t', '<Left>', '<cmd> wincmd h<CR>')
 
 -- insert arrows
 keymap.set('i', '<Up>', '￪')
