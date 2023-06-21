@@ -12,7 +12,7 @@ local dashboard = require('alpha.themes.dashboard')
 [[                      eNL:,l=N0`.   ls`N0> ibK]],
 [[                      XHZu!       _(c      kPBN]],
 [[                       'CD   .     `      tK7KX]],
-[[                         'f     _&zrc_.  .Y]],
+[[                         'f     _&zrc_.  .Y       welcome]],
 [[    ,                      v,   `ta.="  ,V]],
 [[   7q. 6%                   ^l     =   .r]],
 [[   f'noib. +                `d+   .._a7                     t]],
