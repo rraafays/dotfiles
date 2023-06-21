@@ -38,6 +38,7 @@ nvim_lsp.bashls.setup {}
 nvim_lsp.pylsp.setup {}
 nvim_lsp.ltex.setup {}
 nvim_lsp.taplo.setup {}
+nvim_lsp.jdtls.setup {}
 
 vim.fn.sign_define(
     "DiagnosticSignError",
