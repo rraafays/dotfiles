@@ -12,6 +12,19 @@ configs.setup {
         disable = {},
     },
     ensure_installed = {
-        'lua', 'javascript', 'tsx', 'vim', 'fish', 'c', 'c_sharp', 'bash', 'python', 'markdown', 'markdown_inline', 'astro', 'rust', 'java'
+        'lua',
+        'javascript',
+        'tsx',
+        'vim',
+        'fish',
+        'c',
+        'c_sharp',
+        'bash',
+        'python',
+        'markdown',
+        'markdown_inline',
+        'astro',
+        'rust',
+        'java',
     }
 }

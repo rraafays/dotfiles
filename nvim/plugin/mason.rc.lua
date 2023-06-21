@@ -14,6 +14,7 @@ mason_lsp.setup {
         'taplo',
         'pylsp',
         'astro',
-        'cssls'
+        'cssls',
+        'jdtls',
     }
 }
