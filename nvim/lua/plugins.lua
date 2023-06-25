@@ -56,6 +56,7 @@ lazy.setup({
     'windwp/nvim-ts-autotag', -- auto closing tags
     'kylechui/nvim-surround', -- surround function
     'numtostr/comment.nvim', -- comment manipulation
+    'folke/which-key.nvim', -- show commands
 
     -- miscellaneous
     'lervag/vimtex', -- live tex compiling
