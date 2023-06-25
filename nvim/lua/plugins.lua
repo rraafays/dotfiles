@@ -27,6 +27,7 @@ lazy.setup({
     'kyazdani42/nvim-web-devicons', -- icons
     'norcalli/nvim-colorizer.lua', -- colour highlights
     'onsails/lspkind-nvim', -- pictograms
+    'tamton-aquib/keys.nvim', -- show keystrokes
 
     -- interface
     'lewis6991/gitsigns.nvim', -- git changes
