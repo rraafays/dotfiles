@@ -11,7 +11,7 @@ gruvbox.setup{
 }
 
 if os.getenv("DISPLAY") == nil then
-    vim.cmd [[ colorscheme habamax ]]
+    vim.cmd [[ colorscheme default ]]
 else
     vim.cmd [[ colorscheme gruvbox ]]
 end
