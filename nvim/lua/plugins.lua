@@ -21,23 +21,18 @@ end
 -- starts lazy
 lazy.setup({
     defaults = { lazy = true },
-    -- aesthetic
+
+    'ellisonleao/gruvbox.nvim', -- gruvbox theme
     'hoob3rt/lualine.nvim', -- statusline
-    'ellisonleao/gruvbox.nvim', -- theme
     'kyazdani42/nvim-web-devicons', -- icons
     'norcalli/nvim-colorizer.lua', -- colour highlights
     'onsails/lspkind-nvim', -- pictograms
-    'tamton-aquib/keys.nvim', -- show keystrokes
-
-    -- interface
     'lewis6991/gitsigns.nvim', -- git changes
     'folke/zen-mode.nvim', -- zen coding
     'nvim-treesitter/nvim-treesitter', -- code highlighting
     'l3mon4d3/luasnip', -- code snippets
     'nvim-telescope/telescope.nvim', -- fuzzy finder
     'goolord/alpha-nvim', -- startpage
-
-    -- language server
     'neovim/nvim-lspconfig', -- language servers
     'williamboman/mason.nvim', -- language server installer
     'williamboman/mason-lspconfig.nvim', -- lsp configurator
@@ -45,20 +40,13 @@ lazy.setup({
     'hrsh7th/cmp-buffer', -- cmp buffer words
     'hrsh7th/cmp-nvim-lsp', -- cmp lsp
     'glepnir/lspsaga.nvim', -- language server uis
-
-    -- rust
-    'rust-lang/rust.vim', --
-    'simrat39/rust-tools.nvim',
-    'saecki/crates.nvim',
-
-    -- quality of life
+    'rust-lang/rust.vim', -- rust configuration
+    'simrat39/rust-tools.nvim', -- rust devtools
+    'saecki/crates.nvim', -- better crates support
     'windwp/nvim-autopairs', -- auto closing marks
     'windwp/nvim-ts-autotag', -- auto closing tags
     'kylechui/nvim-surround', -- surround function
     'numtostr/comment.nvim', -- comment manipulation
-    'folke/which-key.nvim', -- show commands
-
-    -- miscellaneous
     'lervag/vimtex', -- live tex compiling
     'nvim-telescope/telescope-file-browser.nvim', -- file explorer
     'nvim-lua/plenary.nvim', -- file utilities
