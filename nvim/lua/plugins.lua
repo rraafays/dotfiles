@@ -64,4 +64,5 @@ lazy.setup({
     'nvim-lua/plenary.nvim', -- file utilities
     'RaafatTurki/hex.nvim', -- hex editor
     'akinsho/toggleterm.nvim', -- toggle terminal
+    'ahmedkhalf/project.nvim', -- project management
 })
