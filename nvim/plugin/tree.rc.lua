@@ -21,3 +21,5 @@ tree.setup({
         dotfiles = true,
     },
 })
+
+vim.keymap.set('', '<A-t>', '<cmd>NvimTreeToggle<CR>')
