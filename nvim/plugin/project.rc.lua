@@ -2,7 +2,7 @@ local project = require("project_nvim")
 
 require('telescope').load_extension('projects')
 
-vim.keymap.set('n', '<A-p>', '<cmd>lua require"telescope".extensions.projects.projects{ initial_mode = "normal" }<CR>')
+vim.keymap.set('n', '<A-p>', '<cmd>lua require"telescope".extensions.projects.projects{ initial_mode = "insert" }<CR>')
 
 project.setup {
     manual_mode = false,
