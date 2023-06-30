@@ -1,5 +1,13 @@
 local lspsaga = require("lspsaga")
 
+local function get_border_type()
+    if os.getenv("DISPLAY") == nil then
+        return "single"
+    else
+        return "rounded"
+    end
+end
+
 lspsaga.setup{
     server_filetype_map = {},
     symbol_in_winbar = {
@@ -17,7 +25,7 @@ lspsaga.setup{
         sign = false
     },
     ui = {
-        border = 'rounded',
+        order = get_border_type(),
         colors = {
         normal_bg = '#282828',
         title_bg = '#EBDBB2',

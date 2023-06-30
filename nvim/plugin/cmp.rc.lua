@@ -1,6 +1,20 @@
 local cmp = require("cmp")
 local lspkind = require 'lspkind'
 
+local function get_window_border()
+    if os.getenv("DISPLAY") == nil then
+        return {
+            completion = { border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" } },
+            documentation = { border = { "┌", "─", "┐", "│", "┘", "─", "└", "│" } },
+        }
+    else
+        return {
+            completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+            documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+        }
+    end
+end
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -47,10 +61,7 @@ cmp.setup {
             end
         })
     },
-    window = {
-        completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
-        documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
-    }
+    window = get_window_border()
 }
 
 vim.cmd [[

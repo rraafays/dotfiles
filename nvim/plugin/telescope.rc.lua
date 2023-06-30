@@ -2,6 +2,14 @@ local telescope = require("telescope")
 local actions = require('telescope.actions')
 local fb_actions = require 'telescope'.extensions.file_browser.actions
 
+local function get_window_border()
+    if os.getenv("DISPLAY") == nil then
+        return { "─", "│", "─", "│", "┌", "┐", "┘", "└" }
+    else
+        return { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
+    end
+end
+
 function telescope_buffer_dir()
     return vim.fn.expand('%:p:h')
 end
@@ -12,7 +20,8 @@ telescope.setup {
             n = {
                 ['q'] = actions.close
             }
-        }
+        },
+        borderchars = get_window_border()
     },
     extensions = {
         file_browser = {
