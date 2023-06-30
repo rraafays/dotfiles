@@ -10,4 +10,8 @@ gruvbox.setup{
     }
 }
 
-vim.cmd [[ colorscheme gruvbox ]]
+if os.getenv("DISPLAY") == "" then
+    vim.cmd [[ colorscheme default ]]
+else
+    vim.cmd [[ colorscheme gruvbox ]]
+end
