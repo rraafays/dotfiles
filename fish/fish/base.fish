@@ -11,15 +11,23 @@ if status is-interactive;
   zoxide init fish | source
 end 
 
-# different prompt for root
+# adaptive prompt style
 if not fish_is_root_user; 
-  cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/user.toml" > "$HOME/.config/starship/.user"
-  set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
+    if not test -z $DISPLAY 
+        cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/user.toml" > "$HOME/.config/starship/.user"
+    else
+        cat "$HOME/.config/starship/tty.toml" "$HOME/.config/starship/user.toml" > "$HOME/.config/starship/.user"
+    end
+    set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
 end
 
 if fish_is_root_user; 
-  cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/root.toml" > "$HOME/.config/starship/.root"
-  set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
+    if not test -z $DISPLAY 
+        cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/root.toml" > "$HOME/.config/starship/.root"
+    else
+        cat "$HOME/.config/starship/tty.toml" "$HOME/.config/starship/root.toml" > "$HOME/.config/starship/.root"
+    end
+    set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
 end
 
 # fish vi mode
