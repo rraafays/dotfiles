@@ -61,6 +61,7 @@ disabled = true
 disabled = false
 
 [git_branch]
+symbol = "branch-"
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [status]
