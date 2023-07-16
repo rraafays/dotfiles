@@ -51,8 +51,8 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 vim.cmd([[ set iskeyword-=_ ]])
 
 vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = "set nopaste"
+    pattern = '*',
+    command = "set nopaste"
 })
 
 vim.opt.formatoptions:append { 'r' }
