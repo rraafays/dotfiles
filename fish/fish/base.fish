@@ -11,7 +11,7 @@ if status is-interactive;
   zoxide init fish | source
 end 
 
-# adaptive prompt style
+# adaptive prompt style for root and / or tty
 if not fish_is_root_user; 
     if not test -z $DISPLAY 
         cat "$HOME/.config/starship/base.toml" "$HOME/.config/starship/user.toml" > "$HOME/.config/starship/.user"
