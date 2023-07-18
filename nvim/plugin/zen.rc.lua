@@ -19,7 +19,7 @@ zen.setup {
         alacritty = { enabled = false }
     },
     on_open = function() vim.cmd([[ set laststatus=0 ]]) end,
-    on_close = function() vim.cmd([[ set laststatus=2 ]]) end
+    on_close = function() vim.cmd([[ set laststatus=3 ]]) end
 }
 
 vim.keymap.set('n', 'z', ':ZenMode<CR>', { silent = true })
