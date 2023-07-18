@@ -40,9 +40,9 @@ local dashboard = require('alpha.themes.dashboard')
 }
 
 dashboard.section.buttons.val = {
-    dashboard.button("p", "Projects", "<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>");
+    dashboard.button("l", "Lazy", "<cmd>Lazy sync<CR>");
+    dashboard.button("m", "Mason", "<cmd>Mason<CR>U<CR>");
     dashboard.button("n", "New file", ":ene <BAR> startinsert <CR>"),
-    dashboard.button("f", "Find file", ":Telescope find_files <CR>"),
 }
 
 alpha.setup(dashboard.config)
