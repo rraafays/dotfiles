@@ -2,26 +2,14 @@
 function grep -d 'replace grep with ripgrep'
     rg $argv
 end
-function grep -d 'command'
-    echo -e '\033[1;33minstall ripgrep!\033[0m'
-    command grep $argv
-end
 function ls -d 'replace ls with lsd'
     lsd $argv
 end
 function tree -d 'tree using lsd'
     lsd --tree $argv
 end
-function ls -d 'command'
-    echo -e '\033[1;33minstall lsd!\033[0m'
-    command ls $argv
-end
 function neofetch -d 'command'
     fastfetch $argv
-end
-function neofetch -d 'command'
-    echo -e '\033[1;33minstall fastfetch!\033[0m'
-    command neofetch $argv
 end
 
 # rm -> rip
