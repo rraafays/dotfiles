@@ -1,12 +1,12 @@
-if [ "$BUN_INSTALL" != "$HOME/.bun" ]; set -x BUN_INSTALL "$HOME/.bun"; end
-if [ "$YARN_INSTALL" != "$HOME/.yarn" ]; set -x YARN_INSTALL "$HOME/.yarn"; end
-if [ "$CARGO_INSTALL" != "$HOME/.cargo" ]; set -x CARGO_INSTALL "$HOME/.cargo"; end
-if [ "$DOTNET_INSTALL" != "$HOME/.dotnet" ]; set -x DOTNET_INSTALL "$HOME/.dotnet"; end
-if [ "$GO_INSTALL" != "$HOME/go" ]; set -x GO_INSTALL "$HOME/go"; end
-if [ "$RBENV_INSTALL" != "$HOME/.rbenv" ]; set -x RBENV_INSTALL "$HOME/.rbenv"; end
-if [ "$BREW_INSTALL" != "/opt/homebrew" ]; set -x BREW_INSTALL "/opt/homebrew"; end
-if [ "$PNPM_HOME" != "$HOME/.local/share/pnpm" ]; set -x PNPM_HOME "$HOME/.local/share/pnpm"; end
-if [ "$USER_HOME" != "/Users/$USER" ]; set -x USER_HOME "/Users/$USER"; end
+set -x BUN_INSTALL "$HOME/.bun";
+set -x YARN_INSTALL "$HOME/.yarn";
+set -x CARGO_INSTALL "$HOME/.cargo";
+set -x DOTNET_INSTALL "$HOME/.dotnet";
+set -x GO_INSTALL "$HOME/go";
+set -x RBENV_INSTALL "$HOME/.rbenv";
+set -x BREW_INSTALL "/opt/homebrew";
+set -x PNPM_HOME "$HOME/.local/share/pnpm";
+set -x USER_HOME "/Users/$USER";
 
 set -x PATH                         \
     $BUN_INSTALL/bin                \
