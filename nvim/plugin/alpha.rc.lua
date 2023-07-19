@@ -41,7 +41,7 @@ local dashboard = require('alpha.themes.dashboard')
 
 dashboard.section.buttons.val = {
     dashboard.button("l", "Lazy", "<cmd>Lazy sync<CR>");
-    dashboard.button("m", "Mason", "<cmd>Mason<CR>U<CR>");
+    dashboard.button("m", "Mason", "<cmd>Mason<CR>");
     dashboard.button("n", "New file", ":ene <BAR> startinsert <CR>"),
 }
 
