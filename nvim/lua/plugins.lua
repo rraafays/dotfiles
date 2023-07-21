@@ -54,4 +54,6 @@ lazy.setup({
     'akinsho/toggleterm.nvim', -- toggle terminal
     'ahmedkhalf/project.nvim', -- project management
     'nvim-tree/nvim-tree.lua', -- file tree
+    'mfussenegger/nvim-dap', -- debug adapter protocol
+    'rcarriga/nvim-dap-ui', -- debug adapter protocol uis
 })
