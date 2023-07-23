@@ -45,6 +45,9 @@ end
 function tv -d 'watch transmissions'
     watch -n 1 transmission-remote -l
 end
+function tl -d 'list transmissions'
+   transmission-remote -l
+end
 
 # media tools
 function mpv -d 'mpv as image viewer'
