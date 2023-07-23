@@ -1,2 +1,2 @@
 local comment = require("Comment")
-comment.setup {}
+comment.setup({})
