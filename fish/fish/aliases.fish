@@ -48,6 +48,9 @@ end
 function tl -d 'list transmissions'
    transmission-remote -l
 end
+function tt -d 'control transmission'
+   transmission-remote -t $argv
+end
 
 # media tools
 function mpv -d 'mpv as image viewer'
