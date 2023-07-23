@@ -1,1 +1,1 @@
-vim.cmd [[ set clipboard=unnamedplus ]]
+vim.cmd([[ set clipboard=unnamedplus ]])
