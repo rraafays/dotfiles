@@ -32,6 +32,15 @@ require("formatter").setup({
 				}
 			end,
 		},
+		sh = {
+			function()
+				return {
+					exe = "shfmt",
+					args = { "-i", 4 },
+					stdin = true,
+				}
+			end,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},

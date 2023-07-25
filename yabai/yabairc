@@ -5,47 +5,47 @@ yabai -m signal --add event=window_destroyed active=yes action="yabai -m query -
 
 yabai --load-sa
 defaults write com.apple.finder DisableAllAnimations -bool true
-killall Finder 
+killall Finder
 # to reset system defaults, delete the key instead
 # defaults delete com.apple.finder DisableAllAnimations
 
-yabai -m config                           \
-  layout bsp                              \
-  window_placement second_child           \
-  top_padding    20                       \
-  bottom_padding 20                       \
-  left_padding   20                       \
-  right_padding  20                       \
-  window_gap     20                       \
-  config auto_balance on                  \
-  mouse_modifier alt                      \
-  mouse_action1 move                      \
-  mouse_action2 resize                    \
-  focus_follows_mouse off                 \
-  mouse_follows_focus on                  \
-  window_topmost on                       \
-  window_shadow off                       \
-  window_border off                       \
-  window_border_width 0                   \
-  window_border_radius 12                 \
-  active_window_border_color 0xff000000   \
-  normal_window_border_color 0xff000000   \
-  window_animation_duration 0.1           \
-  window_animation_frame_rate 60          \
-  window_border_blur off                  \
-  external_bar all:0:0
+yabai -m config \
+    layout bsp \
+    window_placement second_child \
+    top_padding 20 \
+    bottom_padding 20 \
+    left_padding 20 \
+    right_padding 20 \
+    window_gap 20 \
+    config auto_balance on \
+    mouse_modifier alt \
+    mouse_action1 move \
+    mouse_action2 resize \
+    focus_follows_mouse off \
+    mouse_follows_focus on \
+    window_topmost on \
+    window_shadow off \
+    window_border off \
+    window_border_width 0 \
+    window_border_radius 12 \
+    active_window_border_color 0xff000000 \
+    normal_window_border_color 0xff000000 \
+    window_animation_duration 0.1 \
+    window_animation_frame_rate 60 \
+    window_border_blur off \
+    external_bar all:0:0
 
-yabai -m space                            \
-  1                                       \
-  2                                       \
-  3                                       \
-  4                                       \
-  5                                       \
-  6                                       \
-  7                                       \
-  8                                       \
-  9                                       \
-  10                                       
+yabai -m space \
+    1 \
+    2 \
+    3 \
+    4 \
+    5 \
+    6 \
+    7 \
+    8 \
+    9 \
+    10
 
 yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
