@@ -25,7 +25,7 @@ lspsaga.setup({
 		sign = false,
 	},
 	ui = {
-		order = get_border_type(),
+		border = get_border_type(),
 		colors = {
 			normal_bg = "#282828",
 			title_bg = "#EBDBB2",
