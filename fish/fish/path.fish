@@ -8,18 +8,18 @@ set -x BREW_INSTALL "/opt/homebrew";
 set -x PNPM_HOME "$HOME/.local/share/pnpm";
 set -x USER_HOME "/Users/$USER";
 
-set -x PATH                         \
-    $BUN_INSTALL/bin                \
-    $YARN_INSTALL/bin               \
-    $PNPM_HOME                      \
-    $CARGO_INSTALL/bin              \
-    $DOTNET_INSTALL/tools           \
-    $BREW_INSTALL/sbin              \
-    $BREW_INSTALL/bin               \
-    $GO_INSTALL/bin                 \
-    $RBENV_INSTALL/bin              \
-    $RBENV_INSTALL/shims            \
-    $HOME/.local/bin                \
-    $HOME/.config/fish/scripts      \
-    $USER_HOME/bin                  \
-    $PATH 
+set -x PATH                       \
+  $BUN_INSTALL/bin                \
+  $YARN_INSTALL/bin               \
+  $PNPM_HOME                      \
+  $CARGO_INSTALL/bin              \
+  $DOTNET_INSTALL/tools           \
+  $BREW_INSTALL/sbin              \
+  $BREW_INSTALL/bin               \
+  $GO_INSTALL/bin                 \
+  $RBENV_INSTALL/bin              \
+  $RBENV_INSTALL/shims            \
+  $HOME/.local/bin                \
+  $HOME/.config/fish/scripts      \
+  $USER_HOME/bin                  \
+  $PATH

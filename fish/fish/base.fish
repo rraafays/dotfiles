@@ -7,44 +7,44 @@ set -x GRAVEYARD "$HOME/.graveyard" # set graveyard
 set -x ELINKS_CONFDIR "$HOME/.config/elinks"
 
 # drop into starship and initialise zoxide
-if status is-interactive; 
+if status is-interactive;
   starship init fish | source
   zoxide init fish | source
-end 
-
-# adaptive prompt style for root and / or tty
-if not fish_is_root_user; 
-    if not test -z $DISPLAY 
-        cat                                         \
-            "$HOME/.config/starship/base.toml"      \
-            "$HOME/.config/starship/user.toml"      \
-        >   "$HOME/.config/starship/.user"
-    else
-        cat                                         \
-            "$HOME/.config/starship/tty.toml"       \
-            "$HOME/.config/starship/user.toml"      \
-        >   "$HOME/.config/starship/.user"              
-    end
-    set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
 end
 
-if fish_is_root_user; 
-    if not test -z $DISPLAY 
-        cat                                         \
-            "$HOME/.config/starship/base.toml"      \
-            "$HOME/.config/starship/root.toml"      \
-        >   "$HOME/.config/starship/.root"          
-    else
-        cat                                         \
-            "$HOME/.config/starship/tty.toml"       \
-            "$HOME/.config/starship/root.toml"      \
-        >   "$HOME/.config/starship/.root"
-    end
-    set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
+# adaptive prompt style for root and / or tty
+if not fish_is_root_user;
+  if not test -z $DISPLAY
+    cat                                       \
+      "$HOME/.config/starship/base.toml"      \
+      "$HOME/.config/starship/user.toml"      \
+    > "$HOME/.config/starship/.user"
+  else
+    cat                                       \
+      "$HOME/.config/starship/tty.toml"       \
+      "$HOME/.config/starship/user.toml"      \
+    > "$HOME/.config/starship/.user"
+  end
+  set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
+end
+
+if fish_is_root_user;
+  if not test -z $DISPLAY
+    cat                                       \
+      "$HOME/.config/starship/base.toml"      \
+      "$HOME/.config/starship/root.toml"      \
+    > "$HOME/.config/starship/.root"
+  else
+    cat                                         \
+        "$HOME/.config/starship/tty.toml"       \
+        "$HOME/.config/starship/root.toml"      \
+    >   "$HOME/.config/starship/.root"
+  end
+  set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
 end
 
 # fish vi mode
-fish_vi_key_bindings 
+fish_vi_key_bindings
 set fish_cursor_default block blink
 set fish_cursor_insert line blink
 set fish_cursor_replace_one underscore blink

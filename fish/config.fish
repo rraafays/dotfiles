@@ -9,7 +9,7 @@ source $FISH_HOME/fish/ls.fish
 
 # source platform specific scripts
 switch (uname)
-  case Darwin 
+  case Darwin
     source $FISH_HOME/fish/macos.fish
   case Linux
     source $FISH_HOME/fish/unix.fish
