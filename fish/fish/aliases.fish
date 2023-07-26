@@ -17,7 +17,7 @@ function graveyard -d 'visit the graveyard'
     z $HOME/.graveyard
 end
 function graves -d 'view graves'
-    tree -a $HOME/.graveyard
+    tree -a -d $HOME/.graveyard
 end
 function decompose -d 'decompose files in the graveyard'
     rip --decompose
