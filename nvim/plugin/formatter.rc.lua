@@ -12,8 +12,8 @@ require("formatter").setup({
 		java = {
 			function()
 				return {
-					exe = "google-java-format",
-					args = "--aosp",
+					exe = "clang-format",
+					args = { "--style=Google", "--assume-filename=.java" },
 					stdin = true,
 				}
 			end,
@@ -25,7 +25,7 @@ require("formatter").setup({
 					args = {
 						"--stdin-filepath",
 						util.escape_path(util.get_current_buffer_file_path()),
-						"--tab-width 4",
+						"--tab-width 2",
 					},
 					stdin = true,
 					try_node_modules = true,
@@ -36,7 +36,7 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "shfmt",
-					args = { "-i", 4 },
+					args = { "-i", 2 },
 					stdin = true,
 				}
 			end,
@@ -48,8 +48,8 @@ require("formatter").setup({
 })
 
 vim.cmd([[
-    augroup FormatAutogroup
-    autocmd!
-    autocmd BufWritePost * FormatWrite
-    augroup END
+  augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+  augroup END
 ]])

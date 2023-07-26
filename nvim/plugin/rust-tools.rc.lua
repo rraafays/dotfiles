@@ -12,16 +12,11 @@ rust_tools.setup({
 	},
 	server = {
 		on_attach = function(_, bufnr)
-			-- Hover actions
 			vim.keymap.set("n", "?", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+			os.execute("echo tab_spaces=2 > rustfmt.toml")
 		end,
 		settings = {
 			["rust-analyzer"] = {
-				-- -- enable clippy on save
-				-- checkOnSave = {
-				-- 	command = "clippy",
-				-- 	extraArgs = { "--all", "--", "-W", "clippy::all" },
-				-- },
 				diagnostics = {
 					disabled = { "unresolved-proc-macro" },
 				},
