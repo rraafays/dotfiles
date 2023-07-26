@@ -23,8 +23,8 @@ cmd + alt - h : yabai -m window --resize left:-25:0 \
 
 cmd - f : yabai -m window --toggle native-fullscreen
 
-cmd - t : yabai -m window --toggle float
-yabai -m window --grid 4:4:1:1:2:2
+cmd - t : yabai -m window --toggle float \
+    yabai -m window --grid 4:4:1:1:2:2
 
 cmd - 1 : yabai -m space --focus 1
 cmd - 2 : yabai -m space --focus 2
