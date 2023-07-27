@@ -13,9 +13,11 @@ rust_tools.setup({
 	server = {
 		on_attach = function(_, bufnr)
 			vim.keymap.set("n", "?", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
-			file = io.open("rustfmt.toml", "w")
-			file:write("fn_single_line = true\nwhere_single_line = true\ntab_spaces = 2")
-			file:close()
+			local file = io.open("rustfmt.toml", "w")
+			if file ~= nil then
+				file:write("fn_single_line = true\nwhere_single_line = true\ntab_spaces = 2")
+				file:close()
+			end
 		end,
 		settings = {
 			["rust-analyzer"] = {
