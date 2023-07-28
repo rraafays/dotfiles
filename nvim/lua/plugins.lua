@@ -22,10 +22,9 @@ end
 lazy.setup({
 	defaults = { lazy = true },
 
-	"ellisonleao/gruvbox.nvim", -- gruvbox theme
+	"rraafays/agnikai.vim", -- agnikai theme
 	"hoob3rt/lualine.nvim", -- statusline
 	"kyazdani42/nvim-web-devicons", -- icons
-	"norcalli/nvim-colorizer.lua", -- colour highlights
 	"onsails/lspkind-nvim", -- pictograms
 	"lewis6991/gitsigns.nvim", -- git changes
 	"folke/zen-mode.nvim", -- zen coding
