@@ -1,3 +1,4 @@
+test
 set fish_greeting ''
 
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
@@ -11,6 +12,9 @@ if status is-interactive;
   starship init fish | source
   zoxide init fish | source
 end
+
+# set tty colors
+setvtrgb $HOME/.config/fish/fish/tty.colors
 
 # adaptive prompt style for root and / or tty
 if not fish_is_root_user;
