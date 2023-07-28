@@ -2,7 +2,7 @@ if [ "$MANPAGER" != "nvim -c 'Man! -o -'" ]
   set MANPAGER "nvim -c 'Man! -o -'"
 end
 
-set -x BEMENU_OPTS "--fn 'Iosevka Term 12' --prompt > --tb #000000FF --tf #D65C0DFF --fb #000000FF --ff #EBDBB2FF --cb #EBDBB2FF --cf #EBDBB2FF --nb #000000FF --nf #928373FF --ab #000000FF --af #928373FF --hb #000000FF --hf #EBDBB2FF"
+set -x BEMENU_OPTS "--fn 'Iosevka Term 12' --prompt > --tb #000000FF --tf #EA2300FF --fb #000000FF --ff #FAFFB2FF --cb #FAFFB2FF --cf #FAFFB2FF --nb #000000FF --nf #F2F2C4FF --ab #000000FF --af #F2F2C4FF --hb #000000FF --hf #FAFFB2FF"
 set -x ANDROID_HOME "$HOME/Android/Sdk"
 
 function hypr -d 'launch hyprland'
