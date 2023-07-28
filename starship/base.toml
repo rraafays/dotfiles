@@ -37,19 +37,19 @@ discharging_symbol = '󰁹 '
 charging_symbol = '󰂅 '
 style = 'fg:8'
 
-[character] 
-success_symbol = "[\\$](bold blue)"
-error_symbol = "[\\$](bold blue)"
-vimcmd_symbol = "[\\$](bold white)"
-vimcmd_replace_one_symbol = "[\\$](bold fg:9)"
-vimcmd_replace_symbol = "[\\$](bold fg:9)"
-vimcmd_visual_symbol = "[\\$](bold fg:11)"
+[character]
+success_symbol = "[\\$](bold fg:2)"
+error_symbol = "[\\$](bold fg:2)"
+vimcmd_symbol = "[\\$](bold fg:8)"
+vimcmd_replace_one_symbol = "[\\$](bold fg:1)"
+vimcmd_replace_symbol = "[\\$](bold fg:1)"
+vimcmd_visual_symbol = "[\\$](bold fg:3)"
 
 [line_break]
 disabled = true
 
 [directory]
-style = "bold blue"
+style = "bold fg:3"
 read_only = " "
 read_only_style = "white"
 truncation_length = 3
@@ -62,6 +62,7 @@ disabled = false
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
+style = "bold fg:11"
 
 [status]
 disabled = false

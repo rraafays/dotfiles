@@ -4,5 +4,5 @@ disabled = true
 [hostname]
 ssh_only = false
 format = "[$hostname ]($style)"
-style = "bold fg:9"
+style = "bold fg:1"
 disabled = false

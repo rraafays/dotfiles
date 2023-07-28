@@ -37,7 +37,7 @@ discharging_symbol = 'battery-'
 charging_symbol = 'battery-'
 style = 'fg:8'
 
-[character] 
+[character]
 success_symbol = "[\\$](bold blue)"
 error_symbol = "[\\$](bold blue)"
 vimcmd_symbol = "[\\$](bold white)"
@@ -49,7 +49,7 @@ vimcmd_visual_symbol = "[\\$](bold fg:11)"
 disabled = true
 
 [directory]
-style = "bold blue"
+style = "bold fg:11"
 read_only = " !"
 read_only_style = "white"
 truncation_length = 3
@@ -108,4 +108,3 @@ format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 [rust]
 symbol = "rust-"
 format = '[$symbol($version)]($style) '
-

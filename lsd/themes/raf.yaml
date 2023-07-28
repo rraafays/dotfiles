@@ -3,7 +3,7 @@ group: 15
 permission:
   read: 10
   write: 11
-  exec: 9
+  exec: 1
   exec-sticky: 12
   no-access: 8
   octal: 14
