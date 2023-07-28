@@ -10,9 +10,9 @@ permission:
   acl: 14
   context: 14
 date:
-  hour-old: 15
-  day-old: 15
-  older: 7
+  hour-old: 7
+  day-old: 7
+  older: 15
 size:
   none: 7
   small: 7

@@ -67,7 +67,7 @@ style = "bold fg:11"
 [status]
 disabled = false
 format = '[$symbol$status]($style) '
-style = 'bold fg:9'
+style = 'bold fg:1'
 map_symbol = true
 pipestatus = true
 symbol = '󰅙 '
@@ -81,30 +81,40 @@ pipestatus_segment_format = '[$symbol$status]($style)'
 [bun]
 symbol = '󰥚 '
 format = '[$symbol($version)]($style) '
+style = "bold fg:7"
 [c]
 symbol = " "
 format = '[$symbol($version(-$name))]($style) '
+style = "bold fg:10"
 [dotnet]
 symbol = '󰌛 '
 format = '[$symbol($version)($tfm)]($style) '
+style = "bold fg:3"
 [gradle]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = "bold fg:3"
 [java]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = "bold fg:1"
 [lua]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = "bold fg:4"
 [nodejs]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = "bold fg:5"
 [package]
 symbol = "󰏗 "
 format = '[$symbol$version]($style) '
+style = "bold fg:6"
 [python]
 symbol = " "
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+style = "bold fg:3"
 [rust]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = "bold fg:9"
