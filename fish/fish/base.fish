@@ -13,9 +13,6 @@ if status is-interactive;
   zoxide init fish | source
 end
 
-# set tty colors
-setvtrgb $HOME/.config/fish/fish/tty.colors
-
 # adaptive prompt style for root and / or tty
 if not fish_is_root_user;
   if not test -z $DISPLAY
