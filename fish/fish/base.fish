@@ -51,18 +51,18 @@ set fish_cursor_insert line blink
 set fish_cursor_replace_one underscore blink
 set fish_cursor_visual block
 
-set --universal fish_color_autosuggestion magenta
-set --universal fish_color_command        cyan
-set --universal fish_color_comment        black
-set --universal fish_color_cwd            red
+set --universal fish_color_autosuggestion brblack
+set --universal fish_color_command        brcyan
+set --universal fish_color_comment        brblack
+set --universal fish_color_cwd            blue
 set --universal fish_color_end            yellow
-set --universal fish_color_error          white
-set --universal fish_color_escape         yellow
+set --universal fish_color_error          brwhite
+set --universal fish_color_escape         brmagenta
 set --universal fish_color_match          red
 set --universal fish_color_normal         white
-set --universal fish_color_operator       red
-set --universal fish_color_param          white
-set --universal fish_color_quote          cyan
-set --universal fish_color_redirection    red
+set --universal fish_color_operator       bryellow --bold
+set --universal fish_color_param          brwhite
+set --universal fish_color_quote          brgreen
+set --universal fish_color_redirection    brmagenta
 set --universal fish_color_search_match   yellow
-set --universal fish_color_selection      red
+set --universal fish_color_selection      brwhite --reverse

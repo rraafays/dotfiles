@@ -1,5 +1,5 @@
 [username]
-style_user = "bold fg:9"
+style_user = "bold fg:10"
 format = "[$user]($style)"
 show_always = true
 disabled = false
@@ -7,5 +7,5 @@ disabled = false
 [hostname]
 ssh_only = false
 format = "[@]($style)[$hostname ]($style)"
-style = "bold fg:9"
+style = "bold fg:10"
 disabled = false
