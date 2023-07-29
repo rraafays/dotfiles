@@ -56,7 +56,7 @@ set --universal fish_color_command        brcyan
 set --universal fish_color_comment        brblack
 set --universal fish_color_cwd            blue
 set --universal fish_color_end            yellow
-set --universal fish_color_error          brwhite
+set --universal fish_color_error          brred
 set --universal fish_color_escape         brmagenta
 set --universal fish_color_match          red
 set --universal fish_color_normal         white
