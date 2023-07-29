@@ -7,6 +7,9 @@ keymap.set("n", ";", ":")
 -- lazy leave
 keymap.set("n", "q", ":q<CR>")
 
+-- easy to reach exit
+keymap.set("v", "q", "<esc>")
+
 -- force quit
 keymap.set("n", "<C-c>", "<Esc>:qa!<CR>")
 keymap.set("i", "<C-c>", "<Esc>:qa!<CR>")
@@ -15,15 +18,14 @@ keymap.set("i", "<C-c>", "<Esc>:qa!<CR>")
 keymap.set("n", "x", '"_x')
 keymap.set("n", "d", '"_d')
 
--- increment & decrement value in normal mode
+-- increment or decrement value under cursor
 keymap.set("n", "=", "<C-a>")
 keymap.set("n", "-", "<C-x>")
--- increment & decrement value by 10 in normal mode
 keymap.set("n", "+", "10<C-a>")
 keymap.set("n", "_", "10<C-x>")
--- increment & decrement value by 2 in normal mode
-keymap.set("n", "<C-=>", "2<C-a>")
-keymap.set("n", "<C-->", "2<C-x>")
+
+-- double value under cursor
+keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>:nohlsearch<CR>")
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
