@@ -25,7 +25,7 @@ keymap.set("n", "+", "10<C-a>")
 keymap.set("n", "_", "10<C-x>")
 
 -- double value under cursor
-keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>:nohlsearch<CR>")
+keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>n:nohlsearch<CR>")
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
