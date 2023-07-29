@@ -1,6 +1,7 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
+dashboard.section.header.opts.hl = "Delimiter"
 dashboard.section.header.val = {
 	[[                                  |`,                               ]],
 	[[                                   \1\.                             ]],
