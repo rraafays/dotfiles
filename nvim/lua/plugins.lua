@@ -22,7 +22,7 @@ end
 lazy.setup({
 	defaults = { lazy = true },
 
-	"rraafays/agnikai.vim", -- agnikai theme
+	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"hoob3rt/lualine.nvim", -- statusline
 	"kyazdani42/nvim-web-devicons", -- icons
 	"onsails/lspkind-nvim", -- pictograms

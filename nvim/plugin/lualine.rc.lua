@@ -1,16 +1,30 @@
 local lualine = require("lualine")
 
-local theme = require("lualine.themes.16color")
+local wm_theme = require("lualine.themes.gruvbox")
+local tty_theme = require("lualine.themes.16color")
 
-theme.normal.a.bg = nil
-theme.normal.b.bg = nil
-theme.normal.c.bg = nil
-theme.insert.a.bg = nil
-theme.visual.a.bg = nil
-theme.replace.a.bg = nil
-theme.insert.a.fg = 2
-theme.visual.a.fg = 3
-theme.replace.a.fg = 1
+wm_theme.insert.a.bg = "#8EC07C"
+wm_theme.inactive.c.bg = "#000000"
+wm_theme.normal.c.bg = "#000000"
+wm_theme.insert.c.bg = "#000000"
+wm_theme.replace.c.bg = "#000000"
+wm_theme.visual.c.bg = "#000000"
+wm_theme.visual.c.fg = "#EBDBB2"
+wm_theme.replace.c.fg = "#EBDBB2"
+wm_theme.insert.c.fg = "#EBDBB2"
+
+tty_theme.normal.a.bg = "#000000"
+tty_theme.insert.a.bg = "#000000"
+tty_theme.visual.a.bg = "#000000"
+tty_theme.replace.a.bg = "#000000"
+
+local function get_theme()
+	if os.getenv("DISPLAY") == nil then
+		return tty_theme
+	else
+		return wm_theme
+	end
+end
 
 lualine.setup({
 	options = {
@@ -24,7 +38,7 @@ lualine.setup({
 			right = "",
 		},
 		disabled_filetypes = {},
-		theme = theme,
+		theme = get_theme,
 	},
 	sections = {
 		lualine_a = {
