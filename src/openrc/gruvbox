@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+
+# copy this file to /etc/init.d/gruvbox
+# copy gruvbox.colours to /gruvbox.colours
+
+depend() {
+  after modules
+}
+
+start() {
+  ebegin "Starting gruvbox"
+  start-stop-daemon --start --exec /usr/bin/setvtrgb /gruvbox.colours
+  eend $?
+}
+
+begin() {
+  ebegin "Stopping gruvbox"
+  start-stop-daemon --stop --exec /usr/bin/setvtrgb /gruvbox.colours
+  eend $?
+}
