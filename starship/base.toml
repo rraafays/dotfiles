@@ -43,7 +43,7 @@ error_symbol = "[\\$](bold fg:4)"
 vimcmd_symbol = "[\\$](bold fg:8)"
 vimcmd_replace_one_symbol = "[\\$](bold fg:9)"
 vimcmd_replace_symbol = "[\\$](bold fg:9)"
-vimcmd_visual_symbol = "[\\$](bold fg:11)"
+vimcmd_visual_symbol = "[\\$](bold #FE8019)"
 
 [line_break]
 disabled = true
