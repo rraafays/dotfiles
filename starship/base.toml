@@ -66,7 +66,7 @@ format = '[$symbol$branch(:$remote_branch)]($style) '
 [status]
 disabled = false
 format = '[$symbol$status]($style) '
-style = 'bold fg:1'
+style = 'bold fg:9'
 map_symbol = true
 pipestatus = true
 symbol = '󰅙 '
