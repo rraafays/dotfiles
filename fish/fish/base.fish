@@ -1,5 +1,6 @@
-test
-set fish_greeting ''
+function fish_greeting
+  proverb
+end
 
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # use ripgrep for fzf
