@@ -66,4 +66,4 @@ set --universal fish_color_param          brwhite
 set --universal fish_color_quote          brgreen
 set --universal fish_color_redirection    brmagenta
 set --universal fish_color_search_match   yellow
-set --universal fish_color_selection      brwhite --reverse
+set --universal fish_color_selection      brwhite --bold
