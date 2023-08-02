@@ -5,8 +5,9 @@ end
 if [ "$EDITOR" != "nvim" ]; set EDITOR nvim; end # set editor to neovim
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow" # use ripgrep for fzf
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
-set -x GRAVEYARD "$HOME/.graveyard" # set graveyard
+set -x GRAVEYARD "$HOME/.graveyard"
 set -x ELINKS_CONFDIR "$HOME/.config/elinks"
+set -x POP_FROM "shahid@raafay.world"
 
 # drop into starship and initialise zoxide
 if status is-interactive;
