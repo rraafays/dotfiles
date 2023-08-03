@@ -6,6 +6,9 @@ require("formatter").setup({
 	log_level = vim.log.levels.WARN,
 
 	filetype = {
+		c = {
+			require("formatter.filetypes.c").clangformat,
+		},
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
