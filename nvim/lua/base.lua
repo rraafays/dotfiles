@@ -47,6 +47,10 @@ vim.opt.fillchars = {
 	vertright = " ",
 	verthoriz = " ",
 	eob = " ",
+	fold = " ",
+	foldsep = " ",
+	foldopen = "+",
+	foldclose = "-",
 }
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

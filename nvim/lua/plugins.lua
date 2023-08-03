@@ -57,4 +57,6 @@ lazy.setup({
 	"rcarriga/nvim-dap-ui", -- debug adapter protocol uis
 	"mhartington/formatter.nvim", -- easy formatter config
 	"norcalli/nvim-colorizer.lua", -- colour highlighter
+	"kevinhwang91/promise-async", -- promise & async
+	"kevinhwang91/nvim-ufo", -- smart folding
 })
