@@ -5,9 +5,9 @@ if not test -e $CREDENTIALS/soulseek.fish
   echo "set -x SOULSEEK_ACCOUNT \"\"" >> $CREDENTIALS/soulseek.fish
   echo "set -x SOULSEEK_PASSWORD \"\"" >> $CREDENTIALS/soulseek.fish
 end
-if not test -e $CREDENTIALS/resend.fish
-  echo "set -x RESEND_API_KEY \"\"" >> $CREDENTIALS/resend.fish
+if not test -e $CREDENTIALS/openai.fish
+  echo "set -x OPENAI_API_KEY \"\"" >> $CREDENTIALS/openai.fish
 end
 
 source $CREDENTIALS/soulseek.fish
-source $CREDENTIALS/resend.fish
+source $CREDENTIALS/openai.fish

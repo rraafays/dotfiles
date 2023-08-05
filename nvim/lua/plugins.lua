@@ -59,4 +59,6 @@ lazy.setup({
 	"norcalli/nvim-colorizer.lua", -- colour highlighter
 	"kevinhwang91/promise-async", -- promise & async
 	"kevinhwang91/nvim-ufo", -- smart folding
+	"MunifTanjim/nui.nvim", -- nvim ui library
+	"jackMort/ChatGPT.nvim", -- chatgpt
 })
