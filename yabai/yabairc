@@ -25,11 +25,11 @@ yabai -m config \
   mouse_follows_focus on \
   window_topmost on \
   window_shadow off \
-  window_border off \
-  window_border_width 0 \
+  window_border on \
+  window_border_width 1 \
   window_border_radius 12 \
-  active_window_border_color 0xff000000 \
-  normal_window_border_color 0xff000000 \
+  active_window_border_color 0xffEBDBB2 \
+  normal_window_border_color 0xffA89983 \
   window_animation_duration 0.1 \
   window_animation_frame_rate 60 \
   window_border_blur off \
