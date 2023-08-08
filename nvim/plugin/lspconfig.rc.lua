@@ -4,7 +4,7 @@ vim.diagnostic.config({
 	update_in_insert = true,
 })
 
-vim.g.rust_recommended_style = false
+vim.g.rust_recommended_style = true
 vim.g.rustfmt_autosave = 1
 
 nvim_lsp.lua_ls.setup({
