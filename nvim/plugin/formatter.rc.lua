@@ -28,7 +28,7 @@ require("formatter").setup({
 					args = {
 						"--stdin-filepath",
 						util.escape_path(util.get_current_buffer_file_path()),
-						"--tab-width 4",
+						"--tab-width 2",
 					},
 					stdin = true,
 					try_node_modules = true,
@@ -39,7 +39,7 @@ require("formatter").setup({
 			function()
 				return {
 					exe = "shfmt",
-					args = { "-i", 4 },
+					args = { "-i", 2 },
 					stdin = true,
 				}
 			end,
