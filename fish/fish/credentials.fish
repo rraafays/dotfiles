@@ -7,6 +7,7 @@ if not test -e $CREDENTIALS/soulseek.fish
 end
 if not test -e $CREDENTIALS/openai.fish
   echo "set -x OPENAI_API_KEY \"\"" >> $CREDENTIALS/openai.fish
+  echo "set -x OPENAI_API_HOST \"\"" >> $CREDENTIALS/openai.fish
 end
 
 source $CREDENTIALS/soulseek.fish
