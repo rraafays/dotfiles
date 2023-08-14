@@ -41,4 +41,14 @@ set recolor                     "true"
 
 set guioptions none
 
+set adjust-open best-fit
+
 map c recolor
+map f toggle_fullscreen
+map = zoom in
+map - zoom out
+
+map [fullscreen] f toggle_fullscreen
+map [fullscreen] c recolor
+map [fullscreen] = zoom in
+map [fullscreen] - zoom out
