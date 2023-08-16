@@ -57,7 +57,7 @@ function mpv -d 'mpv as image viewer'
   command mpv --no-terminal $argv &
 end
 function imv -d 'mpv as image viewer'
-  command mpv --loop --window-maximized --no-terminal $argv &
+  command mpv --loop --window-maximized --no-terminal $argv & disown
 end
 function play -d 'mpv as audio player'
   command mpv --no-audio-display $argv
