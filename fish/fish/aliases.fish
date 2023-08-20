@@ -53,14 +53,14 @@ function tt -d 'control transmission'
 end
 
 # media tools
-function mpv -d 'mpv as image viewer'
-  command mpv --no-terminal $argv &
-end
 function imv -d 'mpv as image viewer'
-  command mpv --loop --window-maximized --no-terminal $argv & disown
+  command mpv --loop --window-maximized --no-terminal --no-input-cursor $argv & disown
+end
+function mpv -d 'mpv as video player'
+  command mpv --no-terminal --no-input-cursor $argv & disown
 end
 function play -d 'mpv as audio player'
-  command mpv --no-audio-display $argv
+  command mpv --no-audio-display --no-input-cursor $argv
 end
 function icat -d 'image in kitty'
   kitty +kitten icat --align left $argv
