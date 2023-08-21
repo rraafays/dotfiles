@@ -1,6 +1,9 @@
 #!/bin/bash
 
 cmd - return : kitty ~/ --single-instance
+cmd - q [
+"librewolf" : skhd -k "cmd - w"
+]
 
 cmd - k : yabai -m window --focus north
 cmd - l : yabai -m window --focus east
