@@ -9,7 +9,7 @@ function tree -d 'directory tree using lsd'
   lsd --tree $argv
 end
 function neofetch -d 'replace neofetch with fastfetch'
-  fastfetch $argv
+  flashfetch $argv
 end
 
 # rm -> rip
