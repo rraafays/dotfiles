@@ -79,3 +79,12 @@ end
 function onefetch -d 'minimal onefetch'
   command onefetch --true-color never --no-color-palette --no-art --no-title
 end
+
+# prompt toggles
+function name -d 'toggle name'
+  starship toggle username
+  starship toggle hostname
+end
+function linebreak -d 'toggle line break'
+  starship toggle line_break
+end
