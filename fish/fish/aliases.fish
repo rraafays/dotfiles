@@ -84,7 +84,9 @@ end
 function ` -d 'toggle name'
   starship toggle username
   starship toggle hostname
+  clear
 end
 function = -d 'toggle line break'
   starship toggle line_break
+  clear
 end
