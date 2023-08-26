@@ -46,15 +46,15 @@ keymap.set("n", "K", "kJ")
 -- v-block on alt
 keymap.set("n", "<A-v>", "<C-v>")
 
--- map arrows to pane nav
-keymap.set("n", "<Up>", ":wincmd k<CR>")
-keymap.set("n", "<Right>", ":wincmd l<CR>")
-keymap.set("n", "<Down>", ":wincmd j<CR>")
-keymap.set("n", "<Left>", ":wincmd h<CR>")
-keymap.set("t", "<Up>", "<cmd> wincmd k<CR>")
-keymap.set("t", "<Right>", "<cmd> wincmd l<CR>")
-keymap.set("t", "<Down>", "<cmd> wincmd j<CR>")
-keymap.set("t", "<Left>", "<cmd> wincmd h<CR>")
+-- pane nav
+keymap.set("n", "<A-k>", ":wincmd k<CR>")
+keymap.set("n", "<A-l>", ":wincmd l<CR>")
+keymap.set("n", "<A-j>", ":wincmd j<CR>")
+keymap.set("n", "<A-h>", ":wincmd h<CR>")
+keymap.set("t", "<A-k>", "<cmd> wincmd k<CR>")
+keymap.set("t", "<A-l>", "<cmd> wincmd l<CR>")
+keymap.set("t", "<A-j>", "<cmd> wincmd j<CR>")
+keymap.set("t", "<A-h>", "<cmd> wincmd h<CR>")
 
 -- insert arrows
 keymap.set("i", "<Up>", "￪")
