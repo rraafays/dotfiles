@@ -76,8 +76,8 @@ end
 function duf -d '16 color duf'
   command duf -theme ansi $argv
 end
-function onefetch -d 'minimal onefetch'
-  command onefetch --true-color never --no-color-palette --no-art --no-title
+function gitfetch -d 'minimal onefetch'
+  command onefetch --true-color never --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15
 end
 
 # prompt toggles
