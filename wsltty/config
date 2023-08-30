@@ -1,0 +1,6 @@
+# link this file to /mnt/c/Users/$WINDOWSUSER/AppData/Local/wsltty/config
+
+Font=Iosevka Term
+Font2=Symbols Nerd Font
+FontChoice=Private:2
+Charwidth=unicode
