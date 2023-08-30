@@ -1,13 +1,12 @@
 .shell powershell
 
-# Reload environment
 alt + o                 : taskkill.exe /f /im whkd.exe && Start-Process.exe whkd -WindowStyle hidden && Start-Process.exe komorebi -WindowStyle hidden
 
-# App shortcuts - these require shell to be pwsh / powershell
-# The apps will be focused if open, or launched if not open
-# alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
-# alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+# spawn terminal
 ctrl + return                 : start wsltty
+
+# maximise window
+ctrl + f : komorebic toggle-maximize
 
 # Focus windows
 ctrl + h                 : komorebic focus left
