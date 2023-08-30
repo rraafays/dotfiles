@@ -1,4 +1,4 @@
-# link this file to /mnt/c/Users/$WINDOWSUSER/AppData/Local/wsltty/config
+# cp -r ~/.config/wsltty /mnt/c/Users/$WINDOWSUSER/AppData/Local/
 
 Font=Iosevka Term
 Font2=Symbols Nerd Font
