@@ -5,20 +5,21 @@
   "alt_focus_hack": true,
   "default_workspace_padding": 20,
   "default_container_padding": 20,
-  "active_window_border": false,
+  "active_window_border": true,
+  "border_width": 8,
   "active_window_border_colours": {
-    "single": { "r": 66, "g": 165, "b": 245 },
-    "stack": { "r": 256, "g": 165, "b": 66 },
-    "monocle": { "r": 255, "g": 51, "b": 153 }
+    "single": { "r": 235, "g": 219, "b": 178 },
+    "stack": { "r": 235, "g": 219, "b": 178 },
+    "monocle": { "r": 235, "g": 219, "b": 178 }
   },
   "monitors": [
     {
       "workspaces": [
         { "name": "I", "layout": "BSP" },
-        { "name": "II", "layout": "VerticalStack" },
-        { "name": "III", "layout": "HorizontalStack" },
-        { "name": "IV", "layout": "UltrawideVerticalStack" },
-        { "name": "V", "layout": "Rows" }
+        { "name": "II", "layout": "BSP" },
+        { "name": "III", "layout": "BSP" },
+        { "name": "IV", "layout": "BSP" },
+        { "name": "V", "layout": "BSP" }
       ]
     }
   ]

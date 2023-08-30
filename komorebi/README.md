@@ -1,1 +1,1 @@
-<!--- # cp ~/.config/komorebi/* /mnt/c/Users/$WINDOWSUSER/ --->
+<!--- # cp -r ~/.config/komorebi/{,.}* /mnt/c/Users/$WINDOWSUSER/ --->
