@@ -46,13 +46,13 @@ ctrl + 9                 : komorebic focus-workspace 8
 ctrl + 0                 : komorebic focus-workspace 9
 
 # Move windows across workspaces
-ctrl + 1                 : komorebic move-to-workspace 0
-ctrl + 2                 : komorebic move-to-workspace 1
-ctrl + 3                 : komorebic move-to-workspace 2
-ctrl + 4                 : komorebic move-to-workspace 3
-ctrl + 5                 : komorebic move-to-workspace 4
-ctrl + 6                 : komorebic move-to-workspace 5
-ctrl + 7                 : komorebic move-to-workspace 6
-ctrl + 8                 : komorebic move-to-workspace 7
-ctrl + 9                 : komorebic move-to-workspace 8
-ctrl + 0                 : komorebic move-to-workspace 9
+ctrl + shift + 1                 : komorebic move-to-workspace 0
+ctrl + shift + 2                 : komorebic move-to-workspace 1
+ctrl + shift + 3                 : komorebic move-to-workspace 2
+ctrl + shift + 4                 : komorebic move-to-workspace 3
+ctrl + shift + 5                 : komorebic move-to-workspace 4
+ctrl + shift + 6                 : komorebic move-to-workspace 5
+ctrl + shift + 7                 : komorebic move-to-workspace 6
+ctrl + shift + 8                 : komorebic move-to-workspace 7
+ctrl + shift + 9                 : komorebic move-to-workspace 8
+ctrl + shift + 0                 : komorebic move-to-workspace 9
