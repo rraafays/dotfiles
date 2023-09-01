@@ -8,9 +8,6 @@ end
 function tree -d 'directory tree using lsd'
   lsd --tree $argv
 end
-function neofetch -d 'replace neofetch with fastfetch'
-  flashfetch $argv
-end
 
 # rm -> rip
 function graveyard -d 'visit the graveyard'
