@@ -76,6 +76,17 @@ end
 function gitfetch -d 'minimal onefetch'
   command onefetch --true-color never --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15
 end
+function user-dirs-update -d 'generate user dirs'
+  mkdir "$HOME/desktop"
+  mkdir "$HOME/downloads"
+  mkdir "$HOME/templates"
+  mkdir "$HOME/public"
+  mkdir "$HOME/documents"
+  mkdir "$HOME/music"
+  mkdir "$HOME/pictures"
+  mkdir "$HOME/videos"
+  xdg-user-dirs-update
+end
 
 # prompt toggles
 function ` -d 'toggle name'
