@@ -68,3 +68,7 @@ set --universal fish_color_quote          brgreen
 set --universal fish_color_redirection    brmagenta
 set --universal fish_color_search_match   yellow
 set --universal fish_color_selection      brwhite --bold
+
+if status --is-interactive && [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ]
+    exec tmux new-session -A -s $USER >/dev/null 2>&1
+end
