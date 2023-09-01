@@ -1,92 +1,167 @@
 #!/usr/bin/env fish
 
-if type --no-functions --query lsd
-  echo -e "lsd \033[1;32m✔\033[0m"
-else
-  echo -e "lsd \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query rg
-  echo -e "ripgrep \033[1;32m✔\033[0m"
-else
-  echo -e "ripgrep \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query neofetch
-  echo -e "neofetch \033[1;32m✔\033[0m"
-else
-  echo -e "neofetch \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query rip
-  echo -e "rm-improved \033[1;32m✔\033[0m"
-else
-  echo -e "rm-improved \033[1;31m✘\033[0m"
-end
-
-
-if type --no-functions --query qrencode
-  echo -e "qrencode \033[1;32m✔\033[0m"
-else
-  echo -e "qrencode \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query nvim
-  echo -e "nvim \033[1;32m✔\033[0m"
-else
-  echo -e "nvim \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query transmission-remote
-  echo -e "transmission \033[1;32m✔\033[0m"
-else
-  echo -e "transmission \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query mpv
-  echo -e "mpv \033[1;32m✔\033[0m"
-else
-  echo -e "mpv \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query onefetch
-  echo -e "onefetch \033[1;32m✔\033[0m"
-else
-  echo -e "onefetch \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query bat
-  echo -e "bat \033[1;32m✔\033[0m"
-else
-  echo -e "bat \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query duf
-  echo -e "duf \033[1;32m✔\033[0m"
-else
-  echo -e "duf \033[1;31m✘\033[0m"
-end
-
-if type --no-functions --query scrcpy
-  echo -e "scrcpy \033[1;32m✔\033[0m"
-else
-  echo -e "scrcpy \033[1;31m✘\033[0m"
-end
-
+echo shell:
 if type --no-functions --query starship
-  echo -e "starship \033[1;32m✔\033[0m"
+  echo -e "  starship \033[1;32m✔\033[0m"
 else
-  echo -e "starship \033[1;31m✘\033[0m"
+  echo -e "  starship \033[1;31m✘\033[0m"
 end
-
 if type --no-functions --query zoxide
-  echo -e "zoxide \033[1;32m✔\033[0m"
+  echo -e "  zoxide \033[1;32m✔\033[0m"
 else
-  echo -e "zoxide \033[1;31m✘\033[0m"
+  echo -e "  zoxide \033[1;31m✘\033[0m"
 end
-
-if type --no-functions --query zathura
-  echo -e "zathura \033[1;32m✔\033[0m"
+if type --no-functions --query lsd
+  echo -e "  lsd \033[1;32m✔\033[0m"
 else
-  echo -e "zathura \033[1;31m✘\033[0m"
+  echo -e "  lsd \033[1;31m✘\033[0m"
+end
+if type --no-functions --query rip
+  echo -e "  rm-improved \033[1;32m✔\033[0m"
+else
+  echo -e "  rm-improved \033[1;31m✘\033[0m"
+end
+if type --no-functions --query rg
+  echo -e "  ripgrep \033[1;32m✔\033[0m"
+else
+  echo -e "  ripgrep \033[1;31m✘\033[0m"
+end
+if type --no-functions --query qrencode
+  echo -e "  qrencode \033[1;32m✔\033[0m"
+else
+  echo -e "  qrencode \033[1;31m✘\033[0m"
+end
+if type --no-functions --query transmission-remote
+  echo -e "  transmission \033[1;32m✔\033[0m"
+else
+  echo -e "  transmission \033[1;31m✘\033[0m"
+end
+if type --no-functions --query bat
+  echo -e "  bat \033[1;32m✔\033[0m"
+else
+  echo -e "  bat \033[1;31m✘\033[0m"
+end
+if type --no-functions --query duf
+  echo -e "  duf \033[1;32m✔\033[0m"
+else
+  echo -e "  duf \033[1;31m✘\033[0m"
+end
+echo
+
+echo fetch:
+if type --no-functions --query neofetch
+  echo -e "  neofetch \033[1;32m✔\033[0m"
+else
+  echo -e "  neofetch \033[1;31m✘\033[0m"
+end
+if type --no-functions --query onefetch
+  echo -e "  onefetch \033[1;32m✔\033[0m"
+else
+  echo -e "  onefetch \033[1;31m✘\033[0m"
+end
+echo
+
+echo neovim:
+if type --no-functions --query nvim
+  echo -e "  nvim \033[1;32m✔\033[0m"
+else
+  echo -e "  nvim \033[1;31m✘\033[0m"
+end
+if type --no-functions --query tree-sitter
+  echo -e "  tree-sitter \033[1;32m✔\033[0m"
+else
+  echo -e "  tree-sitter \033[1;31m✘\033[0m"
+end
+if type --no-functions --query unzip
+  echo -e "  unzip \033[1;32m✔\033[0m"
+else
+  echo -e "  unzip \033[1;31m✘\033[0m"
+end
+if type --no-functions --query wget
+  echo -e "  wget \033[1;32m✔\033[0m"
+else
+  echo -e "  wget \033[1;31m✘\033[0m"
+end
+if type --no-functions --query curl
+  echo -e "  curl \033[1;32m✔\033[0m"
+else
+  echo -e "  curl \033[1;31m✘\033[0m"
+end
+if type --no-functions --query cargo
+  echo -e "  cargo \033[1;32m✔\033[0m"
+else
+  echo -e "  cargo \033[1;31m✘\033[0m"
+end
+if type --no-functions --query go
+  echo -e "  go \033[1;32m✔\033[0m"
+else
+  echo -e "  go \033[1;31m✘\033[0m"
+end
+if type --no-functions --query php
+  echo -e "  php \033[1;32m✔\033[0m"
+else
+  echo -e "  php \033[1;31m✘\033[0m"
+end
+if type --no-functions --query luarocks
+  echo -e "  luarocks \033[1;32m✔\033[0m"
+else
+  echo -e "  luarocks \033[1;31m✘\033[0m"
+end
+if type --no-functions --query node
+  echo -e "  node \033[1;32m✔\033[0m"
+else
+  echo -e "  node \033[1;31m✘\033[0m"
+end
+if type --no-functions --query composer
+  echo -e "  composer \033[1;32m✔\033[0m"
+else
+  echo -e "  composer \033[1;31m✘\033[0m"
+end
+if type --no-functions --query java
+  echo -e "  java \033[1;32m✔\033[0m"
+else
+  echo -e "  java \033[1;31m✘\033[0m"
+end
+if type --no-functions --query ruby
+  echo -e "  ruby \033[1;32m✔\033[0m"
+else
+  echo -e "  ruby \033[1;31m✘\033[0m"
+end
+if type --no-functions --query npm
+  echo -e "  npm \033[1;32m✔\033[0m"
+else
+  echo -e "  npm \033[1;31m✘\033[0m"
+end
+if type --no-functions --query julia
+  echo -e "  julia \033[1;32m✔\033[0m"
+else
+  echo -e "  julia \033[1;31m✘\033[0m"
+end
+if type --no-functions --query javac
+  echo -e "  javac \033[1;32m✔\033[0m"
+else
+  echo -e "  javac \033[1;31m✘\033[0m"
+end
+if type --no-functions --query pip
+  echo -e "  pip \033[1;32m✔\033[0m"
+else
+  echo -e "  pip \033[1;31m✘\033[0m"
+end
+echo
+
+echo gui:
+if type --no-functions --query mpv
+  echo -e "  mpv \033[1;32m✔\033[0m"
+else
+  echo -e "  mpv \033[1;31m✘\033[0m"
+end
+if type --no-functions --query scrcpy
+  echo -e "  scrcpy \033[1;32m✔\033[0m"
+else
+  echo -e "  scrcpy \033[1;31m✘\033[0m"
+end
+if type --no-functions --query zathura
+  echo -e "  zathura \033[1;32m✔\033[0m"
+else
+  echo -e "  zathura \033[1;31m✘\033[0m"
 end
