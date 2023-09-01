@@ -12,10 +12,10 @@ else
   echo -e "ripgrep \033[1;31m✘\033[0m"
 end
 
-if type --no-functions --query flashfetch
-  echo -e "fastfetch \033[1;32m✔\033[0m"
+if type --no-functions --query neofetch
+  echo -e "neofetch \033[1;32m✔\033[0m"
 else
-  echo -e "fastfetch \033[1;31m✘\033[0m"
+  echo -e "neofetch \033[1;31m✘\033[0m"
 end
 
 if type --no-functions --query rip
