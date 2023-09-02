@@ -51,7 +51,6 @@ lazy.setup({
 	"nvim-lua/plenary.nvim", -- file utilities
 	"RaafatTurki/hex.nvim", -- hex editor
 	"ahmedkhalf/project.nvim", -- project management
-	"nvim-tree/nvim-tree.lua", -- file tree
 	"mfussenegger/nvim-dap", -- debug adapter protocol
 	"rcarriga/nvim-dap-ui", -- debug adapter protocol uis
 	"mhartington/formatter.nvim", -- easy formatter config
