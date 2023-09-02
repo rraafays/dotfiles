@@ -64,6 +64,9 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
 end
+function tmux-ls -d "list sessions"
+  tmux ls -F " - #{session_name}"
+end
 
 # transmission
 function t -d "shorthand transmission-remote"
