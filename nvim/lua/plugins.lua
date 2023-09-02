@@ -50,7 +50,6 @@ lazy.setup({
 	"nvim-telescope/telescope-file-browser.nvim", -- file explorer
 	"nvim-lua/plenary.nvim", -- file utilities
 	"RaafatTurki/hex.nvim", -- hex editor
-	"akinsho/toggleterm.nvim", -- toggle terminal
 	"ahmedkhalf/project.nvim", -- project management
 	"nvim-tree/nvim-tree.lua", -- file tree
 	"mfussenegger/nvim-dap", -- debug adapter protocol
