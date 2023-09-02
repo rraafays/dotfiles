@@ -70,6 +70,9 @@ end
 function tmux-rm -d "remove session"
   tmux kill-session -t $argv
 end
+function fd -d "find anything"
+  command fd -u $argv
+end
 
 # transmission
 function t -d "shorthand transmission-remote"
