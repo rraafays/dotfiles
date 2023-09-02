@@ -67,6 +67,9 @@ end
 function tmux-ls -d "list sessions"
   tmux ls -F " - #{session_name}"
 end
+function tmux-rm -d "remove session"
+  tmux kill-session -t $argv
+end
 
 # transmission
 function t -d "shorthand transmission-remote"
