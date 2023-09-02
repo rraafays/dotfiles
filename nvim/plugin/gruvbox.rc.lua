@@ -9,9 +9,9 @@ gruvbox.setup({
 	},
 	invert_selection = true,
 	palette_overrides = {
-		dark0 = "#000000",
-		dark1 = "#000000",
-		dark2 = "#000000",
+		dark0 = "none",
+		dark1 = "none",
+		dark2 = "none",
 	},
 })
 
