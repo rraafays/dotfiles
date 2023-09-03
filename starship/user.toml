@@ -2,10 +2,10 @@
 style_user = "bold fg:10"
 format = "[$user]($style)"
 show_always = true
-disabled = true
+disabled = false
 
 [hostname]
 ssh_only = false
 format = "[@]($style)[$hostname ]($style)"
 style = "bold fg:10"
-disabled = true
+disabled = false
