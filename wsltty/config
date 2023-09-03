@@ -1,0 +1,11 @@
+# cp -r ~/.config/wsltty/ /mnt/c/Users/$WINDOWSUSER/AppData/Local/
+
+ThemeFile=gruvbox.wslttyrc
+Font=Iosevka Term
+Font2=Symbols Nerd Font
+FontChoice=Private:2
+Charwidth=unicode
+BellType=0
+Scrollbar=none
+Transparency=off
+CursorType=block
