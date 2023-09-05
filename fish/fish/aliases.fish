@@ -53,6 +53,14 @@ function clear -d "clear terminal"
     command clear
   end
 end
+function clean -d "clean terminal"
+  if set -q TMUX
+    clear
+    tmux clear-history
+  else
+    command clear
+  end
+end
 function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/desktop"
   mkdir "$HOME/downloads"
