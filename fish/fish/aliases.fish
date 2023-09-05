@@ -1,18 +1,21 @@
-# replacements
-function ` -d "toggle name"
-  starship toggle username
-  starship toggle hostname
-  clear
-end
-function = -d "toggle line break"
-  starship toggle line_break
-  clear
-end
+# base tools
 function ls -d "replace ls with lsd"
   lsd $argv
 end
 function tree -d "directory tree using lsd"
   lsd --tree $argv
+end
+function tls -d "list sessions"
+  tmux ls -F " - #{session_name}"
+end
+function trm -d "remove session"
+  tmux kill-session -t $argv
+end
+function fd -d "find anything"
+  command fd -u $argv
+end
+function vi -d "shorthand nvim"
+  nvim $argv
 end
 function graveyard -d "visit the graveyard"
   z $HOME/.graveyard
@@ -29,11 +32,17 @@ end
 function bat -d "pretty cat"
   command bat --theme gruvbox-dark $argv
 end
-function duf -d "16 color duf"
-  command duf -theme ansi $argv
-end
 
 # utilities
+function ` -d "toggle name"
+  starship toggle username
+  starship toggle hostname
+  clear
+end
+function = -d "toggle line break"
+  starship toggle line_break
+  clear
+end
 function qr -d "quickly generate qrcode"
   qrencode -t UTF8 -m 2 $argv
 end
@@ -43,8 +52,8 @@ end
 function py -d "shorthand python3"
   python3 $argv
 end
-function vi -d "shorthand nvim"
-  nvim $argv
+function duf -d "16 color duf"
+  command duf $argv
 end
 function clear -d "clear terminal"
   if set -q TMUX
@@ -72,30 +81,18 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
 end
-function tmux-ls -d "list sessions"
-  tmux ls -F " - #{session_name}"
-end
-function tmux-rm -d "remove session"
-  tmux kill-session -t $argv
-end
-function fd -d "find anything"
-  command fd -u $argv
-end
 
 # transmission
-function t -d "shorthand transmission-remote"
+function transmission -d "transmission-remote"
   transmission-remote $argv
 end
-function td -d "shorthand transmission-daemon"
-  transmission-daemon $argv
+function transmission-watch -d "watch transmissions"
+  watch -n 1 "transmission-remote -l"
 end
-function tv -d "watch transmissions"
-  watch -n 1 transmission-remote -l
-end
-function tl -d "list transmissions"
+function transmission-list -d "list transmissions"
   transmission-remote -l
 end
-function tt -d "control transmission"
+function transmission-torrent -d "control transmission"
   transmission-remote -t $argv
 end
 
