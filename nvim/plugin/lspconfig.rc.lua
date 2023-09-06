@@ -39,6 +39,7 @@ nvim_lsp.pylsp.setup({})
 nvim_lsp.ltex.setup({})
 nvim_lsp.taplo.setup({})
 nvim_lsp.jdtls.setup({})
+nvim_lsp.sqlls.setup({})
 
 if os.getenv("DISPLAY") == nil then
 	vim.fn.sign_define(
