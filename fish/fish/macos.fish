@@ -17,6 +17,9 @@ end
 function skhd -d 'run skhd in zsh'
   env SHELL=/bin/zsh skhd $argv
 end
+function lsblk -d 'alias lsblk to diskutil list'
+  diskutil list
+end
 
 if not test -e "$HOME/.config/kitty/kitty.conf"
   cat                                   \
