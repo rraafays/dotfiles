@@ -1,6 +1,11 @@
 #!/usr/bin/env fish
 
 echo shell:
+if type --no-functions --query proverb
+  echo -e "  proverb \033[1;32m✔\033[0m"
+else
+  echo -e "  proverb \033[1;31m✘\033[0m"
+end
 if type --no-functions --query starship
   echo -e "  starship \033[1;32m✔\033[0m"
 else
@@ -10,6 +15,11 @@ if type --no-functions --query zoxide
   echo -e "  zoxide \033[1;32m✔\033[0m"
 else
   echo -e "  zoxide \033[1;31m✘\033[0m"
+end
+if type --no-functions --query tmux
+  echo -e "  tmux \033[1;32m✔\033[0m"
+else
+  echo -e "  tmux \033[1;31m✘\033[0m"
 end
 if type --no-functions --query lsd
   echo -e "  lsd \033[1;32m✔\033[0m"
@@ -25,6 +35,16 @@ if type --no-functions --query rg
   echo -e "  ripgrep \033[1;32m✔\033[0m"
 else
   echo -e "  ripgrep \033[1;31m✘\033[0m"
+end
+if type --no-functions --query fzf
+  echo -e "  fzf \033[1;32m✔\033[0m"
+else
+  echo -e "  fzf \033[1;31m✘\033[0m"
+end
+if type --no-functions --query fd
+  echo -e "  fd \033[1;32m✔\033[0m"
+else
+  echo -e "  fd \033[1;31m✘\033[0m"
 end
 if type --no-functions --query qrencode
   echo -e "  qrencode \033[1;32m✔\033[0m"
@@ -45,24 +65,6 @@ if type --no-functions --query duf
   echo -e "  duf \033[1;32m✔\033[0m"
 else
   echo -e "  duf \033[1;31m✘\033[0m"
-end
-if type --no-functions --query fd
-  echo -e "  fd-find \033[1;32m✔\033[0m"
-else
-  echo -e "  fd-find \033[1;31m✘\033[0m"
-end
-echo
-
-echo fetch:
-if type --no-functions --query neofetch
-  echo -e "  neofetch \033[1;32m✔\033[0m"
-else
-  echo -e "  neofetch \033[1;31m✘\033[0m"
-end
-if type --no-functions --query onefetch
-  echo -e "  onefetch \033[1;32m✔\033[0m"
-else
-  echo -e "  onefetch \033[1;31m✘\033[0m"
 end
 echo
 
@@ -170,3 +172,21 @@ if type --no-functions --query zathura
 else
   echo -e "  zathura \033[1;31m✘\033[0m"
 end
+if type --no-functions --query kitty
+  echo -e "  kitty \033[1;32m✔\033[0m"
+else
+  echo -e "  kitty \033[1;31m✘\033[0m"
+end
+
+echo fetch:
+if type --no-functions --query neofetch
+  echo -e "  neofetch \033[1;32m✔\033[0m"
+else
+  echo -e "  neofetch \033[1;31m✘\033[0m"
+end
+if type --no-functions --query onefetch
+  echo -e "  onefetch \033[1;32m✔\033[0m"
+else
+  echo -e "  onefetch \033[1;31m✘\033[0m"
+end
+echo
