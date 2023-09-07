@@ -1,7 +1,7 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
-dashboard.section.header.opts.hl = "TelescopePromptPrefix"
+dashboard.section.header.opts.hl = "GruvboxRed"
 dashboard.section.header.val = {
 	[[                                  |`,                               ]],
 	[[                                   \1\.                             ]],
@@ -40,18 +40,26 @@ dashboard.section.header.val = {
 	[[                       `""666666000000777"""'                       ]],
 }
 
+local button = function(shortcut, text, command, hl)
+	local button = dashboard.button(shortcut, text, command)
+	button.opts.hl_shortcut = hl
+	return button
+end
+
 dashboard.section.buttons.val = {
-	dashboard.button(
+	button(
 		"p",
-		"Projects",
-		"<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>"
+		"projects",
+		"<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>",
+		"GruvboxOrange"
 	),
-	dashboard.button(
+	button(
 		"f",
-		"Files",
-		"<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>"
+		"files",
+		"<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>",
+		"GruvboxOrange"
 	),
-	dashboard.button("/", "Grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>"),
+	button("/", "grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>", "GruvboxOrange"),
 }
 
 alpha.setup(dashboard.config)
