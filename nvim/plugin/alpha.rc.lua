@@ -1,7 +1,7 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
 
-dashboard.section.header.opts.hl = "Delimiter"
+dashboard.section.header.opts.hl = "TelescopePromptPrefix"
 dashboard.section.header.val = {
 	[[                                  |`,                               ]],
 	[[                                   \1\.                             ]],
@@ -41,9 +41,17 @@ dashboard.section.header.val = {
 }
 
 dashboard.section.buttons.val = {
-	dashboard.button("l", "Lazy", "<cmd>Lazy sync<CR>"),
-	dashboard.button("m", "Mason", "<cmd>Mason<CR>"),
-	dashboard.button("n", "New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button(
+		"p",
+		"Projects",
+		"<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>"
+	),
+	dashboard.button(
+		"f",
+		"Files",
+		"<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>"
+	),
+	dashboard.button("/", "Grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>"),
 }
 
 alpha.setup(dashboard.config)
