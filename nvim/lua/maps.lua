@@ -5,7 +5,7 @@ local keymap = vim.keymap
 keymap.set("n", ";", ":")
 
 -- lazy leave
-keymap.set("n", "q", ":q<CR>")
+keymap.set("n", "q", ":NvimTreeClose<CR>:q<CR>")
 
 -- easy to reach exit
 keymap.set("v", "q", "<esc>")

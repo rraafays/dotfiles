@@ -1,5 +1,17 @@
 local nvim_tree = require("nvim-tree")
 
+local function set_custom_bindings(bufnr)
+	local api = require("nvim-tree.api")
+
+	local function opts(desc)
+		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+	end
+
+	api.config.mappings.default_on_attach(bufnr)
+
+	vim.keymap.set("n", "q", ":NvimTreeClose<CR>:q<CR>", opts("Up"))
+end
+
 nvim_tree.setup({
 	sync_root_with_cwd = true,
 	respect_buf_cwd = true,
@@ -7,6 +19,7 @@ nvim_tree.setup({
 		enable = true,
 		update_root = true,
 	},
+	on_attach = set_custom_bindings,
 	renderer = {
 		root_folder_modifier = ":t",
 		icons = {
