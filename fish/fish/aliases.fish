@@ -47,6 +47,7 @@ function qr -d "quickly generate qrcode"
   qrencode -t UTF8 -m 2 $argv
 end
 function firefetch -d "fire nation fetch"
+  echo
   neofetch --ascii ~/.config/ascii/fire_nation_neofetch --ascii_colors 9 firefetch --colors 9 9 11 9 11 8 $argv
 end
 function gitfetch -d "minimal onefetch"
