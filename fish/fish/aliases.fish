@@ -85,6 +85,15 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
 end
+function emerge-upgrade -d "upgrade emerge packages"
+  doas emerge --ask --update --deep --newuse $argv @world
+end
+function brew-upgrade -d "upgrade brew packages"
+  brew upgrade
+end
+function cargo-upgrade -d "upgrade global cargo packages"
+  cargo install-update --all
+end
 
 # transmission
 function transmission -d "transmission-remote"
