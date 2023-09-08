@@ -52,6 +52,11 @@ vim.opt.fillchars = {
 	foldopen = "+",
 	foldclose = "-",
 }
+vim.o.guicursor = table.concat({
+	"n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+	"r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+}, ",")
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
