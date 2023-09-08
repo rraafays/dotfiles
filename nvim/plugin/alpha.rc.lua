@@ -59,7 +59,7 @@ dashboard.section.buttons.val = {
 		"<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>",
 		"GruvboxOrange"
 	),
-	button("/", "grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>", "GruvboxOrange"),
+	button("g", "grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>", "GruvboxOrange"),
 }
 
 alpha.setup(dashboard.config)

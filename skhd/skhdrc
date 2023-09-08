@@ -25,9 +25,9 @@ cmd - right : yabai -m window --move rel:20:0
 cmd - down : yabai -m window --move rel:0:20
 cmd - left : yabai -m window --move rel:-20:0
 
-cmd - f : yabai -m window --toggle native-fullscreen
+cmd - m : yabai -m window --toggle native-fullscreen
 
-cmd - t : yabai -m window --toggle float \
+cmd - tab : yabai -m window --toggle float \
   yabai -m window --grid 4:4:1:1:2:2
 
 cmd - 1 : yabai -m space --focus 1

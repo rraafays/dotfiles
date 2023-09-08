@@ -5,7 +5,7 @@ local keymap = vim.keymap
 keymap.set("n", ";", ":")
 
 -- lazy leave
-keymap.set("n", "q", ":NvimTreeClose<CR>:q<CR>")
+keymap.set("n", "q", ":q<CR>")
 
 -- easy to reach exit
 keymap.set("v", "q", "<esc>")
@@ -38,9 +38,6 @@ keymap.set("n", "<BS>", "dd")
 
 -- join to line above
 keymap.set("n", "K", "kJ")
-
--- v-block on alt v
-keymap.set("n", "<A-v>", "<C-v>")
 
 -- pane nav
 keymap.set("n", "<A-k>", ":wincmd k<CR>")

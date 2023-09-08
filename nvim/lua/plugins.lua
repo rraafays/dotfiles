@@ -61,5 +61,4 @@ lazy.setup({
 	"jackMort/ChatGPT.nvim", -- chatgpt
 	"LunarVim/bigfile.nvim", -- speed up big files
 	"christoomey/vim-tmux-navigator", -- seamless vi & tmux
-	"nvim-tree/nvim-tree.lua", -- file tree
 })

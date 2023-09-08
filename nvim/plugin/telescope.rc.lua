@@ -56,16 +56,16 @@ telescope.load_extension("file_browser")
 local opts = { noremap = true, silent = true }
 vim.keymap.set(
 	"n",
-	"<A-f>",
+	"<C-f>",
 	'<cmd>lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<CR>',
 	opts
 )
-vim.keymap.set("n", "<A-/>", '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
-vim.keymap.set("n", "<A-b>", '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
-vim.keymap.set("n", "<A-d>", '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
+vim.keymap.set("n", "<C-g>", '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
+vim.keymap.set("n", "<C-b>", '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
+vim.keymap.set("n", "<C-d>", '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
 vim.keymap.set(
 	"n",
-	"<A-e>",
+	"<C-e>",
 	'<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = true, initial_mode = "normal"})<CR>',
 	opts
 )
