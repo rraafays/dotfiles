@@ -48,7 +48,7 @@ function qr -d "quickly generate qrcode"
 end
 function firefetch -d "fire nation fetch"
   echo
-  neofetch --ascii ~/.config/ascii/fire_nation_neofetch --ascii_colors 9 firefetch --colors 9 9 11 9 11 8 $argv
+  neofetch --ascii ~/.config/ascii/fire_nation_neofetch --ascii_colors 9 firefetch --colors 9 9 11 9 11 7 $argv
 end
 function gitfetch -d "minimal onefetch"
   command onefetch --true-color never --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15
@@ -86,15 +86,6 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/pictures"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
-end
-function emerge-upgrade -d "upgrade emerge packages"
-  doas emerge --ask --update --deep --newuse $argv @world
-end
-function brew-upgrade -d "upgrade brew packages"
-  brew upgrade
-end
-function cargo-upgrade -d "upgrade global cargo packages"
-  cargo install-update --all
 end
 
 # transmission
