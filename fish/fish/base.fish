@@ -70,5 +70,5 @@ set --universal fish_color_search_match   yellow
 set --universal fish_color_selection      brwhite --bold
 
 if status --is-interactive && [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && not test -z "$DISPLAY"
-    exec tmux new-session -A -s $USER >/dev/null 2>&1
+    exec tmux new-session -A -s (hostname -s) >/dev/null 2>&1
 end
