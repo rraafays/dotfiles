@@ -1,7 +1,6 @@
 local lualine = require("lualine")
 
 local wm_theme = require("lualine.themes.gruvbox")
-local tty_theme = require("lualine.themes.16color")
 
 wm_theme.normal.a.fg = "#A89983"
 wm_theme.insert.a.fg = "#448488"
@@ -34,19 +33,6 @@ wm_theme.insert.c.bg = "none"
 wm_theme.replace.c.bg = "none"
 wm_theme.visual.c.bg = "none"
 
-tty_theme.normal.a.bg = "none"
-tty_theme.insert.a.bg = "none"
-tty_theme.visual.a.bg = "none"
-tty_theme.replace.a.bg = "none"
-
-local function get_theme()
-	if os.getenv("DISPLAY") == nil then
-		return tty_theme
-	else
-		return wm_theme
-	end
-end
-
 lualine.setup({
 	options = {
 		icons_enabled = true,
@@ -59,7 +45,7 @@ lualine.setup({
 			right = "",
 		},
 		disabled_filetypes = {},
-		theme = get_theme,
+		theme = wm_theme,
 	},
 	sections = {
 		lualine_a = {
