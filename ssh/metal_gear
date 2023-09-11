@@ -1,2 +1,5 @@
  Host SHAGOHOD
    SetEnv DISPLAY=ssh
+
+ Host RAY
+   SetEnv DISPLAY=ssh
