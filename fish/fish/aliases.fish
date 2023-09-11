@@ -32,6 +32,9 @@ end
 function bat -d "pretty cat"
   command bat --theme gruvbox-dark $argv
 end
+function ssh -d "source metal gear configurations"
+  command ssh -F ~/.config/ssh/metal_gear $argv
+end
 
 # utilities
 function ` -d "toggle name"
