@@ -65,7 +65,6 @@ function clear -d "clear terminal"
   else
     command clear
   end
-  proverb
 end
 function clean -d "clean terminal"
   if set -q TMUX
@@ -74,7 +73,6 @@ function clean -d "clean terminal"
   else
     command clear
   end
-  proverb
 end
 function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/desktop"
