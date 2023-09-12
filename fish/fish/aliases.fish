@@ -56,6 +56,9 @@ end
 function gitfetch -d "minimal onefetch"
   command onefetch --true-color never --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15
 end
+function onefetch -d "minimal onefetch"
+  command onefetch --true-color never
+end
 function py -d "shorthand python3"
   python3 $argv
 end
