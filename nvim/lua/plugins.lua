@@ -58,6 +58,6 @@ lazy.setup({
 	"kevinhwang91/promise-async", -- promise & async
 	"kevinhwang91/nvim-ufo", -- smart folding
 	"MunifTanjim/nui.nvim", -- nvim ui library
-	"jackMort/ChatGPT.nvim", -- chatgpt
 	"LunarVim/bigfile.nvim", -- speed up big files
+	"gentoo/gentoo-syntax", -- gentoo syntax
 })

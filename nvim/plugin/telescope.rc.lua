@@ -57,7 +57,7 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set(
 	"n",
 	"<C-f>",
-	'<cmd>lua require("telescope.builtin").find_files({ no_ignore = false, hidden = true })<CR>',
+	'<cmd>lua require("telescope.builtin").find_files({ hidden = true })<CR>',
 	opts
 )
 vim.keymap.set("n", "<C-g>", '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
