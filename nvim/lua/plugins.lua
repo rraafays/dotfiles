@@ -60,5 +60,4 @@ lazy.setup({
 	"MunifTanjim/nui.nvim", -- nvim ui library
 	"jackMort/ChatGPT.nvim", -- chatgpt
 	"LunarVim/bigfile.nvim", -- speed up big files
-	"christoomey/vim-tmux-navigator", -- seamless vi & tmux
 })
