@@ -4,26 +4,25 @@ cmd - return : kitty ~/ --single-instance
 cmd - q [
 "librewolf" : skhd -k "cmd - w"
 ]
+cmd - h [
+"librewolf" : skhd -k ""
+"firefox" : skhd -k ""
+]
 
 cmd - up : yabai -m window --focus north
 cmd - right : yabai -m window --focus east
 cmd - down : yabai -m window --focus south
 cmd - left : yabai -m window --focus west
 
-# cmd + shift - k : yabai -m window --swap north
-# cmd + shift - l : yabai -m window --swap east
-# cmd + shift - j : yabai -m window --swap south
-# cmd + shift - h : yabai -m window --swap west
+cmd + shift - up : yabai -m window --swap north
+cmd + shift - right : yabai -m window --swap east
+cmd + shift - down : yabai -m window --swap south
+cmd + shift - left : yabai -m window --swap west
 
-# cmd + alt - k : yabai -m window --resize top:0:-20
-# cmd + alt - l : yabai -m window --resize left:20:0
-# cmd + alt - j : yabai -m window --resize top:0:20
-# cmd + alt - h : yabai -m window --resize left:-20:0
-
-# cmd - up : yabai -m window --move rel:0:-20
-# cmd - right : yabai -m window --move rel:20:0
-# cmd - down : yabai -m window --move rel:0:20
-# cmd - left : yabai -m window --move rel:-20:0
+cmd + alt - up : yabai -m window --resize top:0:-20
+cmd + alt - right : yabai -m window --resize left:20:0
+cmd + alt - down : yabai -m window --resize top:0:20
+cmd + alt - left : yabai -m window --resize left:-20:0
 
 cmd - m : yabai -m window --toggle native-fullscreen
 
