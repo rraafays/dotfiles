@@ -11,11 +11,11 @@ end
 function doas -d 'alias doas to sudo'
   sudo $argv
 end
-function yabai -d 'run yabai in zsh'
-  env SHELL=/bin/zsh yabai $argv
+function yabai -d 'run yabai with dash'
+  SHELL=/bin/dash command yabai $argv
 end
-function skhd -d 'run skhd in zsh'
-  env SHELL=/bin/zsh skhd $argv
+function skhd -d 'run skhd with dash'
+  SHELL=/bin/dash command skhd $argv
 end
 function lsblk -d 'alias lsblk to diskutil list'
   diskutil list
