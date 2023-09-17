@@ -62,9 +62,6 @@ end
 function py -d "shorthand python3"
   python3 $argv
 end
-function duf -d "16 color duf"
-  command duf $argv
-end
 function clear -d "clear terminal"
   if set -q TMUX
     tmux send-keys -R
