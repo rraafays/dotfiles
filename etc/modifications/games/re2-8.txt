@@ -1,0 +1,4 @@
+grab release from https://github.com/praydog/REFramework-nightly/releases
+
+- extract reframework & dinput8.dll into game folder
+- edit launch properties and set WINEDLLOVERRIDES="dinput8=n,b" %command%
