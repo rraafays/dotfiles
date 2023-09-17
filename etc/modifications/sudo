@@ -1,0 +1,7 @@
+run visudo as root
+
+append options ..
+
+Defaults passwd_timeout=0
+Defaults timestamp_timeout=0
+Defaults pwfeedback

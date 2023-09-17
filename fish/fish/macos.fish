@@ -8,9 +8,6 @@ end
 function fixlogin -d 'fix login items and background tasks'
   sfltool resetbtm
 end
-function doas -d 'alias doas to sudo'
-  sudo $argv
-end
 function yabai -d 'run yabai with dash'
   SHELL=/bin/dash command yabai $argv
 end
