@@ -1,6 +1,6 @@
 configuration {
   modes: "window,drun,run,ssh";
-  font: "Iosevka Term 14";
+  font: "Iosevka Term Bold 14";
   drun-display-format: "{name}";
 }
 
@@ -33,91 +33,90 @@ listview {
 }
 
 scrollbar {
-    width:        0px;
-    border:       0;
-    handle-color: @fg;
-    handle-width: 0px;
-    padding:      0 5;
+  width:        0px;
+  border:       0;
+  handle-color: @fg;
+  handle-width: 0px;
+  padding:      0 5;
 }
 
 entry {
-    placeholder: "";
+  placeholder: "";
 }
 
 textbox {
-    text-color: @fg;
+  text-color: @fg;
 }
 
 element {
-    border:  0;
-    padding: 2px;
+   border:  0;
+   padding: 2px;
 }
 element.normal.normal {
-    background-color: @t;
-    text-color:       @fg;
+   background-color: @t;
+   text-color:       @fg;
 }
 element.normal.urgent {
-    background-color: @t;
-    text-color:       @urgent;
+   background-color: @t;
+   text-color:       @urgent;
 }
 element.normal.active {
-    background-color: @t;
-    text-color:       @active;
+  background-color: @t;
+  text-color:       @active;
 }
 element.selected.normal {
-    background-color: @selected-bg;
-    text-color:       @selected-fg;
+  background-color: @selected-bg;
+  text-color:       @selected-fg;
 }
 element.selected.urgent {
-    background-color: @selected-bg;
-    text-color:       @urgent;
+  background-color: @selected-bg;
+  text-color:       @urgent;
 }
 element.selected.active {
-    background-color: @selected-bg;
-    text-color:       @selected-fg;
+  background-color: @selected-bg;
+  text-color:       @selected-fg;
 }
 element.alternate.normal {
-    background-color: @t;
-    text-color:       @fg;
+  background-color: @t;
+  text-color:       @fg;
 }
 element.alternate.urgent {
-    background-color: @t;
-    text-color:       @urgent;
+  background-color: @t;
+  text-color:       @urgent;
 }
 element.alternate.active {
-    background-color: @t;
-    text-color:       @active;
+  background-color: @t;
+  text-color:       @active;
 }
 
 sidebar {
-    border:       2px 0 0;
-    border-color: @fg;
+  border:       2px 0 0;
+  border-color: @fg;
 }
 
 inputbar {
-    spacing:    0;
-    text-color: @fg;
-    padding:    2px;
-    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
+  spacing:    0;
+  text-color: @fg;
+  padding:    2px;
+  children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
 }
 
 case-indicator,
 entry,
 prompt,
 button {
-    spacing:    0;
-    text-color: @fg;
+  spacing:    0;
+  text-color: @fg;
 }
 
 button.selected {
-    background-color: @bg;
-    text-color:       @fg;
+   background-color: @bg;
+   text-color:       @fg;
 }
 
 textbox-prompt-sep {
-    expand:     false;
-    str:        ":";
-    text-color: @fg;
-    margin:     0 0.3em 0 0;
+  expand:     false;
+  str:        ">";
+  text-color: #FE8019;
+  margin:     0 0.3em 0 0;
 }
-// }}}
