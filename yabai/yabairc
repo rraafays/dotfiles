@@ -1,13 +1,7 @@
 #!/bin/bash
 
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
-
-yabai --load-sa
-defaults write com.apple.finder DisableAllAnimations -bool true
-killall Finder
-# to reset system defaults, delete the key instead
-# defaults delete com.apple.finder DisableAllAnimations
+sudo yabai --load-sa
 
 yabai -m config \
   layout bsp \
