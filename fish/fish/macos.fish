@@ -1,6 +1,7 @@
 set -x LIBRARY_PATH "$LIBRARY_PATH:$(brew --prefix)/lib"
 set -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -x FrameworkPathOverride "$HOME/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono"
+set -x DISPLAY "aqua"
 
 function man -d 'man'
   command man -P 'nvim -c \'Man! -o -\'' $argv
