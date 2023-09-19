@@ -1,9 +1,0 @@
-#!/bin/sh
-tput setaf 9 bold
-printf $(hostname -s)
-# printf ' %s\n' "$PWD" >/dev/tty
-tput setaf 8 bold
-printf ' %s' "${@}" >/dev/tty
-printf '\n'
-tput sgr0
-exec /usr/bin/sudo "$@"

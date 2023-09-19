@@ -3,7 +3,7 @@ set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
 set -x GRAVEYARD "$HOME/.graveyard"
 set -x ELINKS_CONFDIR "$HOME/.config/elinks"
-set -x SUDO_PROMPT "$(tput setaf 9 bold)> $(tput sgr0)"
+set -x SUDO_PROMPT "$(tput setaf 9 bold)"
 
 if status is-interactive;
   starship init fish | source
