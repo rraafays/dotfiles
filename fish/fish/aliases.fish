@@ -88,9 +88,6 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
 end
-function visudo -d "edit sudoers file"
-  command sudo EDITOR=nvim visudo $argv
-end
 
 # transmission
 function transmission -d "transmission-remote"
