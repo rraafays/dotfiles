@@ -26,11 +26,4 @@ if status --is-interactive
   function lsblk
     diskutil list
   end
-  function neofetch
-    echo
-    command neofetch --ascii ~/.config/ascii/apple_neofetch --ascii_colors 8 $argv
-  end
-  function cpufetch
-    command cpufetch --color 146,131,115:142,192,123:0,0,0:142,192,123:235,219,178
-  end
 end

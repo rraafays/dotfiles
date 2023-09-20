@@ -10,13 +10,6 @@ if status --is-interactive
     > "$HOME/.config/kitty/kitty.conf"
   end
 
-  function neofetch
-    echo
-    command neofetch --colors 5 5 5 5 5 $argv
-  end
-  function cpufetch
-    command cpufetch --color 146,131,115:204,35,28:0,0,0:204,35,28:235,219,178
-  end
   function hypr
     dbus-run-session Hyprland
   end
