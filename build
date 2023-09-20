@@ -2,6 +2,7 @@
 
 OS=$(uname -s | tr A-Z a-z)
 
+rm -rf fish
 cd base
 stow .
 cd ..
@@ -18,7 +19,6 @@ if [ "$OS" == "linux" ]; then
 fi
 
 if [ "$1" == "clean" ]; then
-  rm fish -rf
   cd base
   stow --delete .
   cd ..
