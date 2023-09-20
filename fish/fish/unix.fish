@@ -1,9 +1,7 @@
 set -x ANDROID_HOME "$HOME/Android/Sdk"
 
 if status --is-interactive
-  function hypr -d 'launch hyprland'
-    dbus-run-session Hyprland
-  end
+  set -x MANPAGER "nvim -c 'Man! -o -'"
 
   if not test -e "$HOME/.config/kitty/kitty.conf"
     cat                                   \
@@ -11,7 +9,11 @@ if status --is-interactive
       "$HOME/.config/kitty/unix.conf"     \
     > "$HOME/.config/kitty/kitty.conf"
   end
-  if [ "$MANPAGER" != "nvim -c 'Man! -o -'" ]
-    set MANPAGER "nvim -c 'Man! -o -'"
+
+  function cpufetch
+    command cpufetch --color 146,131,115:204,35,28:0,0,0:204,35,28:235,219,178
+  end
+  function hypr
+    dbus-run-session Hyprland
   end
 end

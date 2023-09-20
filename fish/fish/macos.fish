@@ -11,22 +11,22 @@ if status --is-interactive
     > "$HOME/.config/kitty/kitty.conf"
   end
 
-  function man -d 'man'
+  function man
     command man -P 'nvim -c \'Man! -o -\'' $argv
   end
-  function fixlogin -d 'fix login items and background tasks'
+  function fixlogin
     sfltool resetbtm
   end
-  function yabai -d 'run yabai with dash'
+  function yabai
     SHELL=/bin/dash command yabai $argv
   end
-  function skhd -d 'run skhd with dash'
+  function skhd
     SHELL=/bin/dash command skhd $argv
   end
-  function lsblk -d 'alias lsblk to diskutil list'
+  function lsblk
     diskutil list
   end
-  function neofetch -d "neofetch"
+  function neofetch
     echo
     command neofetch --ascii ~/.config/ascii/apple_neofetch --ascii_colors 8 $argv
   end
