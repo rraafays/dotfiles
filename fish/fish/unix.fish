@@ -2,7 +2,7 @@ set -x ANDROID_HOME "$HOME/Android/Sdk"
 
 if status --is-interactive
   function hypr -d 'launch hyprland'
-    Hyprland
+    dbus-run-session Hyprland
   end
 
   if not test -e "$HOME/.config/kitty/kitty.conf"
