@@ -1,0 +1,31 @@
+#!/bin/bash
+
+OS=$(uname -s | tr A-Z a-z)
+
+cd base
+stow .
+cd ..
+
+if [ "$OS" == "darwin" ]; then
+  cd macos
+  stow .
+  cd ..
+fi
+if [ "$OS" == "linux" ]; then
+  cd linux
+  stow .
+  cd ..
+fi
+
+if [ "$1" == "clean" ]; then
+  rm fish -rf
+  cd base
+  stow --delete .
+  cd ..
+  cd linux
+  stow --delete .
+  cd ..
+  cd macos
+  stow --delete .
+  cd ..
+fi
