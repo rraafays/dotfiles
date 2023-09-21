@@ -1,0 +1,28 @@
+#!/bin/bash
+
+cargo_package_list=("cargo-update \
+                    proverb \
+                    lsd \
+                    rm-improved \
+                    ripgrep \
+                    fd-find \
+                    qrencode \
+                    bat \
+                    onefetch")
+
+brew_package_list=("yabai \
+                   skhd \
+                   kitty \
+                   fish \
+                   rust \
+                   starship \
+                   zoxide \
+                   fzf \
+                   tmux \
+                   transmission-cli \
+                   nvim \
+                   tree-sitter \
+                   mpv \
+                   zathura \
+                   scrcpy \
+                   dotnet-sdk")
