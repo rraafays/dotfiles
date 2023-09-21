@@ -10,7 +10,8 @@ cargo_package_list=("cargo-update \
                     bat \
                     onefetch")
 
-brew_package_list=("yabai \
+brew_package_list=("stow \
+                    yabai \
                     skhd \
                     kitty \
                     fish \
@@ -27,7 +28,8 @@ brew_package_list=("yabai \
                     scrcpy \
                     dotnet-sdk")
 
-emerge_package_list=("app-admin/doas \
+emerge_package_list=("app-admin/stow \
+                      app-admin/doas \
                       dev-lang/rust \
                       app-shells/fish \
                       app-shells/starship \
