@@ -40,6 +40,6 @@ total-size: false
 
 hyperlink: never
 
-symlink-arrow: ⇒
+symlink-arrow: =>
 
 header: false
