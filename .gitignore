@@ -3,14 +3,17 @@
 
 !build
 
+!.scripts/
+!.scripts/**
+
+!.base/
+!.base/**
+
+!.linux/
+!.linux/**
+
+!.macos/
+!.macos/**
+
 !etc/
 !etc/**
-
-!base/
-!base/**
-
-!linux/
-!linux/**
-
-!macos/
-!macos/**

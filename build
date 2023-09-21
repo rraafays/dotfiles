@@ -1,19 +1,21 @@
 #!/bin/bash
 
 rm -rf fish kitty
-cd base && stow . && cd ..
+cd .base && stow . && cd ..
 
 if [ "$1" == "clean" ]; then
-  cd base && stow --delete . && cd ..
-  cd linux && stow --delete . && cd ..
-  cd macos && stow --delete . && cd ..
+  cd .base && stow --delete . && cd ..
+  cd .linux && stow --delete . && cd ..
+  cd .macos && stow --delete . && cd ..
 else
   OS=$(uname -s | tr A-Z a-z)
 
   if [ "$OS" == "darwin" ]; then
-    cd macos && stow . && cd ..
+    cd .macos && stow . && cd ..
+    bash .scripts/get_brew
+    brew upgrade
   fi
   if [ "$OS" == "linux" ]; then
-    cd linux && stow . && cd ..
+    cd .linux && stow . && cd ..
   fi
 fi
