@@ -11,18 +11,38 @@ cargo_package_list=("cargo-update \
                     onefetch")
 
 brew_package_list=("yabai \
-                   skhd \
-                   kitty \
-                   fish \
-                   rust \
-                   starship \
-                   zoxide \
-                   fzf \
-                   tmux \
-                   transmission-cli \
-                   nvim \
-                   tree-sitter \
-                   mpv \
-                   zathura \
-                   scrcpy \
-                   dotnet-sdk")
+                    skhd \
+                    kitty \
+                    fish \
+                    rust \
+                    starship \
+                    zoxide \
+                    fzf \
+                    tmux \
+                    transmission-cli \
+                    nvim \
+                    tree-sitter \
+                    mpv \
+                    zathura \
+                    scrcpy \
+                    dotnet-sdk")
+
+emerge_package_list=("app-admin/doas \
+                      dev-lang/rust \
+                      app-shells/fish \
+                      app-shells/starship \
+                      app-shells/zoxide \
+                      app-shells/fzf \
+                      app-misc/tmux \
+                      net-p2p/transmission \
+                      app-editors/neovim \
+                      dev-util/tree-sitter-cli \
+                      x11-terms/kitty \
+                      media-video/pipewire \
+                      gui-wm/hyprland \
+                      gui-apps/hyprpaper \
+                      gui-apps/wl-clipboard \
+                      app-text/zathura \
+                      media-video/mpv \
+                      app-mobilephone/scrcpy \
+                      dev-dotnet/dotnet-sdk-bin")
