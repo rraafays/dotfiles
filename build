@@ -16,14 +16,17 @@ else
   if [ "$OS" == "darwin" ]; then
     cd .macos && stow . && cd ..
     bash .scripts/get_brew
-    brew upgrade
     brew install $brew_package_list
     cargo install $cargo_package_list
+    cargo install-update --all
   fi
   if [ "$OS" == "linux" ]; then
     cd .linux && stow . && cd ..
     rm -rf /etc/portage
     git clone https://github.com/rraafays/$HOSTNAME /etc/portage
+    emerge --verbose --update --deep --newuse @world
     emerge --noreplace --verbose $emerge_package_list
+    cargo install $cargo_package_list
+    cargo install-update --all
   fi
 fi
