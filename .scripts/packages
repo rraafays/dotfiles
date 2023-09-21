@@ -24,7 +24,6 @@ brew_package_list=("stow \
                     nvim \
                     tree-sitter \
                     mpv \
-                    zathura \
                     scrcpy \
                     dotnet-sdk")
 
@@ -44,7 +43,6 @@ emerge_package_list=("app-admin/stow \
                       gui-wm/hyprland \
                       gui-apps/hyprpaper \
                       gui-apps/wl-clipboard \
-                      app-text/zathura \
                       media-video/mpv \
                       app-mobilephone/scrcpy \
                       dev-dotnet/dotnet-sdk-bin")

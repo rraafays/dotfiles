@@ -1,8 +1,5 @@
 #!/bin/bash
 
-rm -rf fish kitty
-cd .base && stow . && cd ..
-
 source .scripts/packages
 
 if [ "$1" == "clean" ]; then
@@ -14,19 +11,23 @@ else
   HOSTNAME=$(hostname -s | tr A-Z a-z)
 
   if [ "$OS" == "darwin" ]; then
-    cd .macos && stow . && cd ..
     bash .scripts/get_brew
     brew install $brew_package_list
     cargo install $cargo_package_list
     cargo install-update --all
+    cd .macos && stow . && cd ..
   fi
+
   if [ "$OS" == "linux" ]; then
-    cd .linux && stow . && cd ..
     rm -rf /etc/portage
     git clone https://github.com/rraafays/$HOSTNAME /etc/portage
     emerge --quiet --update --deep --newuse @world
     emerge --quiet --noreplace $emerge_package_list
     cargo install $cargo_package_list
     cargo install-update --all
+    cd .linux && stow . && cd ..
   fi
+
+  rm -rf fish kitty
+  cd .base && stow . && cd ..
 fi
