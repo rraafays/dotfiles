@@ -17,3 +17,8 @@
 
 !etc/
 !etc/**
+
+.base/elinks/bookmarks
+.base/elinks/cookies
+.base/elinks/globhist
+.base/elinks/gotohist

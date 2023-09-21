@@ -11,6 +11,7 @@ if [ "$1" == "clean" ]; then
   cd .macos && stow --delete . && cd ..
 else
   OS=$(uname -s | tr A-Z a-z)
+  HOSTNAME=$(hostname -s | tr A-Z a-z)
 
   if [ "$OS" == "darwin" ]; then
     cd .macos && stow . && cd ..
@@ -21,6 +22,8 @@ else
   fi
   if [ "$OS" == "linux" ]; then
     cd .linux && stow . && cd ..
+    rm -rf /etc/portage
+    git clone https://github.com/rraafays/$HOSTNAME /etc/portage
     emerge --noreplace --verbose $emerge_package_list
   fi
 fi
