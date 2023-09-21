@@ -22,3 +22,7 @@
 .base/elinks/cookies
 .base/elinks/globhist
 .base/elinks/gotohist
+
+.base/kitty/kitty.conf
+.base/starship/.user
+.base/starship/.root
