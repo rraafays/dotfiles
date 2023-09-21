@@ -8,33 +8,33 @@ disabled = false
 
 [[battery.display]]
 threshold = 0
-discharging_symbol = '󰂎 '
-charging_symbol = '󰢟 '
+discharging_symbol = 'battery-'
+charging_symbol = 'battery-'
 style = 'fg:8'
 [[battery.display]]
 threshold = 20
-discharging_symbol = '󰁻 '
-charging_symbol = '󰂆 '
+discharging_symbol = 'battery-'
+charging_symbol = 'battery-'
 style = 'fg:8'
 [[battery.display]]
 threshold = 40
-discharging_symbol = '󰁽 '
-charging_symbol = '󰂈 '
+discharging_symbol = 'battery-'
+charging_symbol = 'battery-'
 style = 'fg:8'
 [[battery.display]]
 threshold = 60
-discharging_symbol = '󰁿 '
-charging_symbol = '󰂉 '
+discharging_symbol = 'battery-'
+charging_symbol = 'battery-'
 style = 'fg:8'
 [[battery.display]]
 threshold = 80
-discharging_symbol = '󰂁 '
-charging_symbol = '󰂊 '
+discharging_symbol = 'battery-'
+charging_symbol = 'battery-'
 style = 'fg:8'
 [[battery.display]]
 threshold = 100
-discharging_symbol = '󰁹 '
-charging_symbol = '󰂅 '
+discharging_symbol = ''
+charging_symbol = ''
 style = 'fg:8'
 
 [line_break]
@@ -53,6 +53,7 @@ disabled = true
 disabled = false
 
 [git_branch]
+symbol = ""
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [status]
@@ -61,43 +62,43 @@ format = '[$symbol$status]($style) '
 style = 'bold fg:9'
 map_symbol = true
 pipestatus = true
-symbol = '󰅙 '
-not_executable_symbol = '󰍶 '
-not_found_symbol = '󰋗 '
-sigint_symbol = '󰙦 '
-signal_symbol = '󰝥 '
+symbol = ''
+not_executable_symbol = ''
+not_found_symbol = ''
+sigint_symbol = ''
+signal_symbol = ''
 pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
 pipestatus_segment_format = '[$symbol$status]($style)'
 
 [bun]
-symbol = '󰥚 '
+symbol = 'bun '
 format = '[$symbol($version)]($style) '
 [c]
-symbol = " "
+symbol = "c "
 format = '[$symbol($version(-$name))]($style) '
 [dotnet]
-symbol = '󰌛 '
+symbol = 'csharp '
 format = '[$symbol($version)($tfm)]($style) '
 [gradle]
-symbol = " "
+symbol = "gradle "
 format = '[$symbol($version)]($style) '
 [java]
-symbol = " "
+symbol = "java "
 format = '[$symbol($version)]($style) '
 [lua]
-symbol = " "
+symbol = "lua "
 format = '[$symbol($version)]($style) '
 [nodejs]
-symbol = " "
+symbol = "node "
 format = '[$symbol($version)]($style) '
 [package]
-symbol = "󰏗 "
+symbol = "version "
 format = '[$symbol$version]($style) '
 [python]
-symbol = " "
+symbol = "python "
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 [rust]
-symbol = " "
+symbol = "rust "
 format = '[$symbol($version)]($style) '
 [username]
 style_user = "bold fg:10"
