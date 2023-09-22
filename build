@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source .scripts/packages
-
 if [ "$1" == "clean" ]; then
   cd .base && stow --delete . && cd ..
   cd .linux && stow --delete . && cd ..
@@ -12,8 +10,8 @@ else
 
   if [ "$OS" == "darwin" ]; then
     bash .scripts/get_brew
-    brew install $brew_package_list
-    cargo install $cargo_package_list
+    brew install $(cat .packages/brew)
+    cargo install $(cat .packages/cargo)
     cd .macos && stow . && cd ..
   fi
 
@@ -21,8 +19,8 @@ else
     rm -rf /etc/portage
     git clone https://github.com/rraafays/$HOSTNAME /etc/portage
     emerge --quiet --update --deep --newuse @world
-    emerge --quiet --noreplace $emerge_package_list
-    cargo install $cargo_package_list
+    emerge --quiet --noreplace $(cat .packages/emerge)
+    cargo install $(cat .packages/cargo)
     cd .linux && stow . && cd ..
   fi
 
