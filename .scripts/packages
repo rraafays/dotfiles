@@ -1,16 +1,18 @@
 #!/bin/bash
 
 cargo_package_list=("cargo-update \
-                    proverb \
-                    lsd \
-                    rm-improved \
-                    ripgrep \
-                    fd-find \
-                    qrencode \
-                    bat \
-                    onefetch")
+                     proverb \
+                     lsd \
+                     rm-improved \
+                     ripgrep \
+                     fd-find \
+                     qrencode \
+                     bat \
+                     onefetch")
 
 brew_package_list=("stow \
+                    font-iosevka \
+                    font-symbols-only-nerd-font \
                     yabai \
                     skhd \
                     kitty \

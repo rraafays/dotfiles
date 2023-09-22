@@ -14,7 +14,6 @@ else
     bash .scripts/get_brew
     brew install $brew_package_list
     cargo install $cargo_package_list
-    cargo install-update --all
     cd .macos && stow . && cd ..
   fi
 
@@ -24,7 +23,6 @@ else
     emerge --quiet --update --deep --newuse @world
     emerge --quiet --noreplace $emerge_package_list
     cargo install $cargo_package_list
-    cargo install-update --all
     cd .linux && stow . && cd ..
   fi
 
