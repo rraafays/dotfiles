@@ -1,3 +1,4 @@
+app-eselect/eselect-repository
 app-admin/stow
 app-admin/doas
 dev-lang/rust
@@ -8,12 +9,18 @@ app-shells/fzf
 app-misc/tmux
 net-p2p/transmission
 app-editors/neovim
+dev-util/xxd
+dev-dotnet/dotnet-sdk-bin
 dev-util/tree-sitter-cli
+media-fonts/iosevka
+media-fonts/nerd-fonts-symbols
+media-fonts/sarasa-gothic
 x11-terms/kitty
 media-video/pipewire
+media-video/wireplumber
+x11-misc/rofi
+www-client/librewolf
+gui-apps/wl-clipboard
 gui-wm/hyprland
 gui-apps/hyprpaper
-gui-apps/wl-clipboard
 media-video/mpv
-app-mobilephone/scrcpy
-dev-dotnet/dotnet-sdk-bin
