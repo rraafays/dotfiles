@@ -31,16 +31,6 @@ yabai -m config \
   window_border_blur off \
   external_bar all:0:0
 
-yabai -m space \
-  1 \
-  2 \
-  3 \
-  4 \
-  5 \
-  6 \
-  7 \
-  8 \
-  9 \
-  10
+yabai -m space 1 2 3 4 5 6 7 8 9 10
 
 yabai -m rule --add app="mpv" sticky=off manage=off
