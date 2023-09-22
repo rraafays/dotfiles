@@ -9,20 +9,14 @@ else
   HOSTNAME=$(hostname -s | tr A-Z a-z)
 
   if [ "$OS" == "darwin" ]; then
-    bash .scripts/get_brew
-    brew install $(cat .packages/brew)
-    cargo install $(cat .packages/cargo)
+    bash .scripts/brew_replicate
     cd .macos && stow . && cd ..
   fi
-
   if [ "$OS" == "linux" ]; then
-    rm -rf /etc/portage
-    git clone https://github.com/rraafays/$HOSTNAME /etc/portage
-    emerge --quiet --update --deep --newuse @world
-    emerge --quiet --noreplace $(cat .packages/emerge)
-    cargo install $(cat .packages/cargo)
+    doas bash .scripts/emerge_replicate
     cd .linux && stow . && cd ..
   fi
+  cargo install $(cat .packages/cargo)
 
   rm -rf fish kitty
   cd .base && stow . && cd ..

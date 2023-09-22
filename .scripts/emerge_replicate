@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf /etc/portage
+git clone https://github.com/rraafays/$HOSTNAME /etc/portage
+emerge --quiet --update --deep --newuse @world
+emerge --verbose --noreplace $(cat .packages/emerge)
