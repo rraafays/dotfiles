@@ -12,7 +12,6 @@ fzf
 tmux
 transmission-cli
 nvim
-tree-sitter
 mpv
 scrcpy
 dotnet-sdk

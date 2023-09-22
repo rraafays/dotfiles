@@ -11,7 +11,6 @@ net-p2p/transmission
 app-editors/neovim
 dev-util/xxd
 dev-dotnet/dotnet-sdk-bin
-dev-util/tree-sitter-cli
 media-fonts/iosevka
 media-fonts/nerd-fonts-symbols
 media-fonts/sarasa-gothic
