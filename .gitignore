@@ -27,5 +27,8 @@
 .base/elinks/gotohist
 
 .base/kitty/kitty.conf
+
 .base/starship/.user
 .base/starship/.root
+
+.base/nvim/lazy-lock.json
