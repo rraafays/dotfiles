@@ -19,10 +19,10 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "d", '"_d')
 
 -- increment or decrement value under cursor
-keymap.set("n", "=", "<C-a>")
-keymap.set("n", "-", "<C-x>")
-keymap.set("n", "+", "10<C-a>")
-keymap.set("n", "_", "10<C-x>")
+-- keymap.set("n", "=", "<C-a>")
+-- keymap.set("n", "-", "<C-x>")
+-- keymap.set("n", "+", "10<C-a>")
+-- keymap.set("n", "_", "10<C-x>")
 
 -- double value under cursor
 keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>n:nohlsearch<CR>")

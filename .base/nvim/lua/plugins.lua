@@ -27,7 +27,6 @@ lazy.setup({
 	"kyazdani42/nvim-web-devicons", -- icons
 	"onsails/lspkind-nvim", -- pictograms
 	"lewis6991/gitsigns.nvim", -- git changes
-	"folke/zen-mode.nvim", -- zen coding
 	"nvim-treesitter/nvim-treesitter", -- code highlighting
 	"l3mon4d3/luasnip", -- code snippets
 	"nvim-telescope/telescope.nvim", -- fuzzy finder
@@ -60,4 +59,5 @@ lazy.setup({
 	"MunifTanjim/nui.nvim", -- nvim ui library
 	"LunarVim/bigfile.nvim", -- speed up big files
 	"gentoo/gentoo-syntax", -- gentoo syntax
+	"shortcuts/no-neck-pain.nvim",
 })
