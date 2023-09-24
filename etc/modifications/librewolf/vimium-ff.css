@@ -9,7 +9,7 @@
 
 #vimiumHintMarkerContainer div span {
   color: #f0dfaf;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
   text-shadow: none;
@@ -50,7 +50,7 @@
   border: none;
   box-shadow: none;
   color: #ebdbb2;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
 }
@@ -81,7 +81,7 @@
 
 #vomnibar li .vomnibarSource {
   color: #83a598;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
 }
@@ -89,14 +89,14 @@
 #vomnibar li em,
 #vomnibar li .vomnibarTitle {
   color: #83a598;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
 }
 
 #vomnibar li .vomnibarUrl {
   color: #ebdbb2;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
 }
@@ -128,7 +128,7 @@ div.vimiumHUD {
 div.vimiumHUD span#hud-find-input,
 div.vimiumHUD .vimiumHUDSearchAreaInner {
   color: #ebdbb2;
-  font-family: tewi, Source Code Pro, sans;
+  font-family: Iosevka Term;
   font-size: 13;
   font-weight: normal;
 }
