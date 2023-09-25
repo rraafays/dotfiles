@@ -15,10 +15,10 @@ if status --is-interactive
   end
   function emerge
     if count $argv > /dev/null
-      command emerge $argv
+      doas emerge $argv
     else
-      command emerge --sync
-      command emerge --verbose --update --deep --newuse @world
+      doas emerge --sync
+      doas emerge --verbose --update --deep --newuse @world
     end
   end
 end
