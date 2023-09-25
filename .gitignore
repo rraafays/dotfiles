@@ -30,4 +30,5 @@
 .base/starship/.root
 .base/nvim/lazy-lock.json
 
+.macos/karabiner/automatic_backups/
 */.DS_Store
