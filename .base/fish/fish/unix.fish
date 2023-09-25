@@ -13,4 +13,12 @@ if status --is-interactive
   function hypr
     dbus-run-session Hyprland
   end
+  function emerge
+    if count $argv > /dev/null
+      command emerge $argv
+    else
+      command emerge --sync
+      command emerge --verbose --update --deep --newuse @world
+    end
+  end
 end
