@@ -26,4 +26,13 @@ if status --is-interactive
   function lsblk
     diskutil list
   end
+  function brew
+    if count $argv > /dev/null
+      command brew $argv
+    else
+      command brew update
+      command brew upgrade
+      command brew upgrade --cask --greedy
+    end
+  end
 end
