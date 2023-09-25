@@ -1,71 +1,71 @@
 # base tools
-function ls -d "replace ls with lsd"
+function ls
   lsd $argv
 end
-function tree -d "directory tree using lsd"
+function tree
   lsd --tree $argv
 end
-function tls -d "list sessions"
+function tls
   tmux ls -F " - #{session_name}"
 end
-function trm -d "remove session"
+function trm
   tmux kill-session -t $argv
 end
-function fd -d "find anything"
+function fd
   command fd -u $argv
 end
-function vi -d "shorthand nvim"
+function vi
   nvim $argv
 end
-function graveyard -d "visit the graveyard"
+function graveyard
   z $HOME/.graveyard
 end
-function graves -d "view graves"
-  tree -a -d $HOME/.graveyard
+function graves
+  tree -a
 end
-function decompose -d "decompose files in the graveyard"
+function decompose
   rip --decompose
 end
-function grep -d "replace grep with ripgrep"
+function grep
   rg $argv
 end
-function bat -d "pretty cat"
+function bat
   command bat --theme gruvbox-dark $argv
 end
-function ssh -d "source metal gear configurations"
+function ssh
   command ssh -F ~/.config/ssh/metal_gear $argv
 end
 
 # utilities
-function ` -d "toggle name"
+function `
   starship toggle username
   starship toggle hostname
   clear
 end
-function = -d "toggle line break"
+function =
   starship toggle line_break
   clear
 end
-function qr -d "quickly generate qrcode"
+function qr
   qrencode -t UTF8 -m 2 $argv
 end
-function gitfetch -d "minimal onefetch"
+function gitfetch
   command onefetch --true-color never --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15
 end
-function onefetch -d "minimal onefetch"
+function onefetch
   command onefetch --true-color never
 end
-function py -d "shorthand python3"
+function py
   python3 $argv
 end
-function clear -d "clear terminal"
+function clear
   if set -q TMUX
     tmux send-keys -R
   else
     command clear
   end
 end
-function clean -d "clean terminal"
+function clean
   if set -q TMUX
     clear
     tmux clear-history
@@ -73,7 +73,7 @@ function clean -d "clean terminal"
     command clear
   end
 end
-function user-dirs-update -d "generate user dirs"
+function user-dirs-update
   mkdir "$HOME/desktop"
   mkdir "$HOME/downloads"
   mkdir "$HOME/templates"
@@ -84,37 +84,44 @@ function user-dirs-update -d "generate user dirs"
   mkdir "$HOME/videos"
   xdg-user-dirs-update
 end
+function cargo
+  if count $argv > /dev/null
+    command cargo $argv
+  else
+    command cargo install-update --all
+  end
+end
 
 # transmission
-function transmission -d "transmission-remote"
+function transmission
   transmission-remote $argv
 end
-function transmission-watch -d "watch transmissions"
+function transmission-watch
   watch -n 1 "transmission-remote -l"
 end
-function transmission-list -d "list transmissions"
+function transmission-list
   transmission-remote -l
 end
-function transmission-torrent -d "control transmission"
+function transmission-torrent
   transmission-remote -t $argv
 end
 
 # graphicals
-function im -d "image in kitty"
+function im
   kitty +kitten icat --align left $argv
 end
-function imv -d "mpv as image viewer"
+function imv
   command mpv --loop --window-maximized --no-terminal --no-input-cursor $argv & disown
 end
-function mpv -d "mpv as video player"
+function mpv
   command mpv --no-terminal --no-input-cursor $argv & disown
 end
-function play -d "mpv as audio player"
+function play
   command mpv --no-audio-display --no-input-cursor $argv
 end
-function thura -d "launch zathura in background"
+function thura
   zathura $argv &
 end
-function scrcpy -d "scrcpy with prefs"
+function scrcpy
   command scrcpy --shortcut-mod lctrl --disable-screensaver $argv
 end
