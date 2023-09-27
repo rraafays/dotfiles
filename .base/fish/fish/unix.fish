@@ -15,7 +15,7 @@ if status --is-interactive
   end
   function emerge
     if count $argv > /dev/null
-      doas emerge $argv
+      emerge $argv
     else
       doas emerge --sync
       doas emerge --verbose --update --deep --newuse @world
