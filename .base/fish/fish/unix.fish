@@ -14,11 +14,20 @@ if status --is-interactive
     dbus-run-session Hyprland
   end
   function emerge
-    if count $argv > /dev/null
-      command emerge $argv
+    if not fish_is_root_user
+      if count $argv > /dev/null
+        doas emerge $argv
+      else
+        doas emerge --sync --verbose
+        doas emerge --verbose --update --deep --newuse @world
+      end
     else
-      doas emerge --sync
-      doas emerge --verbose --update --deep --newuse @world
+      if count $argv > /dev/null
+        command emerge $argv
+      else
+        emerge --sync --verbose
+        emerge --verbose --update --deep --newuse @world
+      end
     end
   end
 end
