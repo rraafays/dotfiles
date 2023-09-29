@@ -59,5 +59,6 @@ lazy.setup({
 	"MunifTanjim/nui.nvim", -- nvim ui library
 	"LunarVim/bigfile.nvim", -- speed up big files
 	"gentoo/gentoo-syntax", -- gentoo syntax
-	"shortcuts/no-neck-pain.nvim",
+	"shortcuts/no-neck-pain.nvim", -- center code
+	"jackmort/chatgpt.nvim", -- chatgpt
 })
