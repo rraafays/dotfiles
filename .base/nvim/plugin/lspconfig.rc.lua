@@ -41,38 +41,10 @@ nvim_lsp.taplo.setup({})
 nvim_lsp.jdtls.setup({})
 nvim_lsp.sqlls.setup({})
 
-if os.getenv("DISPLAY") == nil then
-	vim.fn.sign_define(
-		"DiagnosticSignError",
-		{ texthl = "DiagnosticSignError", text = "E", numhl = "DiagnosticSignError" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignWarn",
-		{ texthl = "DiagnosticSignWarn", text = "W", numhl = "DiagnosticSignWarn" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignHint",
-		{ texthl = "DiagnosticSignHint", text = "H", numhl = "DiagnosticSignHint" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignInfo",
-		{ texthl = "DiagnosticSignInfo", text = "I", numhl = "DiagnosticSignInfo" }
-	)
-else
-	vim.fn.sign_define(
-		"DiagnosticSignError",
-		{ texthl = "DiagnosticSignError", text = "", numhl = "DiagnosticSignError" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignWarn",
-		{ texthl = "DiagnosticSignWarn", text = "", numhl = "DiagnosticSignWarn" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignHint",
-		{ texthl = "DiagnosticSignHint", text = "󰌵", numhl = "DiagnosticSignHint" }
-	)
-	vim.fn.sign_define(
-		"DiagnosticSignInfo",
-		{ texthl = "DiagnosticSignInfo", text = "", numhl = "DiagnosticSignInfo" }
-	)
-end
+vim.fn.sign_define("DiagnosticSignWarn", { texthl = "DiagnosticSignWarn", text = "", numhl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignHint", { texthl = "DiagnosticSignHint", text = "󰌵", numhl = "DiagnosticSignHint" })
+vim.fn.sign_define("DiagnosticSignInfo", { texthl = "DiagnosticSignInfo", text = "", numhl = "DiagnosticSignInfo" })
+vim.fn.sign_define(
+	"DiagnosticSignError",
+	{ texthl = "DiagnosticSignError", text = "", numhl = "DiagnosticSignError" }
+)

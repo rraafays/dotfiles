@@ -16,8 +16,4 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close()
 end
 
-if os.getenv("DISPLAY") == nil then
-	vim.fn.sign_define("DapBreakpoint", { text = "B", texthl = "DiagnosticSignError", numhl = "DiagnosticSignError" })
-else
-	vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", numhl = "DiagnosticSignError" })
-end
+vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", numhl = "DiagnosticSignError" })

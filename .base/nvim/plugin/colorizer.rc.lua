@@ -3,6 +3,4 @@ if not status then
 	return
 end
 
-if os.getenv("DISPLAY") ~= nil then
-	colorizer.setup({ "*" }, { mode = "foreground" })
-end
+colorizer.setup({ "*" }, { mode = "foreground" })

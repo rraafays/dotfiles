@@ -14,32 +14,18 @@ if status is-interactive;
   end
 
   if not fish_is_root_user;
-    if not test -z $DISPLAY
       cat                                       \
         "$HOME/.config/starship/base.toml"      \
         "$HOME/.config/starship/user.toml"      \
       > "$HOME/.config/starship/.user"
-    else
-      cat                                       \
-        "$HOME/.config/starship/tty.toml"       \
-        "$HOME/.config/starship/user.toml"      \
-      > "$HOME/.config/starship/.user"
-    end
     set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
   end
 
   if fish_is_root_user;
-    if not test -z $DISPLAY
       cat                                       \
         "$HOME/.config/starship/base.toml"      \
         "$HOME/.config/starship/root.toml"      \
       > "$HOME/.config/starship/.root"
-    else
-      cat                                         \
-          "$HOME/.config/starship/tty.toml"       \
-          "$HOME/.config/starship/root.toml"      \
-      >   "$HOME/.config/starship/.root"
-    end
     set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
   end
 

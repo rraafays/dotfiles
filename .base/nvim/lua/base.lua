@@ -69,7 +69,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 vim.opt.formatoptions:append({ "r" })
 vim.api.nvim_set_option("showmode", false)
-
-if os.getenv("DISPLAY") == nil then
-	vim.cmd([[ set signcolumn=no ]])
-end

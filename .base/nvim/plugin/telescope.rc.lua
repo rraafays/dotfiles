@@ -2,14 +2,6 @@ local telescope = require("telescope")
 local actions = require("telescope.actions")
 local fb_actions = require("telescope").extensions.file_browser.actions
 
-local function get_window_border()
-	if os.getenv("DISPLAY") == nil then
-		return { "─", "│", "─", "│", "┌", "┐", "┘", "└" }
-	else
-		return { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
-	end
-end
-
 function telescope_buffer_dir()
 	return vim.fn.expand("%:p:h")
 end
@@ -21,7 +13,7 @@ telescope.setup({
 				["q"] = actions.close,
 			},
 		},
-		borderchars = get_window_border(),
+		borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
 	},
 	extensions = {
 		file_browser = {
@@ -54,12 +46,7 @@ telescope.setup({
 telescope.load_extension("file_browser")
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set(
-	"n",
-	"<C-f>",
-	'<cmd>lua require("telescope.builtin").find_files({ hidden = true })<CR>',
-	opts
-)
+vim.keymap.set("n", "<C-f>", '<cmd>lua require("telescope.builtin").find_files({ hidden = true })<CR>', opts)
 vim.keymap.set("n", "<C-g>", '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
 vim.keymap.set("n", "<C-b>", '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
 vim.keymap.set("n", "<C-d>", '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
