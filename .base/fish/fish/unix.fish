@@ -20,6 +20,7 @@ if status --is-interactive
       else
         doas emerge --sync --verbose
         doas emerge --verbose --update --deep --newuse @world
+        doas emerge --depclean
       end
     else
       if count $argv > /dev/null
@@ -27,6 +28,7 @@ if status --is-interactive
       else
         emerge --sync --verbose
         emerge --verbose --update --deep --newuse @world
+        emerge --depclean
       end
     end
   end

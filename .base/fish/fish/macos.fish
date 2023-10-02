@@ -28,11 +28,13 @@ if status --is-interactive
   end
   function brew
     if count $argv > /dev/null
-      command brew $argv
+      command brew install $argv
     else
       command brew update
       command brew upgrade
       command brew upgrade --cask --greedy
+      command brew autoremove
+      command brew cleanup
     end
   end
 end
