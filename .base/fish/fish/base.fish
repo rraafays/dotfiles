@@ -8,6 +8,7 @@ set -x ELINKS_CONFDIR "$HOME/.config/.base/elinks"
 if status is-interactive;
   starship init fish | source
   zoxide init fish | source
+  direnv hook fish | source
 
   function fish_greeting
     proverb

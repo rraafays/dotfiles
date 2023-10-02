@@ -23,3 +23,4 @@ gui-apps/wl-clipboard
 gui-wm/hyprland
 gui-apps/hyprpaper
 media-video/mpv
+app-shells/direnv
