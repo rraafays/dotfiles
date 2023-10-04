@@ -28,7 +28,7 @@ if status --is-interactive
   end
   function brew
     if count $argv > /dev/null
-      command brew install $argv
+      command brew $argv
     else
       command brew update
       command brew upgrade

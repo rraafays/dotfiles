@@ -16,7 +16,7 @@ if status --is-interactive
   function emerge
     if not fish_is_root_user
       if count $argv > /dev/null
-        doas emerge $argv
+        command emerge $argv
       else
         doas emerge --sync --verbose
         doas emerge --verbose --update --deep --newuse @world
