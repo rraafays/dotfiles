@@ -6,6 +6,9 @@ local extensions_path = codelldb:get_install_path() .. "/extension/"
 local codelldb_path = extensions_path .. "adapter/codelldb"
 local liblldb_path = extensions_path .. "lldb/lib/liblldb.dylib"
 
+vim.g.rust_recommended_style = false
+vim.g.rustfmt_autosave = 1
+
 rust_tools.setup({
 	dap = {
 		adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),

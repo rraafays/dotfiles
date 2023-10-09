@@ -4,17 +4,19 @@ local mason_lsp = require("mason-lspconfig")
 mason.setup({})
 mason_lsp.setup({
 	ensure_installed = {
-		"rust_analyzer",
+		"astro",
 		"bashls",
 		"clangd",
 		"csharp_ls",
+		"cssls",
+		"html",
+		"jdtls",
 		"ltex",
 		"lua_ls",
-		"tsserver",
-		"taplo",
 		"pylsp",
-		"astro",
-		"cssls",
-		"jdtls",
+		"rust_analyzer",
+		"sqlls",
+		"taplo",
+		"tsserver",
 	},
 })
