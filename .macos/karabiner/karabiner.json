@@ -18,14 +18,14 @@
                 },
                 "rules": [
                     {
-                        "description": "command -> navigation",
+                        "description": "fn -> navigation",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command"
+                                            "fn"
                                         ],
                                         "optional": [
                                             "any"
@@ -44,7 +44,7 @@
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command"
+                                            "fn"
                                         ],
                                         "optional": [
                                             "any"
@@ -63,7 +63,7 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command"
+                                            "fn"
                                         ],
                                         "optional": [
                                             "any"
@@ -82,7 +82,7 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_command"
+                                            "fn"
                                         ],
                                         "optional": [
                                             "any"
@@ -99,7 +99,7 @@
                         ]
                     },
                     {
-                        "description": "spacebar -> command/navigation (spacebar if pressed alone)",
+                        "description": "spacebar ~> fn/navigation",
                         "manipulators": [
                             {
                                 "from": {
@@ -112,7 +112,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_command"
+                                        "key_code": "fn"
                                     }
                                 ],
                                 "to_if_alone": [
@@ -125,7 +125,7 @@
                         ]
                     },
                     {
-                        "description": "return -> control (return if pressed alone)",
+                        "description": "return ~> control",
                         "manipulators": [
                             {
                                 "from": {
