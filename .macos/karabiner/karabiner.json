@@ -602,6 +602,16 @@
                 },
                 {
                     "from": {
+                        "key_code": "left_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_control"
+                        }
+                    ]
+                },
+                {
+                    "from": {
                         "key_code": "left_option"
                     },
                     "to": [
@@ -617,16 +627,6 @@
                     "to": [
                         {
                             "key_code": "escape"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "left_command"
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_control"
                         }
                     ]
                 },
