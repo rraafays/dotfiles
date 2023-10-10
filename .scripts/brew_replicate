@@ -16,6 +16,6 @@ source
 brew tap homebrew/cask-fonts
 brew install --no-quarantine $(cat .packages/brew)
 source
-yabai --start-service
+brew services restart felixkratz/formulae/fyabai
 skhd --start-service
 open -a karabiner-elements
