@@ -3,9 +3,9 @@
 source() {
   (
     echo
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"'
+    echo 'eval "$($(which brew) shellenv)"'
   ) >>/Users/raf/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  eval "$($(which brew) shellenv)"
 }
 
 if ! command -v brew; then
@@ -16,6 +16,7 @@ source
 brew tap homebrew/cask-fonts
 brew install --no-quarantine $(cat .packages/brew)
 source
-brew services restart felixkratz/formulae/fyabai
+brew install --HEAD felixkratz/formulae/fyabai
+brew services restart yabai
 skhd --start-service
 open -a karabiner-elements
