@@ -44,6 +44,9 @@ require("formatter").setup({
 				}
 			end,
 		},
+		xml = {
+			require("formatter.filetypes.xml").tidy,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
