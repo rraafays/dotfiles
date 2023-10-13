@@ -1,3 +1,4 @@
+vim.loader.enable()
 vim.cmd("autocmd!")
 
 vim.g.loaded_netrw = 1
