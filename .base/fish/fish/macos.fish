@@ -31,8 +31,8 @@ if status --is-interactive
       command brew $argv
     else
       command brew update
-      command brew upgrade
-      command brew upgrade --cask --greedy
+      command brew upgrade --no-quarantine
+      command brew upgrade --no-quarantine --cask --greedy
       command brew autoremove
       command brew cleanup
     end
