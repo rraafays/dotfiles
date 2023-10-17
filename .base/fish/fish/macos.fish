@@ -1,7 +1,7 @@
+set -x DISPLAY "aqua"
 set -x LIBRARY_PATH "$LIBRARY_PATH:$(brew --prefix)/lib"
 set -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -x FrameworkPathOverride "$HOME/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono"
-set -x DISPLAY "aqua"
 
 if status --is-interactive
   if not test -e "$HOME/.config/kitty/kitty.conf"

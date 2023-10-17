@@ -7,6 +7,7 @@ set -x RBENV_INSTALL "$HOME/.rbenv";
 set -x BREW_INSTALL "/opt/homebrew";
 set -x PNPM_HOME "$HOME/.local/share/pnpm";
 set -x USER_HOME "/Users/$USER";
+set -x INTELLIJ_HOME "/Applications/IntelliJ IDEA.app/Contents/MacOS";
 
 set -x PATH                       \
   $BUN_INSTALL/bin                \
@@ -22,4 +23,5 @@ set -x PATH                       \
   $HOME/.local/bin                \
   $HOME/.config/fish/scripts      \
   $USER_HOME/bin                  \
+  $INTELLIJ_HOME                  \
   $PATH
