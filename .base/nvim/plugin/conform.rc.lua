@@ -14,7 +14,7 @@ conform.setup({
 			command = "idea",
 			require_cwd = true,
 			stdin = false,
-			args = { "format", "-s", "/Users/raf/Downloads/odyssey.xml", "$FILENAME" },
+			args = { "format", "-s", os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml", "$FILENAME" },
 		},
 	},
 	format_on_save = {
