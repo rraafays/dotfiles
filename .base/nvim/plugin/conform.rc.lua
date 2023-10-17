@@ -7,7 +7,7 @@ conform.setup({
 		javascript = { "prettier" },
 		xml = { "tidy" },
 		sql = { "sql_formatter" },
-		java = { "intellij" },
+		-- java = { "intellij" },
 	},
 	formatters = {
 		intellij = {

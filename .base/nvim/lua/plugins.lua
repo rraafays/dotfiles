@@ -60,4 +60,5 @@ lazy.setup({
 	"shortcuts/no-neck-pain.nvim", -- center code
 	"jackmort/chatgpt.nvim", -- chatgpt
 	"stevearc/conform.nvim", -- consistent formatters
+	"mfussenegger/nvim-jdtls", -- jdtls
 })
