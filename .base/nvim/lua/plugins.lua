@@ -52,13 +52,12 @@ lazy.setup({
 	"ahmedkhalf/project.nvim", -- project management
 	"mfussenegger/nvim-dap", -- debug adapter protocol
 	"rcarriga/nvim-dap-ui", -- debug adapter protocol uis
-	"mhartington/formatter.nvim", -- easy formatter config
 	"norcalli/nvim-colorizer.lua", -- colour highlighter
 	"kevinhwang91/promise-async", -- promise & async
-	"kevinhwang91/nvim-ufo", -- smart folding
 	"MunifTanjim/nui.nvim", -- nvim ui library
 	"LunarVim/bigfile.nvim", -- speed up big files
 	"gentoo/gentoo-syntax", -- gentoo syntax
 	"shortcuts/no-neck-pain.nvim", -- center code
 	"jackmort/chatgpt.nvim", -- chatgpt
+	"stevearc/conform.nvim", -- consistent formatters
 })
