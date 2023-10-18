@@ -5,9 +5,9 @@ conform.setup({
 		lua = { "stylua" },
 		sh = { "shfmt" },
 		javascript = { "prettier" },
+		typescript = { "prettier" },
 		xml = { "tidy" },
 		sql = { "redgate" },
-		-- java = { "intellij" },
 	},
 	formatters = {
 		intellij = {
@@ -20,6 +20,11 @@ conform.setup({
 			command = "sql-formatter",
 			stdin = true,
 			args = { "--config", os.getenv("HOME") .. "/.config/nvim/etc/redgate.json" },
+		},
+		prettier = {
+			command = "prettier",
+			stdin = true,
+			args = { "--tab-width", 4, "--stdin-filepath", "$FILENAME" },
 		},
 	},
 	format_on_save = {
