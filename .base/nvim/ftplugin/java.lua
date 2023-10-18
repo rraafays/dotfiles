@@ -6,6 +6,20 @@ local root_dir = require("jdtls.setup").find_root(root_markers)
 
 local workspace_folder = home .. "/.local/share/eclipse/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
 
+local has = function(x)
+	return vim.fn.has(x) == 1
+end
+
+local function get_config()
+	local config = home .. "/.local/share/nvim/mason/packages/jdtls/config_"
+	if vim.loop.os_uname().sysname == "Darwin" then
+		return config .. "mac"
+	end
+	if vim.loop.os_uname().sysname == "Linux" then
+		return config .. "linux"
+	end
+end
+
 local config = {
 	flags = {
 		debounce_text_changes = 80,
@@ -76,7 +90,7 @@ local config = {
 		vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
 
 		"-configuration",
-		home .. "/.local/share/nvim/mason/packages/jdtls/config_mac",
+		get_config(),
 
 		"-data",
 		workspace_folder,
