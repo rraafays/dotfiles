@@ -6,7 +6,7 @@ conform.setup({
 		sh = { "shfmt" },
 		javascript = { "prettier" },
 		xml = { "tidy" },
-		sql = { "sql_formatter" },
+		sql = { "redgate" },
 		-- java = { "intellij" },
 	},
 	formatters = {
@@ -15,6 +15,11 @@ conform.setup({
 			require_cwd = true,
 			stdin = false,
 			args = { "format", "-s", os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml", "$FILENAME" },
+		},
+		redgate = {
+			command = "sql-formatter",
+			stdin = true,
+			args = { "--config", os.getenv("HOME") .. "/.config/nvim/etc/redgate.json" },
 		},
 	},
 	format_on_save = {
