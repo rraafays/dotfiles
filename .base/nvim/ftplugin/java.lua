@@ -55,14 +55,6 @@ local config = {
 				},
 				useBlocks = true,
 			},
-			configuration = {
-				runtimes = {
-					{
-						name = "JavaSE-17",
-						path = "/opt/homebrew/Cellar/openjdk@17/17.0.8.1",
-					},
-				},
-			},
 		},
 	},
 	cmd = {
@@ -81,10 +73,10 @@ local config = {
 		"-javaagent:" .. home .. "/.local/share/eclipse/lombok.jar",
 
 		"-jar",
-		vim.fn.glob("/opt/homebrew/Cellar/jdtls/1.28.0/libexec/plugins/org.eclipse.equinox.launcher_*.jar"),
+		vim.fn.glob(home .. "/.local/share/nvim/mason/packages/jdtls/plugins/org.eclipse.equinox.launcher_*.jar"),
 
 		"-configuration",
-		"/opt/homebrew/Cellar/jdtls/1.28.0/libexec/config_mac",
+		home .. "/.local/share/nvim/mason/packages/jdtls/config_mac",
 
 		"-data",
 		workspace_folder,
