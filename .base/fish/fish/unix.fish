@@ -32,4 +32,7 @@ if status --is-interactive
       end
     end
   end
+  function idea
+    idea-community $argv
+  end
 end

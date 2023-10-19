@@ -1,5 +1,14 @@
 local conform = require("conform")
 
+local function get_idea_bin()
+	if vim.loop.os_uname().sysname == "Darwin" then
+		return "idea"
+	end
+	if vim.loop.os_uname().sysname == "Linux" then
+		return "idea-community"
+	end
+end
+
 conform.setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -12,7 +21,7 @@ conform.setup({
 	},
 	formatters = {
 		intellij = {
-			command = "idea",
+			command = get_idea_bin(),
 			require_cwd = false,
 			stdin = false,
 			args = { "format", "-s", os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml", "$FILENAME" },
