@@ -28,12 +28,12 @@ local config = {
 	root_dir = root_dir,
 	settings = {
 		java = {
-			format = {
-				settings = {
-					url = home .. "/.config/nvim/etc/eclipse.xml",
-					profile = "odyssey",
-				},
-			},
+			-- format = {
+			-- 	settings = {
+			-- 		url = home .. "/.config/nvim/etc/eclipse.xml",
+			-- 		profile = "odyssey",
+			-- 	},
+			-- },
 			signatureHelp = { enabled = true },
 			contentProvider = { preferred = "fernflower" },
 			completion = {

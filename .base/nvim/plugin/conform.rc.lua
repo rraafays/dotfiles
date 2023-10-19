@@ -8,11 +8,12 @@ conform.setup({
 		typescript = { "prettier" },
 		xml = { "tidy" },
 		sql = { "redgate" },
+		java = { "intellij" },
 	},
 	formatters = {
 		intellij = {
 			command = "idea",
-			require_cwd = true,
+			require_cwd = false,
 			stdin = false,
 			args = { "format", "-s", os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml", "$FILENAME" },
 		},
@@ -31,16 +32,6 @@ conform.setup({
 		lsp_fallback = true,
 		timeout_ms = 50000,
 	},
-	format_after_save = {
-		lsp_fallback = true,
-	},
-})
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	callback = function(args)
-		require("conform").format({ bufnr = args.buf })
-	end,
 })
 
 local slow_format_filetypes = { "java" }
