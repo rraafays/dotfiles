@@ -1,4 +1,6 @@
 {
   "keywordCase": "upper",
-  "logicalOperatorNewline": "after"
+  "logicalOperatorNewline": "after",
+  "tabWidth": 4,
+  "useTabs": false
 }
