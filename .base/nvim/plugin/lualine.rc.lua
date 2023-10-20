@@ -1,37 +1,46 @@
 local lualine = require("lualine")
 
-local wm_theme = require("lualine.themes.gruvbox")
+local theme = require("lualine.themes.gruvbox")
 
-wm_theme.normal.a.fg = "#A89983"
-wm_theme.insert.a.fg = "#448488"
-wm_theme.replace.a.fg = "#FB4833"
-wm_theme.visual.a.fg = "#FE8019"
-wm_theme.normal.a.bg = "none"
-wm_theme.insert.a.bg = "none"
-wm_theme.replace.a.bg = "none"
-wm_theme.visual.a.bg = "none"
+local function search_term()
+	local res = vim.fn.searchcount()
+	if res.total > 0 then
+		return string.format("/ %s/%d", res.current, res.total)
+	else
+		return ""
+	end
+end
 
-wm_theme.inactive.b.fg = "#EBDBB2"
-wm_theme.normal.b.fg = "#EBDBB2"
-wm_theme.insert.b.fg = "#EBDBB2"
-wm_theme.replace.b.fg = "#EBDBB2"
-wm_theme.visual.b.fg = "#EBDBB2"
-wm_theme.inactive.b.bg = "none"
-wm_theme.normal.b.bg = "none"
-wm_theme.insert.b.bg = "none"
-wm_theme.replace.b.bg = "none"
-wm_theme.visual.b.bg = "none"
+theme.normal.a.fg = "#A89983"
+theme.insert.a.fg = "#448488"
+theme.replace.a.fg = "#FB4833"
+theme.visual.a.fg = "#FE8019"
+theme.normal.a.bg = "none"
+theme.insert.a.bg = "none"
+theme.replace.a.bg = "none"
+theme.visual.a.bg = "none"
 
-wm_theme.inactive.c.fg = "#A89983"
-wm_theme.normal.c.fg = "#A89983"
-wm_theme.insert.c.fg = "#A89983"
-wm_theme.replace.c.fg = "#A89983"
-wm_theme.visual.c.fg = "#A89983"
-wm_theme.inactive.c.bg = "none"
-wm_theme.normal.c.bg = "none"
-wm_theme.insert.c.bg = "none"
-wm_theme.replace.c.bg = "none"
-wm_theme.visual.c.bg = "none"
+theme.inactive.b.fg = "#EBDBB2"
+theme.normal.b.fg = "#EBDBB2"
+theme.insert.b.fg = "#EBDBB2"
+theme.replace.b.fg = "#EBDBB2"
+theme.visual.b.fg = "#EBDBB2"
+theme.inactive.b.bg = "none"
+theme.normal.b.bg = "none"
+theme.insert.b.bg = "none"
+theme.replace.b.bg = "none"
+theme.visual.b.bg = "none"
+
+theme.inactive.c.fg = "#A89983"
+theme.normal.c.fg = "#A89983"
+theme.insert.c.fg = "#A89983"
+theme.replace.c.fg = "#A89983"
+theme.visual.c.fg = "#A89983"
+theme.inactive.c.bg = "none"
+theme.normal.c.bg = "none"
+theme.insert.c.bg = "none"
+theme.replace.c.bg = "none"
+theme.visual.c.bg = "none"
 
 lualine.setup({
 	options = {
@@ -45,7 +54,7 @@ lualine.setup({
 			right = "",
 		},
 		disabled_filetypes = {},
-		theme = wm_theme,
+		theme = theme,
 	},
 	sections = {
 		lualine_a = {
@@ -62,6 +71,10 @@ lualine.setup({
 			},
 		},
 		lualine_x = {
+			{
+				search_term,
+				-- color = { gui = "bold" },
+			},
 			{
 				"diagnostics",
 				sources = {
