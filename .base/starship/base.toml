@@ -9,27 +9,27 @@ disabled = false
 [[battery.display]]
 threshold = 0
 discharging_symbol = '  '
-charging_symbol = '  '
+charging_symbol = ' '
 style = 'fg:8'
 [[battery.display]]
 threshold = 25
 discharging_symbol = '  '
-charging_symbol = '  '
+charging_symbol = ' '
 style = 'fg:8'
 [[battery.display]]
 threshold = 50
 discharging_symbol = '  '
-charging_symbol = '  '
+charging_symbol = ' '
 style = 'fg:8'
 [[battery.display]]
 threshold = 75
 discharging_symbol = '  '
-charging_symbol = '  '
+charging_symbol = ' '
 style = 'fg:8'
 [[battery.display]]
 threshold = 100
 discharging_symbol = '  '
-charging_symbol = '  '
+charging_symbol = ' '
 style = 'fg:8'
 
 [line_break]
