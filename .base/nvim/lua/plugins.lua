@@ -19,32 +19,6 @@ end
 
 lazy.setup({
 	defaults = { lazy = true },
-	ui = {
-		icons = {
-			cmd = "⌃ ",
-			config = "  ",
-			event = "🮲🮳 ",
-			ft = "  ",
-			init = "  ",
-			import = "  ",
-			keys = "  ",
-			lazy = "zzz ",
-			loaded = "●",
-			not_loaded = "○",
-			plugin = "  ",
-			runtime = "  ",
-			require = "  ",
-			source = "  ",
-			start = "  ",
-			task = "✔ ",
-			list = {
-				"●",
-				"➜",
-				"★",
-				"‒",
-			},
-		},
-	},
 
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"hoob3rt/lualine.nvim", -- statusline
