@@ -35,6 +35,9 @@ end
 function ssh
   command ssh -F ~/.config/ssh/metal_gear $argv
 end
+function ghee
+  git log --graph --decorate --pretty=oneline --abbrev-commit
+end
 
 # utilities
 function `
