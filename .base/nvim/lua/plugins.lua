@@ -11,16 +11,40 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- function used to check if lazy is installed
 local status, lazy = pcall(require, "lazy")
 if not status then
 	print("Lazy is not installed")
 	return
 end
 
--- starts lazy
 lazy.setup({
 	defaults = { lazy = true },
+	ui = {
+		icons = {
+			cmd = "⌃ ",
+			config = "  ",
+			event = "🮲🮳 ",
+			ft = "  ",
+			init = "  ",
+			import = "  ",
+			keys = "  ",
+			lazy = "zzz ",
+			loaded = "●",
+			not_loaded = "○",
+			plugin = "  ",
+			runtime = "  ",
+			require = "  ",
+			source = "  ",
+			start = "  ",
+			task = "✔ ",
+			list = {
+				"●",
+				"➜",
+				"★",
+				"‒",
+			},
+		},
+	},
 
 	"ellisonleao/gruvbox.nvim", -- gruvbox theme
 	"hoob3rt/lualine.nvim", -- statusline
