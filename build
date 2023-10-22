@@ -15,6 +15,8 @@ else
   if [ "$OS" == "linux" ]; then
     doas bash .scripts/emerge_replicate
     cd .linux && stow . && cd ..
+    for dir in $HOME/.librewolf/*; do mkdir -- "$dir/chrome"; done
+    cp $HOME/.config/etc/modifications/librewolf/userChrome.css $HOME/.librewolf/*/chrome/ 
   fi
   cargo install $(cat .packages/cargo)
 
