@@ -1,6 +1,6 @@
 configuration {
   modes: "window,drun,run,ssh";
-  font: "Iosevka Term Bold 14";
+  font: "PragmataPro Mono Liga Bold 14";
   drun-display-format: "{name}";
 }
 

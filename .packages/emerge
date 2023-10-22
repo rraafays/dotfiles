@@ -11,9 +11,6 @@ net-p2p/transmission
 app-editors/neovim
 dev-util/xxd
 dev-dotnet/dotnet-sdk-bin
-media-fonts/iosevka
-media-fonts/nerd-fonts-symbols
-media-fonts/sarasa-gothic
 x11-terms/kitty
 media-video/pipewire
 media-video/wireplumber
@@ -24,3 +21,7 @@ gui-wm/hyprland
 gui-apps/hyprpaper
 media-video/mpv
 app-shells/direnv
+net-misc/wget
+app-arch/p7zip
+x11-misc/xdg-user-dirs
+app-misc/neofetch
