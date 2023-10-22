@@ -30,6 +30,7 @@ lspsaga.setup({
 			white = "#ebdbb2",
 			black = "#282828",
 		},
+		actionfix = " ",
 	},
 })
 
