@@ -27,11 +27,11 @@ format = '[$symbol$status]($style) '
 style = 'bold fg:9'
 map_symbol = true
 pipestatus = true
-symbol = '\[error\] '
-not_executable_symbol = '\[fail\] '
-not_found_symbol = '\[error\] '
-sigint_symbol = '\[debug\] '
-signal_symbol = '\[fatal\] '
+symbol = '\[ERROR\] '
+not_executable_symbol = '\[FAIL\] '
+not_found_symbol = '\[ERROR\] '
+sigint_symbol = '\[DEBUG\] '
+signal_symbol = '\[FATAL\] '
 pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
 pipestatus_segment_format = '[$symbol$status]($style)'
 
