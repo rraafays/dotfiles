@@ -3,36 +3,6 @@
 add_newline = false
 format = "$status$username$hostname$battery$all"
 
-[battery]
-disabled = false
-unknown_symbol = '  '
-
-[[battery.display]]
-threshold = 0
-discharging_symbol = '  '
-charging_symbol = ' '
-style = 'fg:8'
-[[battery.display]]
-threshold = 25
-discharging_symbol = '  '
-charging_symbol = ' '
-style = 'fg:8'
-[[battery.display]]
-threshold = 50
-discharging_symbol = '  '
-charging_symbol = ' '
-style = 'fg:8'
-[[battery.display]]
-threshold = 75
-discharging_symbol = '  '
-charging_symbol = ' '
-style = 'fg:8'
-[[battery.display]]
-threshold = 100
-discharging_symbol = '  '
-charging_symbol = ' '
-style = 'fg:8'
-
 [line_break]
 disabled = true
 
@@ -66,13 +36,13 @@ pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$mayb
 pipestatus_segment_format = '[$symbol$status]($style)'
 
 [bun]
-symbol = ' '
+symbol = '󰳮 '
 format = '[$symbol($version)]($style) '
 [c]
 symbol = " "
 format = '[$symbol($version(-$name))]($style) '
 [dotnet]
-symbol = ' '
+symbol = ' '
 format = '[$symbol($version)($tfm)]($style) '
 [gradle]
 symbol = " "
@@ -87,11 +57,72 @@ format = '[$symbol($version)]($style) '
 symbol = " "
 format = '[$symbol($version)]($style) '
 [package]
-symbol = " "
+symbol = " "
 format = '[$symbol$version]($style) '
 [python]
 symbol = " "
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 [rust]
-symbol = " "
+symbol = " "
 format = '[$symbol($version)]($style) '
+
+[battery]
+disabled = false
+unknown_symbol = '󱐥 '
+
+[[battery.display]]
+threshold = 0
+discharging_symbol = '󰂎 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 10
+discharging_symbol = '󰁺 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 20
+discharging_symbol = '󰁻 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 30
+discharging_symbol = '󰁼 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 40
+discharging_symbol = '󰁽 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+[[battery.display]]
+threshold = 50
+discharging_symbol = '󰁾 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 60
+discharging_symbol = '󰁿 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 70
+discharging_symbol = '󰂀 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 80
+discharging_symbol = '󰂁 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 90
+discharging_symbol = '󰂂 '
+charging_symbol = ' '
+style = 'fg:8'
+[[battery.display]]
+threshold = 100
+discharging_symbol = '󰁹 '
+charging_symbol = ' '
+style = 'fg:8'
