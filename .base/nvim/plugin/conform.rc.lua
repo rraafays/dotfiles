@@ -1,12 +1,8 @@
 local conform = require("conform")
 
 local function get_idea_bin()
-	if vim.loop.os_uname().sysname == "Darwin" then
-		return "idea"
-	end
-	if vim.loop.os_uname().sysname == "Linux" then
-		return "idea-community"
-	end
+	if vim.loop.os_uname().sysname == "Darwin" then return "idea" end
+	if vim.loop.os_uname().sysname == "Linux" then return "idea-community" end
 end
 
 conform.setup({
@@ -24,12 +20,20 @@ conform.setup({
 			command = get_idea_bin(),
 			require_cwd = false,
 			stdin = false,
-			args = { "format", "-s", os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml", "$FILENAME" },
+			args = {
+				"format",
+				"-s",
+				os.getenv("HOME") .. "/.config/nvim/etc/intellij.xml",
+				"$FILENAME",
+			},
 		},
 		redgate = {
 			command = "sql-formatter",
 			stdin = true,
-			args = { "--config", os.getenv("HOME") .. "/.config/nvim/etc/redgate.json" },
+			args = {
+				"--config",
+				os.getenv("HOME") .. "/.config/nvim/etc/redgate.json",
+			},
 		},
 		prettier = {
 			command = "prettier",
@@ -46,9 +50,7 @@ conform.setup({
 local slow_format_filetypes = { "java" }
 require("conform").setup({
 	format_on_save = function(bufnr)
-		if slow_format_filetypes[vim.bo[bufnr].filetype] then
-			return
-		end
+		if slow_format_filetypes[vim.bo[bufnr].filetype] then return end
 		local function on_format(err)
 			if err and err:match("timeout$") then
 				slow_format_filetypes[vim.bo[bufnr].filetype] = true
@@ -59,9 +61,7 @@ require("conform").setup({
 	end,
 
 	format_after_save = function(bufnr)
-		if not slow_format_filetypes[vim.bo[bufnr].filetype] then
-			return
-		end
+		if not slow_format_filetypes[vim.bo[bufnr].filetype] then return end
 		return { lsp_fallback = true }
 	end,
 })

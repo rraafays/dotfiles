@@ -27,12 +27,12 @@ autopairs.add_rules({
 for _, bracket in pairs(brackets) do
 	autopairs.add_rules({
 		rule(bracket[1] .. " ", " " .. bracket[2])
-			:with_pair(function()
-				return false
-			end)
-			:with_move(function(opts)
-				return opts.prev_char:match(".%" .. bracket[2]) ~= nil
-			end)
+			:with_pair(function() return false end)
+			:with_move(
+				function(opts)
+					return opts.prev_char:match(".%" .. bracket[2]) ~= nil
+				end
+			)
 			:use_key(bracket[2]),
 	})
 end

@@ -2,12 +2,24 @@ local project = require("project_nvim")
 
 require("telescope").load_extension("projects")
 
-vim.keymap.set("n", "<C-p>", '<cmd>lua require"telescope".extensions.projects.projects{ initial_mode = "insert" }<CR>')
+vim.keymap.set(
+	"n",
+	"<C-p>",
+	'<cmd>lua require"telescope".extensions.projects.projects{ initial_mode = "insert" }<CR>'
+)
 
 project.setup({
 	manual_mode = false,
 	detection_methods = { "lsp", "pattern" },
-	patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+	patterns = {
+		".git",
+		"_darcs",
+		".hg",
+		".bzr",
+		".svn",
+		"Makefile",
+		"package.json",
+	},
 
 	ignore_lsp = {},
 	exclude_dirs = {},

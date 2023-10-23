@@ -1,10 +1,8 @@
-local telescope = require("telescope")
 local actions = require("telescope.actions")
+local telescope = require("telescope")
 local fb_actions = require("telescope").extensions.file_browser.actions
 
-function telescope_buffer_dir()
-	return vim.fn.expand("%:p:h")
-end
+function telescope_buffer_dir() return vim.fn.expand("%:p:h") end
 
 telescope.setup({
 	defaults = {
@@ -21,9 +19,7 @@ telescope.setup({
 			hijack_netrw = true,
 			mappings = {
 				["i"] = {
-					["<C-w>"] = function()
-						vim.cmd("normal vbd")
-					end,
+					["<C-w>"] = function() vim.cmd("normal vbd") end,
 				},
 				["n"] = {
 					["n"] = fb_actions.create,
@@ -34,9 +30,7 @@ telescope.setup({
 					["h"] = fb_actions.goto_parent_dir,
 					["l"] = fb_actions.change_cwd,
 					["~"] = fb_actions.goto_cwd,
-					["/"] = function()
-						vim.cmd("startinsert")
-					end,
+					["/"] = function() vim.cmd("startinsert") end,
 				},
 			},
 		},
@@ -46,10 +40,30 @@ telescope.setup({
 telescope.load_extension("file_browser")
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<C-f>", '<cmd>lua require("telescope.builtin").find_files({ hidden = true })<CR>', opts)
-vim.keymap.set("n", "<C-g>", '<cmd>lua require("telescope.builtin").live_grep()<CR>', opts)
-vim.keymap.set("n", "<C-b>", '<cmd>lua require("telescope.builtin").buffers()<CR>', opts)
-vim.keymap.set("n", "<C-d>", '<cmd>lua require("telescope.builtin").diagnostics()<CR>', opts)
+vim.keymap.set(
+	"n",
+	"<C-f>",
+	'<cmd>lua require("telescope.builtin").find_files({ hidden = true })<CR>',
+	opts
+)
+vim.keymap.set(
+	"n",
+	"<C-g>",
+	'<cmd>lua require("telescope.builtin").live_grep()<CR>',
+	opts
+)
+vim.keymap.set(
+	"n",
+	"<C-b>",
+	'<cmd>lua require("telescope.builtin").buffers()<CR>',
+	opts
+)
+vim.keymap.set(
+	"n",
+	"<C-d>",
+	'<cmd>lua require("telescope.builtin").diagnostics()<CR>',
+	opts
+)
 vim.keymap.set(
 	"n",
 	"<C-e>",

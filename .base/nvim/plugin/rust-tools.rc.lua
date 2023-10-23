@@ -11,11 +11,19 @@ vim.g.rustfmt_autosave = 1
 
 rust_tools.setup({
 	dap = {
-		adapter = require("rust-tools.dap").get_codelldb_adapter(codelldb_path, liblldb_path),
+		adapter = require("rust-tools.dap").get_codelldb_adapter(
+			codelldb_path,
+			liblldb_path
+		),
 	},
 	server = {
 		on_attach = function(_, bufnr)
-			vim.keymap.set("n", "?", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
+			vim.keymap.set(
+				"n",
+				"?",
+				rust_tools.hover_actions.hover_actions,
+				{ buffer = bufnr }
+			)
 			local file = io.open("rustfmt.toml", "w")
 			if file ~= nil then
 				file:write(

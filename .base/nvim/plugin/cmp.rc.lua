@@ -3,9 +3,7 @@ local lspkind = require("lspkind")
 
 cmp.setup({
 	snippet = {
-		expand = function(args)
-			require("luasnip").lsp_expand(args.body)
-		end,
+		expand = function(args) require("luasnip").lsp_expand(args.body) end,
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<Tab>"] = cmp.mapping.select_next_item(),
@@ -24,13 +22,15 @@ cmp.setup({
 		{
 			name = "buffer",
 			entry_filter = function(entry, ctx)
-				return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()] ~= "Text"
+				return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()]
+					~= "Text"
 			end,
 		},
 		{
 			name = "nvim_lsp",
 			entry_filter = function(entry, ctx)
-				return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()] ~= "Text"
+				return require("cmp.types").lsp.CompletionItemKind[entry:get_kind()]
+					~= "Text"
 			end,
 		},
 	},
@@ -40,14 +40,16 @@ cmp.setup({
 			maxwidth = 50,
 			ellipsis_char = "...",
 
-			before = function(entry, vim_item)
-				return vim_item
-			end,
+			before = function(entry, vim_item) return vim_item end,
 		}),
 	},
 	window = {
-		completion = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
-		documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" } },
+		completion = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		},
+		documentation = {
+			border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+		},
 	},
 })
 
