@@ -26,3 +26,5 @@ app-arch/p7zip
 x11-misc/xdg-user-dirs
 app-misc/neofetch
 dev-util/github-cli
+media-fonts/iosevka
+media-fonts/nerd-fonts-symbols
