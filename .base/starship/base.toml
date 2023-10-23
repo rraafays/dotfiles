@@ -23,15 +23,15 @@ format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [status]
 disabled = false
-format = '[$symbol$status]($style) '
+format = '[$symbol](bold bg:9 bold fg:#000000)[ $status](bold bg:#000000 bold fg:9) '
 style = 'bold fg:9'
 map_symbol = true
 pipestatus = true
-symbol = '\[ERROR\] '
-not_executable_symbol = '\[FAIL\] '
-not_found_symbol = '\[ERROR\] '
-sigint_symbol = '\[DEBUG\] '
-signal_symbol = '\[FATAL\] '
+symbol = ' ERROR '
+not_executable_symbol = ' FAIL '
+not_found_symbol = ' ERROR '
+sigint_symbol = ' DEBUG '
+signal_symbol = ' FATAL '
 pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
 pipestatus_segment_format = '[$symbol$status]($style)'
 

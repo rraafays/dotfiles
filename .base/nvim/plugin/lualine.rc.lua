@@ -46,8 +46,8 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		component_separators = {
-			left = "|",
-			right = "|",
+			left = "",
+			right = "",
 		},
 		section_separators = {
 			left = "",
@@ -81,10 +81,10 @@ lualine.setup({
 					"nvim_diagnostic",
 				},
 				symbols = {
-					error = "[ERROR] ",
-					warn = "[WARN] ",
-					info = "[INFO] ",
-					hint = "[NOTE] ",
+					error = "ERROR ",
+					warn = "WARN ",
+					info = "INFO ",
+					hint = "NOTE ",
 				},
 			},
 			"encoding",
