@@ -18,7 +18,9 @@ rust_tools.setup({
 			vim.keymap.set("n", "?", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
 			local file = io.open("rustfmt.toml", "w")
 			if file ~= nil then
-				file:write("fn_single_line = true\nwhere_single_line = true\ntab_spaces = 4")
+				file:write(
+					'fn_single_line = true\nwhere_single_line = true\ntab_spaces = 4\nimports_layout = "Vertical"\nhex_literal_case = "Upper"\nmax_width = 80'
+				)
 				file:close()
 			end
 		end,

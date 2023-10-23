@@ -2,7 +2,7 @@ local pain = require("no-neck-pain")
 
 pain.setup({
 	debug = false,
-	width = 100,
+	width = 80,
 	minSideBufferWidth = 0,
 	disableOnLastBuffer = false,
 	killAllBuffersOnDisable = false,
