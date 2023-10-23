@@ -73,56 +73,56 @@ unknown_symbol = '󱐥 '
 [[battery.display]]
 threshold = 0
 discharging_symbol = '󰂎 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 10
 discharging_symbol = '󰁺 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 20
 discharging_symbol = '󰁻 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 30
 discharging_symbol = '󰁼 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 40
 discharging_symbol = '󰁽 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 [[battery.display]]
 threshold = 50
 discharging_symbol = '󰁾 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 60
 discharging_symbol = '󰁿 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 70
 discharging_symbol = '󰂀 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 80
 discharging_symbol = '󰂁 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 90
 discharging_symbol = '󰂂 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
 [[battery.display]]
 threshold = 100
 discharging_symbol = '󰁹 '
-charging_symbol = ' '
+charging_symbol = '󱐋 '
 style = 'fg:8'
