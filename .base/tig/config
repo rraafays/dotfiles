@@ -1,0 +1,10 @@
+color default white default
+color diff-header yellow default
+color diff-index white default
+color diff-chunk magenta default
+color "Reported-by:" 10 default
+color tree.date black white bold
+color "/(note|warning|error):/" yellow default bold
+color date 15 default 
+color cursor 5 default underline bold
+color author 10 default bold
