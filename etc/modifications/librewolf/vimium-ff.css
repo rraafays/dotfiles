@@ -111,9 +111,7 @@
 }
 
 #vomnibar li.vomnibarSelected {
-  background-color: #000000;
-  padding: 10px;
-  border: 2px solid #EBDBB2;
+  background-color: #282828;
   border-radius: 4px;
 }
 
