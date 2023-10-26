@@ -1,25 +1,37 @@
 #!/bin/bash
+OS=$(uname -s | tr A-Z a-z)
+HOSTNAME=$(hostname -s | tr A-Z a-z)
 
 if [ "$1" == "clean" ]; then
-  cd .base && stow --delete . && cd ..
-  cd .linux && stow --delete . && cd ..
-  cd .macos && stow --delete . && cd ..
-else
-  OS=$(uname -s | tr A-Z a-z)
-  HOSTNAME=$(hostname -s | tr A-Z a-z)
-
-  if [ "$OS" == "darwin" ]; then
-    bash .scripts/brew_replicate
-    cd .macos && stow . && cd ..
-  fi
-  if [ "$OS" == "linux" ]; then
-    doas bash .scripts/emerge_replicate
-    cd .linux && stow . && cd ..
-    for dir in $HOME/.librewolf/*; do mkdir -- "$dir/chrome"; done
-    cp $HOME/.config/etc/modifications/librewolf/userChrome.css $HOME/.librewolf/*/chrome/ 
-  fi
-  cargo install $(cat .packages/cargo)
-
-  rm -rf fish kitty
-  cd .base && stow . && cd ..
+	cd .base && stow --delete . && cd ..
+	cd .linux && stow --delete . && cd ..
+	cd .macos && stow --delete . && cd ..
+	exit
 fi
+
+if [ "$1" == "dirs" ]; then
+	if [ "$OS" == "darwin" ]; then
+		cd .macos && stow . && cd ..
+	fi
+	if [ "$OS" == "linux" ]; then
+		cd .linux && stow . && cd ..
+	fi
+	rm -rf fish kitty
+	cd .base && stow . && cd ..
+	exit
+fi
+
+if [ "$OS" == "darwin" ]; then
+	bash .scripts/brew_replicate
+	cd .macos && stow . && cd ..
+fi
+if [ "$OS" == "linux" ]; then
+	doas bash .scripts/emerge_replicate
+	cd .linux && stow . && cd ..
+	for dir in $HOME/.librewolf/*; do mkdir -- "$dir/chrome"; done
+	cp $HOME/.config/etc/modifications/librewolf/userChrome.css $HOME/.librewolf/*/chrome/
+fi
+cargo install $(cat .packages/cargo)
+
+rm -rf fish kitty
+cd .base && stow . && cd ..
