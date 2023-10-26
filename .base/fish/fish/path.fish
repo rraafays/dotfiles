@@ -8,7 +8,8 @@ set -x BREW_INSTALL "/opt/homebrew";
 set -x PNPM_HOME "$HOME/.local/share/pnpm";
 set -x USER_HOME "/Users/$USER";
 set -x INTELLIJ_HOME "/Applications/IntelliJ IDEA.app/Contents/MacOS";
-set -x SQLCL_HOME "/opt/homebrew/Caskroom/sqlcl/23.3.0.270.1251/sqlcl/"
+set -x SQLCL_HOME "/opt/homebrew/Caskroom/sqlcl/23.3.0.270.1251/sqlcl/";
+set -x SQLPATH "$HOME/.config/sqlcl/";
 
 set -x PATH                       \
   $BUN_INSTALL/bin                \
@@ -26,4 +27,5 @@ set -x PATH                       \
   $USER_HOME/bin                  \
   $INTELLIJ_HOME                  \
   $SQLCL_HOME/bin                 \
+  $SQLPATH                        \
   $PATH
