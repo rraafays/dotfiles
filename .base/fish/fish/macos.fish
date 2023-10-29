@@ -49,4 +49,7 @@ if status --is-interactive
     function intellij
         open -a "Intellij IDEA"
     end
+    function chrome
+        open -a "Google Chrome"
+    end
 end
