@@ -17,7 +17,7 @@ cmd + alt - j : yabai -m window --resize top:0:20
 cmd + alt - k : yabai -m window --resize top:0:-20
 cmd + alt - l : yabai -m window --resize left:20:0
 
-cmd - m : yabai -m window --toggle native-fullscreen
+cmd - m : yabai -m window --toggle zoom-fullscreen
 
 cmd + shift - m : yabai -m window --toggle float \
 	yabai -m window --grid 4:4:1:1:2:2
