@@ -10,6 +10,18 @@ if status --is-interactive
             "$HOME/.config/kitty/macos.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
+    function brew
+        if count $argv >/dev/null
+            command brew $argv
+        else
+            command brew update
+            command brew upgrade --no-quarantine
+            command brew upgrade --no-quarantine --cask --greedy
+            command brew autoremove
+            command brew cleanup
+        end
+    end
+
     function man
         command man -P 'nvim -c \'Man! -o -\'' $argv
     end
@@ -22,18 +34,19 @@ if status --is-interactive
     function skhd
         SHELL=/bin/dash command skhd $argv
     end
-    function lsblk
-        diskutil list
+    function doas
+        sudo $argv
     end
-    function brew
-        if count $argv >/dev/null
-            command brew $argv
-        else
-            command brew update
-            command brew upgrade --no-quarantine
-            command brew upgrade --no-quarantine --cask --greedy
-            command brew autoremove
-            command brew cleanup
-        end
+    function wolf
+        open -a LibreWolf
+    end
+    function sqldev
+        open -a SQLDeveloper
+    end
+    function utm
+        open -a UTM
+    end
+    function intellij
+        open -a "Intellij IDEA"
     end
 end
