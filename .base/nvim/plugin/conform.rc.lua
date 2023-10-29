@@ -11,6 +11,7 @@ conform.setup({
     formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shfmt" },
+        fish = { "fish_indent" },
         javascript = { "prettier" },
         typescript = { "intellij" },
         xml = { "tidy" },
