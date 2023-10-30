@@ -21,8 +21,8 @@ pain.setup({
 })
 
 vim.api.nvim_create_user_command('Center',function()
-    local length = io.popen("wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2")
-    local result = length:read("*a")
-    print(result)
-    vim.cmd("NoNeckPainResize " .. result + 8)
+    local command = io.popen("wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2")
+    local width = command:read("*a")
+    print(width)
+    vim.cmd("NoNeckPainResize " .. width + 8)
 end,{})
