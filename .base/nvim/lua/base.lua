@@ -69,4 +69,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 vim.opt.formatoptions:append({ "r" })
-vim.api.nvim_set_option("showmode", false)
+
+vim.api.nvim_create_user_command('Path',function()
+    vim.cmd([[ echo expand('%:p') ]])
+end,{})
