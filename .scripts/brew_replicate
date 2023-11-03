@@ -1,15 +1,15 @@
 #!/bin/bash
 
 source() {
-  (
-    echo
-    echo 'eval "$($(which brew) shellenv)"'
-  ) >>/Users/raf/.zprofile
-  eval "$($(which brew) shellenv)"
+	(
+		echo
+		echo 'eval "$($(which brew) shellenv)"'
+	) >>/Users/raf/.zprofile
+	eval "$($(which brew) shellenv)"
 }
 
 if ! command -v brew; then
-  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 source
@@ -17,6 +17,12 @@ brew tap homebrew/cask-fonts
 brew install --no-quarantine $(cat .packages/brew)
 source
 brew install --HEAD felixkratz/formulae/fyabai
+brew install --HEAD felixkratz/formulae/borders
+brew services start fyabai
+brew services start borders
 brew services restart fyabai
+brew services restart borders
 skhd --start-service
+skhd --restart-service
 open -a karabiner-elements
+killall Karabiner-Elements

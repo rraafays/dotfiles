@@ -8,11 +8,11 @@ yabai -m config \
 	layout bsp \
 	window_placement second_child \
 	window_zoom_persist on \
-	top_padding 0 \
-	bottom_padding 0 \
-	left_padding 0 \
-	right_padding 0 \
-	window_gap 0 \
+	top_padding 20 \
+	bottom_padding 20 \
+	left_padding 20 \
+	right_padding 20 \
+	window_gap 20 \
 	config auto_balance on \
 	mouse_modifier shift \
 	mouse_action1 move \
@@ -21,15 +21,10 @@ yabai -m config \
 	mouse_follows_focus true \
 	window_topmost off \
 	window_shadow off \
-	window_border off \
-	window_border_width 0 \
-	window_border_radius 0 \
-	active_window_border_color 0xff000000 \
-	normal_window_border_color 0xff000000 \
-	window_border_hidpi on \
 	window_animation_duration 0 \
 	window_animation_frame_rate 60 \
 	window_border_blur off \
 	external_bar all:0:0
 
 yabai -m space 1 2 3 4 5 6 7 8 9 10
+borders active_color=0xFFEBDBB2 inactive_color=0xFF928373 width=5.0 2>/dev/null 1>&2 &
