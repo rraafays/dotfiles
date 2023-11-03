@@ -32,4 +32,8 @@ if status --is-interactive
             end
         end
     end
+
+    function world
+        cat /var/lib/portage/world
+    end
 end

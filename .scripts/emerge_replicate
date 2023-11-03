@@ -5,7 +5,6 @@ git clone https://github.com/rraafays/$HOSTNAME /etc/portage
 emerge --sync
 cp .packages/emerge /var/lib/portage/world
 emerge --quiet --update --deep --newuse @world
-# emerge --verbose --noreplace $(cat .packages/emerge)
 rc-update add elogind default
 rc-update add dbus default
 rc-service elogind start
