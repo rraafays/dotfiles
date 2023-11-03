@@ -4,12 +4,7 @@ if status --is-interactive
     set -x MANPAGER "nvim -c 'Man! -o -'"
 
     if test -e $DISPLAY
-        dbus-run-session cage kitty
-    end
-    if not test -e $DISPLAY && not pgrep wireplumber &>/dev/null
-        gentoo-pipewire-launcher restart &>/dev/null &
-        wlr-randr --output DP-3 --custom-mode 1280x1024@67
-        disown (jobs -p) &>/dev/null &
+        dbus-run-session Hyprland
     end
 
     if not test -e "$HOME/.config/kitty/kitty.conf"
@@ -18,9 +13,6 @@ if status --is-interactive
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
-    function hypr
-        dbus-run-session Hyprland
-    end
     function emerge
         if not fish_is_root_user
             if count $argv >/dev/null
@@ -39,8 +31,5 @@ if status --is-interactive
                 emerge --depclean
             end
         end
-    end
-    function idea
-        idea-community $argv
     end
 end
