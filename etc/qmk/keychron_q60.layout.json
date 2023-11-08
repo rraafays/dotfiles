@@ -45,7 +45,7 @@
       "KC_SCLN",
       "KC_QUOT",
       "KC_NO",
-      "MT(MOD_LCTL | MOD_RCTL,KC_ENT)",
+      "MT(MOD_LALT | MOD_RALT,KC_ENT)",
       "KC_LSFT",
       "KC_NO",
       "KC_Z",
