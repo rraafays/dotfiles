@@ -3,7 +3,6 @@ quote_style = "AutoPreferDouble"
 call_parentheses = "Always"
 collapse_simple_statement = "Always"
 indent_type = "Spaces"
-indent_size = 4
 
 [sort_requires]
 enabled = true
