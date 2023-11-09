@@ -1,5 +1,11 @@
 local nvim_lsp = require("lspconfig")
 
+local function get_os() return vim.loop.os_uname().sysname end
+local function disable_check_third_party()
+    if get_os() == "Darwin" then return "Disable" end
+    if get_os() == "Linux" then return false end
+end
+
 nvim_lsp.cssls.setup({})
 nvim_lsp.astro.setup({})
 nvim_lsp.csharp_ls.setup({})
@@ -20,7 +26,7 @@ nvim_lsp.lua_ls.setup({
 			},
 			workspace = {
 				library = vim.api.nvim_get_runtime_file("", true),
-				checkThirdParty = "Disable",
+				checkThirdParty = disable_check_third_party(),
 			},
 			telemetry = {
 				enable = false,
