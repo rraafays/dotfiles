@@ -2,22 +2,31 @@ local conform = require("conform")
 
 local function get_os() return vim.loop.os_uname().sysname end
 local formatter_config_dir = os.getenv("HOME") .. "/.config/nvim/etc/"
+
 local function get_idea_bin()
     if get_os() == "Darwin" then return "idea" end
     if get_os() == "Linux" then return "idea-community" end
 end
 
+local function get_formatters()
+    if os.getenv("FORMAT") ~= "no" then
+        return {
+            lua = { "stylua" },
+            sh = { "shfmt" },
+            fish = { "fish_indent" },
+            javascript = { "prettier" },
+            typescript = { "intellij" },
+            xml = { "tidy" },
+            sql = { "redgate" },
+            java = { "intellij" },
+        }
+    else
+        return {}
+    end
+end
+
 conform.setup({
-    formatters_by_ft = {
-        lua = { "stylua" },
-        sh = { "shfmt" },
-        fish = { "fish_indent" },
-        javascript = { "prettier" },
-        typescript = { "intellij" },
-        xml = { "tidy" },
-        sql = { "redgate" },
-        java = { "intellij" },
-    },
+    formatters_by_ft = get_formatters(),
     formatters = {
         intellij = {
             command = get_idea_bin(),
@@ -45,7 +54,7 @@ conform.setup({
         },
     },
     format_on_save = {
-        lsp_fallback = true,
+        lsp_fallback = false,
         timeout_ms = 50000,
     },
 })
