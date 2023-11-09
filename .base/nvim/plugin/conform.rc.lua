@@ -8,6 +8,7 @@ local function get_idea_bin()
     if get_os() == "Linux" then return "idea-community" end
 end
 
+local slow_format_filetypes = { "java" }
 local function get_formatters()
     if os.getenv("FORMAT") ~= "no" then
         return {
@@ -53,14 +54,7 @@ conform.setup({
             args = { "--tab-width", 4, "--stdin-filepath", "$FILENAME" },
         },
     },
-    format_on_save = {
-        lsp_fallback = false,
-        timeout_ms = 50000,
-    },
-})
 
-local slow_format_filetypes = { "java" }
-require("conform").setup({
     format_on_save = function(bufnr)
         if slow_format_filetypes[vim.bo[bufnr].filetype] then return end
         local function on_format(err)
@@ -69,11 +63,11 @@ require("conform").setup({
             end
         end
 
-        return { timeout_ms = 200, lsp_fallback = true }, on_format
+        return { timeout_ms = 1000, lsp_fallback = false }, on_format
     end,
 
     format_after_save = function(bufnr)
         if not slow_format_filetypes[vim.bo[bufnr].filetype] then return end
-        return { lsp_fallback = true }
+        return { lsp_fallback = false }
     end,
 })
