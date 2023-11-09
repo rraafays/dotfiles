@@ -1,7 +1,6 @@
 {
   "keywordCase": "upper",
   "logicalOperatorNewline": "after",
-  "indentStyle": "tabularLeft",
   "tabWidth": 4,
   "useTabs": false
 }
