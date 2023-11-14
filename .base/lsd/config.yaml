@@ -5,6 +5,7 @@ blocks:
   - size
   - date
   - name
+  - git
 
 color:
   when: auto

@@ -25,3 +25,14 @@ links:
   valid: 14
   invalid: 13
 tree-edge: 5
+git-status:
+  default: 0
+  unmodified: 15
+  ignored: 8
+  new-in-index: 1
+  new-in-workdir: 1
+  typechange: 12
+  deleted: 1
+  renamed: 11
+  modified: 11
+  conflicted: 9
