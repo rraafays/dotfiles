@@ -20,13 +20,6 @@ function =
     clear
 end
 
-function clear
-    if set -q TMUX
-        tmux send-keys -R
-    else
-        command clear
-    end
-end
 function clean
     if set -q TMUX
         clear
