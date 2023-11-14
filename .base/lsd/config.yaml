@@ -4,8 +4,8 @@ blocks:
   - permission
   - size
   - date
-  - name
   - git
+  - name
 
 color:
   when: auto
