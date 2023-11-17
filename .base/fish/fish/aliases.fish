@@ -67,9 +67,6 @@ end
 function imv
     command mpv --loop --window-maximized --no-terminal --no-input-cursor $argv & disown
 end
-function mpv
-    command mpv --no-terminal --no-input-cursor $argv & disown
-end
 function play
     command mpv --no-audio-display --no-input-cursor $argv
 end
