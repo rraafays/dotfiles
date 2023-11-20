@@ -17,21 +17,20 @@ cmd + alt - j : yabai -m window --resize top:0:20
 cmd + alt - k : yabai -m window --resize top:0:-20
 cmd + alt - l : yabai -m window --resize left:20:0
 
-cmd - m : yabai -m window --toggle zoom-fullscreen
+cmd - m : ~/.config/.macos/yabai/fullscreen && ~/.config/.macos/yabai/borders
 
-cmd + shift - m : yabai -m window --toggle float \
-	yabai -m window --grid 4:4:1:1:2:2
+cmd + shift - m : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
 
-cmd - 1 : yabai -m space --focus 1
-cmd - 2 : yabai -m space --focus 2
-cmd - 3 : yabai -m space --focus 3
-cmd - 4 : yabai -m space --focus 4
-cmd - 5 : yabai -m space --focus 5
-cmd - 6 : yabai -m space --focus 6
-cmd - 7 : yabai -m space --focus 7
-cmd - 8 : yabai -m space --focus 8
-cmd - 9 : yabai -m space --focus 9
-cmd - 0 : yabai -m space --focus 10
+cmd - 1 : yabai -m space --focus 1 && ~/.config/.macos/yabai/borders
+cmd - 2 : yabai -m space --focus 2 && ~/.config/.macos/yabai/borders
+cmd - 3 : yabai -m space --focus 3 && ~/.config/.macos/yabai/borders
+cmd - 4 : yabai -m space --focus 4 && ~/.config/.macos/yabai/borders
+cmd - 5 : yabai -m space --focus 5 && ~/.config/.macos/yabai/borders
+cmd - 6 : yabai -m space --focus 6 && ~/.config/.macos/yabai/borders
+cmd - 7 : yabai -m space --focus 7 && ~/.config/.macos/yabai/borders
+cmd - 8 : yabai -m space --focus 8 && ~/.config/.macos/yabai/borders
+cmd - 9 : yabai -m space --focus 9 && ~/.config/.macos/yabai/borders
+cmd - 0 : yabai -m space --focus 10 && ~/.config/.macos/yabai/borders
 
 cmd + shift - 1 : yabai -m window --space 1
 cmd + shift - 2 : yabai -m window --space 2
