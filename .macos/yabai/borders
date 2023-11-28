@@ -1,11 +1,13 @@
 #!/bin/bash
 
-is_fullscreen=$(yabai -m query --windows --window | jq -s 'first."has-fullscreen-zoom"')
+sleep .1
 
-if [ $is_fullscreen == "true" ]; then
+x=$(yabai -m query --windows --window | jq -s 'first."frame".x')
+y=$(yabai -m query --windows --window | jq -s 'first."frame".y')
+
+if [ $y == "0.0000" ] && [ $x == "-0.0000" ]; then
 	borders active_color=0xff000000 inactive_color=0xff928373 width=0.0 2>/dev/null 1>&2 &
-fi
-
-if [ $is_fullscreen == "false" ]; then
+	exit
+else
 	borders active_color=0xffEBDBB2 inactive_color=0xff928373 width=3.0 2>/dev/null 1>&2 &
 fi
