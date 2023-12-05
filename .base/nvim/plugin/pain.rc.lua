@@ -30,3 +30,8 @@ vim.api.nvim_create_user_command("Center", function()
         vim.cmd("NoNeckPainResize " .. width + 2)
     end
 end, {})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
+    pattern = "",
+    command = "Center",
+})
