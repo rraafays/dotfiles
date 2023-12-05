@@ -27,6 +27,6 @@ vim.api.nvim_create_user_command("Center", function()
     if command ~= nil then
         local width = command:read("*a")
         print(width)
-        vim.cmd("NoNeckPainResize " .. width + 0)
+        vim.cmd("NoNeckPainResize " .. width + 2)
     end
 end, {})
