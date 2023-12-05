@@ -13,12 +13,9 @@ gruvbox.setup({
         dark2 = "none",
     },
     overrides = {
-        Visual = { bg = "none", reverse = true },
-        -- GitSignsChangeLn = { bg = "#b8bb26" },
+        Visual = { bg = "#2a1300", fg = "#FE8019" },
         GitSignsChangeLn = { bg = "#1c1c06" },
-        -- GitSignsAddLn = { bg = "#8ec07c" },
         GitSignsAddLn = { bg = "#14200f" },
-        -- GitSignsChangedeleteLn = { bg = "#fb4934" },
         GitSignsChangedeleteLn = { bg = "#2d0501" },
     },
 })
