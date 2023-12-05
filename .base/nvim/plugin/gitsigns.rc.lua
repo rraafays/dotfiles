@@ -1,2 +1,5 @@
 local gitsigns = require("gitsigns")
-gitsigns.setup({})
+gitsigns.setup({
+    signcolumn = false,
+    linehl = true,
+})

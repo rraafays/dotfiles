@@ -8,7 +8,8 @@ vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
-vim.wo.number = true
+vim.wo.number = false
+vim.opt.signcolumn = "no"
 
 vim.opt.swapfile = false
 vim.opt.title = true
@@ -40,23 +41,23 @@ vim.opt.path:append({ "**" })
 vim.opt.pumblend = 0
 vim.opt.laststatus = 3
 vim.opt.fillchars = {
-	horiz = " ",
-	horizup = " ",
-	horizdown = " ",
-	vert = " ",
-	vertleft = " ",
-	vertright = " ",
-	verthoriz = " ",
-	eob = " ",
-	fold = " ",
-	foldsep = " ",
-	foldopen = "+",
-	foldclose = "-",
+    horiz = " ",
+    horizup = " ",
+    horizdown = " ",
+    vert = " ",
+    vertleft = " ",
+    vertright = " ",
+    verthoriz = " ",
+    eob = " ",
+    fold = " ",
+    foldsep = " ",
+    foldopen = "+",
+    foldclose = "-",
 }
 vim.o.guicursor = table.concat({
-	"n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-	"i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
-	"r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+    "n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
 }, ",")
 
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -64,12 +65,14 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 vim.cmd([[ set iskeyword-=_ ]])
 
 vim.api.nvim_create_autocmd("InsertLeave", {
-	pattern = "*",
-	command = "set nopaste",
+    pattern = "*",
+    command = "set nopaste",
 })
 
 vim.opt.formatoptions:append({ "r" })
 
-vim.api.nvim_create_user_command('Path',function()
-    vim.cmd([[ echo expand('%:p') ]])
-end,{})
+vim.api.nvim_create_user_command(
+    "Path",
+    function() vim.cmd([[ echo expand('%:p') ]]) end,
+    {}
+)

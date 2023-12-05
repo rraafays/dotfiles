@@ -1,28 +1,32 @@
 local pain = require("no-neck-pain")
 
 pain.setup({
-	debug = false,
-	width = 80,
-	minSideBufferWidth = 0,
-	disableOnLastBuffer = true,
-	killAllBuffersOnDisable = true,
-	autocmds = {
-		enableOnVimEnter = true,
-		enableOnTabEnter = true,
-		reloadOnColorSchemeChange = true,
-	},
-	mappings = {
-		enabled = true,
-		toggle = "z",
-		widthUp = "=",
-		widthDown = "-",
-		scratchPad = "false",
-	},
+    debug = false,
+    width = 80,
+    minSideBufferWidth = 0,
+    disableOnLastBuffer = true,
+    killAllBuffersOnDisable = true,
+    autocmds = {
+        enableOnVimEnter = true,
+        enableOnTabEnter = true,
+        reloadOnColorSchemeChange = true,
+    },
+    mappings = {
+        enabled = true,
+        toggle = "z",
+        widthUp = "=",
+        widthDown = "-",
+        scratchPad = "false",
+    },
 })
 
-vim.api.nvim_create_user_command('Center',function()
-    local command = io.popen("wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2")
-    local width = command:read("*a")
-    print(width)
-    vim.cmd("NoNeckPainResize " .. width + 8)
-end,{})
+vim.api.nvim_create_user_command("Center", function()
+    local command = io.popen(
+        "wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2"
+    )
+    if command ~= nil then
+        local width = command:read("*a")
+        print(width)
+        vim.cmd("NoNeckPainResize " .. width + 0)
+    end
+end, {})
