@@ -15,11 +15,11 @@ gruvbox.setup({
     overrides = {
         Visual = { bg = "none", reverse = true },
         -- GitSignsChangeLn = { bg = "#b8bb26" },
-        GitSignsChangeLn = { bg = "#252508" },
+        GitSignsChangeLn = { bg = "#1c1c06" },
         -- GitSignsAddLn = { bg = "#8ec07c" },
-        GitSignsAddLn = { bg = "#1a2b15" },
+        GitSignsAddLn = { bg = "#14200f" },
         -- GitSignsChangedeleteLn = { bg = "#fb4934" },
-        GitSignsChangedeleteLn = { bg = "#3b0701" },
+        GitSignsChangedeleteLn = { bg = "#2d0501" },
     },
 })
 
