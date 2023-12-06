@@ -47,11 +47,12 @@ if status is-interactive
     set --universal fish_color_error brred
     set --universal fish_color_escape brmagenta
     set --universal fish_color_match red
-    set --universal fish_color_normal white
+    set --universal fish_color_normal FE8019
     set --universal fish_color_operator bryellow --bold
     set --universal fish_color_param brwhite
     set --universal fish_color_quote brgreen
     set --universal fish_color_redirection brmagenta
     set --universal fish_color_search_match yellow
     set --universal fish_color_selection brwhite --bold
+    set --universal fish_color_selection -b 2a1300
 end
