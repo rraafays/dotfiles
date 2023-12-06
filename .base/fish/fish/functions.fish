@@ -45,6 +45,9 @@ function cargo
     if count $argv >/dev/null
         command cargo $argv
     else
+        if type -q rustup
+            rustup update
+        end
         command cargo install-update --all
     end
 end
