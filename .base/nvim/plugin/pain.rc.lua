@@ -21,6 +21,10 @@ pain.setup({
 })
 
 vim.api.nvim_create_user_command("Center", function()
+    if vim.bo.filetype == "xxd" then
+        vim.cmd("NoNeckPainResize 80")
+        return
+    end
     local command = io.popen(
         "wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2"
     )
