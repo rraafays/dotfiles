@@ -1,9 +1,11 @@
 local pain = require("no-neck-pain")
-DEFAULT_WIDTH = 80
+
+DOCUMENT_WIDTH = 80
+RECEIPT_WIDTH = 60
 
 pain.setup({
     debug = false,
-    width = DEFAULT_WIDTH,
+    width = DOCUMENT_WIDTH,
     minSideBufferWidth = 0,
     disableOnLastBuffer = true,
     killAllBuffersOnDisable = true,
@@ -22,8 +24,12 @@ pain.setup({
 })
 
 vim.api.nvim_create_user_command("Center", function()
-    if vim.bo.filetype == "xxd" or vim.bo.filetype == "alpha" then
-        vim.cmd("NoNeckPainResize " .. DEFAULT_WIDTH)
+    local filetype = vim.bo.filetype
+    if filetype == "xxd" or filetype == "alpha" then
+        vim.cmd("NoNeckPainResize " .. DOCUMENT_WIDTH)
+        return
+    elseif filetype == "text" then
+        vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
         return
     end
     local command = io.popen(
