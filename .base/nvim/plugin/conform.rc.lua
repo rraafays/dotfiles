@@ -17,7 +17,7 @@ local function get_formatters()
             fish = { "fish_indent" },
             javascript = { "prettier" },
             typescript = { "intellij" },
-            xml = { "tidy" },
+            xml = { "xmlformat" },
             sql = { "redgate" },
             java = { "intellij" },
         }
@@ -52,6 +52,11 @@ conform.setup({
             command = "prettier",
             stdin = true,
             args = { "--tab-width", 4, "--stdin-filepath", "$FILENAME" },
+        },
+        xmlformat = {
+            command = "xmlformat",
+            stdin = true,
+            args = { "--indent", 4, "$FILENAME" },
         },
     },
 
