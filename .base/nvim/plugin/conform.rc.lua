@@ -55,8 +55,8 @@ conform.setup({
         },
         xmlformat = {
             command = "xmlformat",
-            stdin = true,
-            args = { "--indent", 4, "$FILENAME" },
+            stdin = false,
+            args = { "--indent", 4, "--overwrite", "$FILENAME" },
         },
     },
 
