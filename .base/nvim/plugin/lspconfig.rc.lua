@@ -15,7 +15,15 @@ nvim_lsp.pylsp.setup({})
 nvim_lsp.ltex.setup({})
 nvim_lsp.taplo.setup({})
 nvim_lsp.sqlls.setup({})
-nvim_lsp.lemminx.setup({})
+nvim_lsp.lemminx.setup({
+    settings = {
+        xml = {
+            validation = {
+                resolveExternalEntities = true,
+            },
+        },
+    },
+})
 nvim_lsp.lua_ls.setup({
     settings = {
         Lua = {
