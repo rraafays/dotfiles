@@ -17,6 +17,9 @@ gruvbox.setup({
         GitSignsChangeLn = { bg = "#1c1c06" },
         GitSignsAddLn = { bg = "#14200f" },
         GitSignsChangedeleteLn = { bg = "#2d0501" },
+        IncSearch = { bg = "#2b1e01", fg = "#FABC2E", reverse = false },
+        CurSearch = { bg = "#2b1e01", fg = "#FABC2E", reverse = true },
+        Search = { bg = "#2b1e01", fg = "#FABC2E", reverse = false },
     },
 })
 
