@@ -1,0 +1,2 @@
+#!/bin/bash
+coreutils sha1sum $@

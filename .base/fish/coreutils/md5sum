@@ -1,0 +1,2 @@
+#!/bin/bash
+coreutils md5sum $@

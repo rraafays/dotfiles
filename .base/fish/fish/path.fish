@@ -28,4 +28,5 @@ set -x PATH \
     $INTELLIJ_HOME \
     $SQLCL_HOME/bin \
     $SQLPATH \
+    $FISH_HOME/coreutils \
     $PATH
