@@ -32,12 +32,12 @@ vim.api.nvim_create_user_command("Center", function()
         vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
         return
     end
-    local command = io.popen(
-        "wc -L " .. vim.fn.expand("%:p") .. " | tr -s ' ' | cut -d ' ' -f 2"
-    )
+    local command = io.popen("wc -L " .. vim.fn.expand("%:p"))
     if command ~= nil then
-        local width = command:read("*a")
-        vim.cmd("NoNeckPainResize " .. width + 2)
+        local result = command:read("*a")
+        for i in string.gmatch(result, "%S+") do
+            if tonumber(i) ~= nil then vim.cmd("NoNeckPainResize " .. i + 2) end
+        end
     end
 end, {})
 
