@@ -1,5 +1,6 @@
+coreutils
+cargo-info
 cargo-update
-proverb
 lsd
 rm-improved
 ripgrep
@@ -7,3 +8,7 @@ fd-find
 qrencode
 bat
 onefetch
+du-dust
+gitui
+mprocs
+speedtest-rs
