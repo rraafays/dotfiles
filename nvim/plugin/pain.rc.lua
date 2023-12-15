@@ -41,7 +41,20 @@ vim.api.nvim_create_user_command("Center", function()
     end
 end, {})
 
+vim.api.nvim_create_user_command("Square", function()
+    local command = io.popen("tput lines")
+    if command ~= nil then
+        local result = command:read("*a")
+        vim.cmd("NoNeckPainResize " .. result * 2)
+    end
+end, {})
+
 vim.api.nvim_create_autocmd("BufWritePost", {
     pattern = "",
     command = "Center",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "man",
+    command = "Square",
 })
