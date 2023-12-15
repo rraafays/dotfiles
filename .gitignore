@@ -17,3 +17,4 @@ Redgate
 
 fish/coreutils/*
 !fish/coreutils/coreutils-link
+!fish/coreutils/coreutils-unlink
