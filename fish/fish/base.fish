@@ -3,7 +3,7 @@ set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
 set -x GRAVEYARD "$HOME/.graveyard"
-set -x ELINKS_CONFDIR "$HOME/.config/.base/elinks"
+set -x ELINKS_CONFDIR "$HOME/.config/elinks"
 
 if status is-interactive
     starship init fish | source
