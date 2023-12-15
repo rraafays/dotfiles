@@ -1,7 +1,8 @@
 #!/bin/bash
-for i in $(cat coreutils); do
+for i in $(
+	coreutils | sed -e 1,6d | tr -d " \t\n\r" | tr "," "\n" | awk NF
+); do
 	echo "#!/bin/bash" >"$i"
 	echo "coreutils $i \$@" >>"$i"
 	chmod +x "$i"
 done
-chmod -x "gen_coreutils"

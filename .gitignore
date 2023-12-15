@@ -14,3 +14,6 @@ gh
 btop
 .jira
 Redgate
+
+fish/coreutils/*
+!fish/coreutils/coreutils-link
