@@ -1,25 +1,3 @@
-function snake
-    perl -pe 's#([A-Z])#_\L$1#g' | perl -pe 's#^_##'
-end
-
-function fd
-    command fd -u $argv
-end
-
-function bat
-    command bat --theme gruvbox-dark $argv
-end
-
-function `
-    starship toggle username
-    starship toggle hostname
-    clear
-end
-function =
-    starship toggle line_break
-    clear
-end
-
 function clean
     if set -q TMUX
         clear
