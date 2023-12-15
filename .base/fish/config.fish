@@ -6,8 +6,8 @@ source $FISH_HOME/fish/functions.fish
 source $FISH_HOME/fish/path.fish
 source $FISH_HOME/fish/credentials.fish
 source $FISH_HOME/fish/ls.fish
+source $FISH_HOME/fish/coreutils.fish
 
-# source platform specific scripts
 switch (uname)
     case Darwin
         source $FISH_HOME/fish/macos.fish
