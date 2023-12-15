@@ -10,6 +10,10 @@ end
 if not test -e $CREDENTIALS/openai.fish
     echo "set -x OPENAI_API_KEY \"\"" >>$CREDENTIALS/openai.fish
 end
+if not test -e $CREDENTIALS/jira.fish
+    echo "set -x JIRA_API_TOKEN \"\"" >>$CREDENTIALS/jira.fish
+end
 
 source $CREDENTIALS/soulseek.fish
 source $CREDENTIALS/openai.fish
+source $CREDENTIALS/jira.fish
