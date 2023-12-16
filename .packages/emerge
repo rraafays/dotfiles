@@ -1,5 +1,4 @@
 app-admin/doas
-app-admin/stow
 app-admin/sysklogd
 app-arch/p7zip
 app-editors/neovim
@@ -10,9 +9,6 @@ app-portage/gentoolkit
 app-portage/mirrorselect
 app-shells/direnv
 app-shells/fish
-app-shells/fzf
-app-shells/starship
-app-shells/zoxide
 dev-dotnet/dotnet-sdk-bin
 dev-java/openjdk
 dev-lang/rust

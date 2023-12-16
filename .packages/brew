@@ -1,14 +1,12 @@
-stow
 font-iosevka-curly
 font-sarasa-gothic
 font-symbols-only-nerd-font
 koekeishiya/formulae/skhd
+koekeishiya/formulae/yabai
 kitty
 fish
 rust
-starship
-zoxide
-fzf
+rustup
 tmux
 transmission-cli
 nvim

@@ -12,3 +12,6 @@ du-dust
 gitui
 mprocs
 speedtest-rs
+fzf
+starship
+zoxide

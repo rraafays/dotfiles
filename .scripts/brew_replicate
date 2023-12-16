@@ -9,19 +9,20 @@ source() {
 }
 
 if ! command -v brew; then
+	echo "REPLICATE: grabbing brew"
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+echo "REPLICATE: synchronising with .packages/brew"
 source
 brew tap homebrew/cask-fonts
 brew install --no-quarantine $(cat .packages/brew)
 source
-brew install --HEAD felixkratz/formulae/fyabai
 brew install --HEAD felixkratz/formulae/borders
-brew services start fyabai
 brew services start borders
-brew services restart fyabai
 brew services restart borders
+yabai --start-service
+yabai --restart-service
 skhd --start-service
 skhd --restart-service
 open -a karabiner-elements
