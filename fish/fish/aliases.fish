@@ -29,7 +29,7 @@ function bat
     command bat --theme gruvbox-dark $argv
 end
 function onefetch
-    onefetch --true-color never $argv
+    command onefetch --true-color never $argv
 end
 function gitfetch
     onefetch --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15 $argv
