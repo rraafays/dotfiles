@@ -8,12 +8,12 @@ notify.setup({
         ERROR = " ",
         INFO = " ",
         TRACE = "󰛿 ",
-        WARN = " "
+        WARN = " ",
     },
     level = 2,
-    minimum_width = 40,
+    minimum_width = 20,
     render = "default",
     stages = "slide",
-    timeout = 5000,
-    top_down = true
+    timeout = 3000,
+    top_down = false,
 })
