@@ -1,3 +1,26 @@
+function upgrade
+    if type -q emerge
+        emerge
+    end
+    if type -q brew
+        brew
+    end
+    if type -q cargo
+        cargo
+    end
+end
+
+function cargo
+    if count $argv >/dev/null
+        command cargo $argv
+    else
+        if type -q rustup
+            rustup update
+        end
+        command cargo install-update --all
+    end
+end
+
 function clean
     if set -q TMUX
         clear
@@ -17,15 +40,4 @@ function user-dirs-update
     mkdir "$HOME/pictures"
     mkdir "$HOME/videos"
     xdg-user-dirs-update
-end
-
-function cargo
-    if count $argv >/dev/null
-        command cargo $argv
-    else
-        if type -q rustup
-            rustup update
-        end
-        command cargo install-update --all
-    end
 end
