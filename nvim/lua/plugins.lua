@@ -56,7 +56,6 @@ lazy.setup({
     "LunarVim/bigfile.nvim", -- speed up big files
     "gentoo/gentoo-syntax", -- gentoo syntax
     "shortcuts/no-neck-pain.nvim", -- center code
-    "jackmort/chatgpt.nvim", -- chatgpt
     "stevearc/conform.nvim", -- formatters
     "mfussenegger/nvim-jdtls", -- jdtls
     "jbyuki/venn.nvim", -- diagrams
