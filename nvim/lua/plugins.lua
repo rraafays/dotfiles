@@ -61,6 +61,5 @@ lazy.setup({
     "jbyuki/venn.nvim", -- diagrams
     "MunifTanjim/nui.nvim", -- ui components
     "rcarriga/nvim-notify", -- notify
-    "folke/noice.nvim", -- new ui
     "nvim-pack/nvim-spectre", -- find & replace
 })
