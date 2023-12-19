@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ "$EUID" -ne 0 ]; then
-    return
-else
     echo "REPLICATE: root access is required to replicate! :-("
     exit
+else
+    return
 fi
 
 echo "REPLICATE: grabbing portage tree based on machine name"

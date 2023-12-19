@@ -8,7 +8,7 @@ if [ "$OS" == "linux" ]; then
 fi
 
 if [ "$EUID" -ne 0 ]; then
-	exit
-else
 	cargo install $(cat .packages/cargo)
+else
+	exit
 fi
