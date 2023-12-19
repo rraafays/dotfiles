@@ -4,7 +4,11 @@ if [ "$OS" == "darwin" ]; then
 	bash .scripts/brew_replicate
 fi
 if [ "$OS" == "linux" ]; then
-	doas bash .scripts/emerge_replicate
+	bash .scripts/emerge_replicate
 fi
 
-cargo install $(cat .packages/cargo)
+if [ "$EUID" -ne 0 ]; then
+	exit
+else
+	cargo install $(cat .packages/cargo)
+fi

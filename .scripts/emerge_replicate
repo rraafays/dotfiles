@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]; then
+    return
+else
+    echo "REPLICATE: root access is required to replicate! :-("
+    exit
+fi
+
 echo "REPLICATE: grabbing portage tree based on machine name"
 rm -rf /etc/portage
 git clone https://github.com/rraafays/$HOSTNAME /etc/portage
