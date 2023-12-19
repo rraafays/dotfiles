@@ -1,10 +1,10 @@
 #!/bin/bash
 
+HOSTNAME=$(hostname -s | tr A-z a-z)
+
 if [ "$EUID" -ne 0 ]; then
     echo "REPLICATE: root access is required to replicate! :-("
     exit
-else
-    return
 fi
 
 echo "REPLICATE: grabbing portage tree based on machine name"
