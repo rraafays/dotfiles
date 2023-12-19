@@ -2,7 +2,6 @@ coreutils
 cargo-info
 cargo-update
 lsd
-rm-improved
 ripgrep
 fd-find
 qrencode
