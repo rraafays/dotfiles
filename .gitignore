@@ -18,3 +18,4 @@ fish/coreutils/*
 !fish/coreutils/coreutils-link
 !fish/coreutils/coreutils-unlink
 cef_user_data/
+dconf/
