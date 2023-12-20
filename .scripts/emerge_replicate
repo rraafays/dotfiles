@@ -18,7 +18,3 @@ eselect news read
 
 echo "REPLICATE: applying sudo => doas symlink"
 ln -s $(which doas) /bin/sudo
-
-echo "REPLICATE: applying userchrome"
-for dir in $HOME/.librewolf/*; do mkdir -- "$dir/chrome"; done
-cp $HOME/.config/etc/modifications/librewolf/userChrome.css $HOME/.librewolf/*/chrome/

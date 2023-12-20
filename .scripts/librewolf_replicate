@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "REPLICATE: applying userchrome"
+for dir in $HOME/.librewolf/*; do mkdir --parents -- "$dir/chrome"; done
+cp $HOME/.config/etc/modifications/librewolf/userChrome.css $HOME/.librewolf/*/chrome/
