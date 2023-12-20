@@ -1,6 +1,10 @@
 #!/bin/bash
 
+if [ -f ~/.config/fish/fish/coreutils.fish ]; then
+	rm ~/.config/fish/fish/coreutils.fish
+fi
 touch ~/.config/fish/fish/coreutils.fish
+
 for i in $(
 	coreutils | sed -e 1,6d | tr -d " \t\n\r" | tr "," "\n" | awk NF
 ); do
