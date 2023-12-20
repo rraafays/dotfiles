@@ -1,3 +1,7 @@
+gh/
+btop/
+.jira/
+Redgate/
 **/.DS_Store
 elinks/bookmarks
 elinks/cookies
@@ -10,11 +14,7 @@ nvim/lazy-lock.json
 fish/credentials/*
 fish/completions/*
 karabiner/automatic_backups/
-gh
-btop
-.jira
-Redgate
-
 fish/coreutils/*
 !fish/coreutils/coreutils-link
 !fish/coreutils/coreutils-unlink
+cef_user_data/
