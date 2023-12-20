@@ -1,0 +1,12 @@
+#!/bin/bash
+
+touch ~/.config/fish/fish/coreutils.fish
+for i in $(
+	coreutils | sed -e 1,6d | tr -d " \t\n\r" | tr "," "\n" | awk NF
+); do
+	if [ "$i" != "[" ] && [ "$i" != "test" ]; then
+		echo "function $i" >>~/.config/fish/fish/coreutils.fish
+		echo "coreutils $i \$argv" >>~/.config/fish/fish/coreutils.fish
+		echo "end" >>~/.config/fish/fish/coreutils.fish
+	fi
+done

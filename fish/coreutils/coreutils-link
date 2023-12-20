@@ -1,9 +1,0 @@
-#!/bin/bash
-cd $HOME/.config/fish/coreutils
-for i in $(
-	coreutils | sed -e 1,6d | tr -d " \t\n\r" | tr "," "\n" | awk NF
-); do
-	echo "#!/bin/bash" >"$i"
-	echo "~/.cargo/bin/coreutils $i \$@" >>"$i"
-	chmod +x "$i"
-done

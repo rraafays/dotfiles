@@ -13,6 +13,7 @@ starship/.root
 nvim/lazy-lock.json
 fish/credentials/*
 fish/completions/*
+fish/fish/coreutils.fish
 karabiner/automatic_backups/
 fish/coreutils/*
 !fish/coreutils/coreutils-link
