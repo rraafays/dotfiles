@@ -2,11 +2,6 @@
 
 HOSTNAME=$(hostname -s | tr A-z a-z)
 
-if [ "$EUID" -ne 0 ]; then
-    echo "REPLICATE: root access is required to replicate! :-("
-    exit
-fi
-
 echo "REPLICATE: grabbing portage tree based on machine name"
 rm -rf /etc/portage
 git clone https://github.com/rraafays/$HOSTNAME /etc/portage
@@ -18,17 +13,11 @@ echo "REPLICATE: synchronising world file"
 cp .packages/emerge /var/lib/portage/world
 emerge --quiet --update --deep --newuse @world
 
-echo "REPLICATE: enabling services for hyprland"
-rc-update add elogind default
-rc-update add dbus default
-rc-service elogind start
-rc-service dbus start
-
 echo "REPLICATE: checking for package news"
 eselect news read
 
 echo "REPLICATE: applying sudo => doas symlink"
-doas ln -s (which doas) sudo
+ln -s $(which doas) /bin/sudo
 
 echo "REPLICATE: applying userchrome"
 for dir in $HOME/.librewolf/*; do mkdir -- "$dir/chrome"; done
