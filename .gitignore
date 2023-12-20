@@ -19,3 +19,4 @@ fish/coreutils/*
 !fish/coreutils/coreutils-unlink
 cef_user_data/
 dconf/
+transmission-daemon/
