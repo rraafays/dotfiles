@@ -31,6 +31,7 @@ net-misc/chrony
 net-misc/dhcpcd
 net-p2p/transmission
 sys-boot/grub
+sys-fs/duf
 sys-fs/genfstab
 sys-kernel/gentoo-kernel
 sys-kernel/installkernel-gentoo
