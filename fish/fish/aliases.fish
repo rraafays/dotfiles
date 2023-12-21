@@ -46,6 +46,6 @@ end
 function play
     mpv --no-audio-display --no-input-cursor $argv
 end
-function scrcpy
-    command scrcpy --shortcut-mod lctrl --disable-screensaver $argv
+function duf
+    command duf -theme ansi $argv
 end
