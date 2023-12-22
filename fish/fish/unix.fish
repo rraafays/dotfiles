@@ -20,9 +20,11 @@ if status --is-interactive
             if count $argv >/dev/null
                 command emerge $argv
             else
-                doas emerge --sync --verbose
-                doas emerge --verbose --update --deep --newuse @world
-                doas emerge --depclean
+                doas fish -c "
+                    emerge --sync --verbose
+                    emerge --verbose --update --deep --newuse @world
+                    emerge --depclean --verbose
+                "
             end
         else
             if count $argv >/dev/null
@@ -30,7 +32,7 @@ if status --is-interactive
             else
                 emerge --sync --verbose
                 emerge --verbose --update --deep --newuse @world
-                emerge --depclean
+                emerge --depclean --verbose
             end
         end
     end
