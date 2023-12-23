@@ -32,7 +32,8 @@ vim.api.nvim_create_user_command("Center", function()
         vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
         return
     end
-    local command = io.popen("wc -L " .. vim.fn.expand("%:p"))
+    local path = vim.fn.expand("%:p")
+    local command = io.popen("wc -L " .. path:gsub(" ", "\\ "))
     if command ~= nil then
         local result = command:read("*a")
         for i in string.gmatch(result, "%S+") do
