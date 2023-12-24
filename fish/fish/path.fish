@@ -10,7 +10,7 @@ set -x USER_HOME "/Users/$USER"
 set -x INTELLIJ_HOME "/Applications/IntelliJ IDEA.app/Contents/MacOS"
 set -x SQLCL_HOME "/opt/homebrew/Caskroom/sqlcl/23.3.0.270.1251/sqlcl"
 set -x SQLPATH "$HOME/.config/sqlcl"
-set -x SCRIPTS_HOME "$FISH_HOME/bash"
+set -x SCRIPTS_HOME "$FISH_HOME/scripts"
 
 set -x PATH \
     $BUN_INSTALL/bin \
@@ -24,7 +24,6 @@ set -x PATH \
     $RBENV_INSTALL/bin \
     $RBENV_INSTALL/shims \
     $HOME/.local/bin \
-    $HOME/.config/fish/scripts \
     $USER_HOME/bin \
     $INTELLIJ_HOME \
     $SQLCL_HOME/bin \
