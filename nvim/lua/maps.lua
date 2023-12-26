@@ -24,6 +24,9 @@ keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>n:nohlsearch<CR>")
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- write to file
+keymap.set("n", "<C-w>", ":w<CR>")
+
 -- unhighlight search
 keymap.set("n", "\\", ":nohlsearch<CR>", opts)
 
@@ -43,7 +46,7 @@ keymap.set("i", "<S-Right>", "=>")
 keymap.set("i", "<S-Down>", "⇓")
 keymap.set("i", "<S-Left>", "<=")
 
--- alt keys
+-- opt row 1
 keymap.set("i", "<A-1>", "¡")
 keymap.set("i", "<A-2>", "€")
 keymap.set("i", "<A-3>", "£")
@@ -58,7 +61,7 @@ keymap.set("i", "<A-->", "–")
 keymap.set("i", "<A-=>", "≠")
 keymap.set("i", "<A-\\>", "«")
 keymap.set("i", "<A-`>", "`")
-
+-- opt row 2
 keymap.set("i", "<A-q>", "œ")
 keymap.set("i", "<A-w>", "∑")
 keymap.set("i", "<A-e>", "´")
@@ -71,7 +74,7 @@ keymap.set("i", "<A-o>", "ø")
 keymap.set("i", "<A-p>", "π")
 keymap.set("i", "<A-[>", "“")
 keymap.set("i", "<A-]>", "‘")
-
+-- opt row 3
 keymap.set("i", "<A-a>", "å")
 keymap.set("i", "<A-s>", "ß")
 keymap.set("i", "<A-d>", "∂")
@@ -83,7 +86,7 @@ keymap.set("i", "<A-k>", "˚")
 keymap.set("i", "<A-l>", "¬")
 keymap.set("i", "<A-;>", "…")
 keymap.set("i", "<A-'>", "æ")
-
+-- opt row 4
 keymap.set("i", "<A-z>", "Ω")
 keymap.set("i", "<A-x>", "≈")
 keymap.set("i", "<A-c>", "ç")
