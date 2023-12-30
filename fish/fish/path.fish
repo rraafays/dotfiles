@@ -28,5 +28,4 @@ set -x PATH \
     $INTELLIJ_HOME \
     $SQLCL_HOME/bin \
     $SQLPATH \
-    $SCRIPTS_HOME \
     $PATH

@@ -19,6 +19,7 @@ dev-util/idea-community
 dev-util/xxd
 dev-vcs/git
 games-util/steam-meta
+gui-apps/grim
 gui-apps/wl-clipboard
 gui-libs/xdg-desktop-portal-hyprland
 gui-wm/hyprland

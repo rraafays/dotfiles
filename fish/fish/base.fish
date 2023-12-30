@@ -9,12 +9,6 @@ if status is-interactive
     zoxide init fish | source
     direnv hook fish | source
 
-    set COREUTILS "$FISH_HOME/fish/coreutils.fish"
-    if not test -e $COREUTILS
-        touch $COREUTILS
-    end
-    source $COREUTILS
-
     function fish_greeting
         proverb
     end
