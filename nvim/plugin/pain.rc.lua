@@ -33,7 +33,7 @@ vim.api.nvim_create_user_command("Center", function()
         return
     end
     local path = vim.fn.expand("%:p")
-    local command = io.popen("wc -L " .. path:gsub(" ", "\\ "))
+    local command = io.popen("coreutils wc -L " .. path:gsub(" ", "\\ "))
     if command ~= nil then
         local result = command:read("*a")
         for i in string.gmatch(result, "%S+") do
