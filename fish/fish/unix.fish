@@ -1,4 +1,5 @@
 set -x ANDROID_HOME "$HOME/Android/Sdk"
+set -x SDL_VIDEODRIVER wayland
 
 if status --is-interactive
     set -x MANPAGER "nvim -c 'Man! -o -'"
