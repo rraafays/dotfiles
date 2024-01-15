@@ -47,19 +47,15 @@ lazy.setup({
     "nvim-telescope/telescope-file-browser.nvim", -- file explorer
     "nvim-lua/plenary.nvim", -- file utilities
     "RaafatTurki/hex.nvim", -- hex editor
-    "ahmedkhalf/project.nvim", -- project management
     "mfussenegger/nvim-dap", -- debug adapter
     "rcarriga/nvim-dap-ui", -- dap uis
     "norcalli/nvim-colorizer.lua", -- colour highlighter
     "kevinhwang91/promise-async", -- promise & async
-    "MunifTanjim/nui.nvim", -- nvim ui library
     "LunarVim/bigfile.nvim", -- speed up big files
     "gentoo/gentoo-syntax", -- gentoo syntax
     "shortcuts/no-neck-pain.nvim", -- center code
     "stevearc/conform.nvim", -- formatters
     "mfussenegger/nvim-jdtls", -- jdtls
     "jbyuki/venn.nvim", -- diagrams
-    "MunifTanjim/nui.nvim", -- ui components
-    "rcarriga/nvim-notify", -- notify
     "nvim-pack/nvim-spectre", -- find & replace
 })

@@ -20,6 +20,7 @@ local function get_formatters()
             xml = { "xmlformat" },
             sql = { "redgate" },
             java = { "intellij" },
+            json = { "prettier" },
         }
     else
         return {}
