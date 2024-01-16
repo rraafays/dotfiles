@@ -50,6 +50,8 @@ disabled = false
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
+truncation_length = 19
+truncation_symbol = ""
 
 [status]
 disabled = false
