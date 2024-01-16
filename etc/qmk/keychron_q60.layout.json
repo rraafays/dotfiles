@@ -1,7 +1,24 @@
 {
   "name": "Keychron Q60",
   "vendorProductId": 875823552,
-  "macros": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+  "macros": [
+    "{KC_LSFT,KC_HOME}",
+    "{KC_LSFT,KC_END}",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
   "layers": [
     [
       "KC_ESC",
@@ -233,7 +250,7 @@
       "KC_MUTE",
       "KC_VOLD",
       "KC_VOLU",
-      "KC_F13",
+      "CUSTOM(9)",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -262,7 +279,7 @@
       "KC_TRNS",
       "KC_NO",
       "KC_TRNS",
-      "KC_TRNS",
+      "MACRO(0)",
       "KC_NO",
       "KC_TRNS",
       "KC_CUT",
@@ -274,7 +291,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
+      "MACRO(1)",
       "KC_TRNS",
       "KC_LALT",
       "KC_LGUI",
@@ -288,7 +305,7 @@
       "KC_NO",
       "KC_RGUI",
       "KC_RALT",
-      "KC_F14",
+      "KC_EJCT",
       "KC_NO"
     ],
     [
