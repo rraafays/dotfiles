@@ -24,8 +24,8 @@ keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>n:nohlsearch<CR>")
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
--- write to file
-keymap.set("n", "<C-w>", ":w<CR>")
+-- write
+keymap.set("n", "<C-s>", ":w<CR>")
 
 -- unhighlight search
 keymap.set("n", "\\", ":nohlsearch<CR>", opts)
@@ -35,6 +35,10 @@ keymap.set("n", "<BS>", "dd")
 
 -- join to line above
 keymap.set("n", "K", "kJ")
+
+-- page up, page down
+keymap.set("n", "<Up>", "<C-u>")
+keymap.set("n", "<Down>", "<C-d>")
 
 -- insert arrows
 keymap.set("i", "<Up>", "↑")
