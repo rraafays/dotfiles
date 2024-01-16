@@ -58,4 +58,5 @@ lazy.setup({
     "mfussenegger/nvim-jdtls", -- jdtls
     "jbyuki/venn.nvim", -- diagrams
     "nvim-pack/nvim-spectre", -- find & replace
+    "chaoren/vim-wordmotion",
 })
