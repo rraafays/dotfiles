@@ -1,5 +1,4 @@
 local pain = require("no-neck-pain")
-local opts = { noremap = true, silent = true }
 
 DOCUMENT_WIDTH = 80
 RECEIPT_WIDTH = 60
@@ -60,5 +59,3 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "man",
     command = "Square",
 })
-
-vim.keymap.set("n", "<space>", ":Center<CR>", opts)

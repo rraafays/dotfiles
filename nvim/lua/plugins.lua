@@ -58,5 +58,7 @@ lazy.setup({
     "mfussenegger/nvim-jdtls", -- jdtls
     "jbyuki/venn.nvim", -- diagrams
     "nvim-pack/nvim-spectre", -- find & replace
-    "chaoren/vim-wordmotion",
+    "chaoren/vim-wordmotion", -- expanded motions
+    "yorickpeterse/nvim-window", -- pick window
+    "smoka7/hop.nvim", -- easy motion
 })
