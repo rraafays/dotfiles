@@ -36,9 +36,9 @@ keymap.set("n", "<BS>", "dd")
 -- join to line above
 keymap.set("n", "K", "kJ")
 
--- page up, page down
-keymap.set("n", "<Up>", "<C-u>")
-keymap.set("n", "<Down>", "<C-d>")
+-- navigate blocks
+keymap.set("n", "<Up>", "{")
+keymap.set("n", "<Down>", "}")
 
 -- insert arrows
 keymap.set("i", "<Up>", "↑")
