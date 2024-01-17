@@ -1,8 +1,10 @@
 {
   "hideHud": true,
-  "keyMappings": "map m toggleMuteTab\nmap <space> LinkHints.activateMode\nmap <S-space> LinkHints.activateModeToOpenInNewForegroundTab",
+  "keyMappings": "map m toggleMuteTab\nunmap f\nmap <space> LinkHints.activateMode\nmap <S-space> LinkHints.activateModeToOpenInNewForegroundTab",
   "linkHintCharacters": "asdfghjkl",
+  "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://floatingqrcode.com/",
+  "grabBackFocus": true,
   "searchEngines": "",
   "searchUrl": "https://www.google.co.uk/search?q=",
   "settingsVersion": "2.0.6",
