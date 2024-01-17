@@ -62,4 +62,3 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.keymap.set("n", "<space>", ":Center<CR>", opts)
-vim.keymap.set("n", "<tab>", ":Square<CR>", opts)
