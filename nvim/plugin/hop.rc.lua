@@ -4,7 +4,7 @@ local opts = { remap = true, silent = true }
 
 hop.setup({
     jump_on_sole_occurrence = false,
-    keys = "asdfghjklqwertyuiop",
+    keys = "asdfghjkl",
     create_hl_autocmd = false,
     uppercase_labels = true,
 })
