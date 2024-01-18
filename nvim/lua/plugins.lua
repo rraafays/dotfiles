@@ -61,4 +61,5 @@ lazy.setup({
     "chaoren/vim-wordmotion", -- expanded motions
     "yorickpeterse/nvim-window", -- pick window
     "smoka7/hop.nvim", -- easy motion
+    "tpope/vim-fugitive", -- git integration
 })
