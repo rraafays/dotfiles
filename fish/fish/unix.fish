@@ -16,8 +16,8 @@ if status --is-interactive
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
-    function sudo
-        command sudo -s $argv
+    function doas
+        command doas fish -c "$argv"
     end
 
     function emerge
@@ -25,9 +25,11 @@ if status --is-interactive
             if count $argv >/dev/null
                 command emerge $argv
             else
-                sudo emerge --sync --verbose
-                sudo emerge --verbose --update --deep --newuse @world
-                sudo emerge --depclean --verbose
+                doas fish -c "
+                    emerge --sync --verbose
+                    emerge --verbose --update --deep --newuse @world
+                    emerge --depclean --verbose
+                "
             end
         else
             if count $argv >/dev/null

@@ -35,7 +35,7 @@ if status --is-interactive
         SHELL=/bin/dash command skhd $argv
     end
     function doas
-        sudo $argv
+        sudo fish -c "$argv"
     end
     function wolf
         open -a LibreWolf
