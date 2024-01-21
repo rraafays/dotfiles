@@ -16,16 +16,18 @@ if status --is-interactive
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
+    function sudo
+        command sudo -s $argv
+    end
+
     function emerge
         if not fish_is_root_user
             if count $argv >/dev/null
                 command emerge $argv
             else
-                doas fish -c "
-                    emerge --sync --verbose
-                    emerge --verbose --update --deep --newuse @world
-                    emerge --depclean --verbose
-                "
+                sudo emerge --sync --verbose
+                sudo emerge --verbose --update --deep --newuse @world
+                sudo emerge --depclean --verbose
             end
         else
             if count $argv >/dev/null

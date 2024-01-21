@@ -1,4 +1,4 @@
-app-admin/doas
+app-admin/sudo
 app-admin/sysklogd
 app-arch/p7zip
 app-editors/neovim
@@ -38,7 +38,7 @@ sys-boot/grub
 sys-fs/duf
 sys-fs/genfstab
 sys-kernel/gentoo-kernel
-sys-kernel/installkernel-gentoo
+sys-kernel/installkernel
 sys-kernel/linux-firmware
 sys-process/btop
 www-client/librewolf
