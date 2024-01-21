@@ -1,4 +1,4 @@
-app-admin/sudo
+app-admin/doas
 app-admin/sysklogd
 app-arch/p7zip
 app-editors/neovim
