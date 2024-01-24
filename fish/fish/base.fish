@@ -36,7 +36,6 @@ if status is-interactive
     set fish_cursor_replace_one underscore blink
     set fish_cursor_replace underscore blink
     set fish_cursor_visual block
-    bind --mode default v "tmux copy-mode"
 
     set --universal fish_color_autosuggestion brblack
     set --universal fish_color_command brcyan
