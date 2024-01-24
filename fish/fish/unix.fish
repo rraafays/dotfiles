@@ -25,7 +25,7 @@ if status --is-interactive
             if count $argv >/dev/null
                 command emerge $argv
             else
-                doas fish -c "
+                doas fish "
                     emerge --sync --verbose
                     emerge --verbose --update --deep --newuse @world
                     emerge --depclean --verbose
