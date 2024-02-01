@@ -18,7 +18,7 @@ cmd + alt - k : yabai -m window --resize top:0:-20
 cmd + alt - l : yabai -m window --resize left:20:0
 
 cmd - 0x1E : yabai -m window --toggle split
-cmd - 0x29 : ~/.config/yabai/fullscreen && ~/.config/yabai/borders
+cmd - 0x29 : yabai -m window --toggle native-fullscreen
 cmd - 0x27 : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2 && ~/.config/yabai/borders
 cmd - 0x2C : librewolf
 
