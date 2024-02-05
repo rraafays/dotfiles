@@ -2,6 +2,7 @@ set -x DISPLAY aqua
 set -x LIBRARY_PATH "$LIBRARY_PATH:$(brew --prefix)/lib"
 set -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -x FrameworkPathOverride "$HOME/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono"
+set -x PYTHONPATH "$HOME/Library/Python/3.8/lib/python/site-packages"
 
 if status --is-interactive
     if not test -e "$HOME/.config/kitty/kitty.conf"
