@@ -21,6 +21,7 @@ local function get_formatters()
             sql = { "redgate" },
             java = { "intellij" },
             json = { "prettier" },
+            html = { "prettier" },
         }
     else
         return {}
