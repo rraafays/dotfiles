@@ -13,24 +13,26 @@ if status --is-interactive
         command doas fish -c "$argv"
     end
 
-    function emerge
+    function pacman
         if not fish_is_root_user
             if count $argv >/dev/null
-                command emerge $argv
+                command pacman $argv
             else
-                doas fish "
-                    emerge --sync --verbose
-                    emerge --verbose --update --deep --newuse @world
-                    emerge --depclean --verbose
-                "
+                if type -q paru
+                    doas paru --sync --refresh --sysupgrade
+                else
+                    doas pacman --sync --refresh --sysupgrade
+                end
             end
         else
             if count $argv >/dev/null
-                command emerge $argv
+                command pacman $argv
             else
-                emerge --sync --verbose
-                emerge --verbose --update --deep --newuse @world
-                emerge --depclean --verbose
+                if type -q paru
+                    paru --sync --refresh --sysupgrade
+                else
+                    pacman --sync --refresh --sysupgrade
+                end
             end
         end
     end
