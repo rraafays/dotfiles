@@ -14,30 +14,22 @@ if status --is-interactive
     end
 
     function pacman
-        if not fish_is_root_user
+        if type -q paru
             if count $argv >/dev/null
-                command pacman $argv
+                command paru $argv
             else
-                if type -q paru
-                    doas paru --sync --refresh --sysupgrade
-                else
-                    doas pacman --sync --refresh --sysupgrade
-                end
+                paru --sync --refresh --sysupgrade
             end
         else
             if count $argv >/dev/null
                 command pacman $argv
             else
-                if type -q paru
-                    paru --sync --refresh --sysupgrade
-                else
+                if fish_is_root_user
                     pacman --sync --refresh --sysupgrade
+                else
+                    doas pacman --sync --refresh --sysupgrade
                 end
             end
         end
-    end
-
-    function world
-        cat /var/lib/portage/world
     end
 end
