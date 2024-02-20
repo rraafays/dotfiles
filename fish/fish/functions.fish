@@ -41,3 +41,7 @@ function user-dirs-update
     mkdir "$HOME/videos"
     xdg-user-dirs-update
 end
+
+function fetch
+    fastfetch $argv
+end
