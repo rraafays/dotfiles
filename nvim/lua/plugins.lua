@@ -43,7 +43,6 @@ lazy.setup({
     "windwp/nvim-ts-autotag", -- auto closing tags
     "kylechui/nvim-surround", -- surround function
     "numtostr/comment.nvim", -- comment toggling
-    "lervag/vimtex", -- live tex compiler
     "nvim-telescope/telescope-file-browser.nvim", -- file explorer
     "nvim-lua/plenary.nvim", -- file utilities
     "RaafatTurki/hex.nvim", -- hex editor
@@ -57,9 +56,6 @@ lazy.setup({
     "stevearc/conform.nvim", -- formatters
     "mfussenegger/nvim-jdtls", -- jdtls
     "jbyuki/venn.nvim", -- diagrams
-    "nvim-pack/nvim-spectre", -- find & replace
     "chaoren/vim-wordmotion", -- expanded motions
-    "yorickpeterse/nvim-window", -- pick window
-    "smoka7/hop.nvim", -- easy motion
     "tpope/vim-fugitive", -- git integration
 })
