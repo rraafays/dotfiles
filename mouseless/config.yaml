@@ -1,0 +1,21 @@
+devices:
+baseMouseSpeed: 1000.0
+baseScrollSpeed: 20.0
+
+mouseAccelerationTime: 200.0
+mouseAccelerationCurve: 2.0
+startMouseSpeed: 0.0
+mouseDecelerationTime: 300.0
+mouseDecelerationCurve: 3.0
+
+layers:
+- name: initial
+  bindings:
+    kp4: move -1 0 
+    kp2: move 0 1 
+    kp8: move 0 -1 
+    kp6: move 1 0 
+    kp6: move 1 0 
+    kp0: button left
+    kp1: button right
+    kp3: button middle
