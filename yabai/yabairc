@@ -5,6 +5,8 @@ sudo yabai --load-sa
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
 defaults write com.doomlaser.cursorcerer idleHide -float 3
 ~/Library/PreferencePanes/Cursorcerer.prefPane/Contents/Resources/Cursorcerer.app/Contents/MacOS &
+defaults write com.apple.universalaccess mouseDriverInitialDelay -float 0
+defaults write com.apple.universalaccess mouseDriverMaxSpeed -int 64
 
 yabai -m config \
 	layout bsp \
