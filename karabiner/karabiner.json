@@ -794,7 +794,7 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "keypad_3"
+                                    "pointing_button": "button3"
                                 }
                             ]
                         },
@@ -871,6 +871,30 @@
                             "to": [
                                 {
                                     "key_code": "left_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_7"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": 64
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_9"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": -64
+                                    }
                                 }
                             ]
                         }

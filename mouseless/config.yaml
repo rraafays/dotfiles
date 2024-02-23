@@ -15,7 +15,6 @@ layers:
     kp2: move 0 1 
     kp8: move 0 -1 
     kp6: move 1 0 
-    kp6: move 1 0 
     kp0: button left
     kp1: button right
     kp3: button middle
