@@ -18,3 +18,5 @@ layers:
     kp0: button left
     kp1: button right
     kp3: button middle
+    kp7: scroll down
+    kp9: scroll up
