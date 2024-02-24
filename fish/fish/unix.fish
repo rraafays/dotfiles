@@ -16,18 +16,18 @@ if status --is-interactive
     function pacman
         if type -q paru
             if count $argv >/dev/null
-                command paru $argv
+                command paru --noconfirm $argv
             else
-                paru --sync --refresh --sysupgrade
+                paru --noconfirm --sync --refresh --sysupgrade
             end
         else
             if count $argv >/dev/null
-                command pacman $argv
+                command pacman --noconfirm $argv
             else
                 if fish_is_root_user
-                    pacman --sync --refresh --sysupgrade
+                    pacman --noconfirm --sync --refresh --sysupgrade
                 else
-                    doas pacman --sync --refresh --sysupgrade
+                    doas pacman --noconfirm --sync --refresh --sysupgrade
                 end
             end
         end
