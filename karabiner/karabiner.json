@@ -737,7 +737,7 @@
                     "treat_as_built_in_keyboard": false
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": false,
+                    "disable_built_in_keyboard_if_exists": true,
                     "fn_function_keys": [],
                     "game_pad_swap_sticks": false,
                     "identifiers": {
@@ -824,12 +824,36 @@
                         },
                         {
                             "from": {
+                                "key_code": "keypad_7"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": 64
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "keypad_8"
                             },
                             "to": [
                                 {
                                     "mouse_key": {
                                         "y": -1536
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "keypad_9"
+                            },
+                            "to": [
+                                {
+                                    "mouse_key": {
+                                        "vertical_wheel": -64
                                     }
                                 }
                             ]
@@ -871,30 +895,6 @@
                             "to": [
                                 {
                                     "key_code": "left_option"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "keypad_7"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "vertical_wheel": 64
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "keypad_9"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "vertical_wheel": -64
-                                    }
                                 }
                             ]
                         }
