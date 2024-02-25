@@ -1,4 +1,0 @@
-#!/bin/bash
-yabai -m window --toggle zoom-fullscreen
-yabai -m space --toggle padding
-yabai -m space --toggle gap
