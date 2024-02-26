@@ -12,11 +12,11 @@ yabai -m config \
 	layout bsp \
 	window_placement second_child \
 	window_zoom_persist on \
-	top_padding 0 \
-	bottom_padding 0 \
-	left_padding 0 \
-	right_padding 0 \
-	window_gap 0 \
+	top_padding 10 \
+	bottom_padding 20 \
+	left_padding 20 \
+	right_padding 20 \
+	window_gap 20 \
 	config auto_balance on \
 	mouse_modifier shift \
 	mouse_action1 move \

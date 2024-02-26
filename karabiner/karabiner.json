@@ -778,47 +778,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "keypad_2"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "y": 1536
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "keypad_3"
                             },
                             "to": [
                                 {
                                     "pointing_button": "button3"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "keypad_4"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "x": -1536
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "keypad_6"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "x": 1536
-                                    }
                                 }
                             ]
                         },
@@ -830,18 +794,6 @@
                                 {
                                     "mouse_key": {
                                         "vertical_wheel": 64
-                                    }
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "keypad_8"
-                            },
-                            "to": [
-                                {
-                                    "mouse_key": {
-                                        "y": -1536
                                     }
                                 }
                             ]

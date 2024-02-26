@@ -11,6 +11,8 @@ set -x INTELLIJ_HOME "/Applications/IntelliJ IDEA.app/Contents/MacOS"
 set -x SQLCL_HOME "/opt/homebrew/Caskroom/sqlcl/23.3.0.270.1251/sqlcl"
 set -x SQLPATH "$HOME/.config/sqlcl"
 set -x SCRIPTS_HOME "$FISH_HOME/scripts"
+set -x AVR_GCC "/opt/homebrew/opt/avr-gcc@8/"
+set -x ARM_EABI_BINUTILS /opt/homebrew/opt/arm-none-eabi-binutils/
 
 set -x PATH \
     $BUN_INSTALL/bin \
@@ -29,4 +31,6 @@ set -x PATH \
     $SQLCL_HOME/bin \
     $SQLPATH \
     $SCRIPTS_HOME \
+    $AVR_GCC \
+    $ARM_EABI_BINUTILS \
     $PATH
