@@ -4,6 +4,10 @@ local opts = { noremap = true, silent = true }
 -- lazy command
 keymap.set("n", ";", ":")
 
+-- escape in place
+keymap.set("i", "<del>", "<esc>l")
+keymap.set("v", "<del>", "<esc>l")
+
 -- lazy leave
 keymap.set("n", "q", ":q<CR>", opts)
 
