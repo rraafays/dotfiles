@@ -17,6 +17,14 @@ if status --is-interactive
         command doas fish -c "$argv"
     end
 
+    function nsh
+        if count $argv >/dev/null
+            command nix-shell $argv --run fish
+        else
+            return 1
+        end
+    end
+
     function iosevka
         rm -rf $HOME/.local/share/fonts
         mkdir $HOME/.local/share/fonts
