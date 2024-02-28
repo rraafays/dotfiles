@@ -17,7 +17,11 @@ function cargo
         if type -q rustup
             rustup update
         end
-        command cargo install-update --all
+        command cargo install \
+            coreutils \
+            doro \
+            proverb \
+            barish
     end
 end
 

@@ -3,6 +3,10 @@ set -x ANDROID_HOME "$HOME/Android/Sdk"
 if status --is-interactive
     set -x MANPAGER "nvim -c 'Man! -o -'"
 
+    if test -e $WAYLAND_DISPLAY
+        dbus-run-session Hyprland
+    end
+
     if not test -e "$HOME/.config/kitty/kitty.conf"
         cat \
             "$HOME/.config/kitty/base.conf" \
