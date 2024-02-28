@@ -67,6 +67,10 @@ signal_symbol = ' FATAL '
 pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style) '
 pipestatus_segment_format = '[$symbol$status]($style)'
 
+[nix_shell]
+symbol = " "
+format = '[$symbol]($style) '
+
 [bun]
 symbol = '󰳮 '
 format = '[$symbol($version)]($style) '
