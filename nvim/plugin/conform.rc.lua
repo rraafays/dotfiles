@@ -22,6 +22,7 @@ local function get_formatters()
             java = { "intellij" },
             json = { "prettier" },
             html = { "prettier" },
+            nix = { "nixpkgs_fmt" },
         }
     else
         return {}
@@ -59,6 +60,11 @@ conform.setup({
             command = "xmlformat",
             stdin = false,
             args = { "--indent", 4, "--overwrite", "$FILENAME" },
+        },
+        nixpkgs_fmt = {
+            command = "nixpkgs-fmt",
+                stdin = false,
+            args = { "$FILENAME" },
         },
     },
 

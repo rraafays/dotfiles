@@ -15,6 +15,7 @@ nvim_lsp.pylsp.setup({})
 nvim_lsp.ltex.setup({})
 nvim_lsp.taplo.setup({})
 nvim_lsp.sqlls.setup({})
+nvim_lsp.nil_ls.setup({})
 nvim_lsp.lemminx.setup({
     settings = {
         xml = {
