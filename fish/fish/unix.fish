@@ -18,11 +18,7 @@ if status --is-interactive
     end
 
     function nsh
-        if count $argv >/dev/null
-            command nix-shell $argv --run fish
-        else
-            return 1
-        end
+        command nix-shell $argv --run fish
     end
 
     function iosevka
