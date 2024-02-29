@@ -63,7 +63,7 @@ conform.setup({
         },
         nixpkgs_fmt = {
             command = "nixpkgs-fmt",
-                stdin = false,
+            stdin = false,
             args = { "$FILENAME" },
         },
     },
