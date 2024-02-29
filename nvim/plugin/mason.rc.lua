@@ -16,7 +16,6 @@ mason_lsp.setup({
         "ltex",
         "lua_ls",
         "pylsp",
-        "rust_analyzer",
         "sqlls",
         "taplo",
         "tsserver",
