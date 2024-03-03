@@ -30,6 +30,10 @@ if status is-interactive
         exec tmux new-session -A -s (whoami) >/dev/null 2>&1
     end
 
+    if not test -z $SSH_TTY
+        exec tmux new-session -A -s (whoami) >/dev/null 2>&1
+    end
+
     fish_vi_key_bindings
     set fish_cursor_default block blink
     set fish_cursor_insert line blink
