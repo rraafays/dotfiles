@@ -3,7 +3,7 @@ set -x ANDROID_HOME "$HOME/Android/Sdk"
 if status --is-interactive
     set -x MANPAGER "nvim -c 'Man! -o -'"
 
-    if test -e $WAYLAND_DISPLAY
+    if not pgrep -f Hyprland >/dev/null
         dbus-run-session Hyprland
     end
 
