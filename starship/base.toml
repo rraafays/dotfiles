@@ -43,7 +43,9 @@ read_only_style = "bold fg:8"
 truncation_length = 3
 
 [cmd_duration]
-disabled = true
+disabled = false
+min_time = 3000
+format = "[$duration]($style) "
 
 [git_metrics]
 disabled = false
