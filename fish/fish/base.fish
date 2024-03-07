@@ -8,10 +8,7 @@ if status is-interactive
     zoxide init fish | source
     direnv hook fish | source
 
-    function fish_greeting
-        tput setaf 8
-        fortune-kind
-    end
+    set fish_greeting ""
 
     if not fish_is_root_user
         cat \
