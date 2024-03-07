@@ -4,13 +4,34 @@ ctrl - return : kitty ~/ --single-instance
 ctrl - q : skhd --key "cmd - q"
 ctrl - w : skhd --key "cmd - w"
 ctrl - space : skhd --key "cmd - space"
-ctrl - s : skhd --key "cmd - s"
-ctrl - a : skhd --key "cmd - a"
-ctrl - c : skhd --key "cmd - c"
-ctrl - v : skhd --key "cmd - v"
-ctrl - r : skhd --key "cmd - r"
-ctrl - t : skhd --key "cmd - t"
-ctrl - f : skhd --key "cmd - f"
+ctrl - s [
+"kitty" ~
+* : skhd --key "cmd - s"
+]
+ctrl - a [
+"kitty" ~
+* : skhd --key "cmd - a"
+]
+ctrl - c [
+"kitty" ~
+* : skhd --key "cmd - c"
+]
+ctrl - v [
+"kitty" ~
+* : skhd --key "cmd - v"
+]
+ctrl - r [
+"kitty" ~
+* : skhd --key "cmd - r"
+]
+ctrl - t [
+"kitty" ~
+* : skhd --key "cmd - t"
+]
+ctrl - f [
+"kitty" ~
+* : skhd --key "cmd - f"
+]
 0x33 : skhd --key "delete"
 0x0A : skhd --key "escape"
 
