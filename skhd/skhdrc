@@ -10,6 +10,24 @@ ctrl - c : skhd --key "cmd - c"
 ctrl - v : skhd --key "cmd - v"
 ctrl - r : skhd --key "cmd - r"
 ctrl - t : skhd --key "cmd - t"
+ctrl - f : skhd --key "cmd - f"
+0x33 : skhd --key "delete"
+0x0A : skhd --key "escape"
+
+fn - 1 : skhd --key "f1"
+fn - 2 : skhd --key "f2"
+fn - 3 : skhd --key "f3"
+fn - 4 : skhd --key "f4"
+fn - 5 : skhd --key "f5"
+fn - 6 : skhd --key "f6"
+fn - 7 : skhd --key "f7"
+fn - 8 : skhd --key "f8"
+fn - 9 : skhd --key "f9"
+fn - 0 : skhd --key "f10"
+fn - 0x1B : skhd --key "f11"
+fn - 0x18 : skhd --key "f12"
+fn + shift - 0x1B : m volume down
+fn + shift - 0x18 : m volume up
 
 ctrl - h : yabai -m window --focus west
 ctrl - j : yabai -m window --focus south
