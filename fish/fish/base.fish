@@ -8,9 +8,7 @@ if status is-interactive
     zoxide init fish | source
     direnv hook fish | source
 
-    function fish_greeting
-        proverb
-    end
+    set fish_greeting ""
 
     if not fish_is_root_user
         cat \
