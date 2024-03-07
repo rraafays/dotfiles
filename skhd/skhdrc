@@ -4,6 +4,12 @@ ctrl - return : kitty ~/ --single-instance
 ctrl - q : skhd --key "cmd - q"
 ctrl - w : skhd --key "cmd - w"
 ctrl - space : skhd --key "cmd - space"
+ctrl - s : skhd --key "cmd - s"
+ctrl - a : skhd --key "cmd - a"
+ctrl - c : skhd --key "cmd - c"
+ctrl - v : skhd --key "cmd - v"
+ctrl - r : skhd --key "cmd - r"
+ctrl - t : skhd --key "cmd - t"
 
 ctrl - h : yabai -m window --focus west
 ctrl - j : yabai -m window --focus south
