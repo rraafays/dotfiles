@@ -1,5 +1,4 @@
 set -x DISPLAY aqua
-set -x LIBRARY_PATH "$LIBRARY_PATH:$(brew --prefix)/lib"
 set -x ANDROID_HOME "$HOME/Library/Android/sdk"
 set -x FrameworkPathOverride "$HOME/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono"
 set -x PYTHONPATH "$HOME/Library/Python/3.8/lib/python/site-packages"
@@ -25,32 +24,5 @@ if status --is-interactive
 
     function man
         command man -P 'nvim -c \'Man! -o -\'' $argv
-    end
-    function fixlogin
-        sfltool resetbtm
-    end
-    function yabai
-        SHELL=/bin/dash command yabai $argv
-    end
-    function skhd
-        SHELL=/bin/dash command skhd $argv
-    end
-    function doas
-        sudo fish -c "$argv"
-    end
-    function wolf
-        open -a LibreWolf
-    end
-    function sqldev
-        open -a SQLDeveloper
-    end
-    function utm
-        open -a UTM
-    end
-    function intellij
-        open -a "Intellij IDEA"
-    end
-    function chrome
-        open -a "Google Chrome"
     end
 end
