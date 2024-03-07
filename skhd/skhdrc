@@ -34,6 +34,7 @@ ctrl - f [
 ]
 0x33 : skhd --key "delete"
 0x0A : skhd --key "escape"
+alt - 0x0A : skhd --key "alt - escape"
 
 fn - 1 : skhd --key "f1"
 fn - 2 : skhd --key "f2"
