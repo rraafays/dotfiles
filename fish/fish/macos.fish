@@ -10,18 +10,6 @@ if status --is-interactive
             "$HOME/.config/kitty/macos.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
-    function brew
-        if count $argv >/dev/null
-            command brew $argv
-        else
-            command brew update
-            command brew upgrade --no-quarantine
-            command brew upgrade --no-quarantine --cask --greedy
-            command brew autoremove
-            command brew cleanup
-        end
-    end
-
     function man
         command man -P 'nvim -c \'Man! -o -\'' $argv
     end

@@ -7,6 +7,7 @@ defaults write com.doomlaser.cursorcerer idleHide -float 3
 ~/Library/PreferencePanes/Cursorcerer.prefPane/Contents/Resources/Cursorcerer.app/Contents/MacOS &
 defaults write com.apple.universalaccess mouseDriverInitialDelay -float 0
 defaults write com.apple.universalaccess mouseDriverMaxSpeed -int 64
+osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"~/.config/etc/wallpapers/000000.png\" as POSIX file"
 
 yabai -m config \
 	layout bsp \
