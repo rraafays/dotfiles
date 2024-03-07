@@ -13,10 +13,6 @@ if status --is-interactive
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
-    function nsh
-        command nix-shell $argv --run fish
-    end
-
     function dotfiles
         rm -rf /home/raf/.config
         rm -rf /root/.config
