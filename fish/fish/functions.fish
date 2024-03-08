@@ -13,5 +13,9 @@ function clean
 end
 
 function fetch
-    fastfetch $argv
+    if test -e .git
+        onefetch $argv
+    else
+        fastfetch $argv
+    end
 end
