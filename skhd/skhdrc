@@ -3,7 +3,7 @@
 ctrl - return : kitty ~/ --single-instance
 ctrl - q : skhd --key "cmd - q"
 ctrl - w : skhd --key "cmd - w"
-ctrl - space : skhd --key "cmd - space"
+ctrl - space : open -a raycast
 ctrl - s [
 "kitty" ~
 * : skhd --key "cmd - s"
@@ -69,7 +69,6 @@ ctrl + alt - l : yabai -m window --resize left:20:0
 ctrl - 0x1E : yabai -m window --toggle split
 ctrl - 0x29 : yabai -m window --toggle native-fullscreen
 ctrl - 0x27 : yabai -m window --toggle float && yabai -m window --grid 4:4:1:1:2:2
-ctrl - 0x2C : librewolf
 
 ctrl - 1 : yabai -m space --focus 1
 ctrl - 2 : yabai -m space --focus 2
