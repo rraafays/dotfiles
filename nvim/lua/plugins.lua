@@ -30,8 +30,6 @@ lazy.setup({
     "nvim-telescope/telescope.nvim", -- fuzzy finder
     "goolord/alpha-nvim", -- startpage
     "neovim/nvim-lspconfig", -- language servers
-    "williamboman/mason.nvim", -- lsp installer
-    "williamboman/mason-lspconfig.nvim", -- ensure installed
     "hrsh7th/nvim-cmp", -- lsp completions
     "hrsh7th/cmp-buffer", -- buffer words
     "hrsh7th/cmp-nvim-lsp", -- cmp lsp support
