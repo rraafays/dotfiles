@@ -25,3 +25,6 @@ pulse/
 chromium/
 user-dirs.dirs
 hypr/
+environment.d/
+systemd/
+git/
