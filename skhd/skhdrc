@@ -55,6 +55,11 @@ fn - 0x18 : skhd --key "f12"
 fn + shift - 0x1B : m volume down
 fn + shift - 0x18 : m volume up
 
+fn - h : skhd --key "left"
+fn - j : skhd --key "down"
+fn - k : skhd --key "up"
+fn - l : skhd --key "right"
+
 ctrl - h : yabai -m window --focus west
 ctrl - j : yabai -m window --focus south
 ctrl - k : yabai -m window --focus north
