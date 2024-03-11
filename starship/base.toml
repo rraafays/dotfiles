@@ -52,7 +52,7 @@ disabled = false
 
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
-truncation_length = 19
+truncation_length = 16
 truncation_symbol = ""
 
 [status]
