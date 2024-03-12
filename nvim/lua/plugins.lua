@@ -49,7 +49,6 @@ lazy.setup({
     "norcalli/nvim-colorizer.lua", -- colour highlighter
     "kevinhwang91/promise-async", -- promise & async
     "LunarVim/bigfile.nvim", -- speed up big files
-    "gentoo/gentoo-syntax", -- gentoo syntax
     "shortcuts/no-neck-pain.nvim", -- center code
     "stevearc/conform.nvim", -- formatters
     "mfussenegger/nvim-jdtls", -- jdtls
