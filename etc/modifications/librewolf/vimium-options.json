@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "map m toggleMuteTab\nunmap f\nmap <space> LinkHints.activateMode\nmap <S-space> LinkHints.activateModeToOpenInNewForegroundTab",
+  "keyMappings": "map m toggleMuteTab\nunmap f\nmap <space> LinkHints.activateMode\nmap <S-space> LinkHints.activateModeToOpenInNewForegroundTab\nmap n moveTabToNewWindow",
   "linkHintCharacters": "asdfghjkl",
   "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://floatingqrcode.com/",
