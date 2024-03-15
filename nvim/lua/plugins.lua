@@ -56,4 +56,7 @@ lazy.setup({
     "chaoren/vim-wordmotion", -- expanded motions
     "tpope/vim-fugitive", -- git integration
     "folke/trouble.nvim", -- diagnostics overview
+    "https://github.com/folke/noice.nvim",
+    "https://github.com/MunifTanjim/nui.nvim",
+    "https://github.com/rcarriga/nvim-notify",
 })

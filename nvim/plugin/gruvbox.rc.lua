@@ -20,6 +20,7 @@ gruvbox.setup({
         IncSearch = { bg = "#2b1e01", fg = "#FABC2E", reverse = false },
         CurSearch = { bg = "#2b1e01", fg = "#FABC2E", reverse = true },
         Search = { bg = "#2b1e01", fg = "#FABC2E", reverse = false },
+        NotifyBackground = { bg = "#000000" },
     },
 })
 
