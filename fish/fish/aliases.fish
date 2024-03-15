@@ -13,9 +13,6 @@ end
 function py
     python3 $argv
 end
-function transmission
-    transmission-remote $argv
-end
 function fd
     command fd -u $argv
 end
@@ -30,12 +27,6 @@ function bat
 end
 function onefetch
     command onefetch --true-color never $argv
-end
-function gitfetch
-    onefetch --no-color-palette --no-art --no-title --text-colors 0 0 0 5 5 15 $argv
-end
-function transmission-watch
-    watch -n 1 'transmission-remote -l' $argv
 end
 function im
     kitty +kitten icat --align left $argv
