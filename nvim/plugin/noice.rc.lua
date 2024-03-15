@@ -32,7 +32,11 @@ noice.setup({
                 lang = "lua",
                 title = "",
             },
-            help = { pattern = "^:%s*he?l?p?%s+", icon = "help" },
+            help = {
+                pattern = "^:%s*he?l?p?%s+",
+                icon = "help",
+                title = "",
+            },
             input = {
                 title = "",
             },
