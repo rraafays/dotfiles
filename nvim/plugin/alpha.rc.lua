@@ -48,13 +48,13 @@ end
 
 dashboard.section.buttons.val = {
     button(
-        "o",
+        "space",
         "global recents",
         "<cmd>Telescope frecency<cr>",
         "GruvboxOrange"
     ),
     button(
-        "r",
+        "opt space",
         "workspace recents",
         "<cmd>Telescope frecency workspace=CWD<cr>",
         "GruvboxOrange"
