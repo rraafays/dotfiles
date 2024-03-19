@@ -2,6 +2,7 @@ set -x EDITOR nvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --no-ignore --no-ignore-dot --no-ignore-exclude --no-ignore-files --no-ignore-global --no-ignore-parent --no-ignore-vcs"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
+set -x DETOX_SEQUENCE lower
 
 if status is-interactive
     starship init fish | source
