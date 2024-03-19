@@ -54,6 +54,7 @@ telescope.setup({
 })
 
 telescope.load_extension("file_browser")
+telescope.load_extension("frecency")
 
 local opts = { noremap = true, silent = true }
 
@@ -64,7 +65,8 @@ vim.keymap.set("n", "<C-d>", "<cmd>Telescope diagnostics<cr>", opts)
 vim.keymap.set("n", "<A-c>", "<cmd>Telescope git_bcommits", opts)
 vim.keymap.set("n", "<A-b>", "<cmd>Telescope git_branches", opts)
 vim.keymap.set("n", "<A-s>", "<cmd>Telescope git_status", opts)
-
+vim.keymap.set("n", "<C-o>", "<cmd>Telescope frecency<cr>", opts)
+vim.keymap.set("n", "<C-r>", "<cmd>Telescope frecency workspace=CWD<cr>", opts)
 vim.keymap.set(
     "n",
     "<C-e>",

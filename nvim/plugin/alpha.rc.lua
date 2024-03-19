@@ -48,9 +48,15 @@ end
 
 dashboard.section.buttons.val = {
     button(
-        "p",
-        "projects",
-        "<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>",
+        "o",
+        "global recents",
+        "<cmd>Telescope frecency<cr>",
+        "GruvboxOrange"
+    ),
+    button(
+        "r",
+        "workspace recents",
+        "<cmd>Telescope frecency workspace=CWD<cr>",
         "GruvboxOrange"
     ),
     button(
