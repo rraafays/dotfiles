@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "map m toggleMuteTab\nunmap f\nunmap J\nunmap K\nmap <space> LinkHints.activateMode\nmap <S-space> LinkHints.activateModeToOpenInNewForegroundTab\nmap ; moveTabToNewWindow\n\nmap <f1> firstTab count=1\nmap <f2> firstTab count=2\nmap <f3> firstTab count=3\nmap <f4> firstTab count=4\nmap <f5> firstTab count=5\nmap <f6> firstTab count=6\nmap <f7> firstTab count=7\nmap <f8> firstTab count=8\nmap <f9> firstTab count=9\nmap <f0> firstTab count=10",
+  "keyMappings": "map m toggleMuteTab\nunmap J\nunmap K\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow\n\nmap <f1> firstTab count=1\nmap <f2> firstTab count=2\nmap <f3> firstTab count=3\nmap <f4> firstTab count=4\nmap <f5> firstTab count=5\nmap <f6> firstTab count=6\nmap <f7> firstTab count=7\nmap <f8> firstTab count=8\nmap <f9> firstTab count=9\nmap <f0> firstTab count=10",
   "linkHintCharacters": "asdfghjkl",
   "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://floatingqrcode.com/",
