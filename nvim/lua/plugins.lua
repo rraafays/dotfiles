@@ -44,8 +44,6 @@ lazy.setup({
     "nvim-telescope/telescope-file-browser.nvim", -- file explorer
     "nvim-lua/plenary.nvim", -- file utilities
     "RaafatTurki/hex.nvim", -- hex editor
-    "mfussenegger/nvim-dap", -- debug adapter
-    "rcarriga/nvim-dap-ui", -- dap uis
     "norcalli/nvim-colorizer.lua", -- colour highlighter
     "kevinhwang91/promise-async", -- promise & async
     "LunarVim/bigfile.nvim", -- speed up big files

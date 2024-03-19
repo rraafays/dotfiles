@@ -47,19 +47,24 @@ local button = function(shortcut, text, command, hl)
 end
 
 dashboard.section.buttons.val = {
-    -- button(
-    --     "p",
-    --     "projects",
-    --     "<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>",
-    --     "GruvboxOrange"
-    -- ),
-    -- button(
-    --     "f",
-    --     "files",
-    --     "<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>",
-    --     "GruvboxOrange"
-    -- ),
-    -- button("g", "grep", "<cmd>lua require('telescope.builtin').live_grep()<CR>", "GruvboxOrange"),
+    button(
+        "p",
+        "projects",
+        "<cmd>lua require'telescope'.extensions.projects.projects{ initial_mode = 'insert' }<CR>",
+        "GruvboxOrange"
+    ),
+    button(
+        "f",
+        "files",
+        "<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>",
+        "GruvboxOrange"
+    ),
+    button(
+        "g",
+        "grep",
+        "<cmd>lua require('telescope.builtin').live_grep()<CR>",
+        "GruvboxOrange"
+    ),
 }
 
 alpha.setup(dashboard.config)

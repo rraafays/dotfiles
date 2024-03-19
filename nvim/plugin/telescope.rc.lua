@@ -6,6 +6,13 @@ function telescope_buffer_dir() return vim.fn.expand("%:p:h") end
 
 telescope.setup({
     defaults = {
+        find_command = "rg",
+        respect_git_ignore = false,
+        hidden = true,
+        layout_config = {
+            width = 0.9,
+            height = 0.9,
+        },
         mappings = {
             n = {
                 ["q"] = actions.close,
@@ -13,8 +20,17 @@ telescope.setup({
         },
         borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     },
+    pickers = {
+        buffers = {
+            initial_mode = "normal",
+        },
+    },
     extensions = {
         file_browser = {
+            respect_git_ignore = false,
+            hidden = true,
+            grouped = true,
+            initial_mode = "normal",
             theme = "dropdown",
             hijack_netrw = true,
             mappings = {
@@ -40,51 +56,18 @@ telescope.setup({
 telescope.load_extension("file_browser")
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set(
-    "n",
-    "<C-f>",
-    '<cmd>lua require("telescope.builtin").find_files({ hidden = true, layout_config={width=0.9, height=0.9} })<CR>',
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<C-g>",
-    '<cmd>lua require("telescope.builtin").live_grep({layout_config={width=0.9, height=0.9}})<CR>',
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<C-b>",
-    '<cmd>lua require("telescope.builtin").buffers({ initial_mode = "normal", layout_config={width=0.9, height=0.9}})<CR>',
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<C-d>",
-    '<cmd>lua require("telescope.builtin").diagnostics({layout_config={width=0.9, height=0.9}})<CR>',
-    opts
-)
+
+vim.keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>", opts)
+vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
+vim.keymap.set("n", "<C-b>", "<cmd>Telescope buffers<cr>", opts)
+vim.keymap.set("n", "<C-d>", "<cmd>Telescope diagnostics<cr>", opts)
+vim.keymap.set("n", "<A-c>", "<cmd>Telescope git_bcommits", opts)
+vim.keymap.set("n", "<A-b>", "<cmd>Telescope git_branches", opts)
+vim.keymap.set("n", "<A-s>", "<cmd>Telescope git_status", opts)
+
 vim.keymap.set(
     "n",
     "<C-e>",
-    '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", cwd = telescope_buffer_dir(), respect_git_ignore = false, hidden = true, grouped = true, previewer = true, initial_mode = "normal"})<CR>',
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<A-c>",
-    "<cmd>lua require('telescope.builtin').git_commits({ hidden = true, layout_config={width=0.9, height=0.9} })<CR>",
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<A-b>",
-    "<cmd>lua require('telescope.builtin').git_branches({ hidden = true, layout_config={width=0.9, height=0.9} })<CR>",
-    opts
-)
-vim.keymap.set(
-    "n",
-    "<A-s>",
-    "<cmd>lua require('telescope.builtin').git_status({ hidden = true, layout_config={width=0.9, height=0.9} })<CR>",
+    "<cmd>Telescope file_browser file_browser<cr>",
     opts
 )
