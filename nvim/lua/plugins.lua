@@ -53,8 +53,7 @@ lazy.setup({
     "jbyuki/venn.nvim", -- diagrams
     "chaoren/vim-wordmotion", -- expanded motions
     "tpope/vim-fugitive", -- git integration
-    "folke/trouble.nvim", -- diagnostics overview
-    "https://github.com/folke/noice.nvim",
-    "https://github.com/MunifTanjim/nui.nvim",
-    "https://github.com/rcarriga/nvim-notify",
+    "https://github.com/folke/noice.nvim", -- ui overhaul
+    "https://github.com/MunifTanjim/nui.nvim", -- ui library
+    "https://github.com/rcarriga/nvim-notify", -- notifications
 })
