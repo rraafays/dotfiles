@@ -57,4 +57,5 @@ lazy.setup({
     "MunifTanjim/nui.nvim", -- ui library
     "rcarriga/nvim-notify", -- notifications
     "nvim-telescope/telescope-frecency.nvim", -- recent files
+    "https://github.com/lambdalisue/suda.vim",
 })
