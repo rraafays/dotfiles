@@ -8,6 +8,7 @@ if status is-interactive
     starship init fish | source
     zoxide init fish | source
     direnv hook fish | source
+    nix-your-shell fish | source
 
     set fish_greeting ""
 
