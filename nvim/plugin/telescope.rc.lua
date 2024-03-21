@@ -62,9 +62,6 @@ vim.keymap.set("n", "<C-f>", "<cmd>Telescope find_files<cr>", opts)
 vim.keymap.set("n", "<C-g>", "<cmd>Telescope live_grep<cr>", opts)
 vim.keymap.set("n", "<C-b>", "<cmd>Telescope buffers<cr>", opts)
 vim.keymap.set("n", "<C-d>", "<cmd>Telescope diagnostics<cr>", opts)
-vim.keymap.set("n", "<A-c>", "<cmd>Telescope git_bcommits", opts)
-vim.keymap.set("n", "<A-b>", "<cmd>Telescope git_branches", opts)
-vim.keymap.set("n", "<A-s>", "<cmd>Telescope git_status", opts)
 vim.keymap.set("n", "<space>", "<cmd>Telescope frecency<cr>", opts)
 vim.keymap.set(
     "n",
