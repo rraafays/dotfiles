@@ -2,9 +2,13 @@ set -x ANDROID_HOME "$HOME/Android/Sdk"
 
 if status --is-interactive
     set -x MANPAGER "nvim -c 'Man! -o -'"
+    set -x TTY $(tty)
 
-    if not pgrep -f Hyprland >/dev/null
+    if test "$TTY" = /dev/tty1
         dbus-run-session Hyprland
+    end
+    if test "$TTY" = /dev/tty2
+        gamescope --adaptive-sync -r 175 -W 3440 -H 1440 -f -e -- steam steam://open/bigpicture
     end
 
     if not test -e "$HOME/.config/kitty/kitty.conf"
