@@ -1,6 +1,5 @@
-
 function nsh
-    command nix-shell $argv --run fish
+    nix-shell $argv
 end
 
 function clean
@@ -14,8 +13,8 @@ end
 
 function fetch
     if test -e .git
-        onefetch $argv
+        nix-shell --packages onefetch --run onefetch $argv
     else
-        fastfetch $argv
+        nix-shell --packages fastfetch --run fastfetch $argv
     end
 end
