@@ -16,9 +16,6 @@ end
 function tree
     ls --tree $argv
 end
-function qr
-    nix-shell --packages qrencode --run "qrencode -t UTF8 -m 2 $argv"
-end
 function bat
     command bat --theme gruvbox-dark $argv
 end
