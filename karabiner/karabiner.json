@@ -379,7 +379,18 @@
                     "mouse_flip_y": false,
                     "mouse_swap_wheels": false,
                     "mouse_swap_xy": false,
-                    "simple_modifications": [],
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "delete_forward"
+                                }
+                            ]
+                        }
+                    ],
                     "treat_as_built_in_keyboard": false
                 },
                 {
@@ -925,74 +936,6 @@
             "simple_modifications": [
                 {
                     "from": {
-                        "key_code": "delete_or_backspace"
-                    },
-                    "to": [
-                        {
-                            "key_code": "delete_forward"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "non_us_backslash"
-                    },
-                    "to": [
-                        {
-                            "key_code": "escape"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_4"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "x": -1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_2"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "y": 1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_8"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "y": -1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_6"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "x": 1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
                         "key_code": "keypad_0"
                     },
                     "to": [
@@ -1013,11 +956,47 @@
                 },
                 {
                     "from": {
+                        "key_code": "keypad_2"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": 1536
+                            }
+                        }
+                    ]
+                },
+                {
+                    "from": {
                         "key_code": "keypad_3"
                     },
                     "to": [
                         {
                             "pointing_button": "button3"
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_4"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": -1536
+                            }
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "keypad_6"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "x": 1536
+                            }
                         }
                     ]
                 },
@@ -1035,6 +1014,18 @@
                 },
                 {
                     "from": {
+                        "key_code": "keypad_8"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "y": -1536
+                            }
+                        }
+                    ]
+                },
+                {
+                    "from": {
                         "key_code": "keypad_9"
                     },
                     "to": [
@@ -1042,6 +1033,16 @@
                             "mouse_key": {
                                 "vertical_wheel": -32
                             }
+                        }
+                    ]
+                },
+                {
+                    "from": {
+                        "key_code": "non_us_backslash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
                         }
                     ]
                 }
