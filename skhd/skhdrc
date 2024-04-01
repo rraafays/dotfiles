@@ -50,6 +50,9 @@ ctrl - q [
 * : skhd --key "cmd - q"
 ]
 
+ctrl + alt - delete : m shutdown
+ctrl + alt - return : m restart
+
 ctrl - h : yabai -m window --focus west
 ctrl - j : yabai -m window --focus south
 ctrl - k : yabai -m window --focus north
