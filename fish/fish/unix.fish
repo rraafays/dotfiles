@@ -5,7 +5,7 @@ if status --is-interactive
     set -x TTY $(tty)
 
     if test "$TTY" = /dev/tty1
-        dbus-run-session Hyprland
+        Hyprland
     end
     if test "$TTY" = /dev/tty2
         gamescope --adaptive-sync -r 175 -W 3440 -H 1440 -f -e -- steam steam://open/bigpicture
