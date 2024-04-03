@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "map m toggleMuteTab\nunmap J\nunmap K\nunmap o\nunmap O\nmap <a-space> Vomnibar.activateTabSelection\n\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow",
+  "keyMappings": "map m toggleMuteTab\nunmap J\nunmap K\nunmap o\nunmap O\nmap <home> Vomnibar.activateTabSelection\n\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow",
   "linkHintCharacters": "asdfghjkl",
   "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://bouncingcode.com/",
