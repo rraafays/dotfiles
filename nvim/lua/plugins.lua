@@ -22,7 +22,7 @@ lazy.setup({
 
     "ellisonleao/gruvbox.nvim", -- gruvbox theme
     "hoob3rt/lualine.nvim", -- statusline
-    "kyazdani42/nvim-web-devicons", -- icons
+    "nvim-tree/nvim-web-devicons", -- icons
     "onsails/lspkind-nvim", -- pictograms
     "lewis6991/gitsigns.nvim", -- git changes
     "nvim-treesitter/nvim-treesitter", -- code highlighting
