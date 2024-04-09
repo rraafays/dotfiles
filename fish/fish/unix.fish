@@ -17,6 +17,15 @@ if status --is-interactive
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
+    if not fish_is_root_user
+        function mount
+            udisksctl mount --block-device $argv
+        end
+        function umount
+            udisksctl unmount --block-device $argv
+        end
+    end
+
     function dotfiles
         rm -rf /home/raf/.config
         rm -rf /root/.config
