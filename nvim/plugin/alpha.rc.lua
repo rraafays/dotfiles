@@ -38,6 +38,14 @@ dashboard.section.header.val = {
     [[            `666,,       ```''''         ,/767              ]],
     [[               `6666,,,__        __,,,67777"                ]],
     [[                   `""666666000000777"""'                   ]],
+    [[                   `""666666000000777"""'                   ]],
+    [[                                                            ]],
+    string.format(
+        "                          v%s.%s.%s",
+        vim.version().major,
+        vim.version().minor,
+        vim.version().patch
+    ),
 }
 
 local button = function(shortcut, text, command, hl)
