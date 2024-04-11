@@ -16,7 +16,7 @@ local function get_formatters()
             sh = { "shfmt" },
             fish = { "fish_indent" },
             javascript = { "prettier" },
-            typescript = { "intellij" },
+            typescript = { "cognitran" },
             typescriptreact = { "cognitran" },
             xml = { "xmlformat" },
             sql = { "redgate" },
