@@ -13,4 +13,12 @@ if status --is-interactive
     function man
         command man -P 'nvim -c \'Man! -o -\'' $argv
     end
+
+    function fix-nix
+        sudo mv /etc/bashrc /etc/bashrc.orig
+        sudo mv /etc/zshrc /etc/zshrc.orig
+        sudo mv /etc/zprofile /etc/zprofile.orig
+        sudo /nix/var/nix/profiles/system/activate
+        exit
+    end
 end
