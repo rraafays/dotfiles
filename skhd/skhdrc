@@ -42,6 +42,14 @@ ctrl - e [
 "kitty" ~
 * : skhd --key "cmd - e"
 ]
+ctrl - 0x18 [
+"kitty" ~
+* : skhd --key "cmd - 0x18"
+]
+ctrl - 0x1B [
+"kitty" ~
+* : skhd --key "cmd - 0x1B"
+]
 ctrl + shift - 0x2F [
 "kitty" ~
 * : skhd --key "cmd + shift - 0x2F"
