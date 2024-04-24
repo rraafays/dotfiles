@@ -1,7 +1,8 @@
 local chatgpt = require("chatgpt")
 chatgpt.setup({})
 
-vim.keymap.set("n", "<a-g>", "<cmd>ChatGPT<CR>")
-vim.keymap.set("n", "<a-c>", "<cmd>ChatGPTCompleteCode<CR>")
-vim.keymap.set("n", "<a-e>", "<cmd>ChatGPTEditWithInstructions<CR>")
-vim.keymap.set("n", "<a-r>", ":ChatGPTRun ")
+vim.keymap.set("n", "<a-g>", "<cmd>ChatGPT<cr>")
+vim.keymap.set("v", "!", "<cmd>ChatGPTRun summarize<cr>")
+vim.keymap.set("v", "@", "<cmd>ChatGPTRun docstring<cr>")
+vim.keymap.set("v", "-", "<cmd>ChatGPTRun optimize_code<cr>")
+vim.keymap.set("v", "+", "<cmd>ChatGPTRun add_tests<cr>")

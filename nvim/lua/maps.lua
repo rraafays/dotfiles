@@ -7,48 +7,27 @@ local function C(key)
     keymap.set("i", string.format("<C-%s>", key), string.format("<esc>%s", key))
 end
 
--- lazy command
-keymap.set("n", ";", ":")
-
--- escape in place
-keymap.set("i", "<del>", "<esc>l")
-keymap.set("v", "<del>", "<esc>l")
-
 -- lazy leave
-keymap.set("n", "q", ":q<CR>", opts)
+keymap.set("n", "q", "<cmd>q<cr>", opts)
 
 -- easy to reach exit
 keymap.set("v", "q", "<esc>")
 
 -- force quit
-keymap.set("n", "<C-c>", "<Esc>:qa!<CR>", opts)
-keymap.set("i", "<C-c>", "<Esc>:qa!<CR>", opts)
-
--- don't yank on delete
-keymap.set("n", "x", '"_x')
-keymap.set("n", "d", '"_d')
-
--- double value under cursor
-keymap.set("n", "@", ":s/\\d\\+/\\=submatch(0)*2/<CR>n:nohlsearch<CR>")
+keymap.set("n", "<C-c>", "<esc><cmd>qa!<cr>", opts)
+keymap.set("i", "<C-c>", "<esc><cmd>qa!<cr>", opts)
 
 -- select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- write
-keymap.set("n", "<C-s>", ":w<CR>")
+keymap.set("n", "<C-s>", "<cmd>w<cr>")
 
 -- unhighlight search
-keymap.set("n", "\\", ":nohlsearch<CR>", opts)
-
--- quick line del in normal mode
-keymap.set("n", "<BS>", "dd")
+keymap.set("n", "\\", "<cmd>nohlsearch<cr>", opts)
 
 -- join to line above
 keymap.set("n", "K", "kJ")
-
--- navigate blocks
-keymap.set("n", "<Up>", "{")
-keymap.set("n", "<Down>", "}")
 
 -- insert arrows
 keymap.set("i", "<Up>", "↑")

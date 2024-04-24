@@ -21,7 +21,7 @@ local config = {
     on_attach = vim.keymap.set(
         "n",
         "<C-o>",
-        ':lua require("jdtls").organize_imports()<CR>'
+        "<cmd>lua require('jdtls').organize_imports()<cr>"
     ),
     root_dir = root_dir,
     settings = {
