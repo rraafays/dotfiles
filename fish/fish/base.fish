@@ -35,6 +35,14 @@ if status is-interactive
     end
 
     fish_vi_key_bindings
+    # bind --mode default \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode default \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode insert \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode paste \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode replace \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode replace_one \cZ 'fg 2>/dev/null; commandline -f repaint'
+    bind --mode visual \cZ 'fg 2>/dev/null; commandline -f repaint'
+
     set fish_cursor_default block blink
     set fish_cursor_insert line blink
     set fish_cursor_replace_one underscore blink
