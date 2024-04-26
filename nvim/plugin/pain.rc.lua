@@ -16,7 +16,6 @@ pain.setup({
     },
     mappings = {
         enabled = true,
-        toggle = "z",
         widthUp = "=",
         widthDown = "-",
         scratchPad = "false",
