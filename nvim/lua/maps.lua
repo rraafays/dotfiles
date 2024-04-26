@@ -9,6 +9,7 @@ end
 
 -- lazy leave
 keymap.set("n", "q", "<cmd>q<cr>", opts)
+keymap.set("n", "<C-z>", "<cmd>Lazy sync<cr>", opts)
 
 -- easy to reach exit
 keymap.set("v", "q", "<esc>")
