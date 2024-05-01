@@ -570,7 +570,7 @@
                         ]
                     },
                     {
-                        "description": "caps -> ctrl/home",
+                        "description": "caps -> cmd/home",
                         "manipulators": [
                             {
                                 "from": {
@@ -583,12 +583,37 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_control"
+                                        "key_code": "left_command"
                                     }
                                 ],
                                 "to_if_alone": [
                                     {
                                         "key_code": "home"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "space backslash -> opt f1",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "backslash",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f1",
+                                        "modifiers": "option"
                                     }
                                 ],
                                 "type": "basic"
