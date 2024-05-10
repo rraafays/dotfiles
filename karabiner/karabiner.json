@@ -1209,6 +1209,16 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_command"
+                                }
+                            ]
                         }
                     ],
                     "treat_as_built_in_keyboard": false
