@@ -1,6 +1,16 @@
+# skhd conf
+
 0x45 : kitty ~/ --single-instance
 0x4E : open -na firefox
 0x4C : open -a raycast
+
+cmd - 0x2B [
+   "firefox" : skhd --key "ctrl - 0x2B"
+]
+
+cmd - 0x2F [
+   "firefox" : skhd --key "ctrl - 0x2F"
+]
 
 cmd + alt - delete : m shutdown
 cmd + alt - return : m restart

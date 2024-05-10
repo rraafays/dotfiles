@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "map m toggleMuteTab\nunmap J\nunmap K\nunmap o\nunmap O\n\nmap <home>1 firstTab count=1\nmap <home>2 firstTab count=2\nmap <home>3 firstTab count=3\nmap <home>4 firstTab count=4\nmap <home>5 firstTab count=5\nmap <home>6 firstTab count=6\nmap <home>7 firstTab count=7\nmap <home>8 firstTab count=8\nmap <home>9 firstTab count=9\nmap <home>0 firstTab count=0\n\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow",
+  "keyMappings": "unmap J\nunmap K\nunmap o\nunmap O\n\nmap m toggleMuteTab\nmap <c-,> previousTab\nmap <c-.> nextTab\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow",
   "linkHintCharacters": "asdfghjkl",
   "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://random.earth/",
