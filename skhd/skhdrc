@@ -16,3 +16,15 @@ cmd + shift - h : aerospace move left
 cmd + shift - j : aerospace move down
 cmd + shift - k : aerospace move up
 cmd + shift - l : aerospace move right
+
+cmd - 1 : aerospace workspace 1
+cmd - 2 : aerospace workspace 2
+cmd - 3 : aerospace workspace 3
+cmd - 4 : aerospace workspace 4
+cmd - 5 : aerospace workspace 5
+
+cmd + shift - 1 : aerospace move-node-to-workspace 1
+cmd + shift - 2 : aerospace move-node-to-workspace 2
+cmd + shift - 3 : aerospace move-node-to-workspace 3
+cmd + shift - 4 : aerospace move-node-to-workspace 4
+cmd + shift - 5 : aerospace move-node-to-workspace 5
