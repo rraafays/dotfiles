@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "unmap J\nunmap K\nunmap o\nunmap O\n\nmap m toggleMuteTab\nmap <c-,> previousTab\nmap <c-.> nextTab\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ; moveTabToNewWindow",
+  "keyMappings": "map m toggleMuteTab\nunmap J\nunmap K\nunmap o\nunmap O\n\nmap <s-a-left> previousTab\nmap <s-a-right> nextTab\nmap <space> Vomnibar.activate\nmap <s-space> Vomnibar.activateInNewTab\nmap ' moveTabToNewWindow",
   "linkHintCharacters": "asdfghjkl",
   "linkHintNumbers": "asdfghjkl",
   "newTabUrl": "https://random.earth/",
