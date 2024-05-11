@@ -4,13 +4,8 @@ cmd - space : open -a raycast
 cmd - return : kitty ~/ --single-instance
 cmd - 0x27 : open -na firefox
 
-cmd - 0x2B [
-   "firefox" : skhd --key "ctrl - 0x2B"
-]
-
-cmd - 0x2F [
-   "firefox" : skhd --key "ctrl - 0x2F"
-]
+cmd - 0x2B : skhd --key "ctrl - 0x2B"
+cmd - 0x2F : skhd --key "ctrl - 0x2F"
 
 cmd - h : aerospace focus left
 cmd - j : aerospace focus down
