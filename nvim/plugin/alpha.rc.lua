@@ -48,37 +48,6 @@ dashboard.section.header.val = {
     ),
 }
 
-local button = function(shortcut, text, command, hl)
-    local button = dashboard.button(shortcut, text, command)
-    button.opts.hl_shortcut = hl
-    return button
-end
-
-dashboard.section.buttons.val = {
-    button(
-        "space",
-        "global recents",
-        "<cmd>Telescope frecency<cr>",
-        "GruvboxOrange"
-    ),
-    button(
-        "opt space",
-        "workspace recents",
-        "<cmd>Telescope frecency workspace=CWD<cr>",
-        "GruvboxOrange"
-    ),
-    button(
-        "f",
-        "files",
-        "<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true })<CR>",
-        "GruvboxOrange"
-    ),
-    button(
-        "g",
-        "grep",
-        "<cmd>lua require('telescope.builtin').live_grep()<CR>",
-        "GruvboxOrange"
-    ),
-}
+dashboard.section.buttons.val = {}
 
 alpha.setup(dashboard.config)
