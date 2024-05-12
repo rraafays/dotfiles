@@ -1,5 +1,7 @@
 after-login-command = []
-after-startup-command = []
+after-startup-command = [ 
+    'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3'
+]
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
