@@ -40,8 +40,9 @@ lvim.use_icons = true
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
-lvim.builtin.breadcrumbs.active = false
 lvim.colorscheme = "gruvbox"
+
+lvim.builtin.breadcrumbs.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.indentlines.active = false
 lvim.builtin.alpha.active = true
@@ -49,6 +50,12 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.treesitter.auto_install = true
+lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
+lvim.builtin.gitsigns.opts = {
+    signcolumn = false,
+    linehl = true,
+}
 lvim.builtin.lualine.options.theme = {
     normal = {
         a = { fg = "#A89983", bg = "none" },
@@ -85,13 +92,69 @@ lvim.builtin.lualine.options.theme = {
     }
 }
 
-lvim.builtin.treesitter.auto_install = true
-lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
+lvim.keys.normal_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
+lvim.keys.insert_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
+lvim.keys.normal_mode["<C-a>"] = "<esc>gg<S-v>G"
+lvim.keys.insert_mode["<C-a>"] = "<esc>gg<S-v>G"
+lvim.keys.normal_mode["\\"] = "<cmd>nohlsearch<cr>"
 
-lvim.builtin.gitsigns.opts = {
-    signcolumn = false,
-    linehl = true,
-}
+lvim.keys.insert_mode["<Up>"] = "↑"
+lvim.keys.insert_mode["<Right>"] = "->"
+lvim.keys.insert_mode["<Down>"] = "↓"
+lvim.keys.insert_mode["<Left>"] = "<-"
+lvim.keys.insert_mode["<S-Up>"] = "⇑"
+lvim.keys.insert_mode["<S-Right>"] = "=>"
+lvim.keys.insert_mode["<S-Down>"] = "⇓"
+lvim.keys.insert_mode["<S-Left>"] = "<="
+
+lvim.keys.insert_mode["<A-1>"] = "¡"
+lvim.keys.insert_mode["<A-q>"] = "œ"
+lvim.keys.insert_mode["<A-a>"] = "å"
+lvim.keys.insert_mode["<A-z>"] = "Ω"
+lvim.keys.insert_mode["<A-2>"] = "€"
+lvim.keys.insert_mode["<A-w>"] = "∑"
+lvim.keys.insert_mode["<A-s>"] = "ß"
+lvim.keys.insert_mode["<A-x>"] = "≈"
+lvim.keys.insert_mode["<A-3>"] = "£"
+lvim.keys.insert_mode["<A-e>"] = "´"
+lvim.keys.insert_mode["<A-d>"] = "∂"
+lvim.keys.insert_mode["<A-c>"] = "ç"
+lvim.keys.insert_mode["<A-4>"] = "¢"
+lvim.keys.insert_mode["<A-r>"] = "®"
+lvim.keys.insert_mode["<A-f>"] = "ƒ"
+lvim.keys.insert_mode["<A-v>"] = "√"
+lvim.keys.insert_mode["<A-5>"] = "∞"
+lvim.keys.insert_mode["<A-t>"] = "†"
+lvim.keys.insert_mode["<A-g>"] = "©"
+lvim.keys.insert_mode["<A-b>"] = "∫"
+lvim.keys.insert_mode["<A-6>"] = "§"
+lvim.keys.insert_mode["<A-y>"] = "¥"
+lvim.keys.insert_mode["<A-h>"] = "˙"
+lvim.keys.insert_mode["<A-n>"] = "˜"
+lvim.keys.insert_mode["<A-7>"] = "¶"
+lvim.keys.insert_mode["<A-u>"] = "¨"
+lvim.keys.insert_mode["<A-j>"] = "∆"
+lvim.keys.insert_mode["<A-m>"] = "µ"
+lvim.keys.insert_mode["<A-8>"] = "•"
+lvim.keys.insert_mode["<A-i>"] = "ˆ"
+lvim.keys.insert_mode["<A-k>"] = "˚"
+lvim.keys.insert_mode["<A-,>"] = "≤"
+lvim.keys.insert_mode["<A-9>"] = "ª"
+lvim.keys.insert_mode["<A-o>"] = "ø"
+lvim.keys.insert_mode["<A-l>"] = "¬"
+lvim.keys.insert_mode["<A-.>"] = "≥"
+lvim.keys.insert_mode["<A-0>"] = "º"
+lvim.keys.insert_mode["<A-p>"] = "π"
+lvim.keys.insert_mode["<A-;>"] = "…"
+lvim.keys.insert_mode["<A-/>"] = "÷"
+lvim.keys.insert_mode["<A-->"] = "–"
+lvim.keys.insert_mode["<A-[>"] = "“"
+lvim.keys.insert_mode["<A-'>"] = "æ"
+lvim.keys.insert_mode["<A-=>"] = "≠"
+lvim.keys.insert_mode["<A-]>"] = "‘"
+lvim.keys.insert_mode["<A-\\>"] = "«"
+lvim.keys.insert_mode["<A-`>"] = "`"
+
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 -- local formatters = require "lvim.lsp.null-ls.formatters"
 -- formatters.setup {
