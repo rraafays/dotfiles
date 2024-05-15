@@ -1,6 +1,28 @@
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.wo.number = false
+vim.opt.signcolumn = "no"
 vim.opt.relativenumber = false
+vim.opt.fillchars = {
+    horiz = " ",
+    horizup = " ",
+    horizdown = " ",
+    vert = " ",
+    vertleft = " ",
+    vertright = " ",
+    verthoriz = " ",
+    eob = " ",
+    fold = " ",
+    foldsep = " ",
+    foldopen = "+",
+    foldclose = "-",
+}
+vim.o.guicursor = table.concat({
+    "n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
+}, ",")
+
 
 lvim.log.level = "info"
 lvim.format_on_save = {
@@ -13,16 +35,8 @@ lvim.use_icons = true
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
-
--- -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-
--- -- Change theme settings
 lvim.colorscheme = "gruvbox"
-
+lvim.builtin.indentlines.active = false
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
@@ -64,10 +78,13 @@ lvim.builtin.lualine.options.theme = {
     }
 }
 
-
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
 
+lvim.builtin.gitsigns.opts = {
+    signcolumn = false,
+    linehl = true,
+}
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
 -- local formatters = require "lvim.lsp.null-ls.formatters"
 -- formatters.setup {
