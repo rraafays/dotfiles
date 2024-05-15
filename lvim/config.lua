@@ -167,12 +167,12 @@ lvim.plugins = {
                 debug = false,
                 width = DOCUMENT_WIDTH,
                 minSideBufferWidth = 0,
-                disableOnLastBuffer = true,
-                killAllBuffersOnDisable = true,
+                disableOnLastBuffer = false,
+                killAllBuffersOnDisable = false,
                 autocmds = {
                     enableOnVimEnter = true,
-                    enableOnTabEnter = true,
-                    reloadOnColorSchemeChange = true,
+                    enableOnTabEnter = false,
+                    reloadOnColorSchemeChange = false,
                 },
                 mappings = {
                     enabled = true,
@@ -184,15 +184,17 @@ lvim.plugins = {
 
             vim.api.nvim_create_user_command("Center", function()
                 local filetype = vim.bo.filetype
-                if filetype == "xxd" or filetype == "alpha" then
-                    vim.cmd("NoNeckPainResize " .. DOCUMENT_WIDTH)
+                if filetype == "TelescopePrompt" then
                     return
-                elseif filetype == "text" then
-                    vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
-                    return
+                    -- elseif filetype == "xxd" or filetype == "alpha" then
+                    --     vim.cmd("NoNeckPainResize " .. DOCUMENT_WIDTH)
+                    --     return
+                    -- elseif filetype == "text" then
+                    --     vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
+                    --     return
                 end
-                local path = vim.fn.expand("%:p")
-                local command = io.popen("wc -L " .. path:gsub(" ", "\\ "))
+                vim.cmd("w! ~/test")
+                local command = io.popen("wc -L " .. "~/test")
                 if command ~= nil then
                     local result = command:read("*a")
                     for i in string.gmatch(result, "%S+") do
@@ -208,6 +210,11 @@ lvim.plugins = {
                     vim.cmd("NoNeckPainResize " .. result * 2)
                 end
             end, {})
+
+            vim.api.nvim_create_autocmd("CursorMovedI", {
+                pattern = "",
+                command = "Center",
+            })
 
             vim.api.nvim_create_autocmd("BufWritePost", {
                 pattern = "",
