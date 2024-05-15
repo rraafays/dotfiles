@@ -1,5 +1,5 @@
 function vi
-    nvim $argv
+    lvim $argv
 end
 function ls
     lsd $argv
