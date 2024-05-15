@@ -5,6 +5,9 @@ vim.opt.signcolumn = "no"
 vim.opt.relativenumber = false
 vim.opt.showtabline = 0
 vim.opt.cmdheight = 0
+vim.opt.ai = true
+vim.opt.si = true
+vim.opt.wrap = true
 vim.opt.fillchars = {
     horiz = " ",
     horizup = " ",
@@ -24,7 +27,6 @@ vim.o.guicursor = table.concat({
     "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
     "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
 }, ",")
-
 
 lvim.log.level = "info"
 lvim.format_on_save = {
@@ -184,17 +186,11 @@ lvim.plugins = {
 
             vim.api.nvim_create_user_command("Center", function()
                 local filetype = vim.bo.filetype
-                if filetype == "TelescopePrompt" then
+                if filetype == "TelescopePrompt" or filetype == "alpha" then
                     return
-                    -- elseif filetype == "xxd" or filetype == "alpha" then
-                    --     vim.cmd("NoNeckPainResize " .. DOCUMENT_WIDTH)
-                    --     return
-                    -- elseif filetype == "text" then
-                    --     vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
-                    --     return
                 end
-                vim.cmd("w! ~/test")
-                local command = io.popen("wc -L " .. "~/test")
+                vim.cmd("w! ~/.cache/lvim/width")
+                local command = io.popen("wc -L " .. "~/.cache/lvim/width")
                 if command ~= nil then
                     local result = command:read("*a")
                     for i in string.gmatch(result, "%S+") do
@@ -212,6 +208,11 @@ lvim.plugins = {
             end, {})
 
             vim.api.nvim_create_autocmd("CursorMovedI", {
+                pattern = "",
+                command = "Center",
+            })
+
+            vim.api.nvim_create_autocmd("TextChanged", {
                 pattern = "",
                 command = "Center",
             })
