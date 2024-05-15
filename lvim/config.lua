@@ -3,6 +3,8 @@ vim.opt.tabstop = 4
 vim.wo.number = false
 vim.opt.signcolumn = "no"
 vim.opt.relativenumber = false
+vim.opt.showtabline = 0
+vim.opt.cmdheight = 0
 vim.opt.fillchars = {
     horiz = " ",
     horizup = " ",
@@ -35,7 +37,9 @@ lvim.use_icons = true
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
+lvim.builtin.breadcrumbs.active = false
 lvim.colorscheme = "gruvbox"
+lvim.builtin.bufferline.active = false
 lvim.builtin.indentlines.active = false
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
@@ -105,6 +109,7 @@ lvim.builtin.gitsigns.opts = {
 -- }
 
 lvim.plugins = {
+    { "chaoren/vim-wordmotion", },
     {
         "ellisonleao/gruvbox.nvim", -- gruvbox theme
         config = function()
