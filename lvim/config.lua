@@ -178,12 +178,18 @@ lvim.builtin.alpha.dashboard.section.header.val = {
     )
 }
 
+lvim.keys.normal_mode["q"] = "<cmd>q<cr>"
+
 lvim.keys.normal_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
 lvim.keys.insert_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
 lvim.keys.normal_mode["<C-a>"] = "<esc>gg<S-v>G"
 lvim.keys.insert_mode["<C-a>"] = "<esc>gg<S-v>G"
-lvim.keys.normal_mode["\\"] = "<cmd>nohlsearch<cr>"
+lvim.keys.normal_mode["<C-f>"] = "<esc><cmd>Telescope find_files<cr>"
+lvim.keys.insert_mode["<C-f>"] = "<esc><cmd>Telescope find_files<cr>"
+lvim.keys.normal_mode["<C-g>"] = "<esc><cmd>Telescope live_grep<cr>"
+lvim.keys.insert_mode["<C-g>"] = "<esc><cmd>Telescope live_grep<cr>"
 
+lvim.keys.normal_mode["\\"] = "<cmd>nohlsearch<cr>"
 lvim.keys.insert_mode["<Up>"] = "↑"
 lvim.keys.insert_mode["<Right>"] = "->"
 lvim.keys.insert_mode["<Down>"] = "↓"
