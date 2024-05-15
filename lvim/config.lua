@@ -186,7 +186,7 @@ lvim.plugins = {
 
             vim.api.nvim_create_user_command("Center", function()
                 local filetype = vim.bo.filetype
-                if filetype == "TelescopePrompt" or filetype == "alpha" then
+                if filetype == "TelescopePrompt" or filetype == "alpha" or filetype == "lazy" then
                     return
                 end
                 vim.cmd("w! ~/.cache/lvim/width")
