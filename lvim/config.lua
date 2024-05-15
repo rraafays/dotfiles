@@ -56,6 +56,44 @@ lvim.builtin.gitsigns.opts = {
     signcolumn = false,
     linehl = true,
 }
+lvim.builtin.lualine.sections = {
+    lualine_a = {
+        "mode",
+    },
+    lualine_b = {
+        "branch",
+    },
+    lualine_c = {
+        {
+            "filename",
+            file_status = true,
+            path = 1,
+        },
+    },
+    lualine_x = {
+        {
+            "diagnostics",
+            sources = {
+                "nvim_diagnostic",
+            },
+            symbols = {
+                error = "ERROR ",
+                warn = "WARN ",
+                info = "INFO ",
+                hint = "NOTE ",
+            },
+        },
+        "encoding",
+        "filetype",
+    },
+    lualine_y = {
+        "progress",
+    },
+    lualine_z = {
+        "location",
+    },
+}
+
 lvim.builtin.lualine.options.theme = {
     normal = {
         a = { fg = "#A89983", bg = "none" },
