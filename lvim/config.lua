@@ -1,6 +1,7 @@
+vim.wo.number = false
+vim.opt.virtualedit = "block"
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.wo.number = false
 vim.opt.signcolumn = "no"
 vim.opt.relativenumber = false
 vim.opt.showtabline = 0
@@ -112,6 +113,12 @@ lvim.builtin.gitsigns.opts = {
 
 lvim.plugins = {
     { "chaoren/vim-wordmotion", },
+    {
+        "kylechui/nvim-surround",
+        config = function()
+            require("nvim-surround").setup()
+        end
+    },
     {
         "ellisonleao/gruvbox.nvim",
         config = function()
