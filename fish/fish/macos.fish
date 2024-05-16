@@ -12,6 +12,6 @@ if status --is-interactive
     end
 
     function man
-        command man -P 'nvim -c \'Man! -o -\'' $argv
+        command man -P 'lvim -c \'Man! -o -\'' $argv
     end
 end
