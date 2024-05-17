@@ -1,6 +1,7 @@
 after-login-command = []
 after-startup-command = [ 
-    'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3'
+    'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3',
+    'exec-and-forget ~/.nix-profile/bin/borders active_color=0xFFEBDBB2 inactive_color=0xFF928373 width=2.0'
 ]
 start-at-login = true
 enable-normalization-flatten-containers = true
