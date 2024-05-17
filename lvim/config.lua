@@ -98,36 +98,36 @@ lvim.builtin.lualine.options.theme = {
     normal = {
         a = { fg = "#A89983", bg = "none" },
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
+        c = { fg = "#A89983", bg = "none" },
     },
     insert = {
         a = { fg = "#448488", bg = "none" },
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
+        c = { fg = "#A89983", bg = "none" },
     },
 
     replace = {
         a = { fg = "#FB4833", bg = "none" },
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
+        c = { fg = "#A89983", bg = "none" },
     },
 
     visual = {
         a = { fg = "#FE8019", bg = "none" },
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
+        c = { fg = "#A89983", bg = "none" },
     },
 
     command = {
         a = { fg = "#B8BA25", bg = "none" },
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
+        c = { fg = "#A89983", bg = "none" },
     },
 
     inactive = {
         b = { fg = "#EBDBB2", bg = "none" },
-        c = { fg = "#A89983", bg = "none" }
-    }
+        c = { fg = "#A89983", bg = "none" },
+    },
 }
 
 lvim.builtin.alpha.dashboard.section.buttons.entries = {}
@@ -170,12 +170,7 @@ lvim.builtin.alpha.dashboard.section.header.val = {
     [[                   `""666666000000777"""'                   ]],
     [[                   `""666666000000777"""'                   ]],
     [[                                                            ]],
-    string.format(
-        "                          v%s.%s.%s",
-        vim.version().major,
-        vim.version().minor,
-        vim.version().patch
-    )
+    string.format("                          v%s.%s.%s", vim.version().major, vim.version().minor, vim.version().patch),
 }
 
 lvim.keys.normal_mode["q"] = "<cmd>q<cr>"
@@ -250,12 +245,12 @@ lvim.keys.insert_mode["<A-`>"] = "`"
 lvim.keys.normal_mode["<Tab>"] = "<cmd>Lspsaga diagnostic_jump_next<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = "<cmd>Lspsaga diagnostic_jump_prev<cr>"
 lvim.plugins = {
-    { "chaoren/vim-wordmotion", },
+    { "chaoren/vim-wordmotion" },
     {
         "kylechui/nvim-surround",
         config = function()
             require("nvim-surround").setup()
-        end
+        end,
     },
     {
         "glepnir/lspsaga.nvim",
@@ -293,7 +288,7 @@ lvim.plugins = {
                     actionfix = "󰌵 ",
                 },
             })
-        end
+        end,
     },
     {
         "ellisonleao/gruvbox.nvim",
@@ -340,7 +335,7 @@ lvim.plugins = {
                     NoiceCmdlinePopupTitle = { fg = "#EBDBB2" },
                 },
             })
-        end
+        end,
     },
     {
         "shortcuts/no-neck-pain.nvim",
@@ -377,7 +372,9 @@ lvim.plugins = {
                 if command ~= nil then
                     local result = command:read("*a")
                     for i in string.gmatch(result, "%S+") do
-                        if tonumber(i) ~= nil then vim.cmd("NoNeckPainResize " .. i + 2) end
+                        if tonumber(i) ~= nil then
+                            vim.cmd("NoNeckPainResize " .. i + 2)
+                        end
                     end
                 end
             end, {})
@@ -409,19 +406,25 @@ lvim.plugins = {
                 pattern = "man",
                 command = "Square",
             })
-        end
+        end,
     },
     {
         "stevearc/conform.nvim",
         config = function()
             local conform = require("conform")
 
-            local function get_os() return vim.loop.os_uname().sysname end
-            local formatter_config_dir = os.getenv("HOME") .. "/.config/nvim/etc/"
+            local function get_os()
+                return vim.loop.os_uname().sysname
+            end
+            local formatter_config_dir = os.getenv("HOME") .. "/.config/lvim/etc/"
 
             local function get_idea_bin()
-                if get_os() == "Darwin" then return "idea" end
-                if get_os() == "Linux" then return "idea-community" end
+                if get_os() == "Darwin" then
+                    return "idea"
+                end
+                if get_os() == "Linux" then
+                    return "idea-community"
+                end
             end
 
             local slow_format_filetypes = { "java" }
@@ -440,6 +443,7 @@ lvim.plugins = {
                         json = { "prettier" },
                         html = { "prettier" },
                         nix = { "nixpkgs_fmt" },
+                        rust = { "rustfmt" },
                     }
                 else
                     return {}
@@ -499,10 +503,19 @@ lvim.plugins = {
                             "$FILENAME",
                         },
                     },
+                    rustfmt = {
+                        command = "rustfmt",
+                        args = {
+                            "--config",
+                            "fn_single_line=true,where_single_line=true,tab_spaces=4,imports_layout=Vertical,hex_literal_case=Upper,max_width=80",
+                        },
+                    },
                 },
 
                 format_on_save = function(bufnr)
-                    if slow_format_filetypes[vim.bo[bufnr].filetype] then return end
+                    if slow_format_filetypes[vim.bo[bufnr].filetype] then
+                        return
+                    end
                     local function on_format(err)
                         if err and err:match("timeout$") then
                             slow_format_filetypes[vim.bo[bufnr].filetype] = true
@@ -513,10 +526,12 @@ lvim.plugins = {
                 end,
 
                 format_after_save = function(bufnr)
-                    if not slow_format_filetypes[vim.bo[bufnr].filetype] then return end
+                    if not slow_format_filetypes[vim.bo[bufnr].filetype] then
+                        return
+                    end
                     return { lsp_fallback = false }
                 end,
             })
-        end
-    }
+        end,
+    },
 }
