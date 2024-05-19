@@ -7,6 +7,8 @@ cmd - 0x27 : open -na firefox
 cmd - 0x2B : skhd --key "ctrl - 0x2B"
 cmd - 0x2F : skhd --key "ctrl - 0x2F"
 
+cmd - 0x29 : aerospace macos-native-fullscreen
+
 cmd - h : aerospace focus left
 cmd - j : aerospace focus down
 cmd - k : aerospace focus up
