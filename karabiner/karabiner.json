@@ -18,11 +18,11 @@
                 },
                 "rules": [
                     {
-                        "description": "space navigation",
+                        "description": "b navigation",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "b",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -36,7 +36,7 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "spacebar"
+                                        "key_code": "b"
                                     }
                                 ],
                                 "type": "basic"
