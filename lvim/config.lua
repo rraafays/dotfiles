@@ -479,8 +479,8 @@ lvim.plugins = {
                     },
                     xmlformat = {
                         command = "xmlformat",
-                        stdin = false,
-                        args = { "--indent", 4, "--overwrite", "$FILENAME" },
+                        stdin = true,
+                        args = { "$FILENAME" },
                     },
                     nixpkgs_fmt = {
                         command = "nixpkgs-fmt",
