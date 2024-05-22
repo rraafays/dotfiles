@@ -18,15 +18,20 @@ bind-key l open
 bind-key h quit
 
 # solarized
-color background         default   default
-color listnormal         default   default
-color listnormal_unread  default   default
-color listfocus          black     cyan
-color listfocus_unread   black     cyan
-color info               default   black
-color article            default   default
+color background                         default default
+color listnormal                         color7  default
+color listnormal_unread                  default default
+color listfocus                          color9  default reverse
+color listfocus_unread                   color9  default reverse
+color info                               default default
+color article                            default default
+color end-of-text-marker                 color0  default
 
 # highlights
-highlight article "^(Title):.*$" blue default
-highlight article "https?://[^ ]+" red default
-highlight article "\\[image\\ [0-9]+\\]" green default
+highlight article "^(Feed):.*$"          color9  default bold
+highlight article "^(Title):.*$"         color9  default bold
+highlight article "^(Author):.*$"        color7  default
+highlight article "^(Date):.*$"          color7  default
+highlight article "^(Link):.*$"          color7  default
+highlight article "https?://[^ ]+"       color12 default
+highlight article "\\[image\\ [0-9]+\\]" color11 default
