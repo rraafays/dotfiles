@@ -7,15 +7,20 @@ cmd - 0x27 : open -na firefox
 cmd - 0x2B : skhd --key "ctrl - 0x2B"
 cmd - 0x2F : skhd --key "ctrl - 0x2F"
 
-cmd - h : aerospace focus left
-cmd - j : aerospace focus down
-cmd - k : aerospace focus up
-cmd - l : aerospace focus right
+cmd - left : aerospace focus left
+cmd - down : aerospace focus down
+cmd - up : aerospace focus up
+cmd - right : aerospace focus right
 
-cmd + shift - h : aerospace move left
-cmd + shift - j : aerospace move down
-cmd + shift - k : aerospace move up
-cmd + shift - l : aerospace move right
+cmd + shift - left : aerospace move left
+cmd + shift - down : aerospace move down
+cmd + shift - up : aerospace move up
+cmd + shift - right : aerospace move right
+
+cmd + alt - left : aerospace resize width -10
+cmd + alt - down : aerospace resize height 10
+cmd + alt - up : aerospace resize height -10
+cmd + alt - right : aerospace resize width 10
 
 cmd - 1 : aerospace workspace 1
 cmd - 2 : aerospace workspace 2
