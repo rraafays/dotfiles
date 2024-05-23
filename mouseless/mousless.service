@@ -1,8 +1,0 @@
-[Unit]
-Description=mouseless
-
-[Service]
-ExecStart=/sbin/mouseless --config /home/raf/.config/mouseless/config.yaml
-
-[Install]
-WantedBy=multi-user.target
