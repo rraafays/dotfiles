@@ -23,3 +23,7 @@ layers:
     slash: button middle
     leftbrace: scroll down
     rightbrace: scroll up
+    h: left
+    j: down
+    k: up
+    l: right
