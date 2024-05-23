@@ -575,7 +575,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "volume_increment"
+                                        "key_code": "volume_decrement"
                                     }
                                 ],
                                 "type": "basic"
@@ -594,7 +594,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "volume_decrement"
+                                        "key_code": "volume_increment"
                                     }
                                 ],
                                 "type": "basic"
@@ -708,7 +708,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "keypad_minus"
+                                        "key_code": "keypad_hyphen"
                                     }
                                 ],
                                 "type": "basic"
@@ -1488,21 +1488,21 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "left_control"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "left_command"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": [
                                 {
                                     "key_code": "left_control"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_command"
                                 }
                             ]
                         }
@@ -1637,120 +1637,7 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [
-                {
-                    "from": {
-                        "key_code": "keypad_0"
-                    },
-                    "to": [
-                        {
-                            "pointing_button": "button1"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_1"
-                    },
-                    "to": [
-                        {
-                            "pointing_button": "button2"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_2"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "y": 1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_3"
-                    },
-                    "to": [
-                        {
-                            "pointing_button": "button3"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_4"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "x": -1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_6"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "x": 1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_7"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "vertical_wheel": 32
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_8"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "y": -1536
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "keypad_9"
-                    },
-                    "to": [
-                        {
-                            "mouse_key": {
-                                "vertical_wheel": -32
-                            }
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "non_us_backslash"
-                    },
-                    "to": [
-                        {
-                            "key_code": "escape"
-                        }
-                    ]
-                }
-            ],
+            "simple_modifications": [],
             "virtual_hid_keyboard": {
                 "country_code": 0,
                 "indicate_sticky_modifier_keys_state": true,
