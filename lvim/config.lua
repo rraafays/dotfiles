@@ -242,6 +242,11 @@ lvim.keys.insert_mode["<A-]>"] = "‘"
 lvim.keys.insert_mode["<A-\\>"] = "«"
 lvim.keys.insert_mode["<A-`>"] = "`"
 
+lvim.keys.insert_mode["<A-Tab>"] = "⌃"
+lvim.keys.insert_mode["<A-Tab><A-Tab>"] = "⇧"
+lvim.keys.insert_mode["<A-Tab><A-Tab><A-Tab>"] = "⌥"
+lvim.keys.insert_mode["<A-Tab><A-Tab><A-Tab><A-Tab>"] = "⌘"
+
 lvim.keys.normal_mode["<Tab>"] = "<cmd>Lspsaga diagnostic_jump_next<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = "<cmd>Lspsaga diagnostic_jump_prev<cr>"
 lvim.plugins = {
