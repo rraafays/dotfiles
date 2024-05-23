@@ -11,7 +11,7 @@ mouseDecelerationCurve: 3.0
 layers:
 - name: initial
   bindings:
-    space: tap-hold-next space ; toggle-layer navigation ; 500
+    space: tap-hold-next space ; toggle-layer navigation ; 200
 - name: navigation
   bindings:
     s: move -1 0 
