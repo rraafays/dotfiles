@@ -28,7 +28,7 @@ layers:
     k: up
     l: right
 
-    esc: leftalt+_
+    esc: leftalt+esc
 
     k1: leftctrl+_
     k2: leftctrl+_
