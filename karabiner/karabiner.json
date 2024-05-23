@@ -18,6 +18,7 @@
                 },
                 "rules": [
                     {
+<<<<<<< HEAD
                         "description": "visual mouse",
                         "manipulators": [
                             {
@@ -232,6 +233,13 @@
                             {
                                 "from": {
                                     "key_code": "n",
+=======
+                        "description": "space navigation",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+>>>>>>> parent of 943fe0d (chore: switched space navigation to b navigation)
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -245,7 +253,11 @@
                                 ],
                                 "to_if_alone": [
                                     {
+<<<<<<< HEAD
                                         "key_code": "n"
+=======
+                                        "key_code": "spacebar"
+>>>>>>> parent of 943fe0d (chore: switched space navigation to b navigation)
                                     }
                                 ],
                                 "type": "basic"
