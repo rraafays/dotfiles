@@ -31,7 +31,6 @@ cmd - 6 : aerospace workspace 6
 cmd - 7 : aerospace workspace 7
 cmd - 8 : aerospace workspace 8
 cmd - 9 : aerospace workspace 9
-cmd - 0 : aerospace workspace 0
 
 cmd + shift - 1 : aerospace move-node-to-workspace 1
 cmd + shift - 2 : aerospace move-node-to-workspace 2
@@ -42,4 +41,3 @@ cmd + shift - 6 : aerospace move-node-to-workspace 6
 cmd + shift - 7 : aerospace move-node-to-workspace 7
 cmd + shift - 8 : aerospace move-node-to-workspace 8
 cmd + shift - 9 : aerospace move-node-to-workspace 9
-cmd + shift - 0 : aerospace move-node-to-workspace 0
