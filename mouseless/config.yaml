@@ -11,15 +11,15 @@ mouseDecelerationCurve: 3.0
 layers:
 - name: initial
   bindings:
-    space: tap-hold-next space ; toggle-layer mouse ; 500
+    space: tap-hold-next space ; toggle-layer navigation ; 500
 - name: navigation
   bindings:
     s: move -1 0 
     d: move 0 1 
     f: move 0 -1 
     g: move 1 0 
-    \,: button left
-    \.: button right
-    /: button middle
-    \[: scroll down
-    \]: scroll up
+    comma: button left
+    dot: button right
+    slash: button middle
+    leftbrace: scroll down
+    rightbrace: scroll up
