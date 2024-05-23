@@ -27,16 +27,4 @@ layers:
     j: down
     k: up
     l: right
-
     esc: leftalt+esc
-
-    k1: leftctrl+_
-    k2: leftctrl+_
-    k3: leftctrl+_
-    k4: leftctrl+_
-    k5: leftctrl+_
-    k6: leftctrl+_
-    k7: leftctrl+_
-    k8: leftctrl+_
-    k9: leftctrl+_
-    k0: leftctrl+_
