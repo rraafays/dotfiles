@@ -307,6 +307,17 @@
                         "manipulators": [
                             {
                                 "from": {
+                                    "key_code": "non_us_backslash"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
                                         "optional": [
