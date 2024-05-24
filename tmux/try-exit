@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+if [[ $(tmux display -p '#P') != 1 ]]; then
+	tmux send "C-d"
+fi
