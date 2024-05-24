@@ -2,4 +2,4 @@
 
 tmux list-windows -F '#W' |
 	awk 'BEGIN {ORS=" "} {print $1, NR, "\"select-window -t", NR "\""}' |
-	xargs tmux display-menu
+	xargs tmux display-menu -T " Tabs "
