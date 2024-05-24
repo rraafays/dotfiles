@@ -3,7 +3,7 @@
 cmd - space : open -a raycast
 cmd - return : kitty ~/ --single-instance
 cmd - 0x27 : open -na firefox
-cmd - h : none
+cmd - h : skhd --key "ctrl - h"
 cmd - q [
     "firefox" : skhd --key "cmd + shift - w"
     * : aerospace close
