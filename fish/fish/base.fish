@@ -1,3 +1,4 @@
+set -x NIX_AUTO_RUN y
 set -x EDITOR lvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
