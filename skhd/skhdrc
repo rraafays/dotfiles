@@ -2,7 +2,7 @@
 
 cmd - space : open -a raycast
 cmd - return : kitty ~/ --single-instance
-cmd - 0x27 : open -na firefox
+cmd - 0x2C : open -na firefox
 cmd - h : skhd --key "ctrl - h"
 cmd - delete : skhd --key "ctrl - delete"
 cmd - q [
