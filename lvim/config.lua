@@ -182,6 +182,8 @@ lvim.keys.normal_mode["<C-f>"] = "<esc><cmd>Telescope find_files<cr>"
 lvim.keys.insert_mode["<C-f>"] = "<esc><cmd>Telescope find_files<cr>"
 lvim.keys.normal_mode["<C-g>"] = "<esc><cmd>Telescope live_grep<cr>"
 lvim.keys.insert_mode["<C-g>"] = "<esc><cmd>Telescope live_grep<cr>"
+lvim.keys.normal_mode["<C-b>"] = "<esc><cmd>Telescope buffers<cr>"
+lvim.keys.insert_mode["<C-b>"] = "<esc><cmd>Telescope buffers<cr>"
 
 lvim.keys.normal_mode["\\"] = "<cmd>nohlsearch<cr>"
 lvim.keys.insert_mode["<Up>"] = "↑"
