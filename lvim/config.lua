@@ -375,7 +375,7 @@ lvim.plugins = {
                 table_style = "full",
                 highlights = {
                     heading = {
-                        backgrounds = { "DiffAdd", "DiffChange", "DiffDelete" },
+                        backgrounds = { "Keyword", "Keyword", "Comment" },
                         foregrounds = {
                             "markdownH1",
                             "markdownH2",
@@ -387,7 +387,7 @@ lvim.plugins = {
                     },
                     dash = "LineNr",
                     code = "ColorColumn",
-                    bullet = "Keyword",
+                    bullet = "Comment",
                     checkbox = {
                         unchecked = "@markup.list.unchecked",
                         checked = "@markup.heading",
