@@ -37,6 +37,55 @@ lvim.format_on_save = {
 }
 lvim.use_icons = true
 
+-- Autocmd commands
+-- -- Persistent Folds
+local augroup = vim.api.nvim_create_augroup
+local save_fold = augroup("Persistent Folds", { clear = true })
+vim.api.nvim_create_autocmd("BufWinLeave", {
+    pattern = "*.*",
+    callback = function()
+        vim.cmd.mkview()
+    end,
+    group = save_fold,
+})
+vim.api.nvim_create_autocmd("BufWinEnter", {
+    pattern = "*.*",
+    callback = function()
+        vim.cmd.loadview({ mods = { emsg_silent = true } })
+    end,
+    group = save_fold,
+})
+-- Persistent Cursor
+vim.api.nvim_create_autocmd("BufReadPost", {
+    callback = function()
+        local mark = vim.api.nvim_buf_get_mark(0, '"')
+        local lcount = vim.api.nvim_buf_line_count(0)
+        if mark[1] > 0 and mark[1] <= lcount then
+            pcall(vim.api.nvim_win_set_cursor, 0, mark)
+        end
+    end,
+})
+
+-- Cursor Line on each window
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
+    callback = function()
+        local ok, cl = pcall(vim.api.nvim_win_get_var, 0, "auto-cursorline")
+        if ok and cl then
+            vim.wo.cursorline = true
+            vim.api.nvim_win_del_var(0, "auto-cursorline")
+        end
+    end,
+})
+vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
+    callback = function()
+        local cl = vim.wo.cursorline
+        if cl then
+            vim.api.nvim_win_set_var(0, "auto-cursorline", cl)
+            vim.wo.cursorline = false
+        end
+    end,
+})
+
 lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
@@ -250,6 +299,27 @@ lvim.keys.insert_mode["<A-Tab><A-Tab><A-Tab><A-Tab>"] = "cmd"
 
 lvim.keys.normal_mode["<Tab>"] = "<cmd>Lspsaga diagnostic_jump_next<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = "<cmd>Lspsaga diagnostic_jump_prev<cr>"
+local function markdown_sugar()
+    vim.api.nvim_create_autocmd("BufEnter", {
+        pattern = "*.md",
+        group = augroup("markdown", {}),
+        callback = function()
+            vim.api.nvim_set_hl(0, "Conceal", { bg = "NONE", fg = "#8EC07C" })
+            vim.api.nvim_set_hl(0, "todoCheckbox", { link = "Todo" })
+            vim.o.conceallevel = 1
+
+            vim.cmd([[
+        syn match todoCheckbox '\v(\s+)?(-|\*)\s\[\s\]'hs=e-4 conceal cchar=󰄱
+        syn match todoCheckbox '\v(\s+)?(-|\*)\s\[x\]'hs=e-4 conceal cchar=󰄲
+        syn match todoCheckbox '\v(\s+)?(-|\*)\s\[-\]'hs=e-4 conceal cchar=󱋭
+        syn match todoCheckbox '\v(\s+)?(-|\*)\s\[\.\]'hs=e-4 conceal cchar=󰄳
+        syn match todoCheckbox '\v(\s+)?(-|\*)\s\[o\]'hs=e-4 conceal cchar=󰄰
+      ]])
+        end,
+    })
+end
+
+markdown_sugar()
 lvim.plugins = {
     { "chaoren/vim-wordmotion" },
     {
