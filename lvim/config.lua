@@ -387,7 +387,7 @@ lvim.plugins = {
                     },
                     dash = "LineNr",
                     code = "ColorColumn",
-                    bullet = "Normal",
+                    bullet = "Keyword",
                     checkbox = {
                         unchecked = "@markup.list.unchecked",
                         checked = "@markup.heading",
