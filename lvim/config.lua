@@ -530,9 +530,6 @@ lvim.plugins = {
                 local filetype = vim.bo.filetype
                 if filetype == "TelescopePrompt" or filetype == "alpha" or filetype == "lazy" then
                     return
-                elseif filetype == "markdown" then
-                    vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
-                    return
                 end
                 vim.cmd("w! ~/.cache/lvim/width")
                 local command = io.popen("wc -L " .. "~/.cache/lvim/width")
