@@ -504,8 +504,8 @@ lvim.plugins = {
     {
         "shortcuts/no-neck-pain.nvim",
         config = function()
-            DOCUMENT_WIDTH = 80
-            RECEIPT_WIDTH = 60
+            DOCUMENT_WIDTH = 60
+            RECEIPT_WIDTH = 40
 
             require("no-neck-pain").setup({
                 debug = false,
@@ -529,6 +529,9 @@ lvim.plugins = {
             vim.api.nvim_create_user_command("Center", function()
                 local filetype = vim.bo.filetype
                 if filetype == "TelescopePrompt" or filetype == "alpha" or filetype == "lazy" then
+                    return
+                elseif filetype == "markdown" then
+                    vim.cmd("NoNeckPainResize " .. RECEIPT_WIDTH)
                     return
                 end
                 vim.cmd("w! ~/.cache/lvim/width")
