@@ -100,7 +100,8 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.auto_install = true
-lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
+lvim.builtin.treesitter.ensure_installed = "all"
+require("nvim-treesitter.install").compilers = { "gcc" }
 lvim.builtin.gitsigns.opts = {
     signcolumn = false,
     linehl = true,
@@ -386,7 +387,7 @@ lvim.plugins = {
                         },
                     },
                     dash = "LineNr",
-                    code = "ColorColumn",
+                    code = "",
                     bullet = "Comment",
                     checkbox = {
                         unchecked = "@markup.list.unchecked",
