@@ -12,6 +12,8 @@ layers:
 - name: initial
   bindings:
     space: tap-hold-next space ; toggle-layer navigation ; 200
+    backspace: delete
+    numlock: backspace
 - name: navigation
   bindings:
     s: move -1 0 
