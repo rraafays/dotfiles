@@ -29,4 +29,3 @@ layers:
     j: down
     k: up
     l: right
-    esc: leftalt+esc
