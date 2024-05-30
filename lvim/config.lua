@@ -186,6 +186,8 @@ lvim.builtin.lualine.options.theme = {
 }
 
 lvim.builtin.alpha.dashboard.section.buttons.entries = {}
+table.insert(lvim.builtin.alpha.dashboard.section.buttons.entries, { "f", "find", "<cmd>Telescope find_files<cr>" })
+table.insert(lvim.builtin.alpha.dashboard.section.buttons.entries, { "g", "grep", "<cmd>Telescope live_grep<cr>" })
 lvim.builtin.alpha.dashboard.section.footer.val = {}
 lvim.builtin.alpha.dashboard.section.header.val = {
     [[                              |`,                           ]],
