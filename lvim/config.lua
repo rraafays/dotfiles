@@ -233,6 +233,9 @@ lvim.builtin.alpha.dashboard.section.header.val = {
 lvim.keys.normal_mode["q"] = "<cmd>q<cr>"
 lvim.keys.normal_mode["U"] = "<C-r>"
 
+lvim.keys.normal_mode["<C-a>"] = "<esc>ggvG<cr>"
+lvim.keys.insert_mode["<C-a>"] = "<esc>ggvG<cr>"
+lvim.keys.visual_mode["<C-a>"] = "<esc>ggvG<cr>"
 lvim.keys.normal_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
 lvim.keys.insert_mode["<C-c>"] = "<esc><cmd>qa!<cr>"
 lvim.keys.normal_mode["<C-f>"] = "<esc><cmd>Telescope find_files<cr>"
