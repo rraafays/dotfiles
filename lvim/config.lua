@@ -312,7 +312,23 @@ lvim.keys.insert_mode["<A-Tab><A-Tab><A-Tab><A-Tab>"] = "cmd"
 lvim.keys.normal_mode["<Tab>"] = "<cmd>Lspsaga diagnostic_jump_next<cr>"
 lvim.keys.normal_mode["<S-Tab>"] = "<cmd>Lspsaga diagnostic_jump_prev<cr>"
 
+lvim.keys.normal_mode["<A-g>"] = "<cmd>ChatGPT<cr>"
+lvim.keys.visual_mode["!"] = "<cmd>ChatGPTEditWithInstructions<cr>"
+lvim.keys.visual_mode["?"] = "<cmd>ChatGPTRun explain_code<cr>"
+
 lvim.plugins = {
+    {
+        "jackMort/ChatGPT.nvim",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
+            "nvim-telescope/telescope.nvim",
+        },
+        config = function()
+            require("chatgpt").setup()
+        end,
+    },
     {
         "MeanderingProgrammer/markdown.nvim",
         name = "render-markdown",
@@ -535,7 +551,12 @@ lvim.plugins = {
 
             vim.api.nvim_create_user_command("Center", function()
                 local filetype = vim.bo.filetype
-                if filetype == "TelescopePrompt" or filetype == "alpha" or filetype == "lazy" then
+                if
+                    filetype == "TelescopePrompt"
+                    or filetype == "alpha"
+                    or filetype == "lazy"
+                    or filetype == "chatgpt-input"
+                then
                     return
                 end
                 vim.cmd("w! ~/.cache/lvim/width")
