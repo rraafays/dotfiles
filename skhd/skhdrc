@@ -2,7 +2,6 @@
 
 cmd - space : open -a raycast
 cmd - return : kitty ~/ --single-instance
-cmd - 0x2C : open -na firefox
 cmd - h : skhd --key "ctrl - h"
 cmd - delete : skhd --key "ctrl - delete"
 cmd - q [
@@ -13,20 +12,20 @@ cmd - q [
 cmd - 0x2B : skhd --key "ctrl - 0x2B"
 cmd - 0x2F : skhd --key "ctrl - 0x2F"
 
-cmd - left : aerospace focus left
-cmd - down : aerospace focus down
-cmd - up : aerospace focus up
-cmd - right : aerospace focus right
+cmd - 0x21 : aerospace focus up
+cmd - 0x27 : aerospace focus right
+cmd - 0x2C : aerospace focus down
+cmd - 0x29 : aerospace focus left
 
-cmd + shift - left : aerospace move left
-cmd + shift - down : aerospace move down
-cmd + shift - up : aerospace move up
-cmd + shift - right : aerospace move right
+cmd + shift - 0x21 : aerospace move up
+cmd + shift - 0x27 : aerospace move right
+cmd + shift - 0x2C : aerospace move down
+cmd + shift - 0x29 : aerospace move left
 
-cmd + alt - left : aerospace resize width -10
-cmd + alt - down : aerospace resize height 10
-cmd + alt - up : aerospace resize height -10
-cmd + alt - right : aerospace resize width 10
+cmd + alt - 0x21 : aerospace resize height -10
+cmd + alt - 0x27 : aerospace resize width 10
+cmd + alt - 0x2C : aerospace resize height 10
+cmd + alt - 0x29 : aerospace resize width -10
 
 cmd - 1 : aerospace workspace 1
 cmd - 2 : aerospace workspace 2
