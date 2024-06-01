@@ -1,4 +1,4 @@
-set -x BULLET_JOURNAL "$HOME/Documents/bullet_journal"
+set -x BUJO "$HOME/Documents/bullet_journal"
 
 function nsh
     nix-shell $argv
@@ -26,17 +26,19 @@ function qr
 end
 
 function bujo
-    z $BULLET_JOURNAL
+    tree ~/Documents/bullet_journal/
 end
 
 function day
-    set YEAR_MONTH (date +"%Y/%m-%B" | tr '[:upper:]' '[:lower:]')
-    mkdir --parents $BULLET_JOURNAL/$YEAR_MONTH &&
-        vi $BULLET_JOURNAL/$YEAR_MONTH/(date +"%d%m%Y-%A" | tr '[:upper:]' '[:lower:]').md
+    set YEAR (date +"%Y" | tr '[:upper:]' '[:lower:]')
+    set MONTH (date +"%m-%B" | tr '[:upper:]' '[:lower:]')
+    mkdir --parents $BUJO/$YEAR/$MONTH &&
+        vi $BUJO/$YEAR/$MONTH/(date +"%d%m%Y-%A" | tr '[:upper:]' '[:lower:]').md
 end
 
 function month
-    set YEAR_MONTH (date +"%Y/%m-%B" | tr '[:upper:]' '[:lower:]')
-    mkdir --parents $BULLET_JOURNAL/$YEAR_MONTH &&
-        vi $BULLET_JOURNAL/$YEAR_MONTH/(date +"%m%Y-%B" | tr '[:upper:]' '[:lower:]').md
+    set YEAR (date +"%Y" | tr '[:upper:]' '[:lower:]')
+    set MONTH (date +"%m-%B" | tr '[:upper:]' '[:lower:]')
+    mkdir --parents $BUJO/$YEAR/$MONTH &&
+        vi $BUJO/$YEAR/(date +"%m%Y-%B" | tr '[:upper:]' '[:lower:]').md
 end
