@@ -1,5 +1,3 @@
-set -x BUJO "$HOME/Documents/bullet_journal"
-
 function nsh
     nix-shell $argv
 end
@@ -29,16 +27,18 @@ function bujo
     tree ~/Documents/bullet_journal/
 end
 
-function day
+function note
     set YEAR (date +"%Y" | tr '[:upper:]' '[:lower:]')
     set MONTH (date +"%m-%B" | tr '[:upper:]' '[:lower:]')
-    mkdir --parents $BUJO/$YEAR/$MONTH &&
-        vi $BUJO/$YEAR/$MONTH/(date +"%d%m%Y-%A" | tr '[:upper:]' '[:lower:]').md
+    mkdir --parents .notes &&
+        vi .notes/$YEAR/$MONTH/(date +"%d%m%Y-%A" | tr '[:upper:]' '[:lower:]').md
 end
 
-function month
-    set YEAR (date +"%Y" | tr '[:upper:]' '[:lower:]')
-    set MONTH (date +"%m-%B" | tr '[:upper:]' '[:lower:]')
-    mkdir --parents $BUJO/$YEAR/$MONTH &&
-        vi $BUJO/$YEAR/(date +"%m%Y-%B" | tr '[:upper:]' '[:lower:]').md
+function notes
+    if test -e .notes
+        tree .notes
+    else
+        echo "no notes in current directory!"
+        return 1
+    end
 end
