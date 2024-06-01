@@ -9,11 +9,6 @@ if status --is-interactive
             Hyprland
         end
     end
-    if test "$TTY" = /dev/tty2
-        while true
-            gamescope --adaptive-sync -r 175 -W 3440 -H 1440 -f -e -- steam steam://open/bigpicture
-        end
-    end
 
     if not test -e "$HOME/.config/kitty/kitty.conf"
         cat \
