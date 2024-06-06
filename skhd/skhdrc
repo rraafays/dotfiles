@@ -3,6 +3,7 @@
 cmd - space : open -a raycast
 cmd - return : kitty ~/ --single-instance
 cmd - h : skhd --key "ctrl - h"
+cmd - m : skhd --key "ctrl - m"
 cmd - delete : skhd --key "ctrl - delete"
 cmd - q [
     "firefox" : skhd --key "cmd + shift - w"
