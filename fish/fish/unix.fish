@@ -10,6 +10,12 @@ if status --is-interactive
         end
     end
 
+    if test "$TTY" = /dev/tty2
+        while true
+            gamescope --adaptive-sync -r 175 -e -- steam -bigpicture
+        end
+    end
+
     if not test -e "$HOME/.config/kitty/kitty.conf"
         cat \
             "$HOME/.config/kitty/base.conf" \
