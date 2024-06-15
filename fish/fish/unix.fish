@@ -7,12 +7,9 @@ if status --is-interactive
     if test "$TTY" = /dev/tty1
         while true
             Hyprland
-        end
-    end
-
-    if test "$TTY" = /dev/tty2
-        while true
-            gamescope --adaptive-sync -r 175 -e -- steam -bigpicture
+            set -x DXVK_HDR 1
+            set -x PROTON_ENABLE_AMD_AGS 1
+            gamescope --adaptive-sync --hdr-enabled -r 175 -e -- steam -bigpicture
         end
     end
 
