@@ -16,6 +16,7 @@ layers:
     numlock: backspace
 - name: navigation
   bindings:
+    esc: "exec killall .Hyprland-wrapp; killall gamescope-wl"
     s: move -1 0 
     d: move 0 1 
     f: move 0 -1 
