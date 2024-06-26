@@ -2,6 +2,7 @@
 !rebuild
 !.config
 !.gitignore
+!default.nix
 /**/.DS_Store
 
 .config/kitty/kitty.conf
