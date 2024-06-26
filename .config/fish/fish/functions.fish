@@ -42,3 +42,7 @@ function notes
         return 1
     end
 end
+
+function lls
+    ll --color always | grep "=>" --color never
+end
