@@ -12,8 +12,6 @@ layers:
 - name: initial
   bindings:
     space: tap-hold-next space ; toggle-layer navigation ; 0
-    backspace: delete
-    numlock: backspace
     volumeup: "exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
     volumedown: "exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
     mute: "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"

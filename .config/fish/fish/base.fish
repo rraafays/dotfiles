@@ -51,13 +51,6 @@ if status is-interactive
     bind --mode replace_one \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode visual \cZ 'fg 2>/dev/null; commandline -f repaint'
 
-    bind --mode default \x7F 'clear;  commandline -f repaint'
-    bind --mode insert \x7F 'clear;  commandline -f repaint'
-    bind --mode paste \x7F 'clear;  commandline -f repaint'
-    bind --mode replace \x7F 'clear;  commandline -f repaint'
-    bind --mode replace_one \x7F 'clear;  commandline -f repaint'
-    bind --mode visual \x7F 'clear;  commandline -f repaint'
-
     set fish_cursor_default block blink
     set fish_cursor_insert line blink
     set fish_cursor_replace_one underscore blink
