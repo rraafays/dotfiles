@@ -30,7 +30,7 @@ end
 function note
     set YEAR (date +"%Y" | tr '[:upper:]' '[:lower:]')
     set MONTH (date +"%m-%B" | tr '[:upper:]' '[:lower:]')
-    mkdir --parents .notes &&
+    mkdir --parents .notes/$YEAR/$MONTH &&
         vi .notes/$YEAR/$MONTH/(date +"%d%m%Y-%A" | tr '[:upper:]' '[:lower:]').md
 end
 
