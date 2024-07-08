@@ -1693,6 +1693,16 @@
                             "key_code": "left_command"
                         }
                     ]
+                },
+                {
+                    "from": {
+                        "key_code": "application"
+                    },
+                    "to": [
+                        {
+                            "pointing_button": "button2"
+                        }
+                    ]
                 }
             ],
             "virtual_hid_keyboard": {
