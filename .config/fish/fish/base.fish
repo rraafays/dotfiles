@@ -3,6 +3,7 @@ set -x EDITOR lvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
 set -x DETOX_SEQUENCE lower
+set -x DIRENV_WARN_TIMEOUT 60s
 set -x FZF_DEFAULT_COMMAND "rg --files 
                                --follow
                                --no-ignore 
