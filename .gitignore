@@ -2,7 +2,7 @@
 !rebuild
 !.config
 !.gitignore
-!default.nix
+!flake.nix
 /**/.DS_Store
 
 .config/kitty/kitty.conf
