@@ -3,6 +3,7 @@
 !.config
 !.gitignore
 !flake.nix
+!flake.lock
 /**/.DS_Store
 
 .config/kitty/kitty.conf
