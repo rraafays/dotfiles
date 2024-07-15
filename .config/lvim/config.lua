@@ -662,7 +662,7 @@ lvim.plugins = {
                             "--tab-width",
                             4,
                             "--print-width",
-                            100,
+                            80,
                             "--prose-wrap",
                             "always",
                             "--stdin-filepath",
