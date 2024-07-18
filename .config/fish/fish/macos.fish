@@ -14,4 +14,13 @@ if status --is-interactive
     function man
         command man -P 'lvim -c \'Man! -o -\'' $argv
     end
+
+    if not fish_is_root_user
+        function mount
+            diskutil mountDisk $argv
+        end
+        function umount
+            diskutil umountDisk $argv
+        end
+    end
 end
