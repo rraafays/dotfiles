@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-rm -rf $(ls -1t .config/)
+rm -rf "$(ls -1t .config/)"
 cd .config/ || exit
 stow .
 cd - || exit
