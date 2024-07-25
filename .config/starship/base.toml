@@ -104,3 +104,6 @@ format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 [rust]
 symbol = " "
 format = '[$symbol($version)]($style) '
+[docker_context]
+symbol = " "
+format = '[$symbol($context)]($style) '
