@@ -1,3 +1,20 @@
+function rebuild
+    if [ "$argv[1]" = config ]
+        cd ~/.config/ || exit
+        rm -rf "$(ls -1t .config/)"
+        cd .config/ || exit
+        stow .
+        cd - || exit
+    else
+        switch (uname)
+            case Darwin
+                darwin-rebuild $argv
+            case Linux
+                nixos-rebuild $argv
+        end
+    end
+end
+
 function nsh
     nix-shell $argv
 end

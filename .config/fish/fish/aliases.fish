@@ -31,11 +31,3 @@ end
 function duf
     command duf -theme ansi $argv
 end
-function rebuild
-    switch (uname)
-        case Darwin
-            darwin-rebuild $argv
-        case Linux
-            nixos-rebuild $argv
-    end
-end
