@@ -1,5 +1,5 @@
 {
-  description = "Example Darwin system flake";
+  description = "Raf's Macbook: RAY";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -13,7 +13,7 @@
         homebrew = {
           enable = true;
           casks = [
-      "nikitabobko/tap/aerospace"
+            "nikitabobko/tap/aerospace"
             "kitty"
             "karabiner-elements"
             "firefox"
@@ -81,16 +81,48 @@
         system.stateVersion = 4;
 
         nixpkgs.hostPlatform = "aarch64-darwin";
+        system.activationScripts.postUserActivation.text = ''
+          osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"/System/Library/Desktop Pictures/Solid Colors/Black.png\" as POSIX file"
+        '';
+        system.defaults = {
+          SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
+          loginwindow.GuestEnabled = false;
+          dock = {
+            autohide = true;
+            autohide-delay = 0.0;
+            minimize-to-application = true;
+            mru-spaces = false;
+            static-only = true;
+          };
+
+          finder = {
+            AppleShowAllExtensions = true;
+            AppleShowAllFiles = true;
+            CreateDesktop = false;
+            FXEnableExtensionChangeWarning = false;
+            FXPreferredViewStyle = "Nlsv";
+            QuitMenuItem = true;
+            ShowPathbar = true;
+            ShowStatusBar = true;
+            _FXShowPosixPathInTitle = true;
+          };
+
+          NSGlobalDomain = {
+            "com.apple.keyboard.fnState" = true;
+            ApplePressAndHoldEnabled = false;
+            KeyRepeat = 2;
+            InitialKeyRepeat = 12;
+            AppleKeyboardUIMode = 3;
+            AppleFontSmoothing = 1;
+            _HIHideMenuBar = true;
+          };
+        };
       };
     in
     {
-      # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#rafs-MacBook-Pro
       darwinConfigurations."RAY" = nix-darwin.lib.darwinSystem {
         modules = [ configuration ];
       };
-
-      # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."RAY".pkgs;
     };
 }
