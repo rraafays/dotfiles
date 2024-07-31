@@ -962,21 +962,21 @@
                         },
                         {
                             "from": {
-                                "key_code": "non_us_backslash"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "escape"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": [
                                 {
                                     "key_code": "left_option"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "left_control"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "left_control"
                                 }
                             ]
                         },
@@ -992,11 +992,11 @@
                         },
                         {
                             "from": {
-                                "key_code": "right_option"
+                                "key_code": "non_us_backslash"
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "key_code": "escape"
                                 }
                             ]
                         },
@@ -1012,11 +1012,21 @@
                         },
                         {
                             "from": {
-                                "key_code": "left_control"
+                                "key_code": "right_option"
                             },
                             "to": [
                                 {
-                                    "key_code": "left_control"
+                                    "key_code": "right_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "delete_forward"
                                 }
                             ]
                         }
@@ -1711,16 +1721,6 @@
                     "to": [
                         {
                             "pointing_button": "button2"
-                        }
-                    ]
-                },
-                {
-                    "from": {
-                        "key_code": "delete_or_backspace"
-                    },
-                    "to": [
-                        {
-                            "key_code": "delete_forward"
                         }
                     ]
                 },
