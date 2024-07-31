@@ -9,7 +9,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs }:
     let
-      configuration = { pkgs, ... }: {
+      configuration = { pkgs, config, ... }: {
         homebrew = {
           enable = true;
           casks = [
@@ -64,6 +64,7 @@
             wget
             xxd
             zoxide
+            jankyborders
           ];
 
         services.nix-daemon.enable = true;
@@ -81,9 +82,28 @@
         system.stateVersion = 4;
 
         nixpkgs.hostPlatform = "aarch64-darwin";
-        system.activationScripts.postUserActivation.text = ''
+        system.activationScripts.wallpaper.text = ''
           osascript -e "tell application \"System Events\" to tell every desktop to set picture to \"/System/Library/Desktop Pictures/Solid Colors/Black.png\" as POSIX file"
         '';
+        launchd.user.agents.jankyborders = {
+          serviceConfig = {
+            ProgramArguments = [
+              "${pkgs.jankyborders}/bin/borders"
+              "active_color=0xFFEBDBB2"
+              "inactive_color=0xFF928373"
+              "width=4"
+              "order=above"
+            ];
+
+            KeepAlive = true;
+            RunAtLoad = true;
+            ProcessType = "Interactive";
+            EnvironmentVariables = {
+              PATH = "${pkgs.jankyborders}/bin:${config.environment.systemPath}";
+              LANG = "en_US.UTF-8";
+            };
+          };
+        };
         system.defaults = {
           SoftwareUpdate.AutomaticallyInstallMacOSUpdates = true;
           loginwindow.GuestEnabled = false;
