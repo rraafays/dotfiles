@@ -5,10 +5,7 @@ cmd - return : kitty ~/ --single-instance
 cmd - h : skhd --key "ctrl - h"
 cmd - m : skhd --key "ctrl - m"
 cmd - delete : skhd --key "ctrl - delete"
-cmd - q [
-    "Firefox" : skhd --key "cmd + shift - w"
-    * : aerospace close
-]
+cmd - q : aerospace close
 
 cmd - 0x2B : skhd --key "ctrl - 0x2B"
 cmd - 0x2F : skhd --key "ctrl - 0x2F"
