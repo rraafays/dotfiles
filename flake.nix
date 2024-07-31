@@ -12,10 +12,9 @@
         in
         {
           devShells.default = pkgs.mkShell {
-            buildInputs = with pkgs; [ rustfmt clippy ] ++ lib.optional stdenv.isDarwin libiconv;
             nativeBuildInputs = with pkgs; [
+              shfmt
               stow
-              nixpkgs-fmt
             ];
           };
         }
