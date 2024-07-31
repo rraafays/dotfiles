@@ -8,7 +8,7 @@ function rebuild
     else
         switch (uname)
             case Darwin
-                darwin-rebuild $argv
+                darwin-rebuild $argv --flake ~/.config/.config/nix-darwin/
             case Linux
                 nixos-rebuild $argv
         end
