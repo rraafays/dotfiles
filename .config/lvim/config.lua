@@ -100,7 +100,6 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.auto_install = true
-lvim.builtin.treesitter.ensure_installed = "all"
 require("nvim-treesitter.install").compilers = { "gcc" }
 lvim.builtin.gitsigns.opts = {
     signcolumn = false,
