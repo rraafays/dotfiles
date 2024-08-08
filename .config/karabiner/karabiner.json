@@ -18,6 +18,27 @@
                 },
                 "rules": [
                     {
+                        "description": "unmount first external drive",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "eject",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "diskutil unmountDisk /dev/disk4"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "space navigation",
                         "manipulators": [
                             {
@@ -962,6 +983,16 @@
                         },
                         {
                             "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "delete_forward"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": [
@@ -1017,16 +1048,6 @@
                             "to": [
                                 {
                                     "key_code": "right_command"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "delete_or_backspace"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "delete_forward"
                                 }
                             ]
                         }
