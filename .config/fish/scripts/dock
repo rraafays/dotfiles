@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+output=$(diskutil info /dev/disk5s1)
+volume_name=$(echo "$output" | grep "Volume Name" | sed 's/.*Volume Name:[[:space:]]*//')
+
+if [ ! -d "/Volumes/SAMSUNG" ]; then
+    diskutil mountDisk /dev/disk5s1
+    if [ -n "$volume_name" ]; then
+        osascript -e "display notification \"Drive mounted, safe to use\" with title \"$volume_name\""
+    else
+        echo "Volume not found"
+    fi
+else
+    diskutil unmountDisk /dev/disk5s1
+    if [ -n "$volume_name" ]; then
+        osascript -e "display notification \"Drive ejected, safe to undock\" with title \"$volume_name\""
+    else
+        echo "Volume not found"
+    fi
+fi

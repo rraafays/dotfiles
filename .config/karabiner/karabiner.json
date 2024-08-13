@@ -31,7 +31,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "diskutil unmountDisk /dev/disk4"
+                                        "shell_command": "~/.config/fish/scripts/dock"
                                     }
                                 ],
                                 "type": "basic"
