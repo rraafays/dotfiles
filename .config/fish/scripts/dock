@@ -1,20 +1,27 @@
 #!/usr/bin/env bash
 
-output=$(diskutil info /dev/disk5s1)
-volume_name=$(echo "$output" | grep "Volume Name" | sed 's/.*Volume Name:[[:space:]]*//')
-
-if [ ! -d "/Volumes/SAMSUNG" ]; then
-    diskutil mountDisk /dev/disk5s1
-    if [ -n "$volume_name" ]; then
-        osascript -e "display notification \"Drive mounted, safe to use\" with title \"$volume_name\""
-    else
-        echo "Volume not found"
-    fi
+if [ $(ls -d /Volumes/*/ | wc -l) -gt 1 ]; then
+    for disk in /dev/disk*; do
+        if [[ $disk =~ [3-9]+$ ]]; then
+            if [[ $disk =~ s[0-9]+$ ]]; then
+                echo "Skipping $disk (ends with sX)..."
+            else
+                echo "Unmounting $disk..."
+                diskutil unmountDisk $disk
+            fi
+        fi
+    done
+    osascript -e "display notification \"Drives unmounted, safe to undock\" with title \"Dock\""
 else
-    diskutil unmountDisk /dev/disk5s1
-    if [ -n "$volume_name" ]; then
-        osascript -e "display notification \"Drive ejected, safe to undock\" with title \"$volume_name\""
-    else
-        echo "Volume not found"
-    fi
+    for disk in /dev/disk*; do
+        if [[ $disk =~ [3-9]+$ ]]; then
+            if [[ $disk =~ s[0-9]+$ ]]; then
+                echo "Skipping $disk (ends with sX)..."
+            else
+                echo "Mounting $disk..."
+                diskutil mountDisk $disk
+            fi
+        fi
+    done
+    osascript -e "display notification \"Drives mounted, safe to use\" with title \"Dock\""
 fi
