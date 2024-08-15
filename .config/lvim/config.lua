@@ -91,6 +91,9 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 lvim.colorscheme = "gruvbox"
 
+require("lvim.lsp.manager").setup("tailwindcss", {
+    filetypes = { "html", "vue", "typescriptreact", "javascriptreact" }
+})
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.indentlines.active = false
