@@ -56,3 +56,7 @@ end
 function lls
     ll --color always | grep "=>" --color never
 end
+
+function kbd
+    cat ~/.config/etc/ascii/hhkb
+end
