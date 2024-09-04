@@ -15,12 +15,11 @@ set -x FZF_DEFAULT_COMMAND "rg --files
                                --no-ignore-vcs"
 
 if status is-interactive
+    set fish_greeting ""
+
     starship init fish | source
     zoxide init fish | source
     direnv hook fish | source
-    nix-your-shell fish | source
-
-    set fish_greeting ""
 
     if not fish_is_root_user
         cat \
