@@ -91,9 +91,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 lvim.colorscheme = "gruvbox"
 
-require("lvim.lsp.manager").setup("tailwindcss", {
-    filetypes = { "html", "vue", "typescriptreact", "javascriptreact" }
-})
 lvim.builtin.breadcrumbs.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.indentlines.active = false
@@ -280,109 +277,6 @@ lvim.plugins = {
         },
         config = function()
             require("chatgpt").setup()
-        end,
-    },
-    {
-        "MeanderingProgrammer/markdown.nvim",
-        name = "render-markdown",
-        dependencies = { "nvim-treesitter/nvim-treesitter" },
-        config = function()
-            require("render-markdown").setup({
-                start_enabled = true,
-                max_file_size = 1.5,
-                markdown_query = [[
-        (atx_heading [
-            (atx_h1_marker)
-            (atx_h2_marker)
-            (atx_h3_marker)
-            (atx_h4_marker)
-            (atx_h5_marker)
-            (atx_h6_marker)
-        ] @heading)
-
-        (thematic_break) @dash
-
-        (fenced_code_block) @code
-
-        [
-            (list_marker_plus)
-            (list_marker_minus)
-            (list_marker_star)
-        ] @list_marker
-
-        (task_list_marker_unchecked) @checkbox_unchecked
-        (task_list_marker_checked) @checkbox_checked
-
-        (block_quote (block_quote_marker) @quote_marker)
-        (block_quote (paragraph (inline (block_continuation) @quote_marker)))
-
-        (pipe_table) @table
-        (pipe_table_header) @table_head
-        (pipe_table_delimiter_row) @table_delim
-        (pipe_table_row) @table_row
-    ]],
-                inline_query = [[
-        (code_span) @code
-
-        (shortcut_link) @callout
-    ]],
-                log_level = "error",
-                file_types = { "markdown" },
-                render_modes = { "n", "c" },
-                headings = { "", "", "", "", "", "" },
-                dash = "—",
-                bullets = { "●", "○", "◆", "◇" },
-                checkbox = {
-                    unchecked = "󰄱 ",
-                    checked = " ",
-                },
-                quote = "┃",
-                callout = {
-                    note = "  Note",
-                    tip = "  Tip",
-                    important = "󰅾  Important",
-                    warning = "  Warning",
-                    caution = "󰳦  Caution",
-                },
-                conceal = {
-                    default = vim.opt.conceallevel:get(),
-                    rendered = 3,
-                },
-                table_style = "full",
-                highlights = {
-                    heading = {
-                        backgrounds = { "Keyword", "Keyword", "Comment" },
-                        foregrounds = {
-                            "markdownH1",
-                            "markdownH2",
-                            "markdownH3",
-                            "markdownH4",
-                            "markdownH5",
-                            "markdownH6",
-                        },
-                    },
-                    dash = "LineNr",
-                    code = "",
-                    bullet = "Comment",
-                    checkbox = {
-                        unchecked = "@markup.list.unchecked",
-                        checked = "@markup.heading",
-                    },
-                    table = {
-                        head = "@markup.heading",
-                        row = "Normal",
-                    },
-                    latex = "@markup.math",
-                    quote = "@markup.quote",
-                    callout = {
-                        note = "DiagnosticInfo",
-                        tip = "DiagnosticOk",
-                        important = "DiagnosticHint",
-                        warning = "DiagnosticWarn",
-                        caution = "DiagnosticError",
-                    },
-                },
-            })
         end,
     },
     { "chaoren/vim-wordmotion" },
