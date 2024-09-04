@@ -1,4 +1,3 @@
-set -x NIX_AUTO_RUN y
 set -x EDITOR lvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x FZF_DEFAULT_OPTS "--color="16,bg+:#000000""
@@ -20,6 +19,7 @@ if status is-interactive
     starship init fish | source
     zoxide init fish | source
     direnv hook fish | source
+    nix-your-shell fish | source
 
     if not fish_is_root_user
         cat \
