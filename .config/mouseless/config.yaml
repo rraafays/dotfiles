@@ -15,6 +15,8 @@ layers:
     volumeup: "exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"
     volumedown: "exec wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-"
     mute: "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    pause: "exec brightnessctl set 10+"
+    scrolllock: "exec brightnessctl set 10-"
 - name: navigation
   bindings:
     esc: "exec killall .Hyprland-wrapp; killall gamescope-wl"
