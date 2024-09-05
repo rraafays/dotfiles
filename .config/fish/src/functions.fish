@@ -28,10 +28,6 @@ function nsh
     nix-shell $argv
 end
 
-function run
-    nix-shell --packages $argv[1] --run "$argv[1] $argv[2..]"
-end
-
 function clean
     if set -q TMUX
         clear
