@@ -17,6 +17,7 @@ layers:
     mute: "exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     pause: "exec brightnessctl set 10+"
     scrolllock: "exec brightnessctl set 10-"
+    capslock: leftctrl
 - name: navigation
   bindings:
     esc: "exec killall .Hyprland-wrapp; killall gamescope-wl"
