@@ -10,7 +10,14 @@ function rebuild
             case Darwin
                 darwin-rebuild $argv
             case Linux
-                nixos-rebuild $argv
+                if not fish_is_root_user
+                    sudo nixos-rebuild $argv
+                else
+                    nixos-rebuild $argv
+                end
+                if test -e result
+                    rm result
+                end
         end
     end
 end
