@@ -4,12 +4,6 @@ if status --is-interactive
     set -x MANPAGER "lvim -c 'Man! -o -'"
     set -x TTY $(tty)
 
-    if test "$TTY" = /dev/tty1
-        while true
-            Hyprland
-        end
-    end
-
     if not test -e "$HOME/.config/kitty/kitty.conf"
         cat \
             "$HOME/.config/kitty/base.conf" \
