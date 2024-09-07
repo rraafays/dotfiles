@@ -9,7 +9,7 @@ end
 map("n", "<C-s>", "<esc><cmd>w<cr>")
 map("n", "<C-a>", "<esc>gg0VG<cr>")
 map("n", "<C-c>", "<esc><cmd>qa!<cr>")
-map("n", "<q>", "<esc><cmd>q<cr>")
+map("n", "q", "<esc><cmd>q<cr>")
 map("n", "U", "<C-r>")
 map("n", "\\", "<cmd>nohlsearch<cr>")
 map("n", "<Tab>", "<cmd>Lspsaga diagnostic_jump_next<cr>")
