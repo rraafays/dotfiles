@@ -123,9 +123,6 @@ return {
                 lualine_z = {},
             },
             tabline = {},
-            extensions = {
-                "fugitive",
-            },
         })
     end,
 }
