@@ -1,5 +1,5 @@
 return {
-    "https://github.com/nvim-lualine/lualine.nvim",
+    "nvim-lualine/lualine.nvim",
     config = function()
         local lualine = require("lualine")
 

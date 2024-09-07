@@ -1,4 +1,4 @@
-set -x EDITOR lvim
+set -x EDITOR nvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x DETOX_SEQUENCE lower
 set -x DIRENV_WARN_TIMEOUT 60s
@@ -20,7 +20,7 @@ set -x NEWT_COLORS "
     actlistbox=white,black 
     emptyscale=red,black 
     fullscale=green,black
-" 
+"
 
 if status is-interactive
     set fish_greeting ""

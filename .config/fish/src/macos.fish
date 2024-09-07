@@ -12,7 +12,7 @@ if status --is-interactive
     end
 
     function man
-        command man -P 'lvim -c \'Man! -o -\'' $argv
+        command man -P 'nvim -c \'Man! -o -\'' $argv
     end
 
     if not fish_is_root_user

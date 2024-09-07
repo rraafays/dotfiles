@@ -1,7 +1,7 @@
 set -x ANDROID_HOME "$HOME/Android/Sdk"
 
 if status --is-interactive
-    set -x MANPAGER "lvim -c 'Man! -o -'"
+    set -x MANPAGER "nvim -c 'Man! -o -'"
     set -x TTY $(tty)
 
     if not test -e "$HOME/.config/kitty/kitty.conf"

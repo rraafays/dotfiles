@@ -13,7 +13,7 @@ set -x SQLPATH "$HOME/.config/sqlcl"
 set -x SCRIPTS_HOME "$FISH_HOME/scripts"
 set -x AVR_GCC "/opt/homebrew/opt/avr-gcc@8/"
 set -x ARM_EABI_BINUTILS /opt/homebrew/opt/arm-none-eabi-binutils/
-set -x XMLFORMAT_CONF "$HOME/.config/lvim/formatters/xmlformat.conf"
+set -x XMLFORMAT_CONF "$HOME/.config/etc/formatters/xmlformat.conf"
 
 set -x PATH \
     $BUN_INSTALL/bin \
