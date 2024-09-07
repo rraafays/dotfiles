@@ -3,7 +3,7 @@ function rebuild
         cd ~/.config/ || exit
         rm -rf "$(ls -1t .config/)"
         cd .config/ || exit
-        stow .
+        nix-shell --packages stow --run "stow ."
         cd - || exit
     else
         switch (uname)
