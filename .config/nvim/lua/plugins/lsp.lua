@@ -16,6 +16,24 @@ return {
             })
         end)
 
-        require("lazy-lsp").setup({})
+        require("lazy-lsp").setup({
+            prefer_local = true,
+            default_config = {
+                flags = {
+                    debounce_text_changes = 150,
+                },
+            },
+            configs = {
+                lua_ls = {
+                    settings = {
+                        Lua = {
+                            diagnostics = {
+                                globals = { "vim" },
+                            },
+                        },
+                    },
+                },
+            },
+        })
     end,
 }
