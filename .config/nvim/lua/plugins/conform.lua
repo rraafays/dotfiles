@@ -32,7 +32,7 @@ return {
                     java = { "intellij" },
                     json = { "prettier" },
                     html = { "prettier" },
-                    nix = { "nixpkgs_fmt" },
+                    nix = { "nixfmt" },
                     rust = { "rustfmt" },
                 }
             else
@@ -62,16 +62,6 @@ return {
                         formatter_config_dir .. "redgate.json",
                     },
                 },
-                xmlformat = {
-                    command = "xmlformat",
-                    stdin = true,
-                    args = { "$FILENAME" },
-                },
-                nixpkgs_fmt = {
-                    command = "nixpkgs-fmt",
-                    stdin = false,
-                    args = { "$FILENAME" },
-                },
                 cognitran = {
                     command = "prettier",
                     stdin = true,
@@ -88,31 +78,12 @@ return {
                         "$FILENAME",
                     },
                 },
-                prettier = {
-                    command = "prettier",
-                    stdin = true,
-                    args = {
-                        "--trailing-comma",
-                        "es5",
-                        "--tab-width",
-                        4,
-                        "--print-width",
-                        80,
-                        "--prose-wrap",
-                        "always",
-                        "--stdin-filepath",
-                        "$FILENAME",
-                    },
-                },
                 rustfmt = {
                     command = "rustfmt",
                     args = {
                         "--config",
                         "fn_single_line=true,where_single_line=true,tab_spaces=4,imports_layout=Vertical,hex_literal_case=Upper,max_width=80",
                     },
-                },
-                stylua = {
-                    command = "stylua",
                 },
             },
 
