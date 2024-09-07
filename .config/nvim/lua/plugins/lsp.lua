@@ -17,6 +17,9 @@ return {
         end)
 
         require("lazy-lsp").setup({
+            excluded_servers = {
+                "denols",
+            },
             prefer_local = true,
             default_config = {
                 flags = {
