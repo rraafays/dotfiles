@@ -1,5 +1,6 @@
 return {
     "shortcuts/no-neck-pain.nvim",
+    lazy = false,
     config = function()
         DOCUMENT_WIDTH = 60
         RECEIPT_WIDTH = 40

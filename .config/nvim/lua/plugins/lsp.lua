@@ -1,5 +1,6 @@
 return {
     "dundalek/lazy-lsp.nvim",
+    lazy = false,
     dependencies = {
         "neovim/nvim-lspconfig",
         { "VonHeikemen/lsp-zero.nvim", branch = "v3.x" },

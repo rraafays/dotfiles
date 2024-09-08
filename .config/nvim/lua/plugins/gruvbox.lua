@@ -1,8 +1,9 @@
 return {
     "ellisonleao/gruvbox.nvim",
+    lazy = false,
     config = function()
         vim.o.background = "dark"
-        require('gruvbox').setup({
+        require("gruvbox").setup({
             italic = {
                 strings = false,
                 operators = false,
