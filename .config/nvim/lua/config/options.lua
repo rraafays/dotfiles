@@ -31,3 +31,4 @@ vim.o.guicursor = table.concat({
     "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
 }, ",")
 vim.cmd([[ set clipboard+=unnamedplus ]])
+vim.cmd([[ syntax off ]])
