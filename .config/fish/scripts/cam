@@ -8,11 +8,28 @@ for i in "${!devices[@]}"; do
 	echo "$i) ${devices[$i]}"
 done
 
-# Ask for a number
-read -r -p "Select a video device by number: " number
+# Function to read input without waiting for Enter
+read_number() {
+	local input
+	while IFS= read -r -n1 -s input; do
+		[[ "$input" =~ ^[0-9]$ ]] || continue
+		printf '%s' "$input"
+		break
+	done
+}
 
-# If a valid number was selected, open the device with mpv
-if [[ "$number" =~ ^[0-9]+$ ]] && [ "$number" -ge 0 ] && [ "$number" -lt "${#devices[@]}" ]; then
-	selected_device="${devices[$number]}"
-	mpv "$selected_device"
-fi
+# Loop to continuously get device selection
+selected_number=""
+while :; do
+	selected_number+=$(read_number)
+	number=${selected_number}
+
+	# Check if number is valid and within range
+	if [[ "$number" =~ ^[0-9]+$ ]] && [ "$number" -ge 0 ] && [ "$number" -lt "${#devices[@]}" ]; then
+		selected_device="${devices[$number]}"
+		mpv "$selected_device"
+		break
+	elif [ ${#selected_number} -ge ${#devices[@]} ]; then
+		selected_number=""
+	fi
+done
