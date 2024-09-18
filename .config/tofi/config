@@ -16,6 +16,8 @@ num-results = 5
 
 font = "Iosevka Term Curly Bold"
 
+font-size = 18
+
 background-color = #000000
 
 text-color = #a89983
@@ -26,4 +28,6 @@ selection-color = #ebdbb2
 
 fuzzy-match = true
 
-drun-launch = true 
+drun-launch = true
+
+prompt-text = "> "
