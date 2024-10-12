@@ -31,3 +31,6 @@ end
 function duf
     command duf -theme ansi $argv
 end
+function o
+    open $argv
+end
