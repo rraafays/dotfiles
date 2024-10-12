@@ -31,16 +31,12 @@ function src
     end
 end
 
-function modules
+function lsm
     if test -e .gitmodules
-        grep "path|url" .gitmodules | awk '{print $3}' | sed 'N;s/\n/ -> /' |bat -p
+        grep "path|url" .gitmodules | awk '{print $3}' | sed 'N;s/\n/ -> /' | bat -p
     else
         echo "there are no modules!"
     end
-end
-
-function nsh
-    nix-shell $argv
 end
 
 function clean
@@ -49,6 +45,14 @@ function clean
         tmux clear-history
     else
         command clear
+    end
+end
+
+function open
+    if not test -e $argv[1]
+        $argv & disown
+    else
+        command xdg-open $argv[1]
     end
 end
 
@@ -62,6 +66,10 @@ end
 
 function qr
     nix-shell --packages qrencode --run "qrencode -t UTF8 -m 2 '$argv'"
+end
+
+function nsh
+    nix-shell $argv
 end
 
 function lls
