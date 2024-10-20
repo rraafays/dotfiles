@@ -35,10 +35,14 @@ CommandAllKey=Alt
 [Plugins]
 blurEnabled=true
 contrastEnabled=false
+dimscreenEnabled=true
+glideEnabled=true
 krohnkiteEnabled=false
 kwin4_effect_shapecornersEnabled=false
+kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
 poloniumEnabled=true
+scaleEnabled=false
 
 [Script-polonium]
 Borders=3
