@@ -12,22 +12,25 @@ Number=9
 Rows=1
 
 [Effect-ًRound-Corners]
-ActiveOutlinePalette=0
+ActiveOutlinePalette=6
 ActiveOutlineUseCustom=false
 ActiveOutlineUsePalette=true
-AnimationEnabled=false
+ActiveShadowAlpha=0
 DisableOutlineMaximize=false
 DisableOutlineTile=false
 DisableRoundMaximize=false
 DisableRoundTile=false
 Exclusions=plasmashell
-InactiveCornerRadius=6
-InactiveOutlinePalette=6
-InactiveOutlineThickness=10
+InactiveCornerRadius=5
+InactiveOutlineAlpha=0
+InactiveOutlinePalette=18
+InactiveOutlineThickness=0
 InactiveOutlineUseCustom=false
 InactiveOutlineUsePalette=true
-OutlineThickness=10
-Size=6
+InactiveShadowAlpha=0
+InactiveShadowSize=1
+ShadowSize=1
+Size=5
 
 [MouseBindings]
 CommandAllKey=Alt
@@ -38,7 +41,6 @@ contrastEnabled=false
 dimscreenEnabled=true
 glideEnabled=true
 krohnkiteEnabled=false
-kwin4_effect_shapecornersEnabled=false
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
 poloniumEnabled=true
@@ -62,10 +64,10 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Xwayland]
-Scale=1.5
+Scale=1.45
 
 [org.kde.kdecoration2]
-BorderSize=Tiny
-BorderSizeAuto=false
 ButtonsOnLeft=
 ShowToolTips=false
+library=org.kde.breeze
+theme=Breeze

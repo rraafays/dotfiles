@@ -1,2 +1,5 @@
+[Common]
+ShadowSize=ShadowVeryLarge
+
 [Windeco]
 DrawBorderOnMaximizedWindows=true
