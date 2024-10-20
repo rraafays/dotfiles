@@ -21,7 +21,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][245][General]
-ToolBoxButtonState=topcenter
+ToolBoxButtonState=top
 ToolBoxButtonX=300
 ToolBoxButtonY=24
 
@@ -42,7 +42,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][246][Applets][251][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 SystrayContainmentId=252
 
 [Containments][246][Applets][263]
@@ -99,11 +99,14 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][252][Applets][254][Configuration]
-PreloadWeight=55
+PreloadWeight=95
 
 [Containments][252][Applets][255]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
+
+[Containments][252][Applets][255][Configuration]
+PreloadWeight=65
 
 [Containments][252][Applets][256]
 immutability=1
@@ -164,7 +167,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=0
+PreloadWeight=10
 
 [Containments][252][Applets][268]
 immutability=1
