@@ -12,12 +12,14 @@ ActiveOutlinePalette=6
 ActiveOutlineUseCustom=false
 ActiveOutlineUsePalette=true
 ActiveShadowAlpha=0
+ActiveShadowUseCustom=true
+ActiveShadowUsePalette=false
 DisableOutlineMaximize=false
 DisableOutlineTile=false
 DisableRoundMaximize=false
 DisableRoundTile=false
 Exclusions=plasmashell
-InactiveCornerRadius=5
+InactiveCornerRadius=7
 InactiveOutlineAlpha=0
 InactiveOutlinePalette=18
 InactiveOutlineThickness=0
@@ -25,8 +27,10 @@ InactiveOutlineUseCustom=false
 InactiveOutlineUsePalette=true
 InactiveShadowAlpha=0
 InactiveShadowSize=1
+InactiveShadowUseCustom=true
+InactiveShadowUsePalette=false
 ShadowSize=1
-Size=5
+Size=7
 
 [MouseBindings]
 CommandAllKey=Alt
