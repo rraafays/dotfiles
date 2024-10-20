@@ -1,3 +1,7 @@
+[Keyboard]
+RepeatDelay=250
+RepeatRate=100
+
 [Libinput][2362][628][PIXA3854:00 093A:0274 Touchpad]
 ClickMethod=2
 

@@ -150,7 +150,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=100
+PreloadWeight=76
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -160,14 +160,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][252][Applets][266][Configuration]
-PreloadWeight=60
+PreloadWeight=36
 
 [Containments][252][Applets][267]
 immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=10
+PreloadWeight=2
 
 [Containments][252][Applets][268]
 immutability=1
