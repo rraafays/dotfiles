@@ -7,6 +7,7 @@ RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][245]
 ItemGeometries-1504x1003=
+ItemGeometries-1556x1037=
 ItemGeometriesHorizontal=
 activityId=6d43fd7f-2e93-462b-94e4-b8bb2834440c
 formfactor=0
@@ -83,8 +84,20 @@ DialogWidth=680
 [Containments][246][Applets][277][Shortcuts]
 global=
 
+[Containments][246][Applets][279]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][246][Applets][281]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
+[Containments][246][Applets][282]
+immutability=1
+plugin=org.kde.plasma.panelspacer
+
 [Containments][246][General]
-AppletOrder=263;277;272;269;271;251
+AppletOrder=281;263;282;269;272;277;271;251;279
 
 [Containments][252]
 activityId=
