@@ -165,7 +165,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][252][Applets][261][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][252][Applets][261][Configuration][General]
 migrated=true
@@ -185,7 +185,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=80
+PreloadWeight=85
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -215,7 +215,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][252][Applets][268][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 
 [Containments][252][Applets][268][Shortcuts]
 global=Ctrl+Alt+N

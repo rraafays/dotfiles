@@ -7,6 +7,9 @@ Id_5=42beb360-3c93-40f4-bc8d-1549813d2ca8
 Number=5
 Rows=1
 
+[Effect-translucency]
+MoveResize=100
+
 [Effect-ًRound-Corners]
 ActiveOutlinePalette=6
 ActiveOutlineUseCustom=false
@@ -37,7 +40,7 @@ CommandAllKey=Alt
 
 [Plugins]
 blurEnabled=true
-contrastEnabled=false
+contrastEnabled=true
 dimscreenEnabled=true
 glideEnabled=true
 krohnkiteEnabled=false
