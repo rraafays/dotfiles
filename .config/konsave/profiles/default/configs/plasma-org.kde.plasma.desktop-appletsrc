@@ -88,13 +88,25 @@ global=
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
+[Containments][246][Applets][279][Configuration][General]
+expanding=false
+length=10
+
 [Containments][246][Applets][281]
 immutability=1
 plugin=org.kde.plasma.panelspacer
 
+[Containments][246][Applets][281][Configuration][General]
+expanding=false
+length=10
+
 [Containments][246][Applets][282]
 immutability=1
 plugin=org.kde.plasma.panelspacer
+
+[Containments][246][Applets][282][Configuration][General]
+expanding=false
+length=10
 
 [Containments][246][General]
 AppletOrder=281;263;282;269;272;277;271;251;279
@@ -126,7 +138,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][252][Applets][255][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 
 [Containments][252][Applets][255][Shortcuts]
 global=Ctrl+Alt+D
@@ -185,7 +197,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=85
+PreloadWeight=97
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -195,7 +207,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][252][Applets][266][Configuration]
-PreloadWeight=20
+PreloadWeight=14
 
 [Containments][252][Applets][266][Shortcuts]
 global=
@@ -205,7 +217,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=14
+PreloadWeight=10
 
 [Containments][252][Applets][267][Shortcuts]
 global=Ctrl+Alt+B
@@ -215,7 +227,10 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][252][Applets][268][Configuration]
-PreloadWeight=90
+PreloadWeight=100
+
+[Containments][252][Applets][268][Configuration][General]
+currentDetailsTab=details
 
 [Containments][252][Applets][268][Shortcuts]
 global=Ctrl+Alt+N

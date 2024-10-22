@@ -17,11 +17,9 @@ ActiveOutlineUsePalette=true
 ActiveShadowAlpha=0
 ActiveShadowUseCustom=true
 ActiveShadowUsePalette=false
-DisableOutlineMaximize=false
 DisableOutlineTile=false
-DisableRoundMaximize=false
 DisableRoundTile=false
-Exclusions=plasmashell
+Exclusions=plasmashell,plasmashell
 InactiveCornerRadius=7
 InactiveOutlineAlpha=0
 InactiveOutlinePalette=18
@@ -32,6 +30,7 @@ InactiveShadowAlpha=0
 InactiveShadowSize=1
 InactiveShadowUseCustom=true
 InactiveShadowUsePalette=false
+OutlineThickness=2
 ShadowSize=1
 Size=7
 
@@ -53,6 +52,11 @@ scaleEnabled=false
 Borders=3
 InsertionPoint=2
 TimerDelay=1
+
+[TabBox]
+ActivitiesMode=0
+DesktopMode=0
+LayoutName=modern_informative
 
 [Tiling]
 padding=20

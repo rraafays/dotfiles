@@ -1,0 +1,15 @@
+[1]
+Description=Application settings for kitty
+wmclass=kitty
+wmclassmatch=1
+
+[71819f03-a0aa-47cf-832a-3aebc4f4b6e0]
+Description=Application settings for kitty
+fullscreen=true
+fullscreenrule=2
+wmclass=kitty
+wmclassmatch=1
+
+[General]
+count=1
+rules=1
