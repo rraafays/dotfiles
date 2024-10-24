@@ -1,0 +1,5 @@
+# ~/.config/direnv/direnvrc
+
+if [ -d "$(git rev-parse --show-toplevel 2>/dev/null)" ]; then
+	PATH_add ~/.config/fish/scripts/git/
+fi
