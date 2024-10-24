@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+changed_files=$(git status --short | grep -v '^??' | awk '{print $2}')
+
+if [ -z "$changed_files" ]; then
+	echo "No files to commit."
+	exit 0
+fi
+
+file_list=$(echo $changed_files | tr '\n' ' ')
+
+commit_message="update: $file_list"
+
+git commit --message "$commit_message"
