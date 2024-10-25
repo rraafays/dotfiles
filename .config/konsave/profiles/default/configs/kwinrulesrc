@@ -9,7 +9,3 @@ fullscreen=true
 fullscreenrule=2
 wmclass=kitty
 wmclassmatch=1
-
-[General]
-count=1
-rules=1

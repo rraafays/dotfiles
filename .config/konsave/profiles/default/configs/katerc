@@ -10,7 +10,7 @@ Show Url Nav Bar=true
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=true
-Color Theme=Vim Dark
+Color Theme=Breeze Dark
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=false
@@ -20,6 +20,8 @@ Word Wrap Marker=false
 [MainWindow]
 1504x1003 screen: Height=428
 1504x1003 screen: Width=722
+1556x1037 screen: Height=943
+1556x1037 screen: Width=745
 
 [filetree]
 editShade=78,79,16
