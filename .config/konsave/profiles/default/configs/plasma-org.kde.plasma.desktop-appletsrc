@@ -162,7 +162,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][252][Applets][256][Configuration]
-PreloadWeight=80
+PreloadWeight=100
 
 [Containments][252][Applets][256][Shortcuts]
 global=Ctrl+Alt+C
@@ -214,7 +214,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=89
+PreloadWeight=81
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -224,7 +224,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][252][Applets][266][Configuration]
-PreloadWeight=22
+PreloadWeight=14
 
 [Containments][252][Applets][266][Shortcuts]
 global=
