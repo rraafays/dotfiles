@@ -31,3 +31,13 @@ layers:
     j: down
     k: up
     l: right
+    2: leftctrl+f1
+    3: leftctrl+f2
+    4: leftctrl+f3
+    5: leftctrl+f4
+    6: leftctrl+f5
+    7: leftctrl+f6
+    8: leftctrl+f7
+    9: leftctrl+f8
+    10: leftctrl+f9
+    11: leftctrl+f10

@@ -21,13 +21,13 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=180,55,40
+BackgroundAlternate=169,158,129
 BackgroundNormal=16,16,16
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
 ForegroundInactive=55,115,117
-ForegroundLink=251,72,51
+ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -35,33 +35,33 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [Colors:Complementary]
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
-ForegroundLink=251,72,51
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
+ForegroundLink=235,219,178
 
 [Colors:Selection]
-BackgroundAlternate=180,55,40
-BackgroundNormal=180,55,40
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
-ForegroundInactive=255,255,255
-ForegroundLink=251,72,51
+BackgroundAlternate=169,158,129
+BackgroundNormal=169,158,129
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
+ForegroundInactive=0,0,0
+ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
-ForegroundNormal=255,255,255
+ForegroundNormal=0,0,0
 ForegroundPositive=39,174,96
 ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=60,56,54
 BackgroundNormal=16,16,16
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
 ForegroundInactive=55,115,117
-ForegroundLink=251,72,51
+ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -71,11 +71,11 @@ ForegroundVisited=127,140,141
 [Colors:View]
 BackgroundAlternate=60,56,54
 BackgroundNormal=16,16,16
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
 ForegroundInactive=55,115,117
-ForegroundLink=251,72,51
+ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -85,11 +85,11 @@ ForegroundVisited=127,140,141
 [Colors:Window]
 BackgroundAlternate=0,0,0
 BackgroundNormal=0,0,0
-DecorationFocus=251,72,51
-DecorationHover=251,72,51
-ForegroundActive=251,72,51
+DecorationFocus=235,219,178
+DecorationHover=235,219,178
+ForegroundActive=235,219,178
 ForegroundInactive=55,115,117
-ForegroundLink=251,72,51
+ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
 ForegroundNormal=235,219,178
@@ -97,25 +97,27 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [DirSelect Dialog]
-DirSelectDialog Size=717,906
+DirSelectDialog Size=820,566
 History Items[$e]=file:$HOME/Downloads
 
 [General]
-AccentColor=251,72,51
+AccentColor=235,219,178
 ColorScheme=Default
 ColorSchemeHash=de11a79a59fbeb8884e0e39f8765e790a9d6a215
-LastUsedCustomAccentColor=251,72,51
+LastUsedCustomAccentColor=235,219,178
+UseSystemBell=true
 XftAntialias=true
 XftHintStyle=hintnone
-XftSubPixel=rgb
-fixed=Iosevka Term Curly,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-menuFont=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-smallestReadableFont=Iosevka Term Curly,8,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-toolBarFont=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+XftSubPixel=none
+fixed=Iosevka Term Curly,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+menuFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+smallestReadableFont=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+toolBarFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false
@@ -137,6 +139,9 @@ Sort reversed=false
 Speedbar Width=140
 View Style=DetailTree
 
+[KScreen]
+ScreenScaleFactors=eDP-1=1;DP-6=1;
+
 [Shortcuts]
 BackwardWord=
 ForwardWord=
@@ -150,7 +155,7 @@ Theme=freedesktop
 [WM]
 activeBackground=0,0,0
 activeBlend=235,219,178
-activeFont=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+activeFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=235,219,178
 inactiveBackground=0,0,0
 inactiveBlend=0,0,0

@@ -1,10 +1,15 @@
 [Desktops]
 Id_1=8ad7fc54-bb36-4a87-a0d4-eb30281bcbef
+Id_10=9143497e-e33c-41bc-972e-f3e93feed2fb
 Id_2=88423e0d-678a-4c69-887f-415933baedeb
 Id_3=c4196776-efdd-46e6-bea6-bce593edde27
 Id_4=69b90168-9aba-4c8c-8e17-8276a229eb94
-Id_5=42beb360-3c93-40f4-bc8d-1549813d2ca8
-Number=5
+Id_5=b93ad43d-f01c-4f6e-939e-7d512905e30b
+Id_6=bc7591c1-7036-41ee-b614-06ad86a03e82
+Id_7=89a36fdc-eb36-4154-ad1e-186f9ae5d90d
+Id_8=9a2a9f99-bb4e-4e24-b885-fa08f387fd82
+Id_9=809e11d0-588f-4f7e-af2e-6e9bde8168f7
+Number=10
 Rows=1
 
 [Effect-translucency]
@@ -51,6 +56,7 @@ scaleEnabled=false
 [Script-polonium]
 Borders=3
 InsertionPoint=2
+SaveOnTileEdit=true
 TimerDelay=1
 
 [TabBox]
@@ -61,6 +67,9 @@ LayoutName=modern_informative
 [Tiling]
 padding=20
 
+[Tiling][626d6e0c-fb2a-5bb7-9624-d798bd8620e0]
+tiles={"layoutDirection":"horizontal","tiles":[]}
+
 [Tiling][68be1ea7-5666-53e0-a4e4-c8cf535a217b]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
@@ -68,10 +77,10 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d67b1509-69a3-585f-adcc-1048a4265c4f]
-tiles={"layoutDirection":"horizontal","tiles":[]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
 [Xwayland]
-Scale=1.45
+Scale=1.3
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=

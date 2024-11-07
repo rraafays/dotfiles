@@ -8,6 +8,9 @@ RightButton;NoModifier=org.kde.contextmenu
 [Containments][245]
 ItemGeometries-1504x1003=
 ItemGeometries-1556x1037=
+ItemGeometries-1735x1157=
+ItemGeometries-2752x1152=
+ItemGeometries-3440x1440=
 ItemGeometriesHorizontal=
 activityId=6d43fd7f-2e93-462b-94e4-b8bb2834440c
 formfactor=0
@@ -28,6 +31,12 @@ ToolBoxButtonY=24
 
 [Containments][245][Wallpaper][org.kde.color][General]
 Color=0,0,0
+
+[Containments][245][Wallpaper][org.kde.image][General]
+Blur=true
+FillMode=3
+Image=/home/raf/Downloads/WhatsApp Image 2024-11-05 at 23.46.04.jpeg
+SlidePaths=/home/raf/.local/share/wallpapers/,/nix/store/kls40zsrq9dd74innawflbf4ja7ba857-breeze-6.0.5/share/wallpapers/,/home/raf/.nix-profile/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Containments][246]
 activityId=
@@ -52,7 +61,7 @@ plugin=org.kde.plasma.digitalclock
 
 [Containments][246][Applets][263][Configuration]
 PreloadWeight=55
-popupHeight=425
+popupHeight=500
 popupWidth=560
 
 [Containments][246][Applets][263][Configuration][Appearance]
@@ -123,8 +132,8 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.private.systemtray
-popupHeight=434
-popupWidth=434
+popupHeight=480
+popupWidth=480
 wallpaperplugin=org.kde.image
 
 [Containments][252][Applets][253]
@@ -143,7 +152,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][252][Applets][255][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 
 [Containments][252][Applets][255][Shortcuts]
 global=Ctrl+Alt+D
@@ -153,7 +162,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][252][Applets][256][Configuration]
-PreloadWeight=70
+PreloadWeight=80
 
 [Containments][252][Applets][256][Shortcuts]
 global=Ctrl+Alt+C
@@ -165,6 +174,9 @@ plugin=org.kde.plasma.cameraindicator
 [Containments][252][Applets][258]
 immutability=1
 plugin=org.kde.kscreen
+
+[Containments][252][Applets][258][Configuration]
+PreloadWeight=55
 
 [Containments][252][Applets][259]
 immutability=1
@@ -182,7 +194,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][252][Applets][261][Configuration]
-PreloadWeight=60
+PreloadWeight=80
 
 [Containments][252][Applets][261][Configuration][General]
 migrated=true
@@ -202,7 +214,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=100
+PreloadWeight=89
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -212,7 +224,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][252][Applets][266][Configuration]
-PreloadWeight=19
+PreloadWeight=22
 
 [Containments][252][Applets][266][Shortcuts]
 global=
@@ -222,7 +234,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=0
+PreloadWeight=16
 
 [Containments][252][Applets][267][Shortcuts]
 global=Ctrl+Alt+B
@@ -232,7 +244,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][252][Applets][268][Configuration]
-PreloadWeight=89
+PreloadWeight=100
 
 [Containments][252][Applets][268][Configuration][General]
 currentDetailsTab=details
@@ -282,5 +294,15 @@ fill=false
 [Containments][275][General]
 AppletOrder=276
 
+[Containments][283]
+activityId=6d43fd7f-2e93-462b-94e4-b8bb2834440c
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
 [ScreenMapping]
 itemsOnDisabledScreens=
+screenMapping=
