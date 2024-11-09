@@ -102,8 +102,7 @@ History Items[$e]=file:$HOME/Downloads
 
 [General]
 AccentColor=235,219,178
-ColorScheme=Default
-ColorSchemeHash=de11a79a59fbeb8884e0e39f8765e790a9d6a215
+ColorSchemeHash=b4adebbd401af94c5542476dc271e48bb0bb57b0
 LastUsedCustomAccentColor=235,219,178
 UseSystemBell=true
 XftAntialias=true
@@ -114,6 +113,9 @@ font=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 menuFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 smallestReadableFont=Iosevka Term Curly,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 toolBarFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+
+[Icons]
+Theme=breeze-dark
 
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
