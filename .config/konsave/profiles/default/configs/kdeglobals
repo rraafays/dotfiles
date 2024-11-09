@@ -10,23 +10,23 @@ IntensityAmount=0.10000000000000001
 IntensityEffect=2
 
 [ColorEffects:Inactive]
-ChangeSelectionColor=true
+ChangeSelectionColor=false
 Color=112,111,110
-ColorAmount=0.025000000000000001
+ColorAmount=0.025
 ColorEffect=2
-ContrastAmount=0.10000000000000001
-ContrastEffect=2
-Enable=true
+ContrastAmount=1
+ContrastEffect=0
+Enable=false
 IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=169,158,129
-BackgroundNormal=16,16,16
+BackgroundAlternate=170,159,130
+BackgroundNormal=20,20,20
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
 ForegroundActive=235,219,178
-ForegroundInactive=55,115,117
+ForegroundInactive=189,195,199
 ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
@@ -41,8 +41,8 @@ ForegroundActive=235,219,178
 ForegroundLink=235,219,178
 
 [Colors:Selection]
-BackgroundAlternate=169,158,129
-BackgroundNormal=169,158,129
+BackgroundAlternate=170,159,130
+BackgroundNormal=170,159,130
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
 ForegroundActive=235,219,178
@@ -56,11 +56,11 @@ ForegroundVisited=189,195,199
 
 [Colors:Tooltip]
 BackgroundAlternate=60,56,54
-BackgroundNormal=16,16,16
+BackgroundNormal=20,20,20
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
 ForegroundActive=235,219,178
-ForegroundInactive=55,115,117
+ForegroundInactive=189,195,199
 ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
@@ -69,12 +69,12 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [Colors:View]
-BackgroundAlternate=60,56,54
-BackgroundNormal=16,16,16
+BackgroundAlternate=40,40,40
+BackgroundNormal=20,20,20
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
 ForegroundActive=235,219,178
-ForegroundInactive=55,115,117
+ForegroundInactive=189,195,199
 ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
@@ -83,12 +83,12 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [Colors:Window]
-BackgroundAlternate=0,0,0
+BackgroundAlternate=40,40,40
 BackgroundNormal=0,0,0
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
 ForegroundActive=235,219,178
-ForegroundInactive=55,115,117
+ForegroundInactive=189,195,199
 ForegroundLink=235,219,178
 ForegroundNegative=218,68,83
 ForegroundNeutral=246,116,0
@@ -158,5 +158,5 @@ activeBlend=235,219,178
 activeFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=235,219,178
 inactiveBackground=0,0,0
-inactiveBlend=0,0,0
+inactiveBlend=20,20,20
 inactiveForeground=204,190,155
