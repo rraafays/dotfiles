@@ -6,4 +6,5 @@ RepeatRate=100
 ClickMethod=2
 
 [Mouse]
-cursorTheme=Simp1e-Gruvbox-Light
+cursorSize=32
+cursorTheme=Capitaine Cursors (Gruvbox) - White
