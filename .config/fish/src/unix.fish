@@ -7,6 +7,7 @@ if status --is-interactive
     if not test -e "$HOME/.config/kitty/kitty.conf"
         cat \
             "$HOME/.config/kitty/base.conf" \
+            "$HOME/.cache/wal/colors-kitty.conf" \
             "$HOME/.config/kitty/unix.conf" >"$HOME/.config/kitty/kitty.conf"
     end
 
