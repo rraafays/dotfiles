@@ -12,8 +12,6 @@ layers:
 - name: initial
   bindings:
     space: tap-hold-next space ; toggle-layer navigation ; 0
-    scrolllock: brightnessdown
-    pause: brightnessup
     capslock: leftctrl
 - name: navigation
   bindings:
@@ -31,3 +29,5 @@ layers:
     j: down
     k: up
     l: right
+    volumedown: brightnessdown
+    volumeup: brightnessup
