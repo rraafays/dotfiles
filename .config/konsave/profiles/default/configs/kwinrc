@@ -65,10 +65,10 @@ DesktopMode=0
 LayoutName=modern_informative
 
 [Tiling]
-padding=10
+padding=4
 
 [Tiling][3894aa04-2a44-5f2b-a1ec-25c1f90d4d9f]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][45cdc0c4-5ca1-58d0-b69d-c872b71328d1]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -83,6 +83,9 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][d67b1509-69a3-585f-adcc-1048a4265c4f]
+tiles={"layoutDirection":"horizontal","tiles":[]}
+
+[Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Xwayland]

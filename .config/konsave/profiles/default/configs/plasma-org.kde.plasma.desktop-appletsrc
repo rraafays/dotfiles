@@ -194,7 +194,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][252][Applets][261][Configuration]
-PreloadWeight=90
+PreloadWeight=100
 
 [Containments][252][Applets][261][Configuration][General]
 migrated=true
@@ -214,7 +214,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=86
+PreloadWeight=91
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -234,7 +234,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=13
+PreloadWeight=5
 
 [Containments][252][Applets][267][Shortcuts]
 global=Ctrl+Alt+B
@@ -244,7 +244,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][252][Applets][268][Configuration]
-PreloadWeight=100
+PreloadWeight=92
 
 [Containments][252][Applets][268][Configuration][General]
 currentDetailsTab=details
