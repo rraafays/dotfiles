@@ -25,11 +25,13 @@ vim.opt.fillchars = {
     foldopen = "+",
     foldclose = "-",
 }
+
+vim.api.nvim_set_hl(0, "VisualModeCursor", { ctermbg = 0, fg = "#ffffff", bg = "#D65D0E" })
 vim.o.guicursor = table.concat({
     "n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
     "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
     "r:hor50-Cursor/lCursor-blinkwait100-blinkon100-blinkoff100",
-    "v-ve:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
+    "v-ve:block-VisualModeCursor/lVisualModeCursor-blinkwait1000-blinkon100-blinkoff100",
 }, ",")
 vim.cmd([[ set clipboard+=unnamedplus ]])
 vim.cmd([[ syntax off ]])
