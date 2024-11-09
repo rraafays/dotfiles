@@ -34,7 +34,7 @@ return {
             then
                 return
             end
-            vim.cmd("w! ~/.cache/nvim/width")
+            vim.cmd("silent! w! ~/.cache/nvim/width")
             local command = io.popen("wc -L " .. "~/.cache/nvim/width")
             if command ~= nil then
                 local result = command:read("*a")
