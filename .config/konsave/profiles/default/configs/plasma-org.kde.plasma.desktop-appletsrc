@@ -176,7 +176,7 @@ immutability=1
 plugin=org.kde.kscreen
 
 [Containments][252][Applets][258][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][252][Applets][259]
 immutability=1
@@ -214,7 +214,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][252][Applets][265][Configuration]
-PreloadWeight=91
+PreloadWeight=100
 
 [Containments][252][Applets][265][Shortcuts]
 global=Ctrl+Alt+P
@@ -224,7 +224,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][252][Applets][266][Configuration]
-PreloadWeight=34
+PreloadWeight=15
 
 [Containments][252][Applets][266][Shortcuts]
 global=
@@ -234,7 +234,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=5
+PreloadWeight=7
 
 [Containments][252][Applets][267][Shortcuts]
 global=Ctrl+Alt+B
@@ -244,7 +244,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][252][Applets][268][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 
 [Containments][252][Applets][268][Configuration][General]
 currentDetailsTab=details

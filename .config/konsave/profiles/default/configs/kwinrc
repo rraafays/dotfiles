@@ -22,13 +22,14 @@ ActiveOutlineUsePalette=true
 ActiveShadowAlpha=0
 ActiveShadowUseCustom=true
 ActiveShadowUsePalette=false
+AnimationEnabled=false
 DisableOutlineTile=false
+DisableRoundMaximize=false
 DisableRoundTile=false
-Exclusions=plasmashell,plasmashell
-InactiveCornerRadius=7
-InactiveOutlineAlpha=0
-InactiveOutlinePalette=18
-InactiveOutlineThickness=0
+InactiveCornerRadius=8
+InactiveOutlineColor=118,110,89
+InactiveOutlinePalette=16
+InactiveOutlineThickness=2
 InactiveOutlineUseCustom=false
 InactiveOutlineUsePalette=true
 InactiveShadowAlpha=0
@@ -37,7 +38,7 @@ InactiveShadowUseCustom=true
 InactiveShadowUsePalette=false
 OutlineThickness=2
 ShadowSize=1
-Size=7
+Size=8
 
 [MouseBindings]
 CommandAllKey=Alt
@@ -65,7 +66,7 @@ DesktopMode=0
 LayoutName=modern_informative
 
 [Tiling]
-padding=4
+padding=20
 
 [Tiling][3894aa04-2a44-5f2b-a1ec-25c1f90d4d9f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -86,7 +87,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
-tiles={"layoutDirection":"horizontal","tiles":[]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
 [Xwayland]
 Scale=1

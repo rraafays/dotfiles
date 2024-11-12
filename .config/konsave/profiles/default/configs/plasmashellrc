@@ -46,6 +46,7 @@ thickness=34
 
 [PlasmaViews][Panel 246]
 floating=0
+panelVisibility=1
 
 [PlasmaViews][Panel 246][Defaults]
 thickness=24
