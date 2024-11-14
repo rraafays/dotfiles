@@ -145,6 +145,7 @@ View Style=DetailTree
 ScreenScaleFactors=eDP-1=1;DP-6=1;
 
 [Shortcuts]
+ActualSize=
 BackwardWord=
 ForwardWord=
 NextCompletion=

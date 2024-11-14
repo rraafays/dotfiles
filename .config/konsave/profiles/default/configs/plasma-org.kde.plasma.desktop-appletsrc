@@ -234,7 +234,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][252][Applets][267][Configuration]
-PreloadWeight=7
+PreloadWeight=17
 
 [Containments][252][Applets][267][Shortcuts]
 global=Ctrl+Alt+B
