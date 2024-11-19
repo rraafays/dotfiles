@@ -92,6 +92,8 @@ function music
             sacad_r ~/Music/ 600 cover.jpg
         case clean
             remove_folders_that_dont_contain_audio $argv[2]
+        case sync
+            rsync --verbose --human-readable --progress --stats --delete ~/Music/ .
         case '*'
             echo "Usage: music <command> [reset|import|covers|clean]"
     end
