@@ -82,7 +82,6 @@ end
 
 function music
     set command $argv[1]
-
     switch $command
         case reset
             rm -rf ~/.config/beets/*
@@ -91,7 +90,9 @@ function music
             beet import --autotag --incremental --write --move --resume $argv[2..-1]
         case covers
             sacad_r ~/Music/ 600 cover.jpg
+        case clean
+            remove_folders_that_dont_contain_audio $argv[2]
         case '*'
-            echo "Usage: music <command> [reset|import|covers]"
+            echo "Usage: music <command> [reset|import|covers|clean]"
     end
 end
