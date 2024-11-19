@@ -93,13 +93,13 @@ function music
         case clean
             if test -z "$argv[2]"
                 echo "Usage: music clean <directory>"
-                exit 1
+                return 1
             end
             remove_folders_that_dont_contain_audio $argv[2]
         case sync
             if test -z "$argv[2]"
                 echo "Usage: music sync <directory>"
-                exit 1
+                return 1
             end
             rsync --recursive --human-readable --info=progress2 --stats --delete ~/Music $argv[2]
         case '*'
