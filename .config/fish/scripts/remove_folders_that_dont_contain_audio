@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Check if a folder path is provided
+if [[ -z "$1" ]]; then
+	echo "Usage: $0 <directory>"
+	exit 1
+fi
+
+keepers="$(find "$1" \( -name "*.mp3" -o -name "*.wav" -o -name "*.flac" -o -name "*.aac" -o -name "*.ogg" -o -name "*.wma" -o -name "*.m4a" -o -name "*.aiff" -o -name "*.alac" -o -name "*.opus" -o -name "*.amr" -o -name "*.ape" -o -name "*.au" -o -name "*.dts" -o -name "*.gsm" -o -name "*.mka" -o -name "*.mpc" -o -name "*.ra" -o -name "*.shn" -o -name "*.tta" -o -name "*.voc" -o -name "*.vqf" -o -name "*.wv" \))"
+
+echo "$keepers" # debug
+echo            # debug
+
+# Iterate through all subdirectories of the specified folder
+find "$1" -type d | while read -r dir; do
+	# Skip hidden and system directories
+	if [[ ! $dir =~ .*/@.*|/.*#.* ]]; then
+		# Check if the directory contains any .pdf or .mp3 files
+		if [[ ! $keepers =~ "$dir" ]]; then
+			echo "Deleting directory: $dir"
+			rm -rf "$dir"
+		else
+			echo "  Skipping directory: $dir"
+		fi
+	fi
+done
+
+echo -e "\nCleanup complete"

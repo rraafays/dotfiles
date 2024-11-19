@@ -79,3 +79,19 @@ end
 function kbd
     cat ~/.config/etc/ascii/hhkb
 end
+
+function music
+    set command $argv[1]
+
+    switch $command
+        case reset
+            rm -rf ~/.config/beets/*
+            beet import --noautotag ~/Music/
+        case import
+            beet import --autotag --incremental --write --move --resume $argv[2..-1]
+        case covers
+            sacad_r ~/Music/ 600 cover.jpg
+        case '*'
+            echo "Usage: music <command> [reset|import|covers]"
+    end
+end
