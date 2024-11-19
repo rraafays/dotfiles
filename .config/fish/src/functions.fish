@@ -91,10 +91,18 @@ function music
         case covers
             sacad_r ~/Music/ 600 cover.jpg
         case clean
+            if test -z "$argv[2]"
+                echo "Usage: music clean <directory>"
+                exit 1
+            end
             remove_folders_that_dont_contain_audio $argv[2]
         case sync
-            rsync --recursive --human-readable --info=progress2 --stats --delete ~/Music .
+            if test -z "$argv[2]"
+                echo "Usage: music sync <directory>"
+                exit 1
+            end
+            rsync --recursive --human-readable --info=progress2 --stats --delete ~/Music $argv[2]
         case '*'
-            echo "Usage: music <command> [reset|import|covers|clean]"
+            echo "Usage: music <command> [reset|import|covers|clean|sync]"
     end
 end
