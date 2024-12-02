@@ -34,3 +34,6 @@ end
 function o
     open $argv
 end
+function typer
+    command typer --config ~/.config/typer/typer.yaml $argv
+end

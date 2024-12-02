@@ -1,0 +1,21 @@
+theme:
+  #file: /an/absoulute/path/to/the/theme.yaml # if set, it will ignore everything below
+  bar:
+    color: '#458588' # basic color of the progressbar
+    #gradient: '#ff0000' # if passed, will generate a gradient from previous color to this one
+  graph:
+    # see: https://pkg.go.dev/github.com/guptarohit/asciigraph#AnsiColor
+    # see: https://github.com/guptarohit/asciigraph/blob/master/color.go#L152-L292
+    color: white # does not use rgb but rather ANSI codes
+    height: 2   # height of the graph
+  text:
+    error: # color when misspelled
+      background: '#9b0006'
+      foreground: '#fb4934'
+    typed: # color when character have been typed
+      foreground: '#ebdbb2'
+      #background: '#000' # optional, default theme does not add background
+    untyped: # color when still haven't been typed
+      foreground: '#928374'
+      #background: '#000' # optional, default theme does not add background
+
