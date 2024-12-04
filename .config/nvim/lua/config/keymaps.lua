@@ -29,3 +29,8 @@ map("i", "<S-Up>", "⇑")
 map("i", "<S-Right>", "=>")
 map("i", "<S-Down>", "⇓")
 map("i", "<S-Left>", "<=")
+
+map("i", "<C-h>", "<esc>l<Left>i")
+map("i", "<C-j>", "<esc>l<Down>i")
+map("i", "<C-k>", "<esc>l<Up>i")
+map("i", "<C-l>", "<esc>l<Right>i")
