@@ -37,3 +37,6 @@ end
 function typer
     command typer --config ~/.config/typer/typer.yaml $argv
 end
+function mpv
+    command mpv --ao=pulse $argv
+end
