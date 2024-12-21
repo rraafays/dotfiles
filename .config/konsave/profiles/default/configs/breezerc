@@ -1,3 +1,7 @@
 [Common]
 OutlineIntensity=OutlineOff
 ShadowSize=ShadowNone
+
+[Style]
+MenuOpacity=30
+SplitterProxyEnabled=false

@@ -3,6 +3,7 @@ PreviewSize=16
 
 [DetailsMode]
 PreviewSize=22
+SidePadding=0
 
 [ExtractDialog]
 1735x1157 screen: Height=510

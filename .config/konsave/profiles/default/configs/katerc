@@ -24,6 +24,10 @@ Word Wrap Marker=false
 1556x1037 screen: Width=745
 1735x1157 screen: Height=510
 1735x1157 screen: Width=835
+1805x1203 screen: Height=535
+1805x1203 screen: Width=872
+3440x1440 screen: Height=654
+3440x1440 screen: Width=840
 
 [filetree]
 editShade=78,79,16

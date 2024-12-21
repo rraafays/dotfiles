@@ -97,13 +97,16 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [DirSelect Dialog]
-DirSelectDialog Size=820,566
-History Items[$e]=file:$HOME/Downloads
+DirSelectDialog Size=1143,579
+History Items[$e]=file:$HOME/Downloads/Love Goes (Deluxe Edition) (2020) [24 Bit Hi-Res] FLAC,file:$HOME/Downloads/computer kill - computer kill (ep) (2024),file:$HOME/Downloads/Superache (Album\\, 2022),file:$HOME/Downloads/Bitter Tongues - EP,file:$HOME/Downloads/[周興哲][Album] 終於了解自由,file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/Paramore - Album - 2009 - brand new eyes,file:$HOME/Music,file:$HOME/Downloads/ROSÉ - rosie (2024) - WEB FLAC,file:$HOME/Music,file:$HOME/Music/My Little Airport/SABINA之淚,file:$HOME/Downloads/My Little Airport - Sabina之淚 (2021) - CD FLAC,file:$HOME/Downloads,file:$HOME/Music,file:$HOME/Downloads/Unflirt - misc,file:$HOME/Downloads/(2015) Diaries,file:$HOME/Music,file:$HOME/Music,file:$HOME/Downloads/CONGLOMERATE (DELUXE),file:$HOME,file:$HOME/Downloads/pryvt/PRYVT - &SCENE MP3,file:$HOME/Music,file:$HOME/Downloads/The Clientele - 2014 - Suburban Light [CD1] - F,file:$HOME/Downloads/Radwimps - Your Name. (Deluxe Edition _ Original Motion Picture Soundtrack),file:$HOME/Downloads/Alexander Stewart - Album - 2024 - bleeding heart,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Pictures/screensaver,file:$HOME/Downloads
 
 [General]
 AccentColor=235,219,178
+ColorScheme=Default
 ColorSchemeHash=b4adebbd401af94c5542476dc271e48bb0bb57b0
 LastUsedCustomAccentColor=235,219,178
+TerminalApplication=kitty
+TerminalService=kitty.desktop
 UseSystemBell=true
 XftAntialias=true
 XftHintStyle=hintnone
@@ -124,7 +127,7 @@ widgetStyle=Breeze
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=true
+Breadcrumb Navigation=false
 Decoration position=2
 LocationCombo Completionmode=5
 PathCombo Completionmode=5
@@ -151,6 +154,7 @@ ForwardWord=
 NextCompletion=
 PrevCompletion=
 Quit=
+ShowMenubar=
 
 [Sounds]
 Theme=freedesktop

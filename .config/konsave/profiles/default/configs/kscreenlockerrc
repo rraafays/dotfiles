@@ -16,3 +16,8 @@ SlidePaths=/home/raf/.local/share/wallpapers/,/nix/store/kls40zsrq9dd74innawflbf
 [Greeter][Wallpaper][org.kde.potd][General]
 FillMode=2
 Provider=simonstalenhag
+
+[Greeter][Wallpaper][org.kde.slideshow][General]
+Image=file:///home/raf/Pictures/screensaver/david-clode-f2s-Hv8-KJ2-ZA-unsplash.jpg
+SlideInterval=300
+SlidePaths=/home/raf/Pictures/screensaver/

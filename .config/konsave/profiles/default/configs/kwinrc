@@ -12,6 +12,13 @@ Id_9=809e11d0-588f-4f7e-af2e-6e9bde8168f7
 Number=10
 Rows=1
 
+[Effect-blur]
+BlurStrength=12
+NoiseStrength=0
+
+[Effect-hidecursor]
+InactivityDuration=1
+
 [Effect-translucency]
 MoveResize=100
 
@@ -40,19 +47,34 @@ OutlineThickness=2
 ShadowSize=1
 Size=8
 
+[MaximizeTile]
+DisableOutlineTile=false
+DisableRoundTile=false
+
 [MouseBindings]
 CommandAllKey=Alt
+CommandAllWheel=Raise/Lower
 
 [Plugins]
 blurEnabled=true
-contrastEnabled=true
+contrastEnabled=false
 dimscreenEnabled=true
 glideEnabled=true
+hidecursorEnabled=true
 krohnkiteEnabled=false
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
-poloniumEnabled=true
+poloniumEnabled=false
 scaleEnabled=false
+
+[PrimaryOutline]
+ActiveOutlineUseCustom=false
+ActiveOutlineUsePalette=true
+InactiveOutlinePalette=16
+InactiveOutlineThickness=2
+InactiveOutlineUseCustom=false
+InactiveOutlineUsePalette=true
+OutlineThickness=2
 
 [Script-polonium]
 Borders=3
@@ -60,13 +82,29 @@ InsertionPoint=2
 SaveOnTileEdit=true
 TimerDelay=1
 
+[SecondOutline]
+ActiveSecondOutlineUseCustom=false
+ActiveSecondOutlineUsePalette=true
+InactiveSecondOutlineUseCustom=false
+InactiveSecondOutlineUsePalette=true
+
 [TabBox]
 ActivitiesMode=0
+LayoutName=AquaMediumIcons
+
+[TabBoxAlternative]
+ActivitiesMode=0
 DesktopMode=0
-LayoutName=modern_informative
+LayoutName=compact
 
 [Tiling]
 padding=20
+
+[Tiling][273e4bc1-a7b3-53d1-9eb3-155cce369a3f]
+tiles={"layoutDirection":"horizontal","tiles":[]}
+
+[Tiling][282e7fed-9cf4-5739-9103-aa2a92fbb056]
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][3894aa04-2a44-5f2b-a1ec-25c1f90d4d9f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -80,20 +118,34 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 [Tiling][68be1ea7-5666-53e0-a4e4-c8cf535a217b]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
+[Tiling][6c38c091-d235-564f-be71-9bde7e63d996]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][d281e589-60f6-5567-b165-57742aee74a9]
+tiles={"layoutDirection":"horizontal","tiles":[]}
+
 [Tiling][d67b1509-69a3-585f-adcc-1048a4265c4f]
+tiles={"layoutDirection":"horizontal","tiles":[]}
+
+[Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
+[Windows]
+DelayFocusInterval=0
+FocusPolicy=FocusFollowsMouse
+
 [Xwayland]
-Scale=1
+Scale=1.25
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
+ButtonsOnRight=H
 ShowToolTips=false
 library=org.kde.breeze
 theme=Breeze

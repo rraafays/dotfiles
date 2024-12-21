@@ -1,3 +1,10 @@
+[049c46a3-22a3-4797-8394-47c6ec2fd87c]
+Description=Settings for .
+noborder=true
+noborderrule=2
+wmclass=.
+wmclassmatch=3
+
 [1]
 Description=Application settings for kitty
 wmclass=kitty
@@ -9,3 +16,7 @@ fullscreen=true
 fullscreenrule=2
 wmclass=kitty
 wmclassmatch=1
+
+[General]
+count=1
+rules=049c46a3-22a3-4797-8394-47c6ec2fd87c
