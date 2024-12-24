@@ -25,9 +25,6 @@ end
 function imv
     mpv --loop --window-maximized --no-terminal --no-input-cursor $argv
 end
-function play
-    mpv --no-audio-display --no-input-cursor $argv
-end
 function duf
     command duf -theme ansi $argv
 end
