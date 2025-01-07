@@ -1,0 +1,76 @@
+#![enable(implicit_some)]
+#![enable(unwrap_newtypes)]
+#![enable(unwrap_variant_newtypes)]
+(
+    default_album_art_path: None,
+    draw_borders: false,
+    show_song_table_header: false,
+    symbols: (song: "", dir: "", marker: "\u{e0b0}"),
+    progress_bar: (
+        symbols: ["─", "•", " "],
+        track_style: (bg: "0"),
+        elapsed_style: (fg: "15", bg: "0"),
+        thumb_style: (fg: "15", bg: "0"),
+    ),
+    scrollbar: (
+        symbols: ["│", "█", " ", " "],
+        track_style: (),
+        ends_style: (),
+        thumb_style: (fg: "15"),
+    ),
+    browser_column_widths: [20, 38, 42],
+    text_color: "15",
+    background_color: "0",
+    header_background_color: "0",
+    modal_background_color: None,
+    tab_bar: (
+        enabled: false,
+        active_style: (fg: "black", bg: "15", modifiers: "Bold"),
+        inactive_style: (),
+    ),
+    borders_style: (fg: "15"),
+    highlighted_item_style: (fg: "5", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "5", modifiers: "Bold"),
+    highlight_border_style: (fg: "9"),
+    song_table_format: [
+        (
+            prop: (kind: Property(Artist), style: (fg: "4"), default: (kind: Text("Unknown"))),
+            width_percent: 25,
+            alignment: Right,
+        ),
+        (
+            prop: (kind: Property(Album), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            width_percent: 50,
+            alignment: Center,
+        ),
+        (
+            prop: (kind: Property(Title), style: (fg: "15"), default: (kind: Text("Unknown"))),
+            width_percent: 25,
+        ),
+    ],
+    header: (
+        rows: [
+            (
+                left: [
+                    (kind: Text("["), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Property(Status(State)), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Text("]"), style: (fg: "#b7bdf8", modifiers: "Bold"))
+                ],
+                center: [
+                    (kind: Property(Song(Title)), style: (fg: "#7dc4e4", modifiers: "Bold"),
+                        default: (kind: Text("No Song"), style: (fg: "#7dc4e4", modifiers: "Bold"))
+                    ),
+                    (kind: Text(" - ")),
+                    (kind: Property(Song(Artist)), style: (fg: "#eed49f", modifiers: "Bold"),
+                        default: (kind: Text("Unknown"), style: (fg: "#eed49f", modifiers: "Bold"))
+                    )
+                ],
+                right: [
+                    (kind: Text("Vol: "), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Property(Status(Volume)), style: (fg: "#b7bdf8", modifiers: "Bold")),
+                    (kind: Text("% "), style: (fg: "#b7bdf8", modifiers: "Bold"))
+                ]
+            )
+        ],
+    ),
+)
