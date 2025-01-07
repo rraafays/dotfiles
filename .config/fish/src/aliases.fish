@@ -23,7 +23,7 @@ function im
     kitty +kitten icat --align left $argv
 end
 function imv
-    mpv --image-display-duration=inf $argv
+    mpv --image-display-duration=inf --no-terminal $argv
 end
 function duf
     command duf -theme ansi $argv
