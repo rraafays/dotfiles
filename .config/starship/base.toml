@@ -2,6 +2,14 @@
 
 add_newline = false
 format = "$status$username$hostname$battery$all"
+right_format = "$custom"
+
+[custom.song]
+command = "mpc current -f '%title% - %album%'"
+style="#353535"
+when="playing"
+shell="sh"
+format = "[$output]($style)"
 
 [battery]
 disabled = false

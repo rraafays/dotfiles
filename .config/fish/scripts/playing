@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+if not mpc status | grep -q playing
+    return 1
+end
