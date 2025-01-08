@@ -28,9 +28,9 @@
     ),
     scrollbar: (
         symbols: ["│", "┃", "╷", "╵"],
-        track_style: (fg: "#363636"),
-        ends_style: (fg: "#363636"),
-        thumb_style: (fg: "#363636"),
+        track_style: (fg: "0"),
+        ends_style: (fg: "0"),
+        thumb_style: (fg: "0"),
     ),
     song_table_format: [
         (
