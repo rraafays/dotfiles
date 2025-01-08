@@ -18,7 +18,7 @@
     highlighted_item_style: (fg: "15", modifiers: "Bold"),
     current_item_style: (fg: "black", bg: "9", modifiers: "Bold"),
     borders_style: (fg: "black"),
-    highlight_border_style: (fg: "blue"),
+    highlight_border_style: (fg: "#363636"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["─", "─", "─"],
@@ -30,7 +30,7 @@
         symbols: ["│", "█", "│", "│"],
         track_style: (fg: "#363636"),
         ends_style: (fg: "#363636"),
-        thumb_style: (fg: "7"),
+        thumb_style: (fg: "#363636"),
     ),
     song_table_format: [
         (
@@ -59,13 +59,10 @@
             (
                 left: [
                     (kind: Property(Status(State)), style: (fg: "9", modifiers: "Bold")),
-					(kind: Text(" | ")),
-                    (kind: Property(Status(Elapsed))),
-                    (kind: Text(" / ")),
-                    (kind: Property(Status(Duration))),
-                    (kind: Text(" (")),
-                    (kind: Property(Status(Bitrate))),
-                    (kind: Text(" kbps)"))
+                    (kind: Text(" | "), style: (fg: "7")),
+                    (kind: Property(Status(Elapsed)), style: (fg: "7")),
+                    (kind: Text(" / "), style: (fg: "7")),
+                    (kind: Property(Status(Duration)), style: (fg: "7")),
                 ],
                 center: [
                     (kind: Property(Song(Title)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("Unkown"))),
@@ -77,12 +74,12 @@
                 right: [
                     (
                         kind: Property(Widget(States(
-                            active_style: (fg: "white", modifiers: "Bold"),
-                            separator_style: (fg: "white")))
+                            active_style: (fg: "15"),
+                            separator_style: (fg: "7")))
                         ),
                         style: (fg: "dark_gray")
                     ),
-					(kind: Text(" | ")),
+                    (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Volume)), style: (fg: "9")),
                     (kind: Text("%"), style: (fg: "9"))
                 ]
