@@ -3,7 +3,7 @@
 #![enable(unwrap_variant_newtypes)]
 (
     default_album_art_path: None,
-    show_song_table_header: true,
+    show_song_table_header: false,
     draw_borders: true,
     browser_column_widths: [33, 33, 33],
     background_color: None,
@@ -35,43 +35,46 @@
     song_table_format: [
         (
             prop: (kind: Property(Title), style: (fg: "7"), default: (kind: Text("Unknown"))),
-            width_percent: 44,
-            alignment: Left,
-        ),
-        (
-            prop: (kind: Property(Album), style: (fg: "7"), default: (kind: Text("Unknown"))),
-            width_percent: 30,
-            alignment: Left,
-        ),
-        (
-            prop: (kind: Property(Artist), style: (fg: "7"), default: (kind: Text("Unknown"))),
-            width_percent: 20,
+            width_percent: 90,
             alignment: Left,
         ),
         (
             prop: (kind: Property(Duration), style: (fg: "7"), default: (kind: Text("-"))),
-            width_percent: 6,
+            width_percent: 10,
             alignment: Right,
         ),
     ],
     header: (
         rows: [
-            (
-                left: [
-                    (kind: Property(Status(State)), style: (fg: "9", modifiers: "Bold")),
-                    (kind: Text(" | "), style: (fg: "7")),
+			(
+				left: [ ],
+				center: [
+					(kind: Property(Song(Title)), style: (fg: "15"), default: (kind: Text("play"))),
+				],
+				right: [ ]
+			),
+			(
+				left: [
+					(kind: Property(Status(State)), style: (fg: "9")),
+				],
+				center: [
+					(kind: Property(Song(Album)), style: (fg: "15"), default: (kind: Text("something"))),
+				],
+				right: [
+					(kind: Property(Status(Volume)), style: (fg: "9")),
+					(kind: Text("%"), style: (fg: "9"))
+				]
+			),
+			(
+				left: [
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
                     (kind: Property(Status(Duration)), style: (fg: "7")),
-                ],
-                center: [
-                    (kind: Property(Song(Title)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("play"))),
-                    (kind: Text(" ~ ")),
-                    (kind: Property(Song(Album)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("something"))),
-                    (kind: Text(" - ")),
-                    (kind: Property(Song(Artist)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("sad")))
-                ],
-                right: [
+],
+				center: [
+					(kind: Property(Song(Artist)), style: (fg: "15"), default: (kind: Text("sad")))
+				],
+				right: [
                     (
                         kind: Property(Widget(States(
                             active_style: (fg: "15"),
@@ -79,11 +82,8 @@
                         ),
                         style: (fg: "dark_gray")
                     ),
-                    (kind: Text(" | "), style: (fg: "7")),
-                    (kind: Property(Status(Volume)), style: (fg: "9")),
-                    (kind: Text("%"), style: (fg: "9"))
-                ]
-            ),
+]
+			),
         ],
     ),
     browser_song_format: [
