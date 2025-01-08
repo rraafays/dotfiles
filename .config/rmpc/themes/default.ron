@@ -66,16 +66,6 @@
 					(kind: Text("%"), style: (fg: "9")),
 				]
 			),
-			(
-				left: [ ],
-				center: [ ],
-				right: [ ]
-			),
-			(
-				left: [ ],
-				center: [ ],
-				right: [ ]
-			),
         ],
     ),
     browser_song_format: [
