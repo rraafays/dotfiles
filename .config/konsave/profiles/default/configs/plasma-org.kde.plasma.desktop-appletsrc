@@ -70,7 +70,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][285][Applets][286][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 SystrayContainmentId=287
 
 [Containments][285][Applets][301]
@@ -105,6 +105,7 @@ plugin=com.github.antroids.application-title-bar
 [Containments][285][Applets][307][Configuration][Appearance]
 widgetElements=windowTitle
 widgetMargins=2
+windowTitleMaximumWidth=300
 windowTitleUndefined=
 
 [Containments][285][Applets][307][Configuration][ConfigDialog]
@@ -127,8 +128,21 @@ plugin=org.kde.plasma.panelspacer
 expanding=false
 length=5
 
+[Containments][285][Applets][310]
+immutability=1
+plugin=com.github.zren.commandoutput
+
+[Containments][285][Applets][310][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][285][Applets][310][Configuration][General]
+command=mpc current -f '%title% ~ %album% - %artist%'
+fontSize=11
+textAlign=4
+
 [Containments][285][General]
-AppletOrder=308;302;307;306;304;301;286;309
+AppletOrder=308;302;307;306;304;310;301;286;309
 
 [Containments][287]
 activityId=
@@ -154,7 +168,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][287][Applets][290][Configuration]
-PreloadWeight=55
+PreloadWeight=70
 
 [Containments][287][Applets][290][Shortcuts]
 global=Ctrl+Alt+D
@@ -183,7 +197,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][287][Applets][295][Configuration]
-PreloadWeight=60
+PreloadWeight=65
 
 [Containments][287][Applets][295][Configuration][General]
 migrated=true
@@ -200,7 +214,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][287][Applets][297][Configuration]
-PreloadWeight=75
+PreloadWeight=72
 
 [Containments][287][Applets][297][Shortcuts]
 global=Ctrl+Alt+P
@@ -210,14 +224,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][287][Applets][298][Configuration]
-PreloadWeight=55
+PreloadWeight=47
 
 [Containments][287][Applets][299]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][287][Applets][299][Configuration]
-PreloadWeight=60
+PreloadWeight=70
 
 [Containments][287][Applets][299][Configuration][General]
 currentDetailsTab=details
