@@ -65,11 +65,11 @@
                     (kind: Property(Status(Duration)), style: (fg: "7")),
                 ],
                 center: [
-                    (kind: Property(Song(Title)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("Unkown"))),
+                    (kind: Property(Song(Title)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("play"))),
                     (kind: Text(" ~ ")),
-                    (kind: Property(Song(Album)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("Unknown"))),
+                    (kind: Property(Song(Album)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("something"))),
                     (kind: Text(" - ")),
-                    (kind: Property(Song(Artist)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("Unknown")))
+                    (kind: Property(Song(Artist)), style: (fg: "15", modifiers: "Bold"), default: (kind: Text("sad")))
                 ],
                 right: [
                     (
