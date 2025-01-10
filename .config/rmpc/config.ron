@@ -58,7 +58,7 @@
             "N":       PreviousResult,
             "a":       Add,
             "A":       AddAll,
-            "r":       Rename,
+            // "r":       Rename,
             "n":       NextResult,
             "g":       Top,
             // "<Space>": Select,
