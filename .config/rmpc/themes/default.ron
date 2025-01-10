@@ -18,11 +18,11 @@
     highlighted_item_style: (fg: "15", modifiers: "Bold"),
     current_item_style: (fg: "black", bg: "9", modifiers: "Bold"),
     borders_style: (fg: "black"),
-    highlight_border_style: (fg: "#363636"),
+    highlight_border_style: (fg: "#282828"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
-        track_style: (fg: "#363636"),
+        track_style: (fg: "#282828"),
         elapsed_style: (fg: "9"),
         thumb_style: (fg: "9", bg: "0"),
     ),
