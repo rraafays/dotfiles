@@ -34,14 +34,24 @@
     ),
     song_table_format: [
         (
+            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            width_percent: 1,
+            alignment: Left,
+        ),
+        (
             prop: (kind: Property(Title), style: (fg: "7"), default: (kind: Text("Unknown"))),
-            width_percent: 90,
+            width_percent: 89,
             alignment: Left,
         ),
         (
             prop: (kind: Property(Duration), style: (fg: "7"), default: (kind: Text("-"))),
-            width_percent: 10,
+            width_percent: 9,
             alignment: Right,
+        ),
+        (
+            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            width_percent: 1,
+            alignment: Left,
         ),
     ],
     header: (
