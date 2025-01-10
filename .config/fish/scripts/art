@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set cover_art_path (mpc --format %file% | head -n 1 | sed 's/[^/]*$//' | xargs -I{} find ~/Music/{} -type f -iregex ".*\.\(jpg\|jpeg\|png\)\$" | head -n 1)
+if test -n "$cover_art_path"
+    imv -- "$cover_art_path"
+else
+    echo "no cover art found"
+end
