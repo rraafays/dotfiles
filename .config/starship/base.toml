@@ -5,7 +5,7 @@ format = "$status$username$hostname$battery$all"
 right_format = "$custom"
 
 [custom.song]
-command = "mpc current -f '%title% ~ %album%'"
+command = "mpc current -f '%title% : %album% - %artist%'"
 style="bold #282828"
 when="playing"
 shell="sh"
