@@ -1,0 +1,17 @@
+#!/usr/bin/env fish
+
+function copy_art
+    set cover_path ~/Music/(mpc --format %file% | head -n 1 | sed 's/[^/]*$//')/cover.jpg
+    if test -n "$cover_path"
+        cp $cover_path ~/cover.jpg
+    else
+        echo "no cover art found"
+    end
+end
+
+while true
+    copy_art
+    qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = \"org.kde.image\";d.currentConfigGroup = Array(\"Wallpaper\", \"org.kde.image\", \"General\");d.writeConfig(\"Image\", \"file:///home/$(whoami)/test.jpg\")}"
+    qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = \"org.kde.image\";d.currentConfigGroup = Array(\"Wallpaper\", \"org.kde.image\", \"General\");d.writeConfig(\"Image\", \"file:///home/$(whoami)/cover.jpg\")}"
+    mpc idle >/dev/null
+end
