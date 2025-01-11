@@ -29,21 +29,16 @@ set statusbar-fg                "#ebdbb2" # fg
 set highlight-color             "#fabd2f" # bright:yellow
 set highlight-active-color      "#fe8019" # bright:orange
 
-set default-bg                  rgba(0,0,0,1) # bg
+set default-bg                  rgba(255,255,255,1) # bg
 set default-fg                  "#ebdbb2" # fg
 set render-loading              true
 set render-loading-bg           rgba(0,0,0,1) # bg
 set render-loading-fg           "#ebdbb2" # fg
 
-set recolor-lightcolor          rgba(40,40,40,0) # bg
-set recolor-darkcolor           "#ebdbb2" # fg
-set recolor                     "true"
-
 set guioptions none
 
 set adjust-open best-fit
 
-map c recolor
 map f toggle_fullscreen
 map = zoom in
 map - zoom out
