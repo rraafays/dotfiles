@@ -9,8 +9,6 @@ function copy_art
     end
 end
 
-feh --reload 1 ~/cover.jpg & set feh_pid $last_pid
-
 while true
     copy_art
     mpc idle >/dev/null
