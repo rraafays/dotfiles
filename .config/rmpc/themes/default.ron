@@ -68,6 +68,8 @@
 					(kind: Property(Song(Title)), style: (fg: "15"), default: (kind: Text("play"))),
                     (kind: Text(" ~ "), style: (fg: "15")),
 					(kind: Property(Song(Album)), style: (fg: "15"), default: (kind: Text("something"))),
+                    (kind: Text(" - "), style: (fg: "15")),
+					(kind: Property(Song(Artist)), style: (fg: "15"), default: (kind: Text("sad"))),
 				],
 				right: [
                     (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
