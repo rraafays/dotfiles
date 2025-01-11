@@ -4,7 +4,7 @@
 (
     default_album_art_path: None,
     show_song_table_header: false,
-    draw_borders: true,
+    draw_borders: false,
     browser_column_widths: [33, 33, 33],
     background_color: None,
     text_color: None,
@@ -27,7 +27,7 @@
         thumb_style: (fg: "9", bg: "0"),
     ),
     scrollbar: (
-        symbols: ["│", "┃", "╷", "╵"],
+        symbols: ["", "", "", ""],
         track_style: (fg: "0"),
         ends_style: (fg: "0"),
         thumb_style: (fg: "0"),
@@ -78,6 +78,7 @@
 					(kind: Text("%"), style: (fg: "9")),
 				]
 			),
+			(left: [ ], center: [ ], right: [ ]),
         ],
     ),
     browser_song_format: [
