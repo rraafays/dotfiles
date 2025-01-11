@@ -1,9 +1,6 @@
 [Notification Messages]
 klipperClearHistoryAskAgain=false
 
-[PlasmaTransientsConfig]
-PreloadWeight=0
-
 [PlasmaViews][Panel 102]
 floating=0
 
@@ -84,7 +81,7 @@ thickness=34
 [PlasmaViews][Panel 285]
 floating=0
 panelOpacity=2
-panelVisibility=0
+panelVisibility=2
 
 [PlasmaViews][Panel 285][Defaults]
 thickness=22

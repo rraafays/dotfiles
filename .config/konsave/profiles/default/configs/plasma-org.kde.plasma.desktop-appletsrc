@@ -19,16 +19,27 @@ immutability=1
 lastScreen=0
 location=0
 plugin=org.kde.plasma.folder
-wallpaperplugin=org.kde.color
+wallpaperplugin=org.kde.image
 
 [Containments][245][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
+DialogHeight=540
+DialogWidth=720
 
 [Containments][245][General]
 ToolBoxButtonState=top
 ToolBoxButtonX=300
 ToolBoxButtonY=24
+
+[Containments][245][Wallpaper][a2n.blur][General]
+ActiveBlur=false
+Blur=true
+FillMode=6
+Image=/home/raf/cover.jpg
+SlidePaths=/home/raf/.local/share/wallpapers/,/nix/store/imljb70p2v812kxzyk668w59mhjj0ls5-breeze-6.2.5/share/wallpapers/,/home/raf/.nix-profile/share/wallpapers/,/run/current-system/sw/share/wallpapers/
+
+[Containments][245][Wallpaper][com.github.bojidar-bg.parallax][General]
+Image=/home/raf/cover.jpg
+Zoom=100
 
 [Containments][245][Wallpaper][com.plasma.wallpaper.wallhaven][General]
 FillMode=2
@@ -39,13 +50,16 @@ Color=0,0,0
 
 [Containments][245][Wallpaper][org.kde.image][General]
 Blur=true
-FillMode=3
-Image=/home/raf/Downloads/WhatsApp Image 2024-11-05 at 23.46.04.jpeg
+FillMode=6
+Image=file:///home/raf/cover.jpg
 SlidePaths=/home/raf/.local/share/wallpapers/,/nix/store/kls40zsrq9dd74innawflbf4ja7ba857-breeze-6.0.5/share/wallpapers/,/home/raf/.nix-profile/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Containments][245][Wallpaper][org.kde.potd][General]
 FillMode=2
 Provider=epod
+
+[Containments][245][Wallpaperi][org.kde.image][General]
+Image=file:///home/raf/cover.jpg
 
 [Containments][283]
 activityId=6d43fd7f-2e93-462b-94e4-b8bb2834440c
@@ -55,6 +69,13 @@ lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments][283][Wallpaper][org.kde.image][General]
+FillMode=2
+Image=file:///home/raf/cover.jpg
+
+[Containments][283][Wallpaperi][org.kde.image][General]
+Image=file:///home/raf/cover.jpg
 
 [Containments][285]
 activityId=
@@ -70,7 +91,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][285][Applets][286][Configuration]
-PreloadWeight=65
+PreloadWeight=85
 SystrayContainmentId=287
 
 [Containments][285][Applets][301]
@@ -137,7 +158,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][285][Applets][310][Configuration][General]
-command=mpc current -f '%title% ~ %album% - %artist%'
+command=mpc current -f '%title% : %album% - %artist%'
 fontSize=11
 textAlign=4
 
@@ -163,6 +184,9 @@ plugin=org.kde.plasma.manage-inputmethod
 immutability=1
 plugin=org.kde.plasma.notifications
 
+[Containments][287][Applets][289][Configuration]
+PreloadWeight=65
+
 [Containments][287][Applets][290]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
@@ -176,6 +200,9 @@ global=Ctrl+Alt+D
 [Containments][287][Applets][291]
 immutability=1
 plugin=org.kde.plasma.clipboard
+
+[Containments][287][Applets][291][Configuration]
+PreloadWeight=60
 
 [Containments][287][Applets][292]
 immutability=1
@@ -197,7 +224,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][287][Applets][295][Configuration]
-PreloadWeight=65
+PreloadWeight=85
 
 [Containments][287][Applets][295][Configuration][General]
 migrated=true
@@ -214,7 +241,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][287][Applets][297][Configuration]
-PreloadWeight=72
+PreloadWeight=79
 
 [Containments][287][Applets][297][Shortcuts]
 global=Ctrl+Alt+P
@@ -224,14 +251,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][287][Applets][298][Configuration]
-PreloadWeight=47
+PreloadWeight=69
 
 [Containments][287][Applets][299]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][287][Applets][299][Configuration]
-PreloadWeight=70
+PreloadWeight=100
 
 [Containments][287][Applets][299][Configuration][General]
 currentDetailsTab=details
@@ -244,7 +271,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][287][Applets][300][Configuration]
-PreloadWeight=27
+PreloadWeight=0
 
 [Containments][287][Applets][300][Shortcuts]
 global=Ctrl+Alt+B

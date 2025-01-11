@@ -157,7 +157,7 @@ Quit=
 ShowMenubar=
 
 [Sounds]
-Theme=freedesktop
+Theme=oxygen
 
 [WM]
 activeBackground=0,0,0
