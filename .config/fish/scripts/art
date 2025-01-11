@@ -1,9 +1,9 @@
 #!/usr/bin/env fish
 
 function copy_art
-    set album_path (mpc --format %file% | head -n 1 | sed 's/[^/]*$//')
-    if test -n "~/Music/$path/cover.jpg"
-        cp ~/Music/$album_path/cover.jpg ~/cover.jpg
+    set cover_path ~/Music/(mpc --format %file% | head -n 1 | sed 's/[^/]*$//')/cover.jpg
+    if test -n "$cover_path"
+        cp $cover_path ~/cover.jpg
     else
         echo "no cover art found"
     end
