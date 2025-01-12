@@ -37,3 +37,12 @@ end
 function mpv
     command mpv --ao=pulse $argv
 end
+function music
+    rmpc $argv
+end
+function lyrics
+    sptlrx $argv
+end
+function cover
+    feh --reload=1 ~/cover.jpg & disown
+end

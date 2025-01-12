@@ -79,37 +79,3 @@ end
 function kbd
     cat ~/.config/etc/ascii/hhkb
 end
-
-function music
-    set command $argv[1]
-    switch $command
-        case clean
-            if test -z "$argv[2]"
-                echo "Usage: music clean <directory>"
-                return 1
-            end
-            remove_folders_that_dont_contain_audio $argv[2]
-        case resync
-            if test -z "$argv[2]"
-                echo "Usage: music resync <directory>"
-                return 1
-            end
-            rsync --recursive --human-readable --info=progress2 --stats --delete ~/Music $argv[2]
-        case sync
-            set source_dir "$HOME/Music"
-            set target_dir "./Music"
-            if not test -d $target_dir
-                mkdir $target_dir
-            end
-            for dir in $source_dir/*
-                if test -d $dir
-                    set dir_name (basename $dir)
-                    if not test -d "$target_dir/$dir_name"
-                        rsync -av --progress "$dir/" "$target_dir/$dir_name/"
-                    end
-                end
-            end
-        case '*'
-            echo "Usage: music <command> [reset|import|covers|clean|resync|sync]"
-    end
-end
