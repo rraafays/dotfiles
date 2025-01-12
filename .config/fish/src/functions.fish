@@ -79,3 +79,11 @@ end
 function kbd
     cat ~/.config/etc/ascii/hhkb
 end
+
+function chat
+    if test (count $argv) -eq 0
+        echo "Please provide a Twitch channel name with --channel."
+    else
+        kitty ttchat $argv & disown
+    end
+end
