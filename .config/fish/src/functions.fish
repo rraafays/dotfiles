@@ -84,6 +84,6 @@ function chat
     if test (count $argv) -eq 0
         echo "Please provide a Twitch channel name with --channel."
     else
-        kitty -o remember_window_size=no -o initial_window_height=20c -o initial_window_width=60c ttchat $argv & disown
+        kitty -o remember_window_size=no -o initial_window_height=20c -o initial_window_width=60c -o background_opacity=0 ttchat $argv & disown
     end
 end
