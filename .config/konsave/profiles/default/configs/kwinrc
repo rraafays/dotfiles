@@ -59,8 +59,8 @@ CommandAllWheel=Raise/Lower
 Mode=Constant
 
 [Plugins]
-blurEnabled=true
-contrastEnabled=true
+blurEnabled=false
+contrastEnabled=false
 dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true

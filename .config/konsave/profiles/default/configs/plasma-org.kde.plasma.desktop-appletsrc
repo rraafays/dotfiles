@@ -91,7 +91,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][285][Applets][286][Configuration]
-PreloadWeight=90
+PreloadWeight=95
 SystrayContainmentId=287
 
 [Containments][285][Applets][301]
@@ -228,7 +228,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][287][Applets][295][Configuration]
-PreloadWeight=85
+PreloadWeight=90
 
 [Containments][287][Applets][295][Configuration][General]
 migrated=true
@@ -245,7 +245,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][287][Applets][297][Configuration]
-PreloadWeight=79
+PreloadWeight=62
 
 [Containments][287][Applets][297][Shortcuts]
 global=Ctrl+Alt+P
@@ -255,14 +255,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][287][Applets][298][Configuration]
-PreloadWeight=69
+PreloadWeight=42
 
 [Containments][287][Applets][299]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][287][Applets][299][Configuration]
-PreloadWeight=84
+PreloadWeight=89
 
 [Containments][287][Applets][299][Configuration][General]
 currentDetailsTab=details
@@ -275,7 +275,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][287][Applets][300][Configuration]
-PreloadWeight=0
+PreloadWeight=15
 
 [Containments][287][Applets][300][Shortcuts]
 global=Ctrl+Alt+B
