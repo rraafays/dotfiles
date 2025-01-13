@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+kde-material-you-colors --chroma-multiplier 1.5 --scheme-variant 6 --pywal
