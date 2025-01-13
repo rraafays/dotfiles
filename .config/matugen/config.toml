@@ -3,4 +3,4 @@
 
 [templates.kitty]
 input_path = '~/.config/matugen/kitty-colors.conf'
-output_path = '~/.config/kitty/colors.conf'
+output_path = '~/.config/kitty-colors.conf'
