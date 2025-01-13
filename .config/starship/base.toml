@@ -6,7 +6,7 @@ right_format = "$custom"
 
 [custom.song]
 command = "mpc current -f '%title% : %album% - %artist%'"
-style="bold #282828"
+style="bold fg:8"
 when="playing"
 shell="sh"
 format = "[$output]($style)"
