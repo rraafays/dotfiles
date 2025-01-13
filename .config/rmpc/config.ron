@@ -14,8 +14,8 @@
     status_update_interval_ms: 100,
     select_current_song_on_change: false,
     album_art: (
-        method: Auto,
-        max_size_px: (width: 600, height: 600),
+        method: Kitty,
+        max_size_px: (width: 0, height: 0),
     ),
     keybinds: (
         global: {
