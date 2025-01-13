@@ -20,7 +20,7 @@ NoiseStrength=0
 InactivityDuration=1
 
 [Effect-translucency]
-MoveResize=100
+MoveResize=50
 
 [Effect-ًRound-Corners]
 ActiveOutlinePalette=6
@@ -60,7 +60,7 @@ Mode=Constant
 
 [Plugins]
 blurEnabled=true
-contrastEnabled=false
+contrastEnabled=true
 dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true
