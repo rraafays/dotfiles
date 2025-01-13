@@ -3,12 +3,12 @@
 function watch_cover
     set old_checksum ""
     while true
-        if test -n (find cover.jpg -mmin 0.1)
-            set new_checksum (md5sum cover.jpg | awk '{print $1}')
+        if test -n (find ~/cover.jpg -mmin 0.1)
+            set new_checksum (md5sum ~/cover.jpg | awk '{print $1}')
             if test "$new_checksum" != "$old_checksum"
                 set old_checksum $new_checksum
                 wal -c
-                wal -n -i ~/cover.jpg
+                wal -n --saturate 0.3 -i ~/cover.jpg
             end
         end
         sleep 0.1
