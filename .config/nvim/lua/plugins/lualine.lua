@@ -3,6 +3,7 @@ return {
     config = function()
         local lualine = require("lualine")
 
+        local theme = require("lualine.themes.16color")
         local function search_term()
             local res = vim.fn.searchcount()
             if res.total > 0 then
@@ -12,8 +13,25 @@ return {
             end
         end
 
+        theme.normal.a = { fg = 15, bg = "none" }
+        theme.normal.b = { fg = 5, bg = "none" }
+        theme.normal.c = { fg = 0, bg = "none" }
+
+        theme.visual.a = { fg = 3, bg = "none" }
+        theme.visual.b = { fg = 5, bg = "none" }
+        theme.visual.c = { fg = 0, bg = "none" }
+
+        theme.insert.a = { fg = 2, bg = "none" }
+        theme.insert.b = { fg = 5, bg = "none" }
+        theme.insert.c = { fg = 0, bg = "none" }
+
+        theme.replace.a = { fg = 1, bg = "none" }
+        theme.replace.b = { fg = 5, bg = "none" }
+        theme.replace.c = { fg = 0, bg = "none" }
+
         lualine.setup({
             options = {
+                theme = theme,
                 globalstatus = true,
                 icons_enabled = true,
                 component_separators = {
