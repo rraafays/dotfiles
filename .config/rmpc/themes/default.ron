@@ -12,19 +12,19 @@
     modal_background_color: None,
     tab_bar: (
         enabled: true,
-        active_style: (fg: "0", bg: "9", modifiers: "Bold"),
+        active_style: (fg: "0", bg: "15", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "9", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "9", modifiers: "Bold"),
+    highlighted_item_style: (fg: "15", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "15", modifiers: "Bold"),
     borders_style: (fg: "black"),
     highlight_border_style: (fg: "8"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
         track_style: (fg: "8"),
-        elapsed_style: (fg: "9"),
-        thumb_style: (fg: "9", bg: "0"),
+        elapsed_style: (fg: "15"),
+        thumb_style: (fg: "15"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -34,22 +34,22 @@
     ),
     song_table_format: [
         (
-            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            prop: (kind: Text(""), style: (fg: "0"), default: (kind: Text("Unknown"))),
             width_percent: 1,
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Title), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            prop: (kind: Property(Title), style: (fg: "0"), default: (kind: Text("Unknown"))),
             width_percent: 89,
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Duration), style: (fg: "7"), default: (kind: Text("-"))),
+            prop: (kind: Property(Duration), style: (fg: "0"), default: (kind: Text("-"))),
             width_percent: 9,
             alignment: Right,
         ),
         (
-            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
+            prop: (kind: Text(""), style: (fg: "0"), default: (kind: Text("Unknown"))),
             width_percent: 1,
             alignment: Left,
         ),
@@ -58,7 +58,7 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "9")),
+					(kind: Property(Status(State)), style: (fg: "15")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
@@ -74,8 +74,8 @@
 				right: [
                     (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "9")),
-					(kind: Text("%"), style: (fg: "9")),
+					(kind: Property(Status(Volume)), style: (fg: "15")),
+					(kind: Text("%"), style: (fg: "15")),
 				]
 			),
 			(left: [ ], center: [ ], right: [ ]),
