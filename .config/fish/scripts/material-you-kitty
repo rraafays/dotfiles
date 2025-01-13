@@ -7,8 +7,7 @@ function watch_cover
             set new_checksum (md5sum ~/cover.jpg | awk '{print $1}')
             if test "$new_checksum" != "$old_checksum"
                 set old_checksum $new_checksum
-                wal -c
-                wal -n --saturate 0.3 -i ~/cover.jpg
+                matugen image ~/cover.jpg
             end
         end
         sleep 0.1
