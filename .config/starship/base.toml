@@ -85,33 +85,44 @@ style = 'fg:12'
 [bun]
 symbol = '󰳮 '
 format = '[$symbol($version)]($style) '
+style = 'fg:7'
 [c]
 symbol = " "
 format = '[$symbol($version(-$name))]($style) '
+style = 'fg:0'
 [dotnet]
 symbol = ' '
 format = '[$symbol($version)($tfm)]($style) '
+style = 'fg:5'
 [gradle]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = 'fg:10'
 [java]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = 'fg:9'
 [lua]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = 'fg:4'
 [nodejs]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = 'fg:2'
 [package]
 symbol = " "
 format = '[$symbol$version]($style) '
+style = 'fg:3'
 [python]
 symbol = " "
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
+style = 'fg:11'
 [rust]
 symbol = " "
 format = '[$symbol($version)]($style) '
+style = 'fg:9'
 [docker_context]
 symbol = " "
 format = '[$symbol($context)]($style) '
+style = 'fg:4'
