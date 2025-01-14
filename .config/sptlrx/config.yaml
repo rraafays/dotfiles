@@ -10,7 +10,7 @@ style:
   hAlignment: center
   before:
     background: ""
-    foreground: "7"
+    foreground: "0"
     bold: false
     italic: false
     undeline: false
@@ -28,7 +28,7 @@ style:
     faint: false
   after:
     background: ""
-    foreground: "7"
+    foreground: "0"
     bold: false
     italic: false
     undeline: false
