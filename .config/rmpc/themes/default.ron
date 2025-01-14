@@ -4,7 +4,7 @@
 (
     default_album_art_path: None,
     show_song_table_header: false,
-    draw_borders: false,
+    draw_borders: true,
     browser_column_widths: [33, 33, 33],
     background_color: None,
     text_color: None,
@@ -17,7 +17,7 @@
     ),
     highlighted_item_style: (fg: "15", modifiers: "Bold"),
     current_item_style: (fg: "black", bg: "15", modifiers: "Bold"),
-    borders_style: (fg: "black"),
+    borders_style: (fg: "8"),
     highlight_border_style: (fg: "8"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
