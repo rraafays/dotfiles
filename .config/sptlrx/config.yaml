@@ -19,7 +19,7 @@ style:
     faint: false
   current:
     background: ""
-    foreground: ""
+    foreground: "4"
     bold: true
     italic: false
     undeline: false
