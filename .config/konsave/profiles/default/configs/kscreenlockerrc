@@ -1,6 +1,3 @@
-[Greeter]
-WallpaperPlugin=org.kde.color
-
 [Greeter][LnF][General]
 alwaysShowClock=false
 showMediaControls=false
@@ -9,8 +6,10 @@ showMediaControls=false
 Color=0,0,0
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/nix/store/ad8g0d7l759jshwfpx92q1biaj1gh6pn-plasma-workspace-wallpapers-6.0.5/share/wallpapers/Cluster/
-PreviewImage=/nix/store/ad8g0d7l759jshwfpx92q1biaj1gh6pn-plasma-workspace-wallpapers-6.0.5/share/wallpapers/Cluster/
+Blur=true
+FillMode=6
+Image=/home/raf/cover.jpg
+PreviewImage=/home/raf/cover.jpg
 SlidePaths=/home/raf/.local/share/wallpapers/,/nix/store/kls40zsrq9dd74innawflbf4ja7ba857-breeze-6.0.5/share/wallpapers/,/nix/store/7sllsg41qs68mxm6haimvfz4q5ksqc8s-breeze-qt5-5.27.11-bin/share/wallpapers/,/run/current-system/sw/share/wallpapers/
 
 [Greeter][Wallpaper][org.kde.potd][General]

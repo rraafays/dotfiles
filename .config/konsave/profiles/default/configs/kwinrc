@@ -59,8 +59,8 @@ CommandAllWheel=Raise/Lower
 Mode=Constant
 
 [Plugins]
-blurEnabled=false
-contrastEnabled=false
+blurEnabled=true
+contrastEnabled=true
 dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true
@@ -144,7 +144,7 @@ DelayFocusInterval=0
 FocusPolicy=FocusFollowsMouse
 
 [Xwayland]
-Scale=1.25
+Scale=1
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
