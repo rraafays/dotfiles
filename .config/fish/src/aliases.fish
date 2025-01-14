@@ -17,7 +17,7 @@ function tree
     ls --tree $argv
 end
 function bat
-    command bat --theme gruvbox-dark $argv
+    command bat --theme ansi $argv
 end
 function im
     kitty +kitten icat --align left $argv
