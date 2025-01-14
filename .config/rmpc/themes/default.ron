@@ -12,19 +12,19 @@
     modal_background_color: None,
     tab_bar: (
         enabled: true,
-        active_style: (fg: "0", bg: "15", modifiers: "Bold"),
+        active_style: (fg: "8", bg: "4", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "15", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "15", modifiers: "Bold"),
+    highlighted_item_style: (fg: "4", modifiers: "Bold"),
+    current_item_style: (fg: "8", bg: "4", modifiers: "Bold"),
     borders_style: (fg: "8"),
     highlight_border_style: (fg: "8"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
         track_style: (fg: "8"),
-        elapsed_style: (fg: "15"),
-        thumb_style: (fg: "15"),
+        elapsed_style: (fg: "4"),
+        thumb_style: (fg: "4"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -58,24 +58,24 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "15")),
+					(kind: Property(Status(State)), style: (fg: "4")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
                     (kind: Property(Status(Duration)), style: (fg: "7")),
 				],
 				center: [
-					(kind: Property(Song(Title)), style: (fg: "15"), default: (kind: Text("play"))),
-                    (kind: Text(" : "), style: (fg: "15")),
-					(kind: Property(Song(Album)), style: (fg: "15"), default: (kind: Text("something"))),
-                    (kind: Text(" - "), style: (fg: "15")),
-					(kind: Property(Song(Artist)), style: (fg: "15"), default: (kind: Text("sad"))),
+					(kind: Property(Song(Title)), style: (fg: "4"), default: (kind: Text("play"))),
+                    (kind: Text(" : "), style: (fg: "4")),
+					(kind: Property(Song(Album)), style: (fg: "4"), default: (kind: Text("something"))),
+                    (kind: Text(" - "), style: (fg: "4")),
+					(kind: Property(Song(Artist)), style: (fg: "4"), default: (kind: Text("sad"))),
 				],
 				right: [
-                    (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
+                    (kind: Property(Widget(States(active_style: (fg: "4"), separator_style: (fg: "7")))), style: (fg: "0")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "15")),
-					(kind: Text("%"), style: (fg: "15")),
+					(kind: Property(Status(Volume)), style: (fg: "4")),
+					(kind: Text("%"), style: (fg: "4")),
 				]
 			),
 			(left: [ ], center: [ ], right: [ ]),
