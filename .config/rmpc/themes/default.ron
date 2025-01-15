@@ -78,7 +78,7 @@
 					(kind: Text("%"), style: (fg: "4")),
 				]
 			),
-			(left: [ ], center: [ ], right: [ ]),
+			// (left: [ ], center: [ ], right: [ ]),
         ],
     ),
     browser_song_format: [
