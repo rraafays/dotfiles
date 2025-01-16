@@ -101,7 +101,7 @@ DesktopMode=0
 LayoutName=compact
 
 [Tiling]
-padding=20
+padding=4
 
 [Tiling][273e4bc1-a7b3-53d1-9eb3-155cce369a3f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -127,6 +127,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][d02c035d-eef0-5c68-aa2f-2e83d0ba08b1]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][d281e589-60f6-5567-b165-57742aee74a9]
 tiles={"layoutDirection":"floating","tiles":[]}
 
@@ -141,10 +144,9 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Windows]
 DelayFocusInterval=0
-FocusPolicy=FocusFollowsMouse
 
 [Xwayland]
-Scale=1
+Scale=1.25
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
