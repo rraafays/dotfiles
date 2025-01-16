@@ -11,9 +11,9 @@ style = "bold fg:10"
 disabled = false
 
 [character]
-success_symbol = "[\\$](bold fg:6)"
-error_symbol = "[\\$](bold fg:6)"
-vimcmd_symbol = "[\\$](bold fg:0)"
+success_symbol = "[\\$](bold fg:4)"
+error_symbol = "[\\$](bold fg:4)"
+vimcmd_symbol = "[\\$](bold fg:7)"
 vimcmd_replace_one_symbol = "[\\$](bold fg:9)"
 vimcmd_replace_symbol = "[\\$](bold fg:9)"
 vimcmd_visual_symbol = "[\\$](bold fg:11)"

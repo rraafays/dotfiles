@@ -15,22 +15,22 @@ return {
 
         theme = {
             normal = {
-                a = { fg = 15, bg = "none" },
+                a = { fg = 7, bg = "none" },
                 b = { fg = 5, bg = "none" },
                 c = { fg = 0, bg = "none" },
             },
             visual = {
-                a = { fg = 3, bg = "none" },
+                a = { fg = 11, bg = "none" },
                 b = { fg = 5, bg = "none" },
                 c = { fg = 0, bg = "none" },
             },
             insert = {
-                a = { fg = 2, bg = "none" },
+                a = { fg = 4, bg = "none" },
                 b = { fg = 5, bg = "none" },
                 c = { fg = 0, bg = "none" },
             },
             replace = {
-                a = { fg = 1, bg = "none" },
+                a = { fg = 9, bg = "none" },
                 b = { fg = 5, bg = "none" },
                 c = { fg = 0, bg = "none" },
             },
