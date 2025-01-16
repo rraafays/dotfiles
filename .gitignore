@@ -10,7 +10,6 @@
 .config/starship/.user
 .config/starship/.root
 .config/fish/credentials/*
-.config/fish/completions/*
 .config/karabiner/automatic_backups/
 .config/lvim/lazy-lock.json
 .config/newsboat/cache.db
