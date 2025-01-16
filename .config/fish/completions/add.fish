@@ -1,3 +1,8 @@
+function __fish_git_modified_files
+    git diff --name-only --relative
+end
+
+complete -c add -a "(__fish_git_modified_files)"
 complete -c add -s n -l dry-run -d 'Don\'t actually add the file(s), just show if they exist and/or will be ignored'
 complete -c add -s v -l verbose -d 'Be verbose'
 complete -c add -s f -l force -d 'Allow adding otherwise ignored files'
