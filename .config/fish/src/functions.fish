@@ -5,6 +5,20 @@ function rebuild
         cd .config/ || exit
         nix-shell --packages stow --run "stow ."
         cd - || exit
+    else if [ "$argv[1]" = upgrade ]
+        switch (uname)
+            case Darwin
+                darwin-rebuild switch --upgrade
+            case Linux
+                if not fish_is_root_user
+                    sudo nixos-rebuild switch --upgrade --install-bootloader
+                else
+                    nixos-rebuild switch --upgrade --install-bootloader
+                end
+                if test -e result
+                    rm result
+                end
+        end
     else
         switch (uname)
             case Darwin
