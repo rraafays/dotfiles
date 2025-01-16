@@ -18,11 +18,4 @@ if status --is-interactive
             udisksctl unmount --block-device $argv
         end
     end
-
-    function dotfiles
-        rm -rf /home/raf/.config
-        rm -rf /root/.config
-        git clone https://github.com/rraafays/dotfiles /home/raf/.config
-        sudo ln -s /home/raf/.config/ /root/.config
-    end
 end
