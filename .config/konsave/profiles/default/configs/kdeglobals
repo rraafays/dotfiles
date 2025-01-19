@@ -1,6 +1,6 @@
 [ColorEffects:Disabled]
 ChangeSelectionColor=
-Color=#1b2029
+Color=#17221c
 ColorAmount=0.5
 ColorEffect=3
 ContrastAmount=0
@@ -11,7 +11,7 @@ IntensityEffect=0
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
-Color=#060b14
+Color=#040d08
 ColorAmount=0.025
 ColorEffect=0
 ContrastAmount=0.1
@@ -21,124 +21,125 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=#3e4551
-BackgroundNormal=#232831
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#394840
+BackgroundNormal=#1f2a24
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#dee2ef
+ForegroundNormal=#d9e6dc
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:Complementary]
-BackgroundAlternate=#0e141c
-BackgroundNormal=#1b2029
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#0b1610
+BackgroundNormal=#17221c
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#c0c7d5
+ForegroundNormal=#bacbbf
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:Header]
-BackgroundAlternate=#1b2029
-BackgroundNormal=#1b2029
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#17221c
+BackgroundNormal=#17221c
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#c0c7d5
+ForegroundNormal=#bacbbf
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:Header][Inactive]
-BackgroundAlternate=#1b2029
-BackgroundNormal=#1b2029
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#17221c
+BackgroundNormal=#17221c
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#c0c7d5
+ForegroundNormal=#bacbbf
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:Selection]
-BackgroundAlternate=#a5c8ff
-BackgroundNormal=#a5c8ff
-DecorationFocus=#a5c8ff
-DecorationHover=#bdc5eb
-ForegroundActive=#00315e
-ForegroundInactive=#00315e
+BackgroundAlternate=#00e29f
+BackgroundNormal=#00e29f
+DecorationFocus=#00e29f
+DecorationHover=#a2d0c3
+ForegroundActive=#003825
+ForegroundInactive=#003825
 ForegroundLink=#004b73
 ForegroundNegative=#920023
 ForegroundNeutral=#753400
-ForegroundNormal=#00315e
+ForegroundNormal=#003825
 ForegroundPositive=#005228
 ForegroundVisited=#74009f
 
 [Colors:Tooltip]
-BackgroundAlternate=#3e4551
-BackgroundNormal=#1b2029
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#394840
+BackgroundNormal=#17221c
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#dee2ef
+ForegroundNormal=#d9e6dc
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:View]
-BackgroundAlternate=#1b2029
-BackgroundNormal=#0e141c
-DecorationFocus=#a5c8ff
-DecorationHover=#005faf
-ForegroundActive=#dee2ef
-ForegroundInactive=#8a919f
+BackgroundAlternate=#17221c
+BackgroundNormal=#0b1610
+DecorationFocus=#00e29f
+DecorationHover=#006c4a
+ForegroundActive=#d9e6dc
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#dee2ef
+ForegroundNormal=#d9e6dc
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [Colors:Window]
-BackgroundAlternate=#3e4551
-BackgroundNormal=#1b2029
-DecorationFocus=#a5c8ff
-DecorationHover=#a5c8ff
+BackgroundAlternate=#394840
+BackgroundNormal=#17221c
+DecorationFocus=#00e29f
+DecorationHover=#00e29f
 ForegroundActive=#92ccff
-ForegroundInactive=#8a919f
+ForegroundInactive=#84958a
 ForegroundLink=#92ccff
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#ffb68c
-ForegroundNormal=#c0c7d5
+ForegroundNormal=#bacbbf
 ForegroundPositive=#00e479
 ForegroundVisited=#ebb2ff
 
 [DirSelect Dialog]
-DirSelectDialog Size=1142,588
-History Items[$e]=file:$HOME/Downloads/Nicotine,file:$HOME/Downloads,file:$HOME/Downloads/Love Goes (Deluxe Edition) (2020) [24 Bit Hi-Res] FLAC,file:$HOME/Downloads/computer kill - computer kill (ep) (2024),file:$HOME/Downloads/Superache (Album\\, 2022),file:$HOME/Downloads/Bitter Tongues - EP,file:$HOME/Downloads/[周興哲][Album] 終於了解自由,file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/Paramore - Album - 2009 - brand new eyes,file:$HOME/Music,file:$HOME/Downloads/ROSÉ - rosie (2024) - WEB FLAC,file:$HOME/Music,file:$HOME/Music/My Little Airport/SABINA之淚,file:$HOME/Downloads/My Little Airport - Sabina之淚 (2021) - CD FLAC,file:$HOME/Downloads,file:$HOME/Music,file:$HOME/Downloads/Unflirt - misc,file:$HOME/Downloads/(2015) Diaries,file:$HOME/Music,file:$HOME/Music,file:$HOME/Downloads/CONGLOMERATE (DELUXE),file:$HOME,file:$HOME/Downloads/pryvt/PRYVT - &SCENE MP3,file:$HOME/Music,file:$HOME/Downloads/The Clientele - 2014 - Suburban Light [CD1] - F,file:$HOME/Downloads/Radwimps - Your Name. (Deluxe Edition _ Original Motion Picture Soundtrack),file:$HOME/Downloads/Alexander Stewart - Album - 2024 - bleeding heart,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Pictures/screensaver,file:$HOME/Downloads
+DirSelectDialog Size=1142,590
+History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads,file:$HOME/Downloads/Nicotine,file:$HOME/Downloads,file:$HOME/Downloads/Love Goes (Deluxe Edition) (2020) [24 Bit Hi-Res] FLAC,file:$HOME/Downloads/computer kill - computer kill (ep) (2024),file:$HOME/Downloads/Superache (Album\\, 2022),file:$HOME/Downloads/Bitter Tongues - EP,file:$HOME/Downloads/[周興哲][Album] 終於了解自由,file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/So You - Goblin OST Part. 7 [FLAC],file:$HOME/Downloads/Paramore - Album - 2009 - brand new eyes,file:$HOME/Music,file:$HOME/Downloads/ROSÉ - rosie (2024) - WEB FLAC,file:$HOME/Music,file:$HOME/Music/My Little Airport/SABINA之淚,file:$HOME/Downloads/My Little Airport - Sabina之淚 (2021) - CD FLAC,file:$HOME/Downloads,file:$HOME/Music,file:$HOME/Downloads/Unflirt - misc,file:$HOME/Downloads/(2015) Diaries,file:$HOME/Music,file:$HOME/Music,file:$HOME/Downloads/CONGLOMERATE (DELUXE),file:$HOME,file:$HOME/Downloads/pryvt/PRYVT - &SCENE MP3,file:$HOME/Music,file:$HOME/Downloads/The Clientele - 2014 - Suburban Light [CD1] - F,file:$HOME/Downloads/Radwimps - Your Name. (Deluxe Edition _ Original Motion Picture Soundtrack),file:$HOME/Downloads/Alexander Stewart - Album - 2024 - bleeding heart,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Music,file:$HOME/Pictures/screensaver,file:$HOME/Downloads
 
 [General]
+BrowserApplication=google-chrome.desktop
 ColorScheme=MaterialYouDark
-ColorSchemeHash=65822ddf7f4951c19e7352bc3d6b2dacc57dc2f7
+ColorSchemeHash=7071bbe53af4bd800f80e7c94cd8cba28ef43edf
 LastUsedCustomAccentColor=235,219,178
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -195,11 +196,11 @@ ShowMenubar=
 Theme=oxygen
 
 [WM]
-activeBackground=48,53,62
+activeBackground=42,53,47
 activeBlend=252,252,252
 activeFont=Iosevka Term Curly,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-activeForeground=222,226,239
-inactiveBackground=59,67,99
+activeForeground=217,230,220
+inactiveBackground=31,76,67
 inactiveBlend=161,169,177
-inactiveForeground=217,222,252
+inactiveForeground=186,233,220
 

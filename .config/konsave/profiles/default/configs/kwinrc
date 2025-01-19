@@ -127,6 +127,12 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][c2e4b2b0-1ec8-5bfe-9c68-faaf50bfadbb]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][c73684f0-83c4-5586-b5c5-86ac66d58d6c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][d02c035d-eef0-5c68-aa2f-2e83d0ba08b1]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -143,10 +149,12 @@ tiles={"layoutDirection":"floating","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Windows]
+BorderSnapZone=0
 DelayFocusInterval=0
+WindowSnapZone=0
 
 [Xwayland]
-Scale=1.25
+Scale=1
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
