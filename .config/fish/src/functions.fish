@@ -19,6 +19,16 @@ function rebuild
                     rm result
                 end
         end
+    else if [ "$argv[1]" = timer ]
+        systemctl status nixos-upgrade.timer
+        systemctl status nix-optimise.timer
+        systemctl status nix-gc.timer
+        return 0
+    else if [ "$argv[1]" = log ]
+        systemctl status nixos-upgrade.service
+        systemctl status nix-optimise.service
+        systemctl status nix-gc.service
+        return 0
     else
         switch (uname)
             case Darwin
