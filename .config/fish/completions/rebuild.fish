@@ -2,6 +2,8 @@ complete -c rebuild -f -a boot -d "Build the new configuration and make it the b
 complete -c rebuild -f -a switch -d "Build and activate the new configuration, and make it the boot default."
 complete -c rebuild -f -a test -d "Build and activate the new configuration, but do not add it to the GRUB boot menu."
 complete -c rebuild -f -a upgrade -d "Alias of switch --upgrade --install-bootloader"
+complete -c rebuild -f -a timers -d "Show nixos-upgrade, nix-optimise, nix-gc service timers"
+complete -c rebuild -f -a logs -d "Show nixos-upgrade, nix-optimise, nix-gc service logs"
 complete -c rebuild -l upgrade -d 'Update the root user\'s channel named nixos before rebuilding the system'
 complete -c rebuild -l install-bootloader -d 'Causes the boot loader to be (re)installed on the device specified by the rel…'
 complete -c rebuild -l no-build-nix -d 'Normally, nixos-rebuild first builds the nixUnstable attribute in Nixpkgs, an…'

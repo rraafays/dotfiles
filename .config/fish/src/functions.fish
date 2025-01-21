@@ -19,12 +19,12 @@ function rebuild
                     rm result
                 end
         end
-    else if [ "$argv[1]" = timer ]
+    else if [ "$argv[1]" = timers ]
         systemctl status nixos-upgrade.timer
         systemctl status nix-optimise.timer
         systemctl status nix-gc.timer
         return 0
-    else if [ "$argv[1]" = log ]
+    else if [ "$argv[1]" = logs ]
         systemctl status nixos-upgrade.service
         systemctl status nix-optimise.service
         systemctl status nix-gc.service
