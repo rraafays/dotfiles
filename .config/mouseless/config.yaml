@@ -14,6 +14,7 @@ layers:
     space: tap-hold-next space ; toggle-layer navigation ; 0
     capslock: leftctrl
     rightctrl: tap-hold-next rightctrl ; toggle-layer pseudo_hhkb ; 0
+    ejectcd: exec sudo undock
 - name: navigation
   bindings:
     capslock: leftctrl
@@ -38,7 +39,7 @@ layers:
     a: volumedown
     s: volumeup
     d: mute
-    # f: eject
+    f: exec sudo undock
     leftbrace: up
     semicolon: left
     apostrophe: right
