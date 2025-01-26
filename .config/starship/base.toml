@@ -6,7 +6,7 @@ right_format = "$custom"
 
 [custom.song]
 command = "mpc current -f '%title% : %album% - %artist%'"
-style="bold fg:0"
+style="bold fg:8"
 when="playing"
 shell="sh"
 format = "[$output]($style)"
@@ -19,27 +19,27 @@ unknown_symbol = '󱐥 '
 threshold = 0
 discharging_symbol = '  '
 charging_symbol = '󱐋 '
-style = 'fg:0'
+style = 'fg:8'
 [[battery.display]]
 threshold = 25
 discharging_symbol = '  '
 charging_symbol = '󱐋 '
-style = 'fg:0'
+style = 'fg:8'
 [[battery.display]]
 threshold = 50
 discharging_symbol = '  '
 charging_symbol = '󱐋 '
-style = 'fg:0'
+style = 'fg:8'
 [[battery.display]]
 threshold = 75
 discharging_symbol = '  '
 charging_symbol = '󱐋 '
-style = 'fg:0'
+style = 'fg:8'
 [[battery.display]]
 threshold = 100
 discharging_symbol = '  '
 charging_symbol = '󱐋 '
-style = 'fg:0'
+style = 'fg:8'
 
 [line_break]
 disabled = true
@@ -47,7 +47,7 @@ disabled = true
 [directory]
 style = "bold fg:4"
 read_only = "  "
-read_only_style = "bold fg:0"
+read_only_style = "bold fg:8"
 truncation_length = 3
 
 [cmd_duration]
@@ -89,7 +89,7 @@ style = 'fg:7'
 [c]
 symbol = " "
 format = '[$symbol($version(-$name))]($style) '
-style = 'fg:0'
+style = 'fg:8'
 [dotnet]
 symbol = ' '
 format = '[$symbol($version)($tfm)]($style) '
