@@ -3,7 +3,7 @@ return {
     config = function()
         local lualine = require("lualine")
 
-        local theme = require("lualine.themes.16color")
+        -- local theme = require("lualine.themes.16color")
         local function search_term()
             local res = vim.fn.searchcount()
             if res.total > 0 then
@@ -13,32 +13,32 @@ return {
             end
         end
 
-        theme = {
-            normal = {
-                a = { fg = 7, bg = "none" },
-                b = { fg = 5, bg = "none" },
-                c = { fg = 0, bg = "none" },
-            },
-            visual = {
-                a = { fg = 11, bg = "none" },
-                b = { fg = 5, bg = "none" },
-                c = { fg = 0, bg = "none" },
-            },
-            insert = {
-                a = { fg = 4, bg = "none" },
-                b = { fg = 5, bg = "none" },
-                c = { fg = 0, bg = "none" },
-            },
-            replace = {
-                a = { fg = 9, bg = "none" },
-                b = { fg = 5, bg = "none" },
-                c = { fg = 0, bg = "none" },
-            },
-        }
+        -- theme = {
+        --     normal = {
+        --         a = { fg = 7, bg = "none" },
+        --         b = { fg = 5, bg = "none" },
+        --         c = { fg = 0, bg = "none" },
+        --     },
+        --     visual = {
+        --         a = { fg = 11, bg = "none" },
+        --         b = { fg = 5, bg = "none" },
+        --         c = { fg = 0, bg = "none" },
+        --     },
+        --     insert = {
+        --         a = { fg = 4, bg = "none" },
+        --         b = { fg = 5, bg = "none" },
+        --         c = { fg = 0, bg = "none" },
+        --     },
+        --     replace = {
+        --         a = { fg = 9, bg = "none" },
+        --         b = { fg = 5, bg = "none" },
+        --         c = { fg = 0, bg = "none" },
+        --     },
+        -- }
 
         lualine.setup({
             options = {
-                theme = theme,
+                theme = "pywal16-nvim",
                 globalstatus = true,
                 icons_enabled = true,
                 component_separators = {
