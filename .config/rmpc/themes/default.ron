@@ -22,9 +22,9 @@
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
-        track_style: (fg: "8"),
-        elapsed_style: (fg: "4"),
-        thumb_style: (fg: "4"),
+        track_style: (fg: "0"),
+        elapsed_style: (fg: "1"),
+        thumb_style: (fg: "1"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -39,12 +39,12 @@
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Title), style: (fg: "0"), default: (kind: Text("Unknown"))),
+            prop: (kind: Property(Title), style: (fg: "8"), default: (kind: Text("Unknown"))),
             width_percent: 89,
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Duration), style: (fg: "0"), default: (kind: Text("-"))),
+            prop: (kind: Property(Duration), style: (fg: "8"), default: (kind: Text("-"))),
             width_percent: 9,
             alignment: Right,
         ),

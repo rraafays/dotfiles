@@ -65,7 +65,7 @@ truncation_symbol = ""
 
 [status]
 disabled = false
-format = '[$symbol](bold bg:9 bold fg:8)[ $status](bold bold fg:9) '
+format = '[$symbol](bold bg:9 bold fg:0)[ $status](bold bold fg:9) '
 style = 'bold fg:9'
 map_symbol = true
 pipestatus = true
