@@ -1,5 +1,5 @@
 vim.opt.statusline = "%{repeat('─',winwidth('.'))}"
-vim.opt.termguicolors = false
+vim.opt.termguicolors = true
 vim.wo.number = false
 vim.opt.virtualedit = "block"
 vim.opt.shiftwidth = 4
