@@ -5,7 +5,7 @@
     address: "127.0.0.1:6600",
     password: None,
     theme: Some("default"),
-    cache_dir: Some("~/.cache/rmpc/"),
+    cache_dir: None,
     on_song_change: None,
     volume_step: 5,
     scrolloff: 0,
@@ -14,8 +14,8 @@
     status_update_interval_ms: 100,
     select_current_song_on_change: false,
     album_art: (
-        method: Kitty,
-        max_size_px: (width: 0, height: 0),
+        method: Auto,
+        max_size_px: (width: 600, height: 600),
     ),
     keybinds: (
         global: {

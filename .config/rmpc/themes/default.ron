@@ -4,7 +4,7 @@
 (
     default_album_art_path: None,
     show_song_table_header: false,
-    draw_borders: true,
+    draw_borders: false,
     browser_column_widths: [33, 33, 33],
     background_color: None,
     text_color: None,
@@ -12,19 +12,19 @@
     modal_background_color: None,
     tab_bar: (
         enabled: true,
-        active_style: (fg: "8", bg: "4", modifiers: "Bold"),
+        active_style: (fg: "0", bg: "9", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "4", modifiers: "Bold"),
-    current_item_style: (fg: "0", bg: "4", modifiers: "Bold"),
-    borders_style: (fg: "0"),
-    highlight_border_style: (fg: "0"),
+    highlighted_item_style: (fg: "9", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "9", modifiers: "Bold"),
+    borders_style: (fg: "black"),
+    highlight_border_style: (fg: "#282828"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
-        track_style: (fg: "0"),
-        elapsed_style: (fg: "1"),
-        thumb_style: (fg: "1"),
+        track_style: (fg: "#282828"),
+        elapsed_style: (fg: "9"),
+        thumb_style: (fg: "9", bg: "0"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -34,22 +34,22 @@
     ),
     song_table_format: [
         (
-            prop: (kind: Text(""), style: (fg: "0"), default: (kind: Text("Unknown"))),
+            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
             width_percent: 1,
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Title), style: (fg: "8"), default: (kind: Text("Unknown"))),
+            prop: (kind: Property(Title), style: (fg: "7"), default: (kind: Text("Unknown"))),
             width_percent: 89,
             alignment: Left,
         ),
         (
-            prop: (kind: Property(Duration), style: (fg: "8"), default: (kind: Text("-"))),
+            prop: (kind: Property(Duration), style: (fg: "7"), default: (kind: Text("-"))),
             width_percent: 9,
             alignment: Right,
         ),
         (
-            prop: (kind: Text(""), style: (fg: "0"), default: (kind: Text("Unknown"))),
+            prop: (kind: Text(""), style: (fg: "7"), default: (kind: Text("Unknown"))),
             width_percent: 1,
             alignment: Left,
         ),
@@ -58,27 +58,27 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "4")),
+					(kind: Property(Status(State)), style: (fg: "9")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
                     (kind: Property(Status(Duration)), style: (fg: "7")),
 				],
 				center: [
-					(kind: Property(Song(Title)), style: (fg: "4"), default: (kind: Text("play"))),
-                    (kind: Text(" : "), style: (fg: "4")),
-					(kind: Property(Song(Album)), style: (fg: "4"), default: (kind: Text("something"))),
-                    (kind: Text(" - "), style: (fg: "4")),
-					(kind: Property(Song(Artist)), style: (fg: "4"), default: (kind: Text("sad"))),
+					(kind: Property(Song(Title)), style: (fg: "15"), default: (kind: Text("play"))),
+                    (kind: Text(" : "), style: (fg: "15")),
+					(kind: Property(Song(Album)), style: (fg: "15"), default: (kind: Text("something"))),
+                    (kind: Text(" - "), style: (fg: "15")),
+					(kind: Property(Song(Artist)), style: (fg: "15"), default: (kind: Text("sad"))),
 				],
 				right: [
-                    (kind: Property(Widget(States(active_style: (fg: "4"), separator_style: (fg: "7")))), style: (fg: "0")),
+                    (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "4")),
-					(kind: Text("%"), style: (fg: "4")),
+					(kind: Property(Status(Volume)), style: (fg: "9")),
+					(kind: Text("%"), style: (fg: "9")),
 				]
 			),
-			// (left: [ ], center: [ ], right: [ ]),
+			(left: [ ], center: [ ], right: [ ]),
         ],
     ),
     browser_song_format: [
