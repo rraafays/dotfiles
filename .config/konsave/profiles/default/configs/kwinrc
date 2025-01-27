@@ -71,6 +71,7 @@ poloniumEnabled=false
 scaleEnabled=false
 
 [PrimaryOutline]
+ActiveOutlinePalette=6
 ActiveOutlineUseCustom=false
 ActiveOutlineUsePalette=true
 InactiveOutlinePalette=16
@@ -88,8 +89,10 @@ TimerDelay=1
 [SecondOutline]
 ActiveSecondOutlineUseCustom=false
 ActiveSecondOutlineUsePalette=true
+InactiveSecondOutlineThickness=0
 InactiveSecondOutlineUseCustom=false
 InactiveSecondOutlineUsePalette=true
+SecondOutlineThickness=0
 
 [TabBox]
 ActivitiesMode=0
@@ -154,7 +157,7 @@ DelayFocusInterval=0
 WindowSnapZone=0
 
 [Xwayland]
-Scale=1
+Scale=1.25
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
