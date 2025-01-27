@@ -53,6 +53,7 @@ return {
 
         lualine.setup({
             options = {
+                global_status = true,
                 icons_enabled = true,
                 component_separators = {
                     left = "",
