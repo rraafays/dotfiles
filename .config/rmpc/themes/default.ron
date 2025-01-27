@@ -4,7 +4,7 @@
 (
     default_album_art_path: None,
     show_song_table_header: false,
-    draw_borders: false,
+    draw_borders: true,
     browser_column_widths: [33, 33, 33],
     background_color: None,
     text_color: None,
@@ -12,19 +12,19 @@
     modal_background_color: None,
     tab_bar: (
         enabled: true,
-        active_style: (fg: "0", bg: "9", modifiers: "Bold"),
+        active_style: (fg: "0", bg: "15", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "9", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "9", modifiers: "Bold"),
+    highlighted_item_style: (fg: "15", modifiers: "Bold"),
+    current_item_style: (fg: "black", bg: "15", modifiers: "Bold"),
     borders_style: (fg: "black"),
     highlight_border_style: (fg: "#282828"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
         track_style: (fg: "#282828"),
-        elapsed_style: (fg: "9"),
-        thumb_style: (fg: "9", bg: "0"),
+        elapsed_style: (fg: "#FE8019"),
+        thumb_style: (fg: "#FE8019", bg: "0"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -58,7 +58,7 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "9")),
+					(kind: Property(Status(State)), style: (fg: "#FE8019")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
@@ -74,11 +74,10 @@
 				right: [
                     (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "9")),
-					(kind: Text("%"), style: (fg: "9")),
+					(kind: Property(Status(Volume)), style: (fg: "#FE8019")),
+					(kind: Text("%"), style: (fg: "#FE8019")),
 				]
 			),
-			(left: [ ], center: [ ], right: [ ]),
         ],
     ),
     browser_song_format: [
