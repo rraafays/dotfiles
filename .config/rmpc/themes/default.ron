@@ -16,9 +16,9 @@
         inactive_style: (),
     ),
     highlighted_item_style: (fg: "4", modifiers: "Bold"),
-    current_item_style: (fg: "8", bg: "4", modifiers: "Bold"),
-    borders_style: (fg: "8"),
-    highlight_border_style: (fg: "8"),
+    current_item_style: (fg: "0", bg: "4", modifiers: "Bold"),
+    borders_style: (fg: "0"),
+    highlight_border_style: (fg: "0"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
