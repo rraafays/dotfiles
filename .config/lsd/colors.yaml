@@ -5,7 +5,7 @@ permission:
   write: 11
   exec: 1
   exec-sticky: 12
-  no-access: 0
+  no-access: 8
   octal: 14
   acl: 14
   context: 14
@@ -28,7 +28,7 @@ tree-edge: 5
 git-status:
   default: 0
   unmodified: 15
-  ignored: 0
+  ignored: 8
   new-in-index: 1
   new-in-workdir: 1
   typechange: 12
