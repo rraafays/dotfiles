@@ -79,12 +79,12 @@ floating=0
 thickness=34
 
 [PlasmaViews][Panel 285]
-floating=0
+floating=1
 panelOpacity=1
-panelVisibility=2
+panelVisibility=0
 
 [PlasmaViews][Panel 285][Defaults]
-thickness=24
+thickness=22
 
 [PlasmaViews][Panel 52]
 floating=0

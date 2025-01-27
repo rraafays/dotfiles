@@ -83,7 +83,7 @@ ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
 [Colors:Window]
-BackgroundAlternate=60,56,54
+BackgroundAlternate=0,0,0
 BackgroundNormal=20,20,20
 DecorationFocus=235,219,178
 DecorationHover=235,219,178
@@ -103,8 +103,7 @@ History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads/Nicotine,file:$HOME/
 [General]
 AccentColor=235,219,178
 BrowserApplication=google-chrome.desktop
-ColorScheme=GruvboxBlack
-ColorSchemeHash=14d3b6244f4b30f4322cfe524d60fe43bd667631
+ColorSchemeHash=66bb78b6606e897d3dba61b15e11a8a5e065e4c8
 LastUsedCustomAccentColor=235,219,178
 TerminalApplication=kitty
 TerminalService=kitty.desktop

@@ -67,7 +67,7 @@ hidecursorEnabled=true
 krohnkiteEnabled=false
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
-poloniumEnabled=false
+poloniumEnabled=true
 scaleEnabled=false
 
 [PrimaryOutline]
@@ -104,7 +104,7 @@ DesktopMode=0
 LayoutName=compact
 
 [Tiling]
-padding=4
+padding=22
 
 [Tiling][273e4bc1-a7b3-53d1-9eb3-155cce369a3f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -146,7 +146,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}
