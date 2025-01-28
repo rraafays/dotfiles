@@ -12,17 +12,17 @@
     modal_background_color: None,
     tab_bar: (
         enabled: true,
-        active_style: (fg: "0", bg: "15", modifiers: "Bold"),
+        active_style: (fg: "#D65D0E", bg: "#2A1300", modifiers: "Bold"),
         inactive_style: (),
     ),
-    highlighted_item_style: (fg: "15", modifiers: "Bold"),
-    current_item_style: (fg: "black", bg: "15", modifiers: "Bold"),
+    highlighted_item_style: (fg: "#D65D0E", modifiers: "Bold"),
+    current_item_style: (fg: "#D65D0E", bg: "#2A1300", modifiers: "Bold"),
     borders_style: (fg: "black"),
     highlight_border_style: (fg: "#282828"),
     symbols: (song: "", dir: "", marker: "M", ellipsis: "..."),
     progress_bar: (
         symbols: ["━", "━", "━"],
-        track_style: (fg: "#282828"),
+        track_style: (fg: "#2A1300"),
         elapsed_style: (fg: "#D65C0D"),
         thumb_style: (fg: "#D65C0D", bg: "0"),
     ),
@@ -58,7 +58,7 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "#D65C0D")),
+					(kind: Property(Status(State)), style: (fg: "11")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
@@ -74,8 +74,8 @@
 				right: [
                     (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "#D65C0D")),
-					(kind: Text("%"), style: (fg: "#D65C0D")),
+					(kind: Property(Status(Volume)), style: (fg: "11")),
+					(kind: Text("%"), style: (fg: "11")),
 				]
 			),
         ],
