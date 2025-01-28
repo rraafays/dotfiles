@@ -64,10 +64,11 @@ contrastEnabled=true
 dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true
+karouselEnabled=true
 krohnkiteEnabled=false
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
-poloniumEnabled=true
+poloniumEnabled=false
 scaleEnabled=false
 
 [PrimaryOutline]
@@ -80,11 +81,23 @@ InactiveOutlineUseCustom=false
 InactiveOutlineUsePalette=true
 OutlineThickness=2
 
+[Script-karousel]
+gapsInnerHorizontal=22
+gapsInnerVertical=22
+gapsOuterBottom=0
+gapsOuterLeft=22
+gapsOuterRight=22
+gapsOuterTop=22
+presetWidths=25%, 50%, 75%, 100%
+scrollingGrouped=true
+scrollingLazy=false
+untileOnDrag=false
+
 [Script-polonium]
-Borders=3
+Borders=0
 InsertionPoint=2
 SaveOnTileEdit=true
-TimerDelay=1
+TimerDelay=200
 
 [SecondOutline]
 ActiveSecondOutlineUseCustom=false
@@ -125,7 +138,7 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][6c38c091-d235-564f-be71-9bde7e63d996]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -157,7 +170,7 @@ DelayFocusInterval=0
 WindowSnapZone=0
 
 [Xwayland]
-Scale=1.25
+Scale=1
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=

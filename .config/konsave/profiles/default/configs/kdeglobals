@@ -103,7 +103,7 @@ History Items[$e]=file:$HOME/Downloads,file:$HOME/Downloads/Nicotine,file:$HOME/
 [General]
 AccentColor=235,219,178
 BrowserApplication=google-chrome.desktop
-ColorSchemeHash=66bb78b6606e897d3dba61b15e11a8a5e065e4c8
+ColorSchemeHash=8a29b6e0518de66c3e121d228494e458d993b675
 LastUsedCustomAccentColor=235,219,178
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -150,6 +150,7 @@ ScreenScaleFactors=eDP-1=1;DP-6=1;
 [Shortcuts]
 ActualSize=
 BackwardWord=
+Begin=
 ForwardWord=
 NextCompletion=
 PrevCompletion=
