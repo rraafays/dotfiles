@@ -84,10 +84,10 @@ OutlineThickness=2
 [Script-karousel]
 gapsInnerHorizontal=22
 gapsInnerVertical=22
-gapsOuterBottom=0
+gapsOuterBottom=22
 gapsOuterLeft=22
 gapsOuterRight=22
-gapsOuterTop=22
+gapsOuterTop=11
 presetWidths=25%, 50%, 75%, 100%
 scrollingGrouped=true
 scrollingLazy=false
@@ -159,7 +159,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
-tiles={"layoutDirection":"horizontal","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -170,7 +170,7 @@ DelayFocusInterval=0
 WindowSnapZone=0
 
 [Xwayland]
-Scale=1
+Scale=1.25
 
 [org.kde.kdecoration2]
 ButtonsOnLeft=
