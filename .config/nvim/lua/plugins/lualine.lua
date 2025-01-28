@@ -17,7 +17,7 @@ return {
         theme.normal.a.fg = "#A89983"
         theme.insert.a.fg = "#448488"
         theme.replace.a.fg = "#FB4833"
-        theme.visual.a.fg = "#FE8019"
+        theme.visual.a.fg = "#D65C0D"
         theme.command.a.fg = "#B8BA25"
         theme.normal.a.bg = "none"
         theme.insert.a.bg = "none"

@@ -15,13 +15,13 @@ SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host:normal
 SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:red
-SETUVAR fish_color_normal:FE8019
+SETUVAR fish_color_normal:D65D0E
 SETUVAR fish_color_operator:bryellow\x1e\x2d\x2dbold
 SETUVAR fish_color_param:brwhite
 SETUVAR fish_color_quote:brgreen
 SETUVAR fish_color_redirection:brmagenta
 SETUVAR fish_color_search_match:yellow
-SETUVAR fish_color_selection:\x2d\x2dbackground\x3d2A1300\x1eFE8019
+SETUVAR fish_color_selection:\x2d\x2dbackground\x3d2A1300\x1eD65D0E
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline

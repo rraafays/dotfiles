@@ -16,7 +16,7 @@ return {
                 dark2 = "none",
             },
             overrides = {
-                Visual = { bg = "#2a1300", fg = "#FE8019" },
+                Visual = { bg = "#2a1300", fg = "#D65C0D" },
                 GitSignsChangeLn = { bg = "#1c1c06" },
                 GitSignsAddLn = { bg = "#14200f" },
                 GitSignsChangedeleteLn = { bg = "#2d0501" },

@@ -23,8 +23,8 @@
     progress_bar: (
         symbols: ["━", "━", "━"],
         track_style: (fg: "#282828"),
-        elapsed_style: (fg: "#FE8019"),
-        thumb_style: (fg: "#FE8019", bg: "0"),
+        elapsed_style: (fg: "#D65C0D"),
+        thumb_style: (fg: "#D65C0D", bg: "0"),
     ),
     scrollbar: (
         symbols: ["", "", "", ""],
@@ -58,7 +58,7 @@
         rows: [
 			(
 				left: [
-					(kind: Property(Status(State)), style: (fg: "#FE8019")),
+					(kind: Property(Status(State)), style: (fg: "#D65C0D")),
                     (kind: Text(" | "), style: (fg: "7")),
                     (kind: Property(Status(Elapsed)), style: (fg: "7")),
                     (kind: Text(" / "), style: (fg: "7")),
@@ -74,8 +74,8 @@
 				right: [
                     (kind: Property(Widget(States(active_style: (fg: "15"), separator_style: (fg: "7")))), style: (fg: "dark_gray")),
                     (kind: Text(" | "), style: (fg: "7")),
-					(kind: Property(Status(Volume)), style: (fg: "#FE8019")),
-					(kind: Text("%"), style: (fg: "#FE8019")),
+					(kind: Property(Status(Volume)), style: (fg: "#D65C0D")),
+					(kind: Text("%"), style: (fg: "#D65C0D")),
 				]
 			),
         ],
