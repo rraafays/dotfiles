@@ -1,3 +1,8 @@
+function __fish_git_modified_untracked_files
+    git ls-files --others --exclude-standard && git diff --name-only --relative
+end
+
+complete -c restore -a "(__fish_git_modified_untracked_files)" --no-files
 complete -c restore -s s -l source -d 'Restore the working tree files with the content from the given tree'
 complete -c restore -s p -l patch -d 'Interactively select hunks in the difference between the restore source and t…'
 complete -c restore -s W -l worktree -s S -l staged -d 'Specify the restore location'
