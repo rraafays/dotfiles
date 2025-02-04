@@ -24,10 +24,10 @@ set -x NEWT_COLORS "
 
 if status is-interactive
     if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && not test -z "$DISPLAY"
-        exec tmux new-session -A -s main >/dev/null 2>&1
+        exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
     if not test -z $SSH_TTY
-        exec tmux new-session -A -s main >/dev/null 2>&1
+        exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
 
 

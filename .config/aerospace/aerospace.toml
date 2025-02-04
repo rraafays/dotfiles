@@ -42,7 +42,7 @@ PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
     # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
     # You can uncomment the following lines to open up terminal with alt + enter shortcut
     # (like in i3)
-    cmd-enter = 'exec-and-forget kitty ~/ --single-instance'
+    cmd-enter = 'exec-and-forget kitty tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     alt-slash = 'layout tiles horizontal vertical'
     alt-comma = 'layout accordion horizontal vertical'
