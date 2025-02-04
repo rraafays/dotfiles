@@ -97,7 +97,7 @@ function nsh
 end
 
 function lls
-    l --color always | grep "=>" --color never
+    ll --all --color always | grep "=>" --color never
 end
 
 function kbd
