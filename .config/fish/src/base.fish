@@ -23,6 +23,14 @@ set -x NEWT_COLORS "
 "
 
 if status is-interactive
+    #if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && not test -z "$DISPLAY"
+    #exec tmux new-session -A -s main >/dev/null 2>&1
+    #end
+    if not test -z $SSH_TTY
+        exec tmux new-session -A -s main >/dev/null 2>&1
+    end
+
+
     set fish_greeting ""
 
     starship init fish | source
@@ -42,14 +50,6 @@ if status is-interactive
             "$HOME/.config/starship/base.toml" \
             "$HOME/.config/starship/root.toml" >"$HOME/.config/starship/.root"
         set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
-    end
-
-    if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && not test -z "$DISPLAY"
-        exec tmux new-session -A -s main >/dev/null 2>&1
-    end
-
-    if not test -z $SSH_TTY
-        exec tmux new-session -A -s main >/dev/null 2>&1
     end
 
     fish_vi_key_bindings
