@@ -28,7 +28,7 @@ if status is-interactive
     starship init fish | source
     zoxide init fish | source
     direnv hook fish | source
-    nix-your-shell fish | source
+    #nix-your-shell fish | source
 
     if not fish_is_root_user
         cat \
