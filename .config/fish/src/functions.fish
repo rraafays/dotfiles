@@ -93,7 +93,7 @@ function qr
 end
 
 function nsh
-    nix-shell $argv
+    nix-shell --run fish $argv
 end
 
 function lls
