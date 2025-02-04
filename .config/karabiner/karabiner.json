@@ -80,7 +80,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "x": -1536 } }],
+                                "to": [{ "mouse_key": { "x": -3072, "speed_multiplier": 1.0 } }],
                                 "type": "basic"
                             },
                             {
@@ -91,7 +91,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "y": 1536 } }],
+                                "to": [{ "mouse_key": { "y": 3072, "speed_multiplier": 1.0 } }],
                                 "type": "basic"
                             },
                             {
@@ -102,7 +102,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "y": -1536 } }],
+                                "to": [{ "mouse_key": { "y": -3072, "speed_multiplier": 1.0 } }],
                                 "type": "basic"
                             },
                             {
@@ -113,7 +113,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "x": 1536 } }],
+                                "to": [{ "mouse_key": { "x": 3072, "speed_multiplier": 1.0 } }],
                                 "type": "basic"
                             },
                             {
@@ -169,6 +169,28 @@
                                     }
                                 },
                                 "to": [{ "mouse_key": { "vertical_wheel": -80 } }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_shift",
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "mouse_key": { "speed_multiplier": 2.0 } }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_option",
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "mouse_key": { "speed_multiplier": 0.25 } }],
                                 "type": "basic"
                             }
                         ]
