@@ -2,6 +2,7 @@ set -x EDITOR nvim
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x DETOX_SEQUENCE lower
 set -x DIRENV_WARN_TIMEOUT 60s
+set -x NIXPKGS_ALLOW_UNFREE 1
 set -x NEWT_COLORS "
     root=white,black 
     window=green,black 
