@@ -1,3 +1,5 @@
+nix-your-shell fish | source
+
 function rebuild
     if [ "$argv[1]" = config ]
         cd ~/.config/ || exit

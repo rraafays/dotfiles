@@ -31,7 +31,6 @@ if status is-interactive
         exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
 
-
     set fish_greeting ""
 
     starship init fish | source
