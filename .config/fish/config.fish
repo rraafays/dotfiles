@@ -13,3 +13,7 @@ switch (uname)
     case Linux
         source $FISH_HOME/src/unix.fish
 end
+
+if test -e /etc/NIXOS
+    echo hi
+end
