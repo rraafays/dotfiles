@@ -5,12 +5,6 @@ set -x PYTHONPATH "$HOME/Library/Python/3.8/lib/python/site-packages"
 set -x PATH /run/current-system/sw/bin $PATH
 
 if status --is-interactive
-    if not test -e "$HOME/.config/kitty/kitty.conf"
-        cat \
-            "$HOME/.config/kitty/base.conf" \
-            "$HOME/.config/kitty/macos.conf" >"$HOME/.config/kitty/kitty.conf"
-    end
-
     function man
         command man -P 'nvim -c \'Man! -o -\'' $argv
     end
