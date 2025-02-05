@@ -64,11 +64,11 @@ contrastEnabled=true
 dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true
-karouselEnabled=true
+karouselEnabled=false
 krohnkiteEnabled=false
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
-poloniumEnabled=false
+poloniumEnabled=true
 scaleEnabled=false
 
 [PrimaryOutline]
@@ -138,7 +138,7 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][6c38c091-d235-564f-be71-9bde7e63d996]
-tiles={"layoutDirection":"horizontal","tiles":[]}
+tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -159,7 +159,7 @@ tiles={"layoutDirection":"floating","tiles":[]}
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
-tiles={"layoutDirection":"floating","tiles":[]}
+tiles={"layoutDirection":"horizontal","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}
