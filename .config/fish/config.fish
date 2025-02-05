@@ -12,8 +12,7 @@ switch (uname)
         source $FISH_HOME/src/macos.fish
     case Linux
         source $FISH_HOME/src/unix.fish
-end
-
-if test -e /etc/NIXOS
-    echo hi
+        if test -e /etc/nixos
+            source $FISH_HOME/src/nixos.fish
+        end
 end
