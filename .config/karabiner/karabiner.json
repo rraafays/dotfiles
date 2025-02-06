@@ -30,6 +30,28 @@
                             },
                             {
                                 "from": {
+                                    "key_code": "volume_decrement",
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "display_brightness_decrement" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "volume_increment",
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "display_brightness_increment" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "mandatory": ["right_command"],
@@ -80,7 +102,14 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "x": -3072, "speed_multiplier": 1.0 } }],
+                                "to": [
+                                    {
+                                        "mouse_key": {
+                                            "speed_multiplier": 1.0,
+                                            "x": -3072
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -91,7 +120,14 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "y": 3072, "speed_multiplier": 1.0 } }],
+                                "to": [
+                                    {
+                                        "mouse_key": {
+                                            "speed_multiplier": 1.0,
+                                            "y": 3072
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -102,7 +138,14 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "y": -3072, "speed_multiplier": 1.0 } }],
+                                "to": [
+                                    {
+                                        "mouse_key": {
+                                            "speed_multiplier": 1.0,
+                                            "y": -3072
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -113,7 +156,14 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "x": 3072, "speed_multiplier": 1.0 } }],
+                                "to": [
+                                    {
+                                        "mouse_key": {
+                                            "speed_multiplier": 1.0,
+                                            "x": 3072
+                                        }
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -790,6 +840,10 @@
                 },
                 {
                     "from": { "key_code": "left_control" },
+                    "to": [{ "key_code": "left_command" }]
+                },
+                {
+                    "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "left_command" }]
                 }
             ],
