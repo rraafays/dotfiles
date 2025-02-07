@@ -813,14 +813,6 @@
                             "to": [{ "key_code": "left_command" }]
                         }
                     ]
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": true,
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 33,
-                        "vendor_id": 1278
-                    }
                 }
             ],
             "name": "Default profile",
@@ -829,6 +821,10 @@
                 {
                     "from": { "key_code": "application" },
                     "to": [{ "pointing_button": "button2" }]
+                },
+                {
+                    "from": { "key_code": "caps_lock" },
+                    "to": [{ "key_code": "left_command" }]
                 },
                 {
                     "from": { "key_code": "keypad_num_lock" },
@@ -840,10 +836,6 @@
                 },
                 {
                     "from": { "key_code": "left_control" },
-                    "to": [{ "key_code": "left_command" }]
-                },
-                {
-                    "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "left_command" }]
                 }
             ],
