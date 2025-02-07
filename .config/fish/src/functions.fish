@@ -24,14 +24,6 @@ function clean
     end
 end
 
-function open
-    if not test -e $argv[1]
-        $argv & disown
-    else
-        command xdg-open $argv[1]
-    end
-end
-
 function fetch
     if test -e .git
         nix-shell --packages onefetch --run "onefetch --true-color never $argv"

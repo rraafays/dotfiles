@@ -17,11 +17,6 @@ outer.bottom =     20
 outer.top =        20
 outer.right =      20
 
-[exec]
-inherit-env-vars = true
-[exec.env-vars]
-PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
-
 [mode.main.binding]
 
     # All possible keys:
@@ -37,7 +32,8 @@ PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
 
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-    cmd-enter = 'exec-and-forget kitty tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
+    cmd-enter = 'exec-and-forget open -a kitty -n --args tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
+
     cmd-m = 'macos-native-fullscreen'
 
     cmd-left = 'focus left'
