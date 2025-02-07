@@ -10,6 +10,9 @@ source $FISH_HOME/src/ls.fish
 switch (uname)
     case Darwin
         source $FISH_HOME/src/macos.fish
+        if test -e /etc/nix-darwin
+            source $FISH_HOME/src/nix-darwin.fish
+        end
     case Linux
         source $FISH_HOME/src/unix.fish
         if test -e /etc/nixos
