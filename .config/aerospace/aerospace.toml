@@ -1,6 +1,6 @@
 after-startup-command = [ 
     'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3',
-    'exec-and-forget borders active_color=0xFFEBDBB2 inactive_color=0xFF141414 width=3 order=above',
+    'exec-and-forget /run/current-system/sw/bin/borders active_color=0xFFEBDBB2 inactive_color=0xFF141414 width=3 order=above',
 ]
 start-at-login = true
 enable-normalization-flatten-containers = true
@@ -32,7 +32,7 @@ outer.right =      20
 
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
-    cmd-enter = 'exec-and-forget open -a kitty -n --args tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
+    cmd-enter = 'exec-and-forget open -a kitty -n --args /run/current-system/sw/bin/tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
 
     cmd-m = 'macos-native-fullscreen'
 
