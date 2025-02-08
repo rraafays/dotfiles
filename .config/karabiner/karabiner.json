@@ -5,6 +5,7 @@
                 "rules": [
                     {
                         "description": "unmount first external drive",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
