@@ -33,6 +33,7 @@ outer.right =      20
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
     cmd-enter = 'exec-and-forget open -a kitty -n --args /run/current-system/sw/bin/tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
+    cmd-slash = 'exec-and-forget open -a firefox -n'
 
     cmd-m = 'macos-native-fullscreen'
     cmd-q = 'close'
