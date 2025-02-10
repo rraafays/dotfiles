@@ -115,3 +115,8 @@ format = '[$symbol($version)]($style) '
 [docker_context]
 symbol = " "
 format = '[$symbol($context)]($style) '
+[aws]
+style = 'bold #D65D0E'
+symbol = 'aws '
+# format = '[$symbol($profile ) (\[$region\] )]($style)'
+format = '[$symbol]($style)'
