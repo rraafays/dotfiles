@@ -29,7 +29,7 @@ return {
                     typescriptreact = { "prettier" },
                     xml = { "xmlformat" },
                     sql = { "redgate" },
-                    java = { "intellij" },
+                    java = { "aosp" },
                     json = { "prettier" },
                     html = { "prettier" },
                     nix = { "nixfmt" },
@@ -43,6 +43,10 @@ return {
         conform.setup({
             formatters_by_ft = get_formatters(),
             formatters = {
+                aosp = {
+                    command = "google-java-format",
+                    args = { "-", "--aosp" },
+                },
                 intellij = {
                     command = get_idea_bin(),
                     require_cwd = false,
