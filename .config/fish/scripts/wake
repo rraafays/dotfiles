@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sleep_value=$(pmset -g | grep ' sleep ' | awk '{print $2}')
+
+if [ "$sleep_value" -eq 1 ]; then
+	sudo pmset -a sleep 0
+	sudo pmset -a hibernatemode 0
+	sudo pmset -a disablesleep 1
+else
+	sudo pmset -a sleep 1
+	sudo pmset -a hibernatemode 3
+	sudo pmset -a disablesleep 0
+fi
