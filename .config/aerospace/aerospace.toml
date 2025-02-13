@@ -37,7 +37,7 @@ outer.right =      20
     cmd-space = 'exec-and-forget open -a raycast'
 
     cmd-m = 'macos-native-fullscreen'
-    cmd-q = 'close'
+    # cmd-q = 'close'
 
     cmd-left = 'focus left'
     cmd-down = 'focus down'
