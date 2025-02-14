@@ -20,4 +20,8 @@ if status --is-interactive
             command xdg-open $argv[1]
         end
     end
+
+    function mpv
+        command mpv --ao=pulse $argv
+    end
 end

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 file="$1"
 if file --mime-type "$file" | grep -q 'audio/'; then
-	mpv --ao=pulse --no-audio-display --no-input-cursor "$file" "${@:2}"
+	mpv --no-audio-display --no-input-cursor "$file" "${@:2}"
 else
-	mpv --ao=pulse --no-terminal "$file" "${@:2}"
+	mpv --no-terminal "$file" "${@:2}"
 fi
