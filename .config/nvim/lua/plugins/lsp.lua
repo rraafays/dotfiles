@@ -20,6 +20,7 @@ return {
         require("lazy-lsp").setup({
             excluded_servers = {
                 "denols",
+                "biome",
             },
             prefer_local = true,
             default_config = {
