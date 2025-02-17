@@ -4,6 +4,7 @@ return {
     config = function()
         require("nvim-treesitter.configs").setup({
             auto_install = true,
+            matchup = { enable = true },
             highlight = {
                 enable = true,
                 disable = function(lang, buf)
