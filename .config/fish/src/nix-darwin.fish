@@ -3,7 +3,7 @@ nix-your-shell fish | source
 function before-nix-darwin
     for file in /etc/nix/nix*
         set new_name "$file.before-nix-darwin"
-        mv "$file" "$new_name"
+        sudo mv "$file" "$new_name"
     end
 end
 
@@ -15,11 +15,7 @@ function rebuild
         nix-shell --packages stow --run "stow ."
         cd - || exit
     else
-        if not fish_is_root_user
-            sudo before-nix-darwin
-        else
-            before-nix-darwin
-        end
+        before-nix-darwin
         darwin-rebuild $argv -I "darwin-config=/etc/nix-darwin/configuration.nix"
         if test -e result
             rm result
