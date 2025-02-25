@@ -1,10 +1,7 @@
 nix-your-shell fish | source
 
 function before-nix-darwin
-    for file in /etc/nix/nix*
-        set new_name "$file.before-nix-darwin"
-        sudo mv "$file" "$new_name"
-    end
+    sudo mv nix.conf nix.conf.before-nix-darwin
 end
 
 function rebuild
