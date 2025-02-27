@@ -1,4 +1,5 @@
 set -x EDITOR nvim
+set -x PLANNER fasole
 set -x GH_CONFIG_DIR "$HOME/.config/gh"
 set -x DETOX_SEQUENCE lower
 set -x DIRENV_WARN_TIMEOUT 60s
