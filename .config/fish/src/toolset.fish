@@ -14,9 +14,14 @@ function view
         case 'image/*'
             echo "This is a photo."
         case 'text/*'
-            echo "This is a text document."
+            switch (basename $file)
+                case "*.md"
+                    glow --style ~/.config/glow/default.json $file
+                case "*"
+                    cat $file
+            end
         case application/pdf
-            echo "This is a PDF document."
+            zathura $file
         case application/zip
             echo "This is a zip archive."
         case application/x-tar
