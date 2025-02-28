@@ -6,7 +6,6 @@ source $FISH_HOME/src/aliases.fish
 source $FISH_HOME/src/functions.fish
 source $FISH_HOME/src/credentials.fish
 source $FISH_HOME/src/ls.fish
-source $FISH_HOME/src/toolset.fish
 
 switch (uname)
     case Darwin
