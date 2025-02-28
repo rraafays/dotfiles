@@ -37,14 +37,18 @@ function view
     end
 end
 
-function edit
-    $EDITOR $argv
-end
-
 function plan
     if test -z "$argv"
         $PLANNER TODO.md
     else
         $PLANNER $argv
     end
+end
+
+function note
+    $EDITOR NOTE.md
+end
+
+function edit
+    $EDITOR $argv
 end
