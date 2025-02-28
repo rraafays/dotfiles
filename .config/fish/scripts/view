@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-file="$1"
-mpv --loop --no-terminal --no-input-cursor "$file" "${@:2}"
