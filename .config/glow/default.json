@@ -1,5 +1,6 @@
 {
   "document": {
+	"color": "15",
     "block_prefix": "\n",
     "block_suffix": "\n",
     "margin": 2
@@ -16,21 +17,33 @@
     "block_suffix": "\n"
   },
   "h1": {
+	"color": "10",
+	"bold": true,
     "prefix": "# "
   },
   "h2": {
+	"color": "11",
+	"bold": true,
     "prefix": "## "
   },
   "h3": {
+	"color": "12",
+	"bold": true,
     "prefix": "### "
   },
   "h4": {
+	"color": "13",
+	"bold": true,
     "prefix": "#### "
   },
   "h5": {
+	"color": "14",
+	"bold": true,
     "prefix": "##### "
   },
   "h6": {
+	"color": "15",
+	"bold": true,
     "prefix": "###### "
   },
   "text": {},
