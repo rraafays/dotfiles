@@ -80,6 +80,7 @@
   },
   "code": {
     "block_prefix": "`",
+	"color": "14",
     "block_suffix": "`"
   },
   "code_block": {
