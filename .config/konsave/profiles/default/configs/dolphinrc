@@ -2,7 +2,7 @@
 PreviewSize=16
 
 [DetailsMode]
-PreviewSize=22
+PreviewSize=16
 SidePadding=0
 
 [ExtractDialog]
@@ -22,4 +22,3 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
-ToolBarsMovable=Disabled

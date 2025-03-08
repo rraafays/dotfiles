@@ -7,5 +7,6 @@ ClickMethod=2
 DisableWhileTyping=false
 
 [Mouse]
-cursorSize=32
+X11LibInputXAccelProfileFlat=true
+cursorSize=48
 cursorTheme=Capitaine Cursors (Gruvbox) - White

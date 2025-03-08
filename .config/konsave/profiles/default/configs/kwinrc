@@ -1,3 +1,6 @@
+[Activities][LastVirtualDesktop]
+0a3cf89a-fa91-428f-a229-2860a130ca12=88423e0d-678a-4c69-887f-415933baedeb
+
 [Desktops]
 Id_1=8ad7fc54-bb36-4a87-a0d4-eb30281bcbef
 Id_10=9143497e-e33c-41bc-972e-f3e93feed2fb
@@ -47,6 +50,9 @@ OutlineThickness=2
 ShadowSize=1
 Size=8
 
+[IncludeExclude]
+Exclusions=mpv
+
 [MaximizeTile]
 DisableOutlineTile=false
 DisableRoundTile=false
@@ -65,10 +71,10 @@ dimscreenEnabled=true
 glideEnabled=true
 hidecursorEnabled=true
 karouselEnabled=false
-krohnkiteEnabled=false
+krohnkiteEnabled=true
 kwin4_effect_tvEnabled=true
 kwin4_effect_windowapertureEnabled=false
-poloniumEnabled=true
+poloniumEnabled=false
 scaleEnabled=false
 
 [PrimaryOutline]
@@ -76,10 +82,25 @@ ActiveOutlinePalette=6
 ActiveOutlineUseCustom=false
 ActiveOutlineUsePalette=true
 InactiveOutlinePalette=16
-InactiveOutlineThickness=2
+InactiveOutlineThickness=4
 InactiveOutlineUseCustom=false
 InactiveOutlineUsePalette=true
-OutlineThickness=2
+OutlineThickness=4
+
+[Round-Corners]
+ActiveOutlineAlpha=255
+ActiveOutlineUseCustom=false
+ActiveOutlineUsePalette=true
+DisableOutlineTile=false
+DisableRoundTile=false
+InactiveCornerRadius=20
+InactiveOutlineThickness=5
+InactiveOutlineUseCustom=false
+InactiveOutlineUsePalette=true
+InactiveSecondOutlineThickness=0
+OutlineThickness=5
+SecondOutlineThickness=0
+Size=20
 
 [Script-karousel]
 gapsInnerHorizontal=22
@@ -92,6 +113,20 @@ presetWidths=25%, 50%, 75%, 100%
 scrollingGrouped=true
 scrollingLazy=false
 untileOnDrag=false
+
+[Script-krohnkite]
+enableColumnsLayout=false
+enableMonocleLayout=false
+enableSpreadLayout=false
+enableStairLayout=false
+enableThreeColumnLayout=false
+enableTileLayout=false
+preventProtrusion=false
+screenGapBottom=20
+screenGapLeft=20
+screenGapRight=20
+screenGapTop=20
+tileLayoutGap=20
 
 [Script-polonium]
 Borders=0
@@ -117,7 +152,10 @@ DesktopMode=0
 LayoutName=compact
 
 [Tiling]
-padding=22
+padding=20
+
+[Tiling][08dd75c6-8c25-58a7-aba7-766e8dd897cd]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
 
 [Tiling][273e4bc1-a7b3-53d1-9eb3-155cce369a3f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
@@ -140,6 +178,9 @@ tiles={"layoutDirection":"horizontal","tiles":[]}
 [Tiling][6c38c091-d235-564f-be71-9bde7e63d996]
 tiles={"layoutDirection":"floating","tiles":[]}
 
+[Tiling][72b2ecf6-2f0e-5674-8cd7-8f6a4fcd852b]
+tiles={"layoutDirection":"floating","tiles":[]}
+
 [Tiling][8e2f9add-ed69-58fe-ad69-9b73593e6b60]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
@@ -158,8 +199,11 @@ tiles={"layoutDirection":"floating","tiles":[]}
 [Tiling][d67b1509-69a3-585f-adcc-1048a4265c4f]
 tiles={"layoutDirection":"horizontal","tiles":[]}
 
-[Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
+[Tiling][eb40e923-80df-5101-8e67-ecdc9deee63e]
 tiles={"layoutDirection":"horizontal","tiles":[]}
+
+[Tiling][ed39b2a4-1e89-575d-8f80-864a4608c8f4]
+tiles={"layoutDirection":"floating","tiles":[]}
 
 [Tiling][f0a45fbd-f7e9-5f5a-898a-354be21c3740]
 tiles={"layoutDirection":"horizontal","tiles":[]}

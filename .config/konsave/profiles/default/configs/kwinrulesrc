@@ -1,14 +1,14 @@
-[049c46a3-22a3-4797-8394-47c6ec2fd87c]
+[1]
+Description=Application settings for kitty
+wmclass=kitty
+wmclassmatch=1
+
+[579e927d-d9bd-4bdd-afa3-38092cf285ba]
 Description=Settings for .
 noborder=true
 noborderrule=2
 wmclass=.
 wmclassmatch=3
-
-[1]
-Description=Application settings for kitty
-wmclass=kitty
-wmclassmatch=1
 
 [71819f03-a0aa-47cf-832a-3aebc4f4b6e0]
 Description=Application settings for kitty
@@ -19,4 +19,4 @@ wmclassmatch=1
 
 [General]
 count=1
-rules=049c46a3-22a3-4797-8394-47c6ec2fd87c
+rules=579e927d-d9bd-4bdd-afa3-38092cf285ba
