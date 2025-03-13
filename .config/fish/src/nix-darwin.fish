@@ -1,6 +1,10 @@
 nix-your-shell fish | source
 
 function rebuild
+    if not test -r /Library/Application\ Support/com.apple.TCC/
+        osascript -e 'tell application "System Events" to display dialog "Please grant Full Disk Access to the terminal in the Security & Privacy preferences."'
+        open 'x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles'
+    end
     switch "$argv[1]"
         case config
             cd ~/.config/ || exit
