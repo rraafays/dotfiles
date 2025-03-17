@@ -34,9 +34,10 @@ outer.right =      20
 
     cmd-enter = 'exec-and-forget open -a kitty -n --args /run/current-system/sw/bin/tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
     cmd-space = 'exec-and-forget open -a raycast'
+	cmd-h = []
+	cmd-alt-h = []
 
     cmd-m = 'macos-native-fullscreen'
-    # cmd-q = 'close'
 
     cmd-left = 'focus left'
     cmd-down = 'focus down'
