@@ -22,7 +22,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "volume_decrement",
+                                    "key_code": "hyphen",
                                     "modifiers": {
                                         "mandatory": ["left_shift", "left_option", "left_command", "left_control"],
                                         "optional": ["any"]
@@ -33,7 +33,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "volume_increment",
+                                    "key_code": "equal_sign",
                                     "modifiers": {
                                         "mandatory": ["left_shift", "left_option", "left_command", "left_control"],
                                         "optional": ["any"]
