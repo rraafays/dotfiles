@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+borders active_color="$(defaults read "Apple Global Domain" AppleHighlightColor | awk '{printf("0xff%02x%02x%02x", $1*255 , $2*255 , $3*255)}')" inactive_color=0xff282828 width=3 order=above
