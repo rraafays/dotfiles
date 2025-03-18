@@ -7,7 +7,7 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 default-root-container-layout = 'accordion'
-default-root-container-orientation = 'vertical'
+default-root-container-orientation = 'horizontal'
 key-mapping.preset = 'qwerty'
 
 [gaps]
