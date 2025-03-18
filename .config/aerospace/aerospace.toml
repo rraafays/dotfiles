@@ -1,12 +1,12 @@
 after-startup-command = [ 
     'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3',
-    'exec-and-forget ~/.config/aerospace/border',
+    'exec-and-forget ./border',
 ]
 start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 default-root-container-layout = 'accordion'
-default-root-container-orientation = 'auto'
+default-root-container-orientation = 'vertical'
 key-mapping.preset = 'qwerty'
 
 [gaps]
