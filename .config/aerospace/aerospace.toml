@@ -1,5 +1,6 @@
 after-startup-command = [ 
     'exec-and-forget defaults write com.doomlaser.cursorcerer idleHide -float 3',
+    'exec-and-forget open -j -a ShowMeYourHotkeys',
     'exec-and-forget ./border',
 ]
 start-at-login = true
@@ -63,6 +64,6 @@ outer.right =      20
     cmd-shift-8 = 'move-node-to-workspace 8'
     cmd-shift-9 = 'move-node-to-workspace 9'
 
-[[on-window-detected]]
-if.app-id = 'com.0804Team.KeyClu'
-run = ['layout floating']
+# [[on-window-detected]]
+# if.app-id = 'com.0804Team.KeyClu'
+# run = ['layout floating']
