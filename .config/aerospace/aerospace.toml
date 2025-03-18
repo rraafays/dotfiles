@@ -68,3 +68,7 @@ outer.right =      20
     cmd-shift-7 = 'move-node-to-workspace 7'
     cmd-shift-8 = 'move-node-to-workspace 8'
     cmd-shift-9 = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.moxadventu.ShowMeYourHotKeys'
+run = ['layout floating']
