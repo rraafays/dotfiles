@@ -70,5 +70,5 @@ outer.right =      20
     cmd-shift-9 = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
-if.app-id = 'com.moxadventu.ShowMeYourHotKeys'
+if.app-id = 'com.0804Team.KeyClu'
 run = ['layout floating']
