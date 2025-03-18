@@ -33,7 +33,6 @@ outer.right =      20
     # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
     cmd-enter = 'exec-and-forget open -a kitty -n --args /run/current-system/sw/bin/tmux new-session -A -c ~/ -s main >/dev/null 2>&1'
-    cmd-space = 'exec-and-forget open -a raycast'
 	cmd-h = []
 	cmd-alt-h = []
 
@@ -43,11 +42,6 @@ outer.right =      20
     cmd-down = 'focus down'
     cmd-up = 'focus up'
     cmd-right = 'focus right'
-
-    cmd-shift-left = 'move left'
-    cmd-shift-down = 'move down'
-    cmd-shift-up = 'move up'
-    cmd-shift-right = 'move right'
 
     cmd-1 = 'workspace 1'
     cmd-2 = 'workspace 2'
