@@ -12,7 +12,7 @@ right_format = "$custom"
 # format = "[$output]($style)"
 
 [battery]
-disabled = false
+disabled = true
 unknown_symbol = '󱐥 '
 
 [[battery.display]]
