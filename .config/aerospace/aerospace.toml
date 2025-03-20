@@ -53,6 +53,7 @@ outer.right =      20
     alt-cmd-ctrl-7 = 'workspace 7'
     alt-cmd-ctrl-8 = 'workspace 8'
     alt-cmd-ctrl-9 = 'workspace 9'
+    alt-cmd-ctrl-0 = 'workspace 10'
 
     shift-alt-cmd-ctrl-1 = 'move-node-to-workspace 1'
     shift-alt-cmd-ctrl-2 = 'move-node-to-workspace 2'
@@ -63,7 +64,4 @@ outer.right =      20
     shift-alt-cmd-ctrl-7 = 'move-node-to-workspace 7'
     shift-alt-cmd-ctrl-8 = 'move-node-to-workspace 8'
     shift-alt-cmd-ctrl-9 = 'move-node-to-workspace 9'
-
-# [[on-window-detected]]
-# if.app-id = 'com.0804Team.KeyClu'
-# run = ['layout floating']
+    shift-alt-cmd-ctrl-0 = 'move-node-to-workspace 10'
