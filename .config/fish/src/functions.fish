@@ -48,6 +48,11 @@ function kbd
     cat ~/.config/etc/ascii/hhkb
 end
 
+function envrc
+    touch .envrc
+    direnv allow
+end
+
 function use
     switch "$argv[1]"
         case nix
