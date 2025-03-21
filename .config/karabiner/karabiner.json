@@ -215,7 +215,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "right_control",
+                                    "key_code": "right_option",
                                     "modifiers": {
                                         "mandatory": ["left_option", "left_command", "left_control"],
                                         "optional": ["any"]
@@ -226,7 +226,7 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "right_option",
+                                    "key_code": "right_control",
                                     "modifiers": {
                                         "mandatory": ["left_option", "left_command", "left_control"],
                                         "optional": ["any"]
