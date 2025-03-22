@@ -16,6 +16,9 @@ end
 function tree
     ls --tree $argv
 end
+function treecomp
+    tree --ignore-glob "*.part" $argv
+end
 function bat
     command bat --theme ansi $argv
 end
