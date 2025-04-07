@@ -128,5 +128,5 @@ symbol = 'aws '
 format = '[$symbol($profile ) (\[$region\] )]($style)'
 [package]
 symbol = " "
-style = 'fg:11'
+style = 'bold fg:11'
 format = '[$symbol$version]($style) '
