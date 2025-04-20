@@ -13,7 +13,7 @@ return {
           typescript = { "ram" },
           typescriptreact = { "ram" },
           xml = { "xmlformat" },
-          sql = { "redgate" },
+          sql = { "pgformatter" },
           java = { "aosp" },
           json = { "prettier" },
           html = { "prettier" },
@@ -44,6 +44,11 @@ return {
           command = "google-java-format",
           args = { "-", "--aosp" },
         },
+        pgformatter = {
+          command = "pg_format",
+          stdin = true,
+          args = { "-s", "4", "-u", "2", "--no-space-function" },
+        },
         redgate = {
           command = "sql-formatter",
           stdin = true,
@@ -73,17 +78,6 @@ return {
             "fn_single_line=true,where_single_line=true,tab_spaces=4,imports_layout=Vertical,hex_literal_case=Upper,max_width=80",
           },
         },
-        -- # Example of using dprint only when a dprint.json file is present
-        -- dprint = {
-        --   condition = function(ctx)
-        --     return vim.fs.find({ "dprint.json" }, { path = ctx.filename, upward = true })[1]
-        --   end,
-        -- },
-        --
-        -- # Example of using shfmt with extra args
-        -- shfmt = {
-        --   prepend_args = { "-i", "2", "-ci" },
-        -- },
       },
     }
     return opts
