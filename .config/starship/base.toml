@@ -83,47 +83,47 @@ style = 'fg:6'
 
 [bun]
 symbol = ' '
-style = 'bold #FBEFDF'
+style = 'bold fg:15'
 format = '[$symbol($version)]($style) '
 [c]
 symbol = " "
-style = 'bold #AABBCE'
+style = 'bold fg:7'
 format = '[$symbol($version(-$name))]($style) '
 [dotnet]
 symbol = ' '
-style = 'bold #512BD4'
+style = 'bold fg:5'
 format = '[$symbol($version)($tfm)]($style) '
 [gradle]
 symbol = " "
-style = 'bold #1DA2BD'
+style = 'bold fg:6'
 format = '[$symbol($version)]($style) '
 [java]
 symbol = " "
-style = 'bold #EC2025'
+style = 'bold fg:1'
 format = '[$symbol($version)]($style) '
 [lua]
 symbol = " "
-style = 'bold #00007F'
+style = 'bold fg:4'
 format = '[$symbol($version)]($style) '
 [nodejs]
 symbol = " "
-style = 'bold #417E38'
+style = 'bold fg:2'
 format = '[$symbol($version)]($style) '
 [python]
 symbol = " "
-style = 'bold #FFDF76'
+style = 'bold fg:3'
 format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) '
 [rust]
 symbol = " "
-style = 'bold #E33B26'
+style = 'bold fg:1'
 format = '[$symbol($version)]($style) '
 [docker_context]
 symbol = " "
-style = 'bold #1d63ed'
+style = 'bold fg:4'
 format = '[$symbol($context)]($style) '
 [aws]
 disabled = true
-style = 'bold #ff9a00'
+style = 'bold fg:3'
 symbol = 'aws '
 format = '[$symbol($profile ) (\[$region\] )]($style)'
 [package]
