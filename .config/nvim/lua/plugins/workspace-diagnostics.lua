@@ -8,6 +8,10 @@ return {
           return
         end
 
+        if client.name == "copilot" then
+          return
+        end
+
         local bufnr = args.buf
         require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
       end,
