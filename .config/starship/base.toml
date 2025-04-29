@@ -79,7 +79,7 @@ pipestatus_segment_format = '[$symbol$status]($style)'
 [nix_shell]
 symbol = " "
 format = '[$symbol]($style) '
-style = 'fg:12'
+style = 'fg:6'
 
 [bun]
 symbol = ' '
