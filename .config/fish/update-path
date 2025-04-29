@@ -1,0 +1,36 @@
+#!/usr/bin/env fish
+
+set -U BUN_INSTALL "$HOME/.bun"
+set -U YARN_INSTALL "$HOME/.yarn"
+set -U CARGO_INSTALL "$HOME/.cargo"
+set -U DOTNET_INSTALL "$HOME/.dotnet"
+set -U GO_INSTALL "$HOME/go"
+set -U RBENV_INSTALL "$HOME/.rbenv"
+set -U BREW_INSTALL /opt/homebrew
+set -U PNPM_HOME "$HOME/.local/share/pnpm"
+set -U USER_HOME "/Users/$USER"
+set -U INTELLIJ_HOME "/Applications/IntelliJ IDEA.app/Contents/MacOS"
+set -U SQLPATH "$HOME/.config/sqlcl"
+set -U SCRIPTS_HOME "$FISH_HOME/scripts"
+set -U XMLFORMAT_CONF "$HOME/.config/etc/formatters/xmlformat.conf"
+
+set -U PATH \
+    $BUN_INSTALL/bin \
+    $YARN_INSTALL/bin \
+    $PNPM_HOME \
+    $CARGO_INSTALL/bin \
+    $DOTNET_INSTALL/tools \
+    $BREW_INSTALL/sbin \
+    $BREW_INSTALL/bin \
+    $GO_INSTALL/bin \
+    $RBENV_INSTALL/bin \
+    $RBENV_INSTALL/shims \
+    $HOME/.local/bin \
+    $USER_HOME/bin \
+    $INTELLIJ_HOME \
+    $SQLPATH \
+    $SCRIPTS_HOME \
+    $XMLFORMAT_CONF \
+    $PATH
+
+set -U PATH /run/current-system/sw/bin $PATH

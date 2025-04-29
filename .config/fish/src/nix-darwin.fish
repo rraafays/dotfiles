@@ -1,5 +1,3 @@
-nix-your-shell fish | source
-
 function rebuild
     switch "$argv[1]"
         case config
