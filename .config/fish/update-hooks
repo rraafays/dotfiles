@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+direnv hook fish >$FISH_HOME/src/direnv.fish
+zoxide init fish >$FISH_HOME/src/zoxide.fish
+starship init fish --print-full-init >$FISH_HOME/src/starship.fish

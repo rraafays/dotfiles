@@ -36,12 +36,6 @@ if status is-interactive
         set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
     end
 
-    starship init fish | source
-    zoxide init fish | source
-    direnv hook fish | source
-
-    source $FISH_HOME/src/credentials.fish
-
     switch (uname)
         case Darwin
             if test -e /etc/nix-darwin
@@ -53,4 +47,9 @@ if status is-interactive
                 source $FISH_HOME/src/nixos.fish
             end
     end
+
+    source $FISH_HOME/src/credentials.fish
+    source $FISH_HOME/src/direnv.fish
+    source $FISH_HOME/src/zoxide.fish
+    source $FISH_HOME/src/starship.fish
 end
