@@ -13,39 +13,45 @@ if status is-interactive
                                commandline -f repaint;
                            else; 
                                cd $PREVIOUS_DIR; 
-                               commandline -f repaint; 
+                               exec fish
                            end;'
 
-    if [ -x "$(command -v tmux)" ] && [ -z "$TMUX" ] && not test -z "$DISPLAY"
-        exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
-    end
-    if not test -z $SSH_TTY
+    if command -q tmux && test -z "$TMUX" && test -n "$DISPLAY" || test -n "$SSH_TTY"
         exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
 
-    if not fish_is_root_user
-        cat \
-            "$HOME/.config/starship/base.toml" \
-            "$HOME/.config/starship/user.toml" >"$HOME/.config/starship/.user"
-        set -x STARSHIP_CONFIG "$HOME/.config/starship/.user"
-    end
+    set -l config_dir "$HOME/.config/starship"
     if fish_is_root_user
-        cat \
-            "$HOME/.config/starship/base.toml" \
-            "$HOME/.config/starship/root.toml" >"$HOME/.config/starship/.root"
-        set -x STARSHIP_CONFIG "$HOME/.config/starship/.root"
+        set -l target "$config_dir/.root"
+        set -l base "$config_dir/base.toml"
+        set -l role "$config_dir/root.toml"
+
+        if test ! -e "$target" -o "$base" -nt "$target" -o "$role" -nt "$target"
+            cat "$base" "$role" >"$target"
+        end
+        set -x STARSHIP_CONFIG "$target"
+    else
+        set -l target "$config_dir/.user"
+        set -l base "$config_dir/base.toml"
+        set -l role "$config_dir/user.toml"
+
+        if test ! -e "$target" -o "$base" -nt "$target" -o "$role" -nt "$target"
+            cat "$base" "$role" >"$target"
+        end
+        set -x STARSHIP_CONFIG "$target"
     end
 
-    switch (uname)
-        case Darwin
-            if test -e /etc/nix-darwin
-                source $FISH_HOME/src/nix-darwin.fish
-            end
-        case Linux
-            source $FISH_HOME/src/unix.fish
-            if test -e /etc/nixos
-                source $FISH_HOME/src/nixos.fish
-            end
+    set -l os (uname)
+
+    if test "$os" = Darwin
+        if test -e /etc/nix-darwin
+            source $FISH_HOME/src/nix-darwin.fish
+        end
+    else if test "$os" = Linux
+        source $FISH_HOME/src/unix.fish
+        if test -e /etc/nixos
+            source $FISH_HOME/src/nixos.fish
+        end
     end
 
     source $FISH_HOME/src/credentials.fish
