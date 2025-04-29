@@ -23,7 +23,7 @@ SETUVAR XMLFORMAT_CONF:/Users/raf/\x2econfig/etc/formatters/xmlformat\x2econf
 SETUVAR YARN_INSTALL:/Users/raf/\x2eyarn
 SETUVAR __fish_initialized:3800
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_color_autosuggestion:808080
+SETUVAR fish_color_autosuggestion:525252
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:brcyan
 SETUVAR fish_color_comment:brblack

@@ -14,7 +14,7 @@ set -U fish_cursor_replace_one underscore blink
 set -U fish_cursor_replace underscore blink
 set -U fish_cursor_visual block
 
-set -U fish_color_autosuggestion 808080
+set -U fish_color_autosuggestion 525252
 set -U fish_color_command brcyan
 set -U fish_color_comment brblack
 set -U fish_color_cwd blue
