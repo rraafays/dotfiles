@@ -21,7 +21,7 @@ SETUVAR fish_color_param:brwhite
 SETUVAR fish_color_quote:brgreen
 SETUVAR fish_color_redirection:brmagenta
 SETUVAR fish_color_search_match:yellow
-SETUVAR fish_color_selection:\x2d\x2dbackground\x3dBE95FF\x1e000000
+SETUVAR fish_color_selection:\x2d\x2dbackground\x3dFFE97B\x1e000000
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen
 SETUVAR fish_color_valid_path:\x2d\x2dunderline
