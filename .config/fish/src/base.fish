@@ -86,5 +86,5 @@ if status is-interactive
     set --universal fish_color_quote brgreen
     set --universal fish_color_redirection brmagenta
     set --universal fish_color_search_match yellow
-    set --universal fish_color_selection --background=2A1300 D65D0E
+    set --universal fish_color_selection --background=BE95FF 000000
 end

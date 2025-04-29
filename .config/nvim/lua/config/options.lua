@@ -29,7 +29,6 @@ vim.opt.fillchars = {
   foldclose = "-",
 }
 
-vim.api.nvim_set_hl(0, "VisualModeCursor", { ctermbg = 0, fg = "#ffffff", bg = "#D65D0E" })
 vim.o.guicursor = table.concat({
   "n-c:block-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
   "i-ci:ver25-Cursor/lCursor-blinkwait1000-blinkon100-blinkoff100",
