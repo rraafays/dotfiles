@@ -1,6 +1,26 @@
 if status is-interactive
-    fish_vi_key_bindings
 
+    set -x PATH \
+        /run/current-system/sw/bin \
+        $BUN_INSTALL/bin \
+        $YARN_INSTALL/bin \
+        $PNPM_HOME \
+        $CARGO_INSTALL/bin \
+        $DOTNET_INSTALL/tools \
+        $BREW_INSTALL/sbin \
+        $BREW_INSTALL/bin \
+        $GO_INSTALL/bin \
+        $RBENV_INSTALL/bin \
+        $RBENV_INSTALL/shims \
+        $HOME/.local/bin \
+        $USER_HOME/bin \
+        $INTELLIJ_HOME \
+        $SQLPATH \
+        $SCRIPTS_HOME \
+        $XMLFORMAT_CONF \
+        $PATH
+
+    fish_vi_key_bindings
     bind --mode default \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode insert \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode paste \cZ 'fg 2>/dev/null; commandline -f repaint'
