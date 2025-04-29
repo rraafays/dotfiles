@@ -73,7 +73,7 @@ if status is-interactive
     set fish_cursor_replace underscore blink
     set fish_cursor_visual block
 
-    set --universal fish_color_autosuggestion brblack
+    set --universal fish_color_autosuggestion 808080
     set --universal fish_color_command brcyan
     set --universal fish_color_comment brblack
     set --universal fish_color_cwd blue
