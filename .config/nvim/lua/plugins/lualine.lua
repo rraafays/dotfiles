@@ -1,38 +1,38 @@
 return {
   "nvim-lualine/lualine.nvim",
+  lazy = false,
   config = function()
     local lualine = require("lualine")
-
     local theme = {
       inactive = {
         a = { fg = "#33B1FF", bg = "#000000", gui = "bold" },
-        b = { fg = "#FF7EB6", bg = "#000000", gui = "bold" },
+        b = { fg = "#bc8cff", bg = "#000000", gui = "bold" },
         c = { fg = "#FFFFFF", bg = "#000000" },
-        z = { fg = "#525252", bg = "#000000" },
+        z = { fg = "#484f58", bg = "#000000" },
       },
       normal = {
-        a = { fg = "#525252", bg = "#000000", gui = "bold" },
-        b = { fg = "#FF7EB6", bg = "#000000", gui = "bold" },
+        a = { fg = "#484f58", bg = "#000000", gui = "bold" },
+        b = { fg = "#bc8cff", bg = "#000000", gui = "bold" },
         c = { fg = "#FFFFFF", bg = "#000000" },
-        z = { fg = "#525252", bg = "#000000" },
+        z = { fg = "#484f58", bg = "#000000" },
       },
       visual = {
-        a = { fg = "#FFE97B", bg = "#000000", gui = "bold" },
-        b = { fg = "#FF7EB6", bg = "#000000", gui = "bold" },
+        a = { fg = "#d29922", bg = "#000000", gui = "bold" },
+        b = { fg = "#bc8cff", bg = "#000000", gui = "bold" },
         c = { fg = "#FFFFFF", bg = "#000000" },
-        z = { fg = "#525252", bg = "#000000" },
+        z = { fg = "#484f58", bg = "#000000" },
       },
       insert = {
-        a = { fg = "#33B1FF", bg = "#000000", gui = "bold" },
-        b = { fg = "#FF7EB6", bg = "#000000", gui = "bold" },
+        a = { fg = "#58a6ff", bg = "#000000", gui = "bold" },
+        b = { fg = "#bc8cff", bg = "#000000", gui = "bold" },
         c = { fg = "#FFFFFF", bg = "#000000" },
-        z = { fg = "#525252", bg = "#000000" },
+        z = { fg = "#484f58", bg = "#000000" },
       },
       replace = {
-        a = { fg = "#EE5396", bg = "#000000", gui = "bold" },
-        b = { fg = "#FF7EB6", bg = "#000000", gui = "bold" },
+        a = { fg = "#ff7b72", bg = "#000000", gui = "bold" },
+        b = { fg = "#bc8cff", bg = "#000000", gui = "bold" },
         c = { fg = "#FFFFFF", bg = "#000000", gui = "bold" },
-        z = { fg = "#525252", bg = "#000000", gui = "bold" },
+        z = { fg = "#484f58", bg = "#000000", gui = "bold" },
       },
       command = { a = { fg = "#BE95FF", bg = "#000000", gui = "bold" } },
     }
