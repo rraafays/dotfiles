@@ -2,7 +2,7 @@
 
 sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -v "^SSH" || echo "")
 
-selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="attach: " --preview '/run/current-system/sw/bin/tmux list-windows -t {} -F "#{window_index}: #{window_name} [#{window_panes} #{?#{==:#{window_panes},1},pane,panes}]" 2>/dev/null || echo "New session"' --preview-window=right:50% --print-query | /run/current-system/sw/bin/tail -1)
+selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="attach: " --preview "$HOME/.config/tmux/preview {}" --preview-window=right:50% --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$selected" ]; then
     exit 0
