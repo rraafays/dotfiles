@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null || echo "")
+
+selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="attach: " --print-query | /run/current-system/sw/bin/tail -1)
+
+if [ -z "$selected" ]; then
+    exit 0
+fi
+
+if /run/current-system/sw/bin/tmux has-session -t "$selected" 2>/dev/null; then
+    /run/current-system/sw/bin/tmux switch-client -t "$selected"
+else
+    /run/current-system/sw/bin/tmux new-session -d -s "$selected" && /run/current-system/sw/bin/tmux switch-client -t "$selected"
+fi

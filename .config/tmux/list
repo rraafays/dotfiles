@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+windows=$(tmux list-windows -F "#{window_index}: #{window_name} #{pane_current_path}" 2>/dev/null || echo "")
+
+selected=$(echo "$windows" | fzf --tmux --prompt="list: " --print-query | tail -1)
+
+if [ -z "$selected" ]; then
+    exit 0
+fi
+
+if echo "$windows" | grep -qFx "$selected"; then
+    window_index=$(echo "$selected" | cut -d':' -f1)
+    tmux select-window -t ":$window_index"
+else
+    if ! tmux select-window -t "$selected" 2>/dev/null; then
+        exit 0
+    fi
+fi
