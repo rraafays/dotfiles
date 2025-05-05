@@ -1,22 +1,20 @@
 #!/usr/bin/env bash
 
-sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null || echo "")
+sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null || echo "")
 
 if [ -z "$sessions" ]; then
     echo "No tmux sessions found."
     exit 0
 fi
 
-selected=$(echo "$sessions" | fzf --tmux --prompt="kill: " --print-query | tail -1)
+selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="kill: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$selected" ]; then
     exit 0
 fi
 
-if tmux has-session -t "$selected" 2>/dev/null; then
-    tmux kill-session -t "$selected"
-    echo "Session '$selected' has been killed."
+if /run/current-system/sw/bin/tmux has-session -t "$selected" 2>/dev/null; then
+    /run/current-system/sw/bin/tmux kill-session -t "$selected"
 else
-    echo "Session '$selected' not found."
     exit 1
 fi

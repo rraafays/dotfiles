@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-ssh_sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -E "^SSH " || echo "")
+ssh_sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -E "^SSH " || echo "")
 
 display_sessions=$(echo "$ssh_sessions" | sed 's/^SSH //')
 
-result=$(echo "$display_sessions" | fzf --tmux --prompt="ssh: " --print-query | tail -1)
+result=$(echo "$display_sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="ssh: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$result" ]; then
     exit 0
@@ -12,8 +12,8 @@ fi
 
 session_name="SSH $result"
 
-if tmux has-session -t "$session_name" 2>/dev/null; then
-    tmux switch-client -t "$session_name"
+if /run/current-system/sw/bin/tmux has-session -t "$session_name" 2>/dev/null; then
+    /run/current-system/sw/bin/tmux switch-client -t "$session_name"
 else
-    tmux new-session -d -s "$session_name" "ssh $result" && tmux switch-client -t "$session_name"
+    /run/current-system/sw/bin/tmux new-session -d -s "$session_name" "ssh $result" && /run/current-system/sw/bin/tmux switch-client -t "$session_name"
 fi
