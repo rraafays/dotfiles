@@ -21,12 +21,20 @@ if status is-interactive
         $PATH
 
     fish_vi_key_bindings
+
     bind --mode default \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode insert \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode paste \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode replace \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode replace_one \cZ 'fg 2>/dev/null; commandline -f repaint'
     bind --mode visual \cZ 'fg 2>/dev/null; commandline -f repaint'
+
+    bind --mode default \cf 'commandline -a " (fzf)"'
+    bind --mode insert \cf 'commandline -a " (fzf)"'
+    bind --mode paste \cf 'commandline -a " (fzf)"'
+    bind --mode replace \cf 'commandline -a " (fzf)"'
+    bind --mode replace_one \cf 'commandline -a " (fzf)"'
+    bind --mode visual \cf 'commandline -a " (fzf)"'
 
     bind --mode default - 'if test (pwd) = $PREVIOUS_DIR; 
                                cd -; 
