@@ -1,7 +1,5 @@
 #!/bin/bash
-# tmux-session-preview.sh - Display a preview of tmux session contents
 
-# Check if session name was provided
 if [ -z "$1" ]; then
     echo "Error: No session name provided"
     echo "Usage: tmux-session-preview.sh <session-name>"
@@ -12,19 +10,23 @@ session="$1"
 echo "$session"
 echo ""
 
-# Get all windows in the session
 windows=$(/run/current-system/sw/bin/tmux list-windows -t "$session" -F "#{window_index}" 2>/dev/null)
 
-# Loop through each window
 for window in $windows; do
     pane_count=$(/run/current-system/sw/bin/tmux list-panes -t "$session":"$window" 2>/dev/null | wc -l)
 
     if [ "$pane_count" -eq 1 ]; then
-        # Single pane window - show simplified view
-        /run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "  ▸ #{pane_current_command}: #{pane_current_path}" 2>/dev/null
+        /run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "  ▸ #{pane_current_command} [#{pane_pid}]: #{pane_current_path}" 2>/dev/null
     else
-        # Multi-pane window - show tree view
         echo "  ▸ $(/run/current-system/sw/bin/tmux display-message -p -t "$session":"$window" -F "#{window_name}" 2>/dev/null)"
-        /run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "    └─ #{pane_current_command}: #{pane_current_path}" 2>/dev/null
+        panes=$(/run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "#{pane_index}" 2>/dev/null)
+        last_pane=$(echo "$panes" | tail -1)
+        for pane in $panes; do
+            if [ "$pane" = "$last_pane" ]; then
+                /run/current-system/sw/bin/tmux display-message -p -t "$session":"$window"."$pane" -F "    └─ #{pane_current_command} [#{pane_pid}]: #{pane_current_path}" 2>/dev/null
+            else
+                /run/current-system/sw/bin/tmux display-message -p -t "$session":"$window"."$pane" -F "    ├─ #{pane_current_command} [#{pane_pid}]: #{pane_current_path}" 2>/dev/null
+            fi
+        done
     fi
 done
