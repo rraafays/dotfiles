@@ -2,7 +2,7 @@
 
 ssh_sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -E "^SSH " || echo "")
 
-display_sessions=$(echo "$ssh_sessions" | sed 's/^SSH //')
+display_sessions=${ssh_sessions//SSH /}
 
 result=$(echo "$display_sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="ssh: " --print-query | /run/current-system/sw/bin/tail -1)
 
