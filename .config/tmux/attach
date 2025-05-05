@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null || echo "")
+sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null | grep -v "^SSH" || echo "")
 
 selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="attach: " --print-query | /run/current-system/sw/bin/tail -1)
 
