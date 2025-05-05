@@ -18,7 +18,7 @@ for window in $windows; do
     if [ "$pane_count" -eq 1 ]; then
         /run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "  ▸ #{pane_current_command} [#{pane_pid}]: #{pane_current_path}" 2>/dev/null
     else
-        echo "  ▸ $(/run/current-system/sw/bin/tmux display-message -p -t "$session":"$window" -F "#{window_name}" 2>/dev/null)"
+        echo "  ▸ $pane_count panes"
         panes=$(/run/current-system/sw/bin/tmux list-panes -t "$session":"$window" -F "#{pane_index}" 2>/dev/null)
         last_pane=$(echo "$panes" | tail -1)
         for pane in $panes; do
