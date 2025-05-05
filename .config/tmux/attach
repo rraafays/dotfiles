@@ -2,7 +2,7 @@
 
 sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}" 2>/dev/null || echo "")
 
-selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="attach: " --print-query | /run/current-system/sw/bin/tail -1)
+selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="attach: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$selected" ]; then
     exit 0

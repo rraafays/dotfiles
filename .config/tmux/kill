@@ -7,7 +7,7 @@ if [ -z "$sessions" ]; then
     exit 0
 fi
 
-selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="kill: " --print-query | /run/current-system/sw/bin/tail -1)
+selected=$(echo "$sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="kill: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$selected" ]; then
     exit 0

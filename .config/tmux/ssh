@@ -4,7 +4,7 @@ ssh_sessions=$(/run/current-system/sw/bin/tmux list-sessions -F "#{session_name}
 
 display_sessions=$(echo "$ssh_sessions" | sed 's/^SSH //')
 
-result=$(echo "$display_sessions" | /run/current-system/sw/bin/fzf --tmux --prompt="ssh: " --print-query | /run/current-system/sw/bin/tail -1)
+result=$(echo "$display_sessions" | /run/current-system/sw/bin/fzf --reverse --prompt="ssh: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$result" ]; then
     exit 0

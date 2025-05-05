@@ -2,7 +2,7 @@
 
 windows=$(/run/current-system/sw/bin/tmux list-windows -F "#{window_name}: #{pane_current_path}" 2>/dev/null || echo "")
 
-selected=$(echo "$windows" | /run/current-system/sw/bin/fzf --tmux --prompt="list: " --print-query | /run/current-system/sw/bin/tail -1)
+selected=$(echo "$windows" | /run/current-system/sw/bin/fzf --reverse --prompt="list: " --print-query | /run/current-system/sw/bin/tail -1)
 
 if [ -z "$selected" ]; then
     exit 0
