@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-windows=$(/run/current-system/sw/bin/tmux list-windows -F "#{window_name}: #{pane_current_path}" 2>/dev/null || echo "")
+windows=$(/run/current-system/sw/bin/tmux list-windows -F "#{window_name} [#{pane_pid}]: #{pane_current_path} " 2>/dev/null || echo "")
 
 selected=$(echo "$windows" | /run/current-system/sw/bin/fzf --reverse --prompt="list: " --print-query | /run/current-system/sw/bin/tail -1)
 
