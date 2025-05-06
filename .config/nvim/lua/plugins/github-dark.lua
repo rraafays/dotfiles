@@ -1,5 +1,5 @@
 return {
-  "projekt0n/github-nvim-theme",
+  "rraafays/github-nvim-theme",
   name = "github-theme",
   lazy = false,
   priority = 9999,
