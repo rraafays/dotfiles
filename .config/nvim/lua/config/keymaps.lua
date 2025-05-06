@@ -1,3 +1,5 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+local snacks = require("snacks")
+
+vim.keymap.set("n", "<C-f>", function()
+  snacks.picker.git_files()
+end, { desc = "Find git files" })
