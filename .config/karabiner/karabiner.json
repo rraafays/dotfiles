@@ -445,6 +445,17 @@
                             },
                             {
                                 "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": ["left_option", "left_command", "left_control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "apple_vendor_keyboard_key_code": "language" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "s",
                                     "modifiers": {
                                         "mandatory": ["left_option", "left_command", "left_control"],
@@ -821,10 +832,6 @@
                 {
                     "from": { "key_code": "right_command" },
                     "to": [{ "key_code": "right_control" }]
-                },
-                {
-                    "from": { "consumer_key_code": "eject" },
-                    "to": [{ "apple_vendor_keyboard_key_code": "language" }]
                 }
             ],
             "virtual_hid_keyboard": {
