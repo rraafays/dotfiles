@@ -4,23 +4,23 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "shift ~> language switch",
+                        "description": "ctrl ~> language switch",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_shift",
+                                    "key_code": "left_control",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_shift" }],
+                                "to": [{ "key_code": "left_control" }],
                                 "to_if_alone": [{ "apple_vendor_keyboard_key_code": "language" }],
                                 "type": "basic"
                             },
                             {
                                 "from": {
-                                    "key_code": "right_shift",
+                                    "key_code": "right_control",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "right_shift" }],
+                                "to": [{ "key_code": "right_control" }],
                                 "to_if_alone": [{ "apple_vendor_keyboard_key_code": "language" }],
                                 "type": "basic"
                             }
