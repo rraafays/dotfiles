@@ -4,29 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "ctrl ~> language switch",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "apple_vendor_keyboard_key_code": "language" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_control",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_control" }],
-                                "to_if_alone": [{ "apple_vendor_keyboard_key_code": "language" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "fn ~> hhkb",
                         "manipulators": [
                             {
@@ -844,6 +821,10 @@
                 {
                     "from": { "key_code": "right_command" },
                     "to": [{ "key_code": "right_control" }]
+                },
+                {
+                    "from": { "consumer_key_code": "eject" },
+                    "to": [{ "apple_vendor_keyboard_key_code": "language" }]
                 }
             ],
             "virtual_hid_keyboard": {
