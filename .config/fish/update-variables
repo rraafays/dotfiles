@@ -5,7 +5,7 @@ set -U FISH_HOME "$HOME/.config/fish"
 set -U EDITOR nvim
 set -U GH_CONFIG_DIR "$HOME/.config/gh"
 set -U DETOX_SEQUENCE lower
-set -U DIRENV_WARN_TIMEOUT 0s
+set -U DIRENV_WARN_TIMEOUT 100y
 set -U NIXPKGS_ALLOW_UNFREE 1
 
 set -U fish_cursor_default block blink
