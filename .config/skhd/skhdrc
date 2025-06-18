@@ -1,0 +1,1 @@
+cmd - return : kitty -1 tmux new-session -A -c ~/ -s main >/dev/null 2>&1
