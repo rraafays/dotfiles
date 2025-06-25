@@ -1,15 +1,13 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 add_newline = false
-format = "$status$username$hostname$battery$all"
-right_format = "$custom"
+format = "$status$username$hostname$battery$directory$git_branch$git_metrics$git_status$custom$nix_shell$character$all"
 
-# [custom.song]
-# command = "mpc current -f '%title% : %album% - %artist%'"
-# style="bold #282828"
-# when="playing"
-# shell="sh"
-# format = "[$output]($style)"
+[custom.unused_nix_shell]
+style = "bold #484f58"
+when = "test -e shell.nix || test -e flake.nix && ! test $IN_NIX_SHELL"
+shell = "sh"
+format = "[ ]($style) "
 
 [battery]
 disabled = true
