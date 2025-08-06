@@ -1,5 +1,0 @@
-#!/usr/bin/env fish
-
-if not mpc status | grep -q "playing|paused"
-    return 1
-end
