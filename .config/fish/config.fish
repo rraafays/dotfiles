@@ -71,17 +71,6 @@ if status is-interactive
 
     set -l os (uname)
 
-    if test "$os" = Darwin
-        if test -e /etc/nix-darwin
-            source $FISH_HOME/src/nix-darwin.fish
-        end
-    else if test "$os" = Linux
-        source $FISH_HOME/src/unix.fish
-        if test -e /etc/nixos
-            source $FISH_HOME/src/nixos.fish
-        end
-    end
-
     source $FISH_HOME/src/credentials.fish
     source $FISH_HOME/src/direnv.fish
     source $FISH_HOME/src/zoxide.fish
