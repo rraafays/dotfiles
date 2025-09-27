@@ -1,5 +1,0 @@
-#!/usr/bin/env fish
-
-for file in $argv
-    sips -s format tiff $file --out (path change-extension '' $file).tiff
-end
