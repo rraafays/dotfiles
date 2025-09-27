@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+for file in $argv
+    sips -s format jpeg $file --out (path change-extension '' $file).jpeg
+end
