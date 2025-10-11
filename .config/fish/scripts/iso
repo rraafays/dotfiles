@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+for file in $argv
+    mkisofs -lJR -V $file -o (basename $file).iso "$file"
+end
