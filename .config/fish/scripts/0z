@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+for file in $argv
+    zip -0 -r (basename $file).zip $file
+end
