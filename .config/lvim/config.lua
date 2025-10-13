@@ -71,3 +71,6 @@ local theme = {
 lvim.builtin.lualine.options.theme = theme
 lvim.builtin.illuminate.active = false
 lvim.format_on_save.enabled = true
+lvim.builtin.terminal.execs = {
+  { nil, "<M-f12>", "Horizontal Terminal", "horizontal", 0.4 },
+}
