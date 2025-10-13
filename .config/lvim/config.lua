@@ -25,7 +25,8 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "MsgArea", { bg = "NONE" })
       vim.api.nvim_set_hl(0, "TelescopeBorder", { bg = "NONE" })
       vim.api.nvim_set_hl(0, "NvimTreeNormal", { bg = "NONE" })
-      --vim.opt.fillchars = { eob = " " }
+      ---@diagnostic disable-next-line: missing-fields
+      vim.opt.fillchars = { eob = " " }
 
       vim.api.nvim_set_hl(0, "Visual", { bg = "#FFFFFF", fg = "#000000" })
       vim.api.nvim_set_hl(0, "CursorLine", { bg = "#000000" })
