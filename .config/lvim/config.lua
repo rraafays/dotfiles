@@ -33,6 +33,10 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "Cursor", { bg = "#FFFFFF", fg = "#000000" })
     end,
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    enabled = false,
+  }
 }
 
 local theme = {
