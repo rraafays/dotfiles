@@ -1,12 +1,8 @@
--- Read the docs: https://www.lunarvim.org/docs/configuration
--- Example configs: https://github.com/LunarVim/starter.lvim
--- Video Tutorials: https://www.youtube.com/watch?v=sFA9kX-Ud_c&list=PLhoH5vyxr6QqGu0i7tt_XoVK9v-KvZ3m6
--- Forum: https://www.reddit.com/r/lunarvim/
--- Discord: https://discord.com/invite/Xb9B4Ny
 vim.opt.cmdheight = 0;
 vim.opt.showtabline = 0
 
 lvim.plugins = {
+  { "lukas-reineke/indent-blankline.nvim", enabled = false, },
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
@@ -32,10 +28,6 @@ lvim.plugins = {
       vim.api.nvim_set_hl(0, "CursorLine", { bg = "#000000" })
       vim.api.nvim_set_hl(0, "Cursor", { bg = "#FFFFFF", fg = "#000000" })
     end,
-  },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    enabled = false,
   }
 }
 
@@ -76,6 +68,4 @@ local theme = {
 lvim.builtin.lualine.options.theme = theme
 lvim.builtin.illuminate.active = false
 lvim.format_on_save.enabled = true
-lvim.builtin.terminal.execs = {
-  { nil, "<M-f12>", "Horizontal Terminal", "horizontal", 0.4 },
-}
+lvim.builtin.terminal.execs = { { nil, "<M-f12>", "Horizontal Terminal", "horizontal", 0.4 } }
