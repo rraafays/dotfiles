@@ -45,7 +45,7 @@ disabled = true
 [directory]
 style = "bold fg:4"
 read_only = "  "
-read_only_style = "bold fg:8"
+read_only_style = "bold fg:7"
 truncation_length = 3
 
 [cmd_duration]
