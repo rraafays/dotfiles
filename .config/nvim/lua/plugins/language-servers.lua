@@ -1,7 +1,4 @@
 return {
-  { "mason-org/mason.nvim", enabled = false },
-  { "mason-org/mason-lspconfig.nvim", enabled = false },
-
   {
     "dundalek/lazy-lsp.nvim",
     dependencies = {
