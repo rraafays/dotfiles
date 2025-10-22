@@ -7,32 +7,16 @@ return {
       "saghen/blink.cmp",
     },
     config = function()
-      require("lazy-lsp").setup({
-        excluded_servers = {},
-        preferred_servers = {
-          markdown = {},
-          python = { "pyright" },
-        },
-        default_config = {
-          flags = {
-            debounce_text_changes = 150,
-          },
-          -- on_attach = on_attach,
-          -- capabilities = capabilities,
-        },
-        configs = {
-          lua_ls = {
-            settings = {
-              Lua = {
-                diagnostics = {
-                  globals = { "vim" },
-                },
-              },
-            },
-          },
-        },
-        prefer_local = true,
-      })
+      local lsp_zero = require("lsp-zero")
+
+      lsp_zero.on_attach(function(client, bufnr)
+        lsp_zero.default_keymaps({
+          buffer = bufnr,
+          preserve_mappings = false,
+        })
+      end)
+
+      require("lazy-lsp").setup({})
     end,
   },
 }
