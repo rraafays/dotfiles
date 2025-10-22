@@ -3,20 +3,45 @@ return {
     "dundalek/lazy-lsp.nvim",
     dependencies = {
       "neovim/nvim-lspconfig",
-      { "vonheikemen/lsp-zero.nvim", branch = "v3.x" },
       "saghen/blink.cmp",
     },
     config = function()
-      local lsp_zero = require("lsp-zero")
-
-      lsp_zero.on_attach(function(client, bufnr)
-        lsp_zero.default_keymaps({
-          buffer = bufnr,
-          preserve_mappings = false,
-        })
-      end)
-
-      require("lazy-lsp").setup({})
+      require("lazy-lsp").setup()
+      require("lspconfig").lua_ls.setup({
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT",
+            },
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = {
+                vim.env.VIMRUNTIME,
+              },
+            },
+          },
+        },
+      })
+    end,
+  },
+  {
+    "neovim/nvim-lspconfig",
+    opts = function(_, opts)
+      opts.diagnostics = {
+        float = {
+          border = "rounded",
+        },
+        signs = {
+          text = {
+            [vim.diagnostic.severity.ERROR] = LazyVim.config.icons.diagnostics.Error,
+            [vim.diagnostic.severity.WARN] = LazyVim.config.icons.diagnostics.Warn,
+            [vim.diagnostic.severity.HINT] = LazyVim.config.icons.diagnostics.Hint,
+            [vim.diagnostic.severity.INFO] = LazyVim.config.icons.diagnostics.Info,
+          },
+        },
+      }
     end,
   },
 }
