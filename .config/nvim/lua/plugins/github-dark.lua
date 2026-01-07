@@ -1,5 +1,4 @@
 return {
-  { "snacks.nvim", opts = { indent = { enabled = false } } },
   {
     "projekt0n/github-nvim-theme",
     name = "github-theme",
@@ -12,18 +11,6 @@ return {
           terminal_colors = false,
           dim_inactive = false,
           module_default = true,
-          styles = {
-            comments = "NONE",
-            functions = "NONE",
-            keywords = "NONE",
-            variables = "NONE",
-            conditionals = "NONE",
-            constants = "NONE",
-            numbers = "NONE",
-            operators = "NONE",
-            strings = "NONE",
-            types = "NONE",
-          },
         },
       })
 
