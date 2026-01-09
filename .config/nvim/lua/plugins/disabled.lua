@@ -3,5 +3,6 @@ return {
   { "mason-org/mason-lspconfig.nvim", enabled = false },
   { "folke/flash.nvim", enabled = false },
   { "akinsho/bufferline.nvim", enabled = false },
-  { "snacks.nvim", opts = { indent = { enabled = false } } },
+  { "folke/snacks.nvim", opts = { indent = { enabled = false } } },
+  { "catppuccin/nvim", enabled = false },
 }
