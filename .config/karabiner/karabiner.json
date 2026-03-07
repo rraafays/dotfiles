@@ -4,18 +4,42 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "ctrl/command swap for Kitty",
+                        "description": "ctrl -> dev",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            ".*kitty.*"
+                                            ".*kitty.*",
+                                            "com.jetbrains.intellij.*"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": { "key_code": "left_command" },
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "mandatory": ["left_control"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "osascript -e 'tell application \"System Events\" to key code 49 using command down'" }],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            ".*kitty.*",
+                                            "com.jetbrains.intellij.*"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": { "optional": ["any"] }
+                                },
                                 "to": [{ "key_code": "left_control" }],
                                 "type": "basic"
                             },
@@ -23,12 +47,16 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            ".*kitty.*"
+                                            ".*kitty.*",
+                                            "com.jetbrains.intellij.*"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
                                 ],
-                                "from": { "key_code": "left_control" },
+                                "from": {
+                                    "key_code": "left_control",
+                                    "modifiers": { "optional": ["any"] }
+                                },
                                 "to": [{ "key_code": "left_command" }],
                                 "type": "basic"
                             }
