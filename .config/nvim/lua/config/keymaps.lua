@@ -46,48 +46,48 @@ local dap = require("dap")
 -- spc,spc -> search everything
 map("n", "<leader><leader>", Snacks.picker.smart, opts)
 
--- Cmd+Shift+O → Go to File
-map("n", "<A-S-o>", Snacks.picker.files, opts)
+-- Ctrl+Shift+N → Go to File
+map("n", "<C-S-n>", Snacks.picker.files, opts)
 
--- Cmd+Shift+A → Find Action
-map("n", "<A-S-a>", Snacks.picker.commands, opts)
+-- Ctrl+Shift+A → Find Action
+map("n", "<C-S-a>", Snacks.picker.commands, opts)
 
--- Cmd+E → Recent Files
-map("n", "<A-e>", Snacks.picker.recent, opts)
+-- Ctrl+E → Recent Files
+map("n", "<C-e>", Snacks.picker.recent, opts)
 
--- Cmd+Shift+E → Recent Locations
-map("n", "<A-S-e>", Snacks.picker.jumps, opts)
+-- Ctrl+Shift+E → Recent Locations
+map("n", "<C-S-e>", Snacks.picker.jumps, opts)
 
--- Cmd+Alt+O → Go to Symbol
-map("n", "<A-A-o>", Snacks.picker.lsp_symbols, opts)
+-- Ctrl+Alt+Shift+N → Go to Symbol
+map("n", "<C-A-S-n>", Snacks.picker.lsp_symbols, opts)
 
--- Cmd+Alt+Shift+O → Workspace Symbols
-map("n", "<A-A-S-o>", Snacks.picker.lsp_workspace_symbols, opts)
+-- Ctrl+Alt+Shift+N → Workspace Symbols
+map("n", "<C-A-S-n>", Snacks.picker.lsp_workspace_symbols, opts)
 
--- Cmd+Shift+F → Find in project
-map("n", "<A-S-f>", Snacks.picker.grep, opts)
+-- Ctrl+Shift+F → Find in project
+map("n", "<C-S-f>", Snacks.picker.grep, opts)
 
--- Cmd+F → Find in file
-map("n", "<A-f>", "/", opts)
+-- Ctrl+F → Find in file
+map("n", "<C-f>", "/", opts)
 
 --------------------------------------------------
 -- CODE NAVIGATION
 --------------------------------------------------
 
--- Cmd+B → Go to definition
-map("n", "<A-b>", vim.lsp.buf.definition, opts)
+-- Ctrl+B → Go to definition
+map("n", "<C-b>", vim.lsp.buf.definition, opts)
 
--- Cmd+Alt+B → Go to implementation
-map("n", "<A-A-b>", vim.lsp.buf.implementation, opts)
+-- Ctrl+Alt+B → Go to implementation
+map("n", "<C-A-b>", vim.lsp.buf.implementation, opts)
 
--- Cmd+U → Type definition
-map("n", "<A-u>", vim.lsp.buf.type_definition, opts)
+-- Ctrl+Shift+B → Type definition
+map("n", "<C-S-b>", vim.lsp.buf.type_definition, opts)
 
 -- Alt+F7 → Find usages
 map("n", "<A-F7>", Snacks.picker.lsp_references, opts)
 
--- Cmd+Shift+I → Quick definition
-map("n", "<A-S-i>", vim.lsp.buf.hover, opts)
+-- Ctrl+Shift+I → Quick definition
+map("n", "<C-S-i>", vim.lsp.buf.hover, opts)
 
 -- f3 -> place mark
 map("n", "<F3>", ToggleSmartMark)
@@ -96,8 +96,8 @@ map("n", "<F3>", ToggleSmartMark)
 -- REFACTORING
 --------------------------------------------------
 
--- Ctrl+T → Refactor this
-map("n", "<C-t>", vim.lsp.buf.code_action, opts)
+-- Ctrl+Alt+Shift+T → Refactor this
+map("n", "<C-A-S-t>", vim.lsp.buf.code_action, opts)
 
 -- Shift+F6 → Rename
 map("n", "<S-F6>", vim.lsp.buf.rename, opts)
@@ -106,18 +106,18 @@ map("n", "<S-F6>", vim.lsp.buf.rename, opts)
 -- EDITING
 --------------------------------------------------
 
--- Cmd+D → Duplicate line
-map("n", "<A-d>", "yyp", opts)
+-- Ctrl+D → Duplicate line
+map("n", "<C-d>", "yyp", opts)
 
--- Cmd+Delete → Delete line
-map("n", "<A-BS>", "dd", opts)
+-- Ctrl+Y → Delete line
+map("n", "<C-y>", "dd", opts)
 
--- Cmd+/ → Comment
-map("n", "<A-/>", "gcc", { remap = true })
-map("v", "<A-/>", "gc", { remap = true })
+-- Ctrl+/ → Comment
+map("n", "<C-/>", "gcc", { remap = true })
+map("v", "<C-/>", "gc", { remap = true })
 
--- Cmd+Alt+L → Format
-map("n", "<A-A-l>", function()
+-- Ctrl+Alt+L → Format
+map("n", "<C-A-l>", function()
   vim.lsp.buf.format({ async = true })
 end, opts)
 
@@ -125,23 +125,23 @@ end, opts)
 -- TOOL WINDOWS
 --------------------------------------------------
 
--- Cmd+1 → Project Explorer
+-- Alt+1 → Project Explorer
 map("n", "<A-1>", Snacks.picker.explorer, opts)
 
--- Cmd+7 → File Structure
+-- Alt+7 → File Structure
 map("n", "<A-7>", "<cmd>AerialToggle!<CR>", opts)
 
--- Cmd+6 → Problems
+-- Alt+6 → Problems
 map("n", "<A-6>", "<cmd>Trouble diagnostics toggle<CR>", opts)
 
--- Cmd+8 → TODOs
+-- Alt+8 → TODOs
 map("n", "<A-8>", "<cmd>TodoTrouble toggle<CR>", opts)
 
 --------------------------------------------------
 -- TERMINAL (Snacks)
 --------------------------------------------------
 
--- Cmd+4 → Toggle terminal
+-- Alt+4 → Toggle terminal
 map("n", "<A-4>", Snacks.terminal.toggle, opts)
 map("t", "<A-4>", Snacks.terminal.toggle, opts)
 
@@ -152,30 +152,30 @@ map("n", "<leader>tt", Snacks.terminal.toggle, opts)
 -- TAB / BUFFER NAVIGATION
 --------------------------------------------------
 
--- Cmd+Shift+[ → Previous file
-map("n", "<A-S-[>", "<cmd>bprevious<CR>", opts)
+-- Alt+Left → Previous file (mapped to Ctrl+Tab equivalent)
+map("n", "<A-Left>", "<cmd>bprevious<CR>", opts)
 
--- Cmd+Shift+] → Next file
-map("n", "<A-S-]>", "<cmd>bnext<CR>", opts)
+-- Alt+Right → Next file (mapped to Ctrl+Shift+Tab equivalent)
+map("n", "<A-Right>", "<cmd>bnext<CR>", opts)
 
--- Cmd+W → Close file
-map("n", "<A-w>", "<cmd>bdelete<CR>", opts)
+-- Ctrl+F4 → Close file
+map("n", "<C-F4>", "<cmd>bdelete<CR>", opts)
 
 --------------------------------------------------
 -- DEBUGGING
 --------------------------------------------------
 
--- Cmd+F8 → Toggle breakpoint
-map("n", "<A-F8>", dap.toggle_breakpoint, opts)
+-- Ctrl+F8 → Toggle breakpoint
+map("n", "<C-F8>", dap.toggle_breakpoint, opts)
 
--- Shift+F8 → Step over
-map("n", "<S-F8>", dap.step_over, opts)
+-- F8 → Step over
+map("n", "<F8>", dap.step_over, opts)
 
 -- F7 → Step into
 map("n", "<F7>", dap.step_into, opts)
 
--- Shift+F7 → Step out
-map("n", "<S-F7>", dap.step_out, opts)
+-- Shift+F8 → Step out
+map("n", "<S-F8>", dap.step_out, opts)
 
 -- Shift+F9 → Debug
 map("n", "<S-F9>", dap.continue, opts)
