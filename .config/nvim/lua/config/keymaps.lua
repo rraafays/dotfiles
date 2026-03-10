@@ -40,421 +40,546 @@ local Snacks = require("snacks")
 local dap = require("dap")
 
 --================================================
--- macOS IntelliJ KEYBINDINGS
--- Reference: https://resources.jetbrains.com/help/img/idea/KeymapReference_Mac.pdf
+-- macOS For All IntelliJ KEYBINDINGS (Ctrl-based)
+-- Reference: /Users/raf/Development/hhkb-intellij/src/main/resources/keymaps/macOS For All.xml
+-- No Command key usage - uses Control (Ctrl+), Alt, and Shift combinations
 --================================================
-
---================================================
--- SEARCH / NAVIGATION / GLOBAL
---================================================
-
--- Cmd+Shift+A → Find Action
-map("n", "<D-S-a>", Snacks.picker.commands, opts)
-
--- Cmd+1 → Project panel
-map("n", "<D-1>", Snacks.picker.explorer, opts)
-
--- Cmd+2 → Bookmarks panel
--- map("n", "<D-2>", ..., opts)  -- NOTE: requires bookmarks plugin
-
--- Cmd+3 → Find Results panel
--- map("n", "<D-3>", ..., opts)  -- NOTE: requires search history plugin
-
--- Cmd+4 → Run panel
--- map("n", "<D-4>", Snacks.terminal.toggle, opts)
-
--- Cmd+5 → Debug panel
--- map("n", "<D-5>", ..., opts)  -- NOTE: requires dap UI plugin (nvim-dap-ui)
-
--- Cmd+6 → Problems/Diagnostics panel
-map("n", "<D-6>", "<cmd>Trouble diagnostics toggle<CR>", opts)
-
--- Cmd+7 → Structure panel
-map("n", "<D-7>", "<cmd>AerialToggle!<CR>", opts)
-
--- Cmd+8 → Services panel
--- map("n", "<D-8>", ..., opts)  -- NOTE: unavailable in Neovim
-
--- Cmd+9 → Git/Version Control panel
--- map("n", "<D-9>", ..., opts)  -- NOTE: requires git integration plugin
-
--- Cmd+0 → Message panel
--- map("n", "<D-0>", ..., opts)  -- NOTE: requires message history plugin
-
---================================================
--- SEARCHING & FINDING
---================================================
-
--- Cmd+F → Find
-map("n", "<D-f>", "/", opts)
-map("v", "<D-f>", "/", opts)
-
--- Cmd+G → Find Next
-map("n", "<D-g>", "n", opts)
-
--- Cmd+Shift+G → Find Previous
-map("n", "<D-S-g>", "N", opts)
-
--- Cmd+H → Replace
--- map("n", "<D-h>", ..., opts)  -- NOTE: requires advanced search/replace (grug-far.nvim available)
-map("n", "<D-h>", Snacks.picker.grep, opts)
-
--- Cmd+Shift+F → Find in Files/Project
-map("n", "<D-S-f>", Snacks.picker.grep, opts)
-
--- Cmd+Shift+H → Replace in Files
--- map("n", "<D-S-h>", ..., opts)  -- NOTE: requires grug-far.nvim setup for replace
-
--- Cmd+O → Go to Class
-map("n", "<D-o>", Snacks.picker.lsp_symbols, opts)
-
--- Cmd+Shift+O → Go to Symbol
-map("n", "<D-S-o>", Snacks.picker.lsp_workspace_symbols, opts)
-
--- Cmd+Alt+O → Go to Symbol in File
-map("n", "<D-A-o>", Snacks.picker.lsp_symbols, opts)
-
--- Ctrl+Shift+A → Go to File
-map("n", "<C-S-a>", Snacks.picker.files, opts)
-
--- Cmd+; → Search everywhere
-map("n", "<D-;>", Snacks.picker.smart, opts)
-
---================================================
--- CODE NAVIGATION
---================================================
-
--- Cmd+B → Go to Declaration/Definition
-map("n", "<D-b>", vim.lsp.buf.definition, opts)
-
--- Cmd+Alt+B → Go to Implementation
-map("n", "<D-A-b>", vim.lsp.buf.implementation, opts)
-
--- Cmd+Y → Show Quick Definition
-map("n", "<D-y>", vim.lsp.buf.hover, opts)
-
--- Cmd+Ctrl+B → Open in New Window (Declaration)
--- map("n", "<D-C-b>", ..., opts)  -- NOTE: requires window management plugin
-
--- Cmd+[ → Back
-map("n", "<D-[>", "<C-o>", opts)
-
--- Cmd+] → Forward
-map("n", "<D-]>", "<C-i>", opts)
-
--- Cmd+Ctrl+H → Type Hierarchy
--- map("n", "<D-C-h>", ..., opts)  -- NOTE: requires hierarchy plugin (aerial.nvim shows structure)
-
--- Cmd+Ctrl+U → Show UML Diagram
--- map("n", "<D-C-u>", ..., opts)  -- NOTE: unavailable in Neovim
-
--- F12 → Go to declaration
-map("n", "<F12>", vim.lsp.buf.definition, opts)
-
--- Ctrl+Alt+G → Find usages / Go to references
-map("n", "<C-A-g>", Snacks.picker.lsp_references, opts)
-
--- Cmd+Alt+J → Collapse/Inline
--- map("n", "<D-A-j>", ..., opts)  -- NOTE: requires code folding UI
-
---================================================
--- EDITING & TEXT MANIPULATION
---================================================
-
--- Cmd+X → Cut line
-map("n", "<D-x>", "dd", opts)
-
--- Cmd+C → Copy line (with vim select)
-map("n", "<D-c>", "yy", opts)
-
--- Cmd+V → Paste
-map("n", "<D-v>", "p", opts)
-
--- Cmd+D → Duplicate line
-map("n", "<D-d>", "yyp", opts)
-
--- Cmd+Delete → Delete line
-map("n", "<D-Backspace>", "dd", opts)
-
--- Ctrl+Shift+J → Join lines
-map("n", "<C-S-j>", "J", opts)
-
--- Cmd+Alt+L → Reformat code
-map("n", "<D-A-l>", function()
-  vim.lsp.buf.format({ async = true })
-end, opts)
-
--- Cmd+Alt+I → Auto-indent lines
-map("n", "<D-A-i>", function()
-  vim.lsp.buf.format({ async = true })
-end, opts)
-
--- Cmd+/ → Comment line
-map("n", "<D-/>", "gcc", { remap = true })
-map("v", "<D-/>", "gc", { remap = true })
-
--- Cmd+Alt+/ → Block comment
-map("n", "<D-A-/>", "gbc", { remap = true })
-map("v", "<D-A-/>", "gb", { remap = true })
-
--- Cmd+Shift+Enter → Complete Statement
--- map("n", "<D-S-CR>", ..., opts)  -- NOTE: requires smart completion
-
--- Cmd+Alt+T → Surround with...
--- map("n", "<D-A-t>", ..., opts)  -- NOTE: requires vim-surround or mini.surround
-
--- Cmd+Shift+Delete → Delete to word start
-map("n", "<D-S-Backspace>", "dB", opts)
-
--- Cmd+Alt+Shift+Delete → Delete to word end
-map("n", "<D-A-S-Backspace>", "dE", opts)
-
--- Ctrl+H → Show Signature Help
-map("n", "<C-h>", vim.lsp.buf.signature_help, opts)
-
---================================================
--- REFACTORING & CODE ACTIONS
---================================================
-
--- Cmd+Alt+R → Refactor This
-map("n", "<D-A-r>", vim.lsp.buf.code_action, opts)
-
--- Cmd+Alt+M → Extract Method
--- map("n", "<D-A-m>", ..., opts)  -- NOTE: requires nvim-refactoring plugin
-
--- Cmd+Alt+V → Extract Variable
--- map("n", "<D-A-v>", ..., opts)  -- NOTE: requires nvim-refactoring plugin
-
--- Cmd+Alt+C → Extract Constant
--- map("n", "<D-A-c>", ..., opts)  -- NOTE: requires nvim-refactoring plugin
-
--- Cmd+Alt+P → Extract Parameter
--- map("n", "<D-A-p>", ..., opts)  -- NOTE: requires nvim-refactoring plugin
-
--- F6 → Rename
-map("n", "<F6>", vim.lsp.buf.rename, opts)
-
--- Cmd+Alt+Shift+M → Move
--- map("n", "<D-A-S-m>", ..., opts)  -- NOTE: requires file movement plugin
-
--- Cmd+Alt+N → Inline
--- map("n", "<D-A-n>", ..., opts)  -- NOTE: requires code analysis plugin
 
 --================================================
 -- TOOL WINDOWS & PANELS
 --================================================
 
--- Cmd+W → Close tab/window
-map("n", "<D-w>", "<cmd>bdelete<CR>", opts)
+-- Alt+1 → Project Explorer / Project Tool Window
+map("n", "<A-1>", Snacks.picker.explorer, opts)
 
--- Cmd+Alt+Y → Sync
--- map("n", "<D-A-y>", ..., opts)  -- NOTE: requires VCS plugin
+-- Alt+2 → Bookmarks Tool Window
+-- map("n", "<A-2>", ..., opts)  -- NOTE: requires bookmarks plugin
 
--- Cmd+Alt+Shift+Y → Force Refresh
--- map("n", "<D-A-S-y>", ..., opts)  -- NOTE: requires VCS plugin
+-- Alt+3 → Find Tool Window
+-- map("n", "<A-3>", ..., opts)  -- NOTE: requires search history plugin
 
--- Cmd+T → Recent Files
-map("n", "<D-t>", Snacks.picker.recent, opts)
+-- Alt+4 → Run Tool Window / Terminal
+map("n", "<A-4>", Snacks.terminal.toggle, opts)
+map("t", "<A-4>", Snacks.terminal.toggle, opts)
 
--- Cmd+Ctrl+E → Recent Locations
-map("n", "<D-C-e>", Snacks.picker.jumps, opts)
+-- Alt+5 → Debug Tool Window
+-- map("n", "<A-5>", ..., opts)  -- NOTE: requires dap UI plugin (nvim-dap-ui)
 
--- Cmd+Alt+S → Settings/Preferences
--- map("n", "<D-A-s>", ..., opts)  -- NOTE: open neovim config manually
+-- Alt+6 → Problems View / Diagnostics
+map("n", "<A-6>", "<cmd>Trouble diagnostics toggle<CR>", opts)
 
--- Cmd+, → IDE Settings
--- map("n", "<D-,>", ..., opts)  -- NOTE: open neovim config manually
+-- Alt+7 → Structure Tool Window / File Structure
+map("n", "<A-7>", "<cmd>AerialToggle!<CR>", opts)
 
---================================================
--- TAB / BUFFER NAVIGATION
---================================================
+-- Alt+8 → Services Tool Window
+-- map("n", "<A-8>", ..., opts)  -- NOTE: unavailable in Neovim
 
--- Cmd+[ → Previous tab/buffer
-map("n", "<D-[>", "<cmd>bprevious<CR>", opts)
+-- Alt+9 → Version Control / Git Tool Window
+-- map("n", "<A-9>", ..., opts)  -- NOTE: requires git integration plugin
 
--- Cmd+] → Next tab/buffer
-map("n", "<D-]>", "<cmd>bnext<CR>", opts)
-
--- Cmd+Shift+[ → Move tab left
--- map("n", "<D-S-[>", ..., opts)  -- NOTE: requires bufferline configuration
-
--- Cmd+Shift+] → Move tab right
--- map("n", "<D-S-]>", ..., opts)  -- NOTE: requires bufferline configuration
-
--- Cmd+Alt+Left → Previous editor/file
-map("n", "<D-A-Left>", "<cmd>bprevious<CR>", opts)
-
--- Cmd+Alt+Right → Next editor/file
-map("n", "<D-A-Right>", "<cmd>bnext<CR>", opts)
-
--- Cmd+L → Go to Line
-map("n", "<D-l>", "<cmd>lua require('snacks').picker.lines()<CR>", opts)
+-- Alt+0 → Commit Tool Window
+-- map("n", "<A-0>", ..., opts)  -- NOTE: requires git integration plugin
 
 --================================================
--- RUNNING & DEBUGGING
+-- SEARCHING & FINDING
 --================================================
 
--- Ctrl+R → Run
--- map("n", "<C-r>", dap.run_last, opts)  -- NOTE: requires dap configuration
+-- Ctrl+F → Find in file
+map("n", "<C-f>", "/", opts)
+map("v", "<C-f>", "/", opts)
 
--- Ctrl+D → Debug
--- map("n", "<C-d>", dap.continue, opts)  -- NOTE: requires dap configuration
+-- Ctrl+Shift+F → Find in Path / Find in project
+map("n", "<C-S-f>", Snacks.picker.grep, opts)
 
--- Ctrl+Shift+R → Run with options
--- map("n", "<C-S-r>", ..., opts)  -- NOTE: requires dap UI
+-- Ctrl+G → Find Next
+map("n", "<C-g>", "n", opts)
 
--- Ctrl+Shift+D → Debug with options
--- map("n", "<C-S-d>", ..., opts)  -- NOTE: requires dap UI
+-- Alt+Shift+G → Find Previous
+map("n", "<A-S-g>", "N", opts)
 
--- Cmd+Alt+R → Debug (alternative)
-map("n", "<D-A-d>", dap.continue, opts)
+-- Ctrl+Shift+R → Replace in Path
+-- map("n", "<C-S-r>", ..., opts)  -- NOTE: requires grug-far.nvim setup for replace
 
--- F9 → Resume/Continue
-map("n", "<F9>", dap.continue, opts)
+-- Ctrl+O → Go to Class
+map("n", "<C-o>", Snacks.picker.lsp_symbols, opts)
 
--- Cmd+Shift+F10 → Run from editor
--- map("n", "<D-S-F10>", dap.run_last, opts)  -- NOTE: platform-specific
+-- Ctrl+Shift+O → Go to File
+map("n", "<C-S-o>", Snacks.picker.files, opts)
 
--- Cmd+Shift+F9 → Debug from editor
--- map("n", "<D-S-F9>", dap.continue, opts)  -- NOTE: platform-specific
+-- Ctrl+Alt+O → Go to Symbol
+map("n", "<C-A-o>", Snacks.picker.lsp_workspace_symbols, opts)
 
---================================================
--- BREAKPOINTS & STEPPING
---================================================
+-- Ctrl+L → Go to Line
+map("n", "<C-l>", "<cmd>lua require('snacks').picker.lines()<CR>", opts)
 
--- Cmd+F8 → Toggle breakpoint
-map("n", "<D-F8>", dap.toggle_breakpoint, opts)
+-- Ctrl+Alt+Home → Go to Related
+-- map("n", "<C-A-Home>", ..., opts)  -- NOTE: requires file relation navigation
 
--- Cmd+Shift+F8 → View breakpoints
--- map("n", "<D-S-F8>", ..., opts)  -- NOTE: requires dap UI (nvim-dap-ui)
-
--- F10 → Step over
-map("n", "<F10>", dap.step_over, opts)
-
--- F11 → Step into
-map("n", "<F11>", dap.step_into, opts)
-
--- Cmd+Shift+F11 → Step into by type
--- map("n", "<D-S-F11>", ..., opts)  -- NOTE: requires advanced dap
-
--- Cmd+F11 → Force step into
--- map("n", "<D-F11>", dap.step_into, opts)
-
--- Cmd+Shift+F10 → Step out
-map("n", "<D-S-F10>", dap.step_out, opts)
-
--- Cmd+Alt+F9 → Run to cursor
--- map("n", "<D-A-F9>", dap.run_to_cursor, opts)
-
--- Cmd+Alt+F10 → Force run to cursor
--- map("n", "<D-A-F10>", ..., opts)  -- NOTE: requires dap extension
+-- Ctrl+P → File Chooser Toggle Path Bar
+map("n", "<C-p>", Snacks.picker.recent, opts)
 
 --================================================
--- DIAGNOSTICS & INSPECTIONS
+-- CODE NAVIGATION & REFERENCES
 --================================================
 
--- F2 → Next error/problem
-map("n", "<F2>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+-- Ctrl+B → Go to Declaration / Go to Definition
+map("n", "<C-b>", vim.lsp.buf.definition, opts)
 
--- Shift+F2 → Previous error/problem
-map("n", "<S-F2>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+-- Ctrl+Shift+B → Go to Type Declaration
+-- map("n", "<C-S-b>", vim.lsp.buf.type_definition, opts)
 
--- Cmd+Alt+Shift+I → Run inspections
--- map("n", "<D-A-S-i>", ..., opts)  -- NOTE: requires code inspection plugin
+-- Ctrl+Alt+G → Find usages / Go to References
+map("n", "<C-A-g>", Snacks.picker.lsp_references, opts)
 
--- Cmd+Alt+I → Show intention actions
-map("n", "<D-A-i>", vim.lsp.buf.code_action, opts)
+-- Ctrl+Alt+H → Call Hierarchy
+-- map("n", "<C-A-h>", ..., opts)  -- NOTE: requires hierarchy plugin
+
+-- Ctrl+H → Type Hierarchy
+-- map("n", "<C-h>", ..., opts)  -- NOTE: requires hierarchy plugin (aerial.nvim shows structure)
+
+-- Ctrl+Y → Quick Implementations / Quick Definition
+map("n", "<C-y>", vim.lsp.buf.hover, opts)
+
+-- Ctrl+Alt+Left → Back (Previous location)
+map("n", "<C-A-Left>", "<C-o>", opts)
+map("n", "<C-[>", "<C-o>", opts)
+
+-- Ctrl+Alt+Right → Forward (Next location)
+map("n", "<C-A-Right>", "<C-i>", opts)
+map("n", "<C-]>", "<C-i>", opts)
+
+-- F4 → Edit Source
+map("n", "<F4>", "<cmd>vsplit<CR>", opts)
+
+-- Ctrl+Down → Edit Source / Go into definition
+map("n", "<C-Down>", vim.lsp.buf.definition, opts)
+
+--================================================
+-- EDITING & TEXT MANIPULATION
+--================================================
+
+-- Ctrl+D → EditorDeleteLine (but vim-like delete, we use Ctrl+B for backspace line)
+-- Using native behavior: Ctrl+D scrolls down (vim default)
+-- For delete line use: Ctrl+K (EditorCutLineEnd) or standard dd
+
+-- Ctrl+K → EditorCutLineEnd (delete to end of line)
+map("n", "<C-k>", "d$", opts)
+
+-- Ctrl+Backspace → EditorDeleteLine / Delete entire line
+map("n", "<C-Backspace>", "dd", opts)
+
+-- Delete → EditorDelete
+map("n", "<Del>", "x", opts)
+
+-- Backspace → EditorBackSpace
+map("n", "<Backspace>", "X", opts)
+
+-- Shift+Enter → EditorStartNewLine
+map("n", "<S-Enter>", "O", opts)
+
+-- Ctrl+Shift+J → EditorJoinLines
+map("n", "<C-S-j>", "J", opts)
+
+-- Ctrl+Shift+Space → SmartTypeCompletion
+-- map("n", "<C-S-Space>", ..., opts)  -- NOTE: requires completion plugin
+
+-- Ctrl+Space → CodeCompletion
+-- map("n", "<C-Space>", ..., opts)  -- NOTE: requires completion plugin
+
+-- Ctrl+Alt+Space → ClassNameCompletion
+-- map("n", "<C-A-Space>", ..., opts)  -- NOTE: requires completion plugin
+
+-- Ctrl+Period → EditorChooseLookupItemDot
+-- map("n", "<C-.>", ..., opts)  -- NOTE: requires completion plugin
+
+-- Ctrl+Shift+/ → CommentByBlockComment
+map("n", "<C-S-/>", "gbc", { remap = true })
+map("v", "<C-S-/>", "gb", { remap = true })
+
+-- Ctrl+Alt+I → AutoIndentLines (reformat/indent)
+map("n", "<C-A-i>", function()
+  vim.lsp.buf.format({ async = true })
+end, opts)
+
+-- Ctrl+Alt+Shift+O → OptimizeImports
+-- map("n", "<C-A-S-o>", ..., opts)  -- NOTE: requires LSP-based import optimization
+
+-- Ctrl+J → QuickJavaDoc (hover/documentation)
+map("n", "<C-j>", vim.lsp.buf.hover, opts)
+
+-- Ctrl+Shift+P → ExpressionTypeInfo (type info)
+map("n", "<C-S-p>", vim.lsp.buf.hover, opts)
+
+-- Shift+F1 → ExternalJavaDoc
+-- map("n", "<S-F1>", ..., opts)  -- NOTE: requires external doc integration
+
+-- Ctrl+Shift+Q → EditorContextInfo
+-- map("n", "<C-S-q>", ..., opts)  -- NOTE: requires context info popup
+
+-- Ctrl+Alt+Q → ToggleRenderedDocPresentation
+-- map("n", "<C-A-q>", ..., opts)  -- NOTE: requires rendered doc mode
+
+-- Alt+Left → EditorPreviousWord
+map("n", "<A-Left>", "b", opts)
+
+-- Alt+Shift+Left → EditorPreviousWordWithSelection
+map("n", "<A-S-Left>", "vb", opts)
+
+-- Alt+Right → EditorNextWord
+map("n", "<A-Right>", "w", opts)
+
+-- Alt+Shift+Right → EditorNextWordWithSelection
+map("n", "<A-S-Right>", "vw", opts)
+
+-- Alt+Backspace → EditorDeleteToWordStart
+map("n", "<A-Backspace>", "dB", opts)
+
+-- Alt+Delete → EditorDeleteToWordEnd
+map("n", "<A-Del>", "dE", opts)
+
+-- Ctrl+Z → $Undo
+map("n", "<C-z>", "u", opts)
+
+-- Ctrl+Shift+Z → $Redo (note: standard vim uses Ctrl+R)
+map("n", "<C-S-z>", "<C-r>", opts)
+
+--================================================
+-- REFACTORING & CODE ACTIONS
+--================================================
+
+-- Ctrl+T → Refactorings.QuickListPopupAction (refactor menu)
+map("n", "<C-t>", vim.lsp.buf.code_action, opts)
+
+-- Ctrl+I → ImplementMethods
+-- map("n", "<C-i>", ..., opts)  -- NOTE: requires implementation generation
+
+-- Alt+Shift+O → OverrideMethods
+-- map("n", "<A-S-o>", ..., opts)  -- NOTE: requires override generation
+
+-- Ctrl+Alt+Shift+G → SelectAllOccurrences
+-- map("n", "<C-A-S-g>", ..., opts)  -- NOTE: requires multi-cursor plugin
+
+-- Ctrl+G → SelectNextOccurrence
+-- map("n", "<C-g>", ..., opts)  -- NOTE: requires multi-cursor plugin (conflicts with Find Next)
+
+-- Ctrl+Shift+G → UnselectPreviousOccurrence
+-- map("n", "<C-S-g>", ..., opts)  -- NOTE: requires multi-cursor plugin (conflicts with Find Previous)
+
+--================================================
+-- RENAME & REFACTOR
+--================================================
+
+-- F2 → GotoFile (but in context, used for rename in many IDEs)
+-- Using Snacks for file navigation
+
+-- Alt+F3 → ToggleBookmarkWithMnemonic
+-- map("n", "<A-F3>", ..., opts)  -- NOTE: requires bookmark plugin
+
+-- Shift+F6 → Rename (standard in IntelliJ, but not in this keymap)
+-- Using standard Neovim LSP rename
+map("n", "<F6>", vim.lsp.buf.rename, opts)
 
 --================================================
 -- BOOKMARKS & MARKS
 --================================================
 
--- F3 → Toggle bookmark / Smart Mark
+-- F3 → ToggleBookmark / Smart Mark (preserved from original)
 map("n", "<F3>", ToggleSmartMark, opts)
 
--- Cmd+F3 → Toggle bookmark with mnemonic
--- map("n", "<D-F3>", ..., opts)  -- NOTE: requires bookmark plugin
+-- Ctrl+F3 → ShowBookmarks
+-- map("n", "<C-F3>", ..., opts)  -- NOTE: requires bookmark plugin
 
--- Cmd+2 → Show bookmarks
--- map("n", "<D-2>", ..., opts)  -- NOTE: requires bookmark plugin
-
--- Cmd+Shift+1 to Cmd+Shift+9 → Set bookmark 1-9
--- map("n", "<D-S-1>", ..., opts)  -- NOTE: requires bookmark plugin
-
--- Cmd+1 to Cmd+9 → Go to bookmark 1-9
--- map("n", "<D-1>", ..., opts)  -- NOTE: requires bookmark plugin
+-- Ctrl+0 to Ctrl+9 → GotoBookmark0-9
+-- Ctrl+Shift+0 to Ctrl+Shift+9 → ToggleBookmark0-9
+-- map("n", "<C-0>", ..., opts)  -- NOTE: requires bookmark plugin
+-- ... (repeat for 1-9)
 
 --================================================
--- VERSION CONTROL / GIT
+-- NAVIGATION & BUFFER/TAB MANAGEMENT
 --================================================
 
--- Cmd+K → Commit
--- map("n", "<D-k>", ..., opts)  -- NOTE: requires git/fugitive plugin
+-- Ctrl+Tab → Switcher (buffer switcher)
+map("n", "<C-Tab>", "<cmd>Telescope buffers<CR>", opts)
 
--- Cmd+Shift+K → Push
--- map("n", "<D-S-k>", ..., opts)  -- NOTE: requires git plugin
+-- Ctrl+Shift+Tab → Diff.FocusOppositePaneAndScroll / Switcher backward
+map("n", "<C-S-Tab>", Snacks.picker.buffers, opts)
 
--- Cmd+Ctrl+Alt+Z → Rollback
--- map("n", "<D-C-A-z>", ..., opts)  -- NOTE: requires git plugin
+-- Ctrl+Shift+[ → PreviousTab / Diff.PrevChange
+map("n", "<C-S-[>", "<cmd>bprevious<CR>", opts)
 
--- Cmd+' → VCS operations menu
--- map("n", "<D-'>", ..., opts)  -- NOTE: requires git plugin
+-- Ctrl+Shift+] → NextTab / Diff.NextChange
+map("n", "<C-S-]>", "<cmd>bnext<CR>", opts)
 
--- Cmd+Alt+G → Show diff
--- map("n", "<D-A-g>", ..., opts)  -- NOTE: use gitsigns instead
+-- Ctrl+Alt+Shift+Left → PreviousEditorTab
+map("n", "<C-A-S-Left>", "<cmd>bprevious<CR>", opts)
 
---================================================
--- TERMINAL
---================================================
+-- Ctrl+Alt+Shift+Right → NextEditorTab
+map("n", "<C-A-S-Right>", "<cmd>bnext<CR>", opts)
 
--- Ctrl+` → Toggle terminal
-map("n", "<C-`>", Snacks.terminal.toggle, opts)
-map("t", "<C-`>", Snacks.terminal.toggle, opts)
+-- Ctrl+Alt+` → NextProjectWindow
+-- map("n", "<C-A-`>", ..., opts)  -- NOTE: requires project window management
 
--- Alt+F12 → Toggle terminal (alternative)
-map("n", "<A-F12>", Snacks.terminal.toggle, opts)
-map("t", "<A-F12>", Snacks.terminal.toggle, opts)
+-- Ctrl+Alt+Shift+` → PreviousProjectWindow
+-- map("n", "<C-A-S-`>", ..., opts)  -- NOTE: requires project window management
 
---================================================
--- SELECTION & MULTI-CURSOR
---================================================
+-- Ctrl+W → CloseContent / Close tab
+map("n", "<C-w>", "<cmd>bdelete<CR>", opts)
 
--- Ctrl+G → Add next occurrence to selection (multi-cursor)
--- map("n", "<C-g>", ..., opts)  -- NOTE: requires vim-visual-multi or similar
+-- Ctrl+Shift+F4 → CloseActiveTab
+map("n", "<C-S-F4>", "<cmd>bdelete<CR>", opts)
 
--- Ctrl+Cmd+G → Add all occurrences to selection
--- map("n", "<C-D-g>", ..., opts)  -- NOTE: requires vim-visual-multi or similar
+-- Ctrl+Q → Exit
+-- map("n", "<C-q>", "<cmd>qa<CR>", opts)  -- Dangerous, commented out
 
--- Cmd+Alt+Shift+J → Create rectangular selection
--- map("n", "<D-A-S-j>", ..., opts)  -- NOTE: requires column selection plugin
+-- Ctrl+M → MinimizeCurrentWindow
+-- map("n", "<C-m>", ..., opts)  -- NOTE: requires window management
 
--- Cmd+Shift+L → Split selection into lines
--- map("n", "<D-S-l>", ..., opts)  -- NOTE: requires advanced selection plugin
+-- Ctrl+= → ZoomCurrentWindow
+-- map("n", "<C-=>", ..., opts)  -- NOTE: requires window zoom
 
--- Alt+Click → Column selection
--- NOTE: Mouse-based, handled by terminal
+-- Ctrl+Alt+Shift+F → ToggleFullScreen
+-- map("n", "<C-A-S-f>", ..., opts)  -- NOTE: requires fullscreen toggle
 
 --================================================
--- OTHER ACTIONS
+-- NAVIGATION & MOTION
 --================================================
 
--- Cmd+N → Generate (new file, class, etc.)
--- map("n", "<D-n>", ..., opts)  -- NOTE: requires generation plugin
+-- Home → EditorLineStart
+map("n", "<Home>", "0", opts)
 
--- Cmd+Alt+O → Optimize imports
--- map("n", "<D-A-o>", ..., opts)  -- NOTE: requires LSP-based import plugin
+-- End → EditorLineEnd
+map("n", "<End>", "$", opts)
 
--- Cmd+Shift+M → Mark as modified
--- map("n", "<D-S-m>", ..., opts)  -- NOTE: built-in buffer modification tracking
+-- Ctrl+Left → EditorLineStart
+map("n", "<C-Left>", "0", opts)
 
--- Cmd+Ctrl+S → Save all
-map("n", "<D-C-s>", "<cmd>wa<CR>", opts)
+-- Ctrl+Right → EditorLineEnd
+map("n", "<C-Right>", "$", opts)
 
--- Cmd+S → Save
-map("n", "<D-s>", "<cmd>w<CR>", opts)
+-- Ctrl+Home → EditorLineStart (top of file)
+map("n", "<C-Home>", "gg", opts)
 
--- Cmd+Z → Undo
-map("n", "<D-z>", "u", opts)
+-- Ctrl+End → EditorLineEnd (end of file)
+map("n", "<C-End>", "G", opts)
 
--- Cmd+Shift+Z → Redo
-map("n", "<D-S-z>", "<C-r>", opts)
+-- Ctrl+Shift+Left → EditorLineStartWithSelection
+map("n", "<C-S-Left>", "v0", opts)
+
+-- Ctrl+Shift+Right → EditorLineEndWithSelection
+map("n", "<C-S-Right>", "v$", opts)
+
+-- Up → EditorUp
+map("n", "<Up>", "k", opts)
+
+-- Down → EditorDown
+map("n", "<Down>", "j", opts)
+
+-- Left → EditorLeft
+map("n", "<Left>", "h", opts)
+
+-- Right → EditorRight
+map("n", "<Right>", "l", opts)
+
+-- Ctrl+Alt+Up → MethodUp / GotoPrevElementUnderCaretUsage
+map("n", "<C-A-Up>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+
+-- Ctrl+Alt+Down → MethodDown / GotoNextElementUnderCaretUsage
+map("n", "<C-A-Down>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+
+-- Ctrl+Alt+[ → EditorCodeBlockStart
+map("n", "<C-A-[>", "[[", opts)
+
+-- Ctrl+Alt+] → EditorCodeBlockEnd
+map("n", "<C-A-]>", "]]", opts)
+
+-- Ctrl+Alt+Shift+[ → EditorCodeBlockStartWithSelection
+map("n", "<C-A-S-[>", "v[[", opts)
+
+-- Ctrl+Alt+Shift+] → EditorCodeBlockEndWithSelection
+map("n", "<C-A-S-]>", "v]]", opts)
+
+-- Ctrl+Alt+M → EditorMatchBrace
+map("n", "<C-A-m>", "%", opts)
+
+-- Ctrl+Shift+Down → ShowContent
+map("n", "<C-S-Down>", "G", opts)
+
+-- Ctrl+Up → ShowNavBar / SearchEverywhere.NavigateToPrevGroup
+map("n", "<C-Up>", "gg", opts)
+
+-- Alt+Home → ShowNavBar
+-- map("n", "<A-Home>", ..., opts)  -- NOTE: requires nav bar
+
+-- Ctrl+Alt+Shift+PageDown → NextSplitter
+-- map("n", "<C-A-S-PageDown>", ..., opts)  -- NOTE: requires split management
+
+-- Ctrl+Alt+Shift+PageUp → PrevSplitter
+-- map("n", "<C-A-S-PageUp>", ..., opts)  -- NOTE: requires split management
+
+--================================================
+-- RUNNING & DEBUGGING
+--================================================
+
+-- Ctrl+Alt+R → Run
+-- map("n", "<C-A-r>", dap.run_last, opts)  -- NOTE: requires dap configuration
+
+-- Ctrl+Alt+D → Debug
+map("n", "<C-A-d>", dap.continue, opts)
+
+-- Ctrl+Alt+Shift+R → ChooseRunConfiguration
+-- map("n", "<C-A-S-r>", ..., opts)  -- NOTE: requires dap UI
+
+-- Ctrl+Alt+Shift+D → ChooseDebugConfiguration
+-- map("n", "<C-A-S-d>", ..., opts)  -- NOTE: requires dap UI
+
+-- Ctrl+R → Refresh / Rerun
+-- map("n", "<C-r>", dap.run_last, opts)  -- conflicts with search
+
+-- Ctrl+Shift+C → RunClass
+-- map("n", "<C-S-c>", dap.run_last, opts)  -- NOTE: requires dap configuration
+
+-- Ctrl+Shift+D → DebugClass (differs from ChooseDebugConfiguration)
+-- map("n", "<C-S-d>", dap.continue, opts)  -- conflicts with other bindings
+
+-- Ctrl+Shift+F10 → RunClass (alternative keybinding)
+-- map("n", "<C-S-F10>", dap.run_last, opts)
+
+-- Ctrl+Shift+F9 → DebugClass (alternative keybinding)
+-- map("n", "<C-S-F9>", dap.continue, opts)
+
+-- F9 → Resume / Continue
+map("n", "<F9>", dap.continue, opts)
+
+-- Alt+Shift+R → RerunTests
+-- map("n", "<A-S-r>", ..., opts)  -- NOTE: requires test runner
+
+-- Alt+Shift+F5 → XDebugger.AttachToProcess
+-- map("n", "<A-S-F5>", ..., opts)  -- NOTE: requires dap process attach
+
+--================================================
+-- BREAKPOINTS & STEPPING
+--================================================
+
+-- Ctrl+F8 or Shift+Ctrl+F8 → Toggle Breakpoint (note: using standard approach)
+map("n", "<C-F8>", dap.toggle_breakpoint, opts)
+
+-- F10 → Step over (standard Neovim)
+map("n", "<F10>", dap.step_over, opts)
+
+-- F11 → Step into (standard Neovim)
+map("n", "<F11>", dap.step_into, opts)
+
+-- Ctrl+Shift+F10 → Step out
+map("n", "<C-S-F10>", dap.step_out, opts)
+
+-- Alt+F9 → RunToCursor
+-- map("n", "<A-F9>", dap.run_to_cursor, opts)
+
+--================================================
+-- DIAGNOSTICS & PROBLEMS
+--================================================
+
+-- F2 → FindNext (but also used for next error in many IDEs)
+map("n", "<F2>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+
+-- Shift+F3 → FindPrevious (standard mapping)
+map("n", "<S-F3>", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+
+-- Shift+Control+Alt+Up → VcsShowPrevChangeMarker
+-- map("n", "<S-C-A-Up>", ..., opts)  -- NOTE: requires VCS plugin
+
+-- Shift+Control+Alt+Down → VcsShowNextChangeMarker
+-- map("n", "<S-C-A-Down>", ..., opts)  -- NOTE: requires VCS plugin
+
+--================================================
+-- VCS / GIT OPERATIONS
+--================================================
+
+-- Ctrl+E → Vcs.ShowMessageHistory
+-- map("n", "<C-e>", ..., opts)  -- NOTE: requires git plugin (conflicts with search)
+
+-- Ctrl+Shift+M → Vcs.MoveChangedLinesToChangelist / ChangesView.Move
+-- map("n", "<C-S-m>", ..., opts)  -- NOTE: requires git plugin
+
+-- Ctrl+Shift+V → Vcs.QuickListPopupAction
+-- map("n", "<C-S-v>", ..., opts)  -- NOTE: requires git plugin
+
+-- Ctrl+Alt+Shift+T → Vcs.UpdateProject
+-- map("n", "<C-A-S-t>", ..., opts)  -- NOTE: requires git plugin
+
+-- Ctrl+Alt+A → VcsHistory.ShowAllAffected
+-- map("n", "<C-A-a>", ..., opts)  -- NOTE: requires git plugin
+
+--================================================
+-- SETTINGS & CONFIGURATION
+--================================================
+
+-- Ctrl+, → ShowSettings (Preferences)
+-- map("n", "<C-,>", ..., opts)  -- NOTE: manually edit config
+
+-- Ctrl+; → ShowProjectStructureSettings
+-- map("n", "<C-;>", ..., opts)  -- NOTE: manually edit config
+
+-- Ctrl+Back_Quote → QuickChangeScheme
+-- map("n", "<C-`>", ..., opts)  -- conflicts with terminal toggle
+
+-- Ctrl+Alt+Shift+Space → EmojiAndSymbols
+-- map("n", "<C-A-S-Space>", ..., opts)  -- NOTE: requires emoji picker
+
+-- Ctrl+Shift+F1 → ContextHelp
+-- map("n", "<C-S-F1>", ..., opts)  -- NOTE: requires help system
+
+--================================================
+-- OTHER
+--================================================
+
+-- Ctrl+N → NewElement / Generate / NewScratchFile
+map("n", "<C-n>", Snacks.picker.files, opts)
+
+-- Ctrl+Shift+N → NewScratchFile
+map("n", "<C-S-n>", "<cmd>enew<CR>", opts)
+
+-- Ctrl+Alt+N → NewElementSamePlace
+-- map("n", "<C-A-n>", ..., opts)  -- NOTE: requires element generation
+
+-- Ctrl+Delete → SafeDelete
+-- map("n", "<C-Del>", "dd", opts)  -- NOTE: safer deletion (requires plugin)
+
+-- Ctrl+Alt+F → ShowFilterPopup
+-- map("n", "<C-A-f>", ..., opts)  -- NOTE: requires filter UI
+
+-- Alt+Down → ShowSearchHistory
+-- map("n", "<A-Down>", ..., opts)  -- NOTE: requires search history
+
+-- Ctrl+Alt+Shift+O → ExportToTextFile
+-- map("n", "<C-A-S-o>", ..., opts)  -- NOTE: requires export plugin
+
+-- Ctrl+Shift+A → Find Action / Commands palette
+map("n", "<C-S-a>", Snacks.picker.commands, opts)
+
+-- Ctrl+Alt+F → ShowFilterPopup
+-- map("n", "<C-A-f>", Snacks.picker.grep, opts)  -- NOTE: filter in search results
+
+-- Ctrl+Space → CodeCompletion
+-- Already mapped above
+
+-- Alt+Up → MethodOverloadSwitchUp
+-- map("n", "<A-Up>", ..., opts)  -- NOTE: requires method overload detection
+
+-- Alt+Down → MethodOverloadSwitchDown
+-- map("n", "<A-Down>", ..., opts)  -- NOTE: requires method overload detection
+
+-- Shift+Control+T → ServiceView.ShowServices
+-- map("n", "<S-C-T>", ..., opts)  -- NOTE: requires services view
+
+-- Ctrl+Alt+H → CallHierarchy
+-- map("n", "<C-A-h>", ..., opts)  -- NOTE: requires call hierarchy plugin
+
+-- Ctrl+Alt+Shift+8 → EditorToggleColumnMode
+map("n", "<C-A-S-8>", "<cmd>set virtualedit=all<CR>", opts)
+
+-- Page_Down / Ctrl+Down → SearchEverywhere.NavigateToNextGroup
+map("n", "<PageDown>", "20j", opts)
+
+-- Page_Up / Ctrl+Up → SearchEverywhere.NavigateToPrevGroup
+map("n", "<PageUp>", "20k", opts)
