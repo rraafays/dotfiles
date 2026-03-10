@@ -1,5 +1,3 @@
-local map = vim.keymap.set
-
 function ToggleSmartMark()
   local bufnr = vim.api.nvim_get_current_buf()
   local curr_line = vim.api.nvim_win_get_cursor(0)[1]
@@ -36,16 +34,8 @@ function ToggleSmartMark()
   print("No free marks available!")
 end
 
-map("n", "<F3>", ToggleSmartMark)
---
---
---
---
--- IntelliJ-style keymaps for LazyVim using Snacks
-
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
-
 local Snacks = require("snacks")
 local dap = require("dap")
 
@@ -53,7 +43,7 @@ local dap = require("dap")
 -- SEARCH / NAVIGATION
 --------------------------------------------------
 
--- Double Shift equivalent → Search Everywhere
+-- spc,spc -> search everything
 map("n", "<leader><leader>", Snacks.picker.smart, opts)
 
 -- Cmd+Shift+O → Go to File
@@ -63,41 +53,44 @@ map("n", "<A-S-o>", Snacks.picker.files, opts)
 map("n", "<A-S-a>", Snacks.picker.commands, opts)
 
 -- Cmd+E → Recent Files
-map("n", "<C-e>", Snacks.picker.recent, opts)
+map("n", "<A-e>", Snacks.picker.recent, opts)
 
 -- Cmd+Shift+E → Recent Locations
 map("n", "<A-S-e>", Snacks.picker.jumps, opts)
 
 -- Cmd+Alt+O → Go to Symbol
-map("n", "<C-A-o>", Snacks.picker.lsp_symbols, opts)
+map("n", "<A-A-o>", Snacks.picker.lsp_symbols, opts)
 
 -- Cmd+Alt+Shift+O → Workspace Symbols
-map("n", "<C-A-S-o>", Snacks.picker.lsp_workspace_symbols, opts)
+map("n", "<A-A-S-o>", Snacks.picker.lsp_workspace_symbols, opts)
 
 -- Cmd+Shift+F → Find in project
 map("n", "<A-S-f>", Snacks.picker.grep, opts)
 
 -- Cmd+F → Find in file
-map("n", "<C-f>", "/", opts)
+map("n", "<A-f>", "/", opts)
 
 --------------------------------------------------
 -- CODE NAVIGATION
 --------------------------------------------------
 
 -- Cmd+B → Go to definition
-map("n", "<C-b>", vim.lsp.buf.definition, opts)
+map("n", "<A-b>", vim.lsp.buf.definition, opts)
 
 -- Cmd+Alt+B → Go to implementation
-map("n", "<C-A-b>", vim.lsp.buf.implementation, opts)
+map("n", "<A-A-b>", vim.lsp.buf.implementation, opts)
 
 -- Cmd+U → Type definition
-map("n", "<C-u>", vim.lsp.buf.type_definition, opts)
+map("n", "<A-u>", vim.lsp.buf.type_definition, opts)
 
 -- Alt+F7 → Find usages
 map("n", "<A-F7>", Snacks.picker.lsp_references, opts)
 
 -- Cmd+Shift+I → Quick definition
 map("n", "<A-S-i>", vim.lsp.buf.hover, opts)
+
+-- f3 -> place mark
+map("n", "<F3>", ToggleSmartMark)
 
 --------------------------------------------------
 -- REFACTORING
@@ -114,17 +107,17 @@ map("n", "<S-F6>", vim.lsp.buf.rename, opts)
 --------------------------------------------------
 
 -- Cmd+D → Duplicate line
-map("n", "<C-d>", "yyp", opts)
+map("n", "<A-d>", "yyp", opts)
 
 -- Cmd+Delete → Delete line
-map("n", "<C-BS>", "dd", opts)
+map("n", "<A-BS>", "dd", opts)
 
 -- Cmd+/ → Comment
-map("n", "<C-/>", "gcc", { remap = true })
-map("v", "<C-/>", "gc", { remap = true })
+map("n", "<A-/>", "gcc", { remap = true })
+map("v", "<A-/>", "gc", { remap = true })
 
 -- Cmd+Alt+L → Format
-map("n", "<C-A-l>", function()
+map("n", "<A-A-l>", function()
   vim.lsp.buf.format({ async = true })
 end, opts)
 
@@ -166,14 +159,14 @@ map("n", "<A-S-[>", "<cmd>bprevious<CR>", opts)
 map("n", "<A-S-]>", "<cmd>bnext<CR>", opts)
 
 -- Cmd+W → Close file
-map("n", "<C-w>", "<cmd>bdelete<CR>", opts)
+map("n", "<A-w>", "<cmd>bdelete<CR>", opts)
 
 --------------------------------------------------
 -- DEBUGGING
 --------------------------------------------------
 
 -- Cmd+F8 → Toggle breakpoint
-map("n", "<C-F8>", dap.toggle_breakpoint, opts)
+map("n", "<A-F8>", dap.toggle_breakpoint, opts)
 
 -- Shift+F8 → Step over
 map("n", "<S-F8>", dap.step_over, opts)
