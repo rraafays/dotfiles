@@ -150,6 +150,7 @@ map("n", "<A-8>", "<cmd>TodoTrouble toggle<CR>", opts)
 
 -- Cmd+4 → Toggle terminal
 map("n", "<A-4>", Snacks.terminal.toggle, opts)
+map("t", "<A-4>", Snacks.terminal.toggle, opts)
 
 -- Leader+tt → terminal
 map("n", "<leader>tt", Snacks.terminal.toggle, opts)
