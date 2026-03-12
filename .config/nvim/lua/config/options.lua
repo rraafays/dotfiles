@@ -1,6 +1,10 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-vim.g.autoformat = true
+if os.getenv("FORMAT") == "no" then
+  vim.g.autoformat = false
+else
+  vim.g.autoformat = true
+end
 vim.g.snacks_animate = true
 vim.g.markdown_recommended_style = 0
 
