@@ -6,23 +6,41 @@ return {
       "saghen/blink.cmp",
     },
     config = function()
-      require("lazy-lsp").setup()
-      require("lspconfig").lua_ls.setup({
-        settings = {
-          Lua = {
-            runtime = {
-              version = "LuaJIT",
-            },
-            diagnostics = {
-              globals = { "vim" },
-            },
-            workspace = {
-              library = {
-                vim.env.VIMRUNTIME,
+      require("lazy-lsp").setup({
+        excluded_servers = {
+          "denols",
+        },
+        preferred_servers = {
+          markdown = {},
+          python = { "pyright" },
+        },
+        default_config = {
+          flags = {
+            debounce_text_changes = 150,
+          },
+          -- on_attach = on_attach,
+          -- capabilities = capabilities,
+        },
+        configs = {
+          lua_ls = {
+            settings = {
+              Lua = {
+                diagnostics = {
+                  globals = { "vim" },
+                },
+                runtime = {
+                  version = "LuaJIT",
+                },
+                workspace = {
+                  library = {
+                    vim.env.VIMRUNTIME,
+                  },
+                },
               },
             },
           },
         },
+        prefer_local = true,
       })
     end,
   },
@@ -80,6 +98,17 @@ return {
           filter = {
             event = "notify",
             find = "%[lspconfig%]",
+          },
+          opts = { skip = true },
+        },
+        {
+          filter = {
+            event = "notify",
+            any = {
+              { find = "notify%.error" },
+              { find = "Request textDocument/diagnostic failed" },
+              { find = "is unknown" },
+            },
           },
           opts = { skip = true },
         },
