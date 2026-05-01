@@ -597,7 +597,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "speed_multiplier": 2.0 } }],
+                                "to": [{ "mouse_key": { "speed_multiplier": 0.25 } }],
                                 "type": "basic"
                             },
                             {
@@ -608,7 +608,7 @@
                                         "optional": ["any"]
                                     }
                                 },
-                                "to": [{ "mouse_key": { "speed_multiplier": 0.25 } }],
+                                "to": [{ "mouse_key": { "speed_multiplier": 2 } }],
                                 "type": "basic"
                             }
                         ]
@@ -759,25 +759,7 @@
                         "product_id": 33,
                         "vendor_id": 1278
                     },
-                    "manipulate_caps_lock_led": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "right_control" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_option" }]
-                        }
-                    ]
+                    "manipulate_caps_lock_led": false
                 }
             ],
             "fn_function_keys": [
@@ -835,15 +817,11 @@
                 },
                 {
                     "from": { "key_code": "left_command" },
-                    "to": [{ "key_code": "left_option" }]
+                    "to": [{ "key_code": "left_control" }]
                 },
                 {
                     "from": { "key_code": "left_control" },
                     "to": [{ "key_code": "left_command" }]
-                },
-                {
-                    "from": { "key_code": "left_option" },
-                    "to": [{ "key_code": "left_control" }]
                 },
                 {
                     "from": { "key_code": "power" },
@@ -851,10 +829,6 @@
                 },
                 {
                     "from": { "key_code": "right_command" },
-                    "to": [{ "key_code": "right_option" }]
-                },
-                {
-                    "from": { "key_code": "right_option" },
                     "to": [{ "key_code": "right_control" }]
                 }
             ],
