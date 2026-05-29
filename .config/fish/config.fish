@@ -43,7 +43,7 @@ if status is-interactive
                                exec fish
                            end;'
 
-    if command -q tmux && test -z "$TMUX" && test -n "$DISPLAY" || test -n "$SSH_TTY"
+    if test -z "$TMUX" && test -n "$DISPLAY" || test -n "$SSH_TTY"
         exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
 
