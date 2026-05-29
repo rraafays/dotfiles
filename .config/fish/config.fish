@@ -1,7 +1,6 @@
 if status is-interactive
 
     set -x PATH \
-        /run/current-system/sw/bin \
         $BUN_INSTALL/bin \
         $YARN_INSTALL/bin \
         $PNPM_HOME \
