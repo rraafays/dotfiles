@@ -43,8 +43,8 @@ if status is-interactive
                                exec fish
                            end;'
 
-    if test -z "$TMUX" && test -n "$DISPLAY" || test -n "$SSH_TTY"
-        exec tmux new-session -A -c ~/ -s main >/dev/null 2>&1
+    if test -z "$TMUX" || test -n "$SSH_TTY"
+        tmux new-session -A -c ~/ -s main >/dev/null 2>&1
     end
 
     set -l config_dir "$HOME/.config/starship"
