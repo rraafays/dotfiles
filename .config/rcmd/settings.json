@@ -1,96 +1,96 @@
 {
-  "specialKey" : "equal",
-  "appKeyAssignments" : [
-
-  ],
-  "whenAlreadyFocusedAction" : 2,
-  "showWindowSwitcher" : true,
-  "hideOnlyFocusedAppOnMinus" : false,
-  "windowSwitchOSDDelay" : 350,
+  "enableAssignHotkey" : false,
+  "windowOnlySwitchOSDDelay" : 0,
+  "windowSwitcherAppearance" : "comfortable",
   "windowKeyPatterns" : [
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.sublimetext.4"
+      "id" : "com.sublimetext.4",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.sublimetext.3"
+      "id" : "com.sublimetext.3",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.sublimetext.2"
+      "id" : "com.sublimetext.2",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.sublimetext."
+      "id" : "com.sublimetext.",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.visualstudio.code.oss"
+      "id" : "com.visualstudio.code.oss",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.visualstudio.code"
+      "id" : "com.visualstudio.code",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.microsoft.VSCodiumInsiders"
+      "id" : "com.microsoft.VSCodiumInsiders",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.microsoft.VSCode"
+      "id" : "com.microsoft.VSCode",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.microsoft.VSCodeInsiders"
+      "id" : "com.microsoft.VSCodeInsiders",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.microsoft.VSCod"
+      "id" : "com.microsoft.VSCod",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     },
     {
-      "pattern" : ".* — [^\\w\\d]*(.)",
-      "id" : "com.todesktop."
+      "id" : "com.todesktop.",
+      "pattern" : ".* — [^\\w\\d]*(.)"
     }
   ],
-  "appSwitcherFeatures" : 38,
-  "hideStaticSettings" : false,
-  "windowSwitcherFeatures" : 57,
-  "minimizeOnlyFocusedWindowOnMinus" : true,
-  "ignoredKeys" : [
-
-  ],
-  "alwaysHideOthers" : false,
-  "enableAssignHotkey" : false,
-  "zeroAsLastFocusedWindow" : false,
-  "triggerKeys" : [
-    5
-  ],
+  "minimizeKey" : "minus",
   "ignoredApps" : [
     "com.moxadventu.ShowMeYourHotKeys"
   ],
+  "zeroAsLastFocusedWindow" : false,
+  "windowSwitcherDimFocused" : false,
+  "hideOnlyFocusedAppOnMinus" : false,
+  "enableHideOnFocusHotkey" : false,
+  "appSwitcherFeatures" : 38,
+  "keyTapThreshold" : 0.14,
+  "appSort" : "name",
+  "specialKey" : "equal",
+  "showAppSwitcher" : false,
+  "activateAllWindows" : true,
+  "notificationsPermissionsGranted" : false,
+  "appSwitcherUseNumbersForWindows" : false,
+  "alwaysHideOthers" : false,
+  "triggerKeys" : [
+    2
+  ],
+  "allowWindowSwitcher" : false,
+  "appSortReverse" : false,
+  "whenAlreadyFocusedAction" : 2,
+  "focusOnKeyUp" : false,
   "windowTriggerKeys" : [
     5
   ],
-  "minimizeKey" : "minus",
+  "fnWindowSwitching" : false,
+  "minimizeOnlyFocusedWindowOnMinus" : true,
   "windowKeyAssignments" : [
 
   ],
-  "notificationsPermissionsGranted" : false,
-  "enableHideOnFocusHotkey" : false,
-  "activateAllWindows" : true,
-  "appSortReverse" : false,
-  "windowOnlySwitchOSDDelay" : 0,
-  "switcherScreenPlacement" : 1,
-  "windowSwitcherAppearance" : "comfortable",
-  "allowWindowSwitcher" : false,
-  "fnWindowSwitching" : false,
-  "keyTapThreshold" : 0.14,
-  "enableCycleHotkey" : true,
-  "windowSwitcherDimFocused" : false,
-  "focusOnKeyUp" : false,
-  "appSwitcherUseNumbersForWindows" : false,
-  "showAppSwitcher" : false,
+  "ignoredKeys" : [
+
+  ],
+  "windowSwitcherFeatures" : 57,
+  "windowSwitchOSDDelay" : 350,
   "enableStaticCycle" : false,
-  "appSort" : "name"
+  "appKeyAssignments" : [
+
+  ],
+  "switcherScreenPlacement" : 1,
+  "showWindowSwitcher" : true,
+  "enableCycleHotkey" : true,
+  "hideStaticSettings" : false
 }
