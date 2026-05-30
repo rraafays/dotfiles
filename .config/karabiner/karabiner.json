@@ -4,11 +4,11 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "tab ~> fn",
+                        "description": "return ~> fn",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "tab",
+                                    "key_code": "return_or_enter",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -17,7 +17,21 @@
                                         "lazy": true
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "tab" }],
+                                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "keypad_enter",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn",
+                                        "lazy": true
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "keypad_enter" }],
                                 "type": "basic"
                             }
                         ]
