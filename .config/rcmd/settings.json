@@ -1,96 +1,96 @@
 {
+  "notificationsPermissionsGranted" : false,
+  "windowSwitcherDimFocused" : false,
   "enableAssignHotkey" : false,
-  "windowOnlySwitchOSDDelay" : 0,
-  "windowSwitcherAppearance" : "comfortable",
-  "windowKeyPatterns" : [
-    {
-      "id" : "com.sublimetext.4",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.sublimetext.3",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.sublimetext.2",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.sublimetext.",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.visualstudio.code.oss",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.visualstudio.code",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.microsoft.VSCodiumInsiders",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.microsoft.VSCode",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.microsoft.VSCodeInsiders",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.microsoft.VSCod",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    },
-    {
-      "id" : "com.todesktop.",
-      "pattern" : ".* — [^\\w\\d]*(.)"
-    }
-  ],
-  "minimizeKey" : "minus",
   "ignoredApps" : [
     "com.moxadventu.ShowMeYourHotKeys"
-  ],
-  "zeroAsLastFocusedWindow" : false,
-  "windowSwitcherDimFocused" : false,
-  "hideOnlyFocusedAppOnMinus" : false,
-  "enableHideOnFocusHotkey" : false,
-  "appSwitcherFeatures" : 38,
-  "keyTapThreshold" : 0.14,
-  "appSort" : "name",
-  "specialKey" : "equal",
-  "showAppSwitcher" : false,
-  "activateAllWindows" : true,
-  "notificationsPermissionsGranted" : false,
-  "appSwitcherUseNumbersForWindows" : false,
-  "alwaysHideOthers" : false,
-  "triggerKeys" : [
-    2
-  ],
-  "allowWindowSwitcher" : false,
-  "appSortReverse" : false,
-  "whenAlreadyFocusedAction" : 2,
-  "focusOnKeyUp" : false,
-  "windowTriggerKeys" : [
-    5
-  ],
-  "fnWindowSwitching" : false,
-  "minimizeOnlyFocusedWindowOnMinus" : true,
-  "windowKeyAssignments" : [
-
   ],
   "ignoredKeys" : [
 
   ],
-  "windowSwitcherFeatures" : 57,
-  "windowSwitchOSDDelay" : 350,
   "enableStaticCycle" : false,
+  "specialKey" : "equal",
   "appKeyAssignments" : [
 
   ],
-  "switcherScreenPlacement" : 1,
+  "activateAllWindows" : true,
+  "windowSwitchOSDDelay" : 350,
+  "minimizeKey" : "minus",
+  "appSwitcherUseNumbersForWindows" : false,
+  "minimizeOnlyFocusedWindowOnMinus" : true,
+  "windowTriggerKeys" : [
+    5
+  ],
+  "showAppSwitcher" : false,
   "showWindowSwitcher" : true,
+  "appSwitcherFeatures" : 38,
+  "hideStaticSettings" : false,
+  "enableHideOnFocusHotkey" : false,
+  "hideOnlyFocusedAppOnMinus" : false,
+  "allowWindowSwitcher" : false,
+  "windowSwitcherAppearance" : "comfortable",
+  "whenAlreadyFocusedAction" : 2,
+  "windowSwitcherFeatures" : 57,
+  "windowOnlySwitchOSDDelay" : 0,
+  "windowKeyAssignments" : [
+
+  ],
   "enableCycleHotkey" : true,
-  "hideStaticSettings" : false
+  "fnWindowSwitching" : false,
+  "keyTapThreshold" : 0.14,
+  "zeroAsLastFocusedWindow" : false,
+  "appSortReverse" : false,
+  "triggerKeys" : [
+    4
+  ],
+  "windowKeyPatterns" : [
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.sublimetext.4"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.sublimetext.3"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.sublimetext.2"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.sublimetext."
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.visualstudio.code.oss"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.visualstudio.code"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.microsoft.VSCodiumInsiders"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.microsoft.VSCode"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.microsoft.VSCodeInsiders"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.microsoft.VSCod"
+    },
+    {
+      "pattern" : ".* — [^\\w\\d]*(.)",
+      "id" : "com.todesktop."
+    }
+  ],
+  "alwaysHideOthers" : false,
+  "focusOnKeyUp" : false,
+  "switcherScreenPlacement" : 1,
+  "appSort" : "name"
 }
