@@ -8,6 +8,7 @@ if status is-interactive
         $DOTNET_INSTALL/tools \
         $BREW_INSTALL/sbin \
         $BREW_INSTALL/bin \
+        $BREW_INSTALL/opt/uutils-coreutils/libexec/uubin \
         $GO_INSTALL/bin \
         $RBENV_INSTALL/bin \
         $RBENV_INSTALL/shims \
