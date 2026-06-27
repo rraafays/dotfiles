@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+for file in (ls **.jpg)
+    magick $file -interlace none $file.deinterlaced
+    mv $file.deinterlaced $file
+end
+
+for file in (ls **.png)
+    magick $file -interlace none $file.deinterlaced
+    mv $file.deinterlaced $file
+end
