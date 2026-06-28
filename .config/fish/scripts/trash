@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+case "$1" in
+  -e)
+    osascript -e 'tell application "Finder" to empty trash'
+    ;;
+  -l|-r)
+    ls ~/.Trash
+    ;;
+  *)
+    files_to_move=()
+
+    for file in "$@"; do
+      abs_path="$(cd "$(dirname "$file")" && pwd)/$(basename "$file")"
+      files_to_move+=("POSIX file \"$abs_path\"")
+    done
+
+    IFS=', '
+    osascript -e "tell application \"Finder\" to delete {${files_to_move[*]}}" &>/dev/null
+    ;;
+esac
