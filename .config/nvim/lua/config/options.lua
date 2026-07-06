@@ -1,3 +1,4 @@
+-- Leader: Space (shown in which-key popups). Local leader: backslash.
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 if os.getenv("FORMAT") == "no" then
