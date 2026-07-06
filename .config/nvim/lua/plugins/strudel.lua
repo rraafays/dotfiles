@@ -5,12 +5,12 @@ return {
   ft = { "strudel" },
   cmd = { "StrudelBuild", "StrudelHealth", "StrudelCleanup" },
   keys = {
-    { "<leader>Zl", desc = "Launch Strudel", ft = "strudel" },
-    { "<leader>Zq", desc = "Quit Strudel", ft = "strudel" },
-    { "<leader>Zt", desc = "Strudel Toggle Play/Stop", ft = "strudel" },
-    { "<leader>Zu", desc = "Strudel Update", ft = "strudel" },
-    { "<leader>Zs", desc = "Strudel Stop Playback", ft = "strudel" },
-    { "<leader>Zb", desc = "Strudel Set Current Buffer", ft = "strudel" },
+    { "<leader>Zl", desc = "Launch Strudel",                ft = "strudel" },
+    { "<leader>Zq", desc = "Quit Strudel",                  ft = "strudel" },
+    { "<leader>Zt", desc = "Strudel Toggle Play/Stop",      ft = "strudel" },
+    { "<leader>Zu", desc = "Strudel Update",                ft = "strudel" },
+    { "<leader>Zs", desc = "Strudel Stop Playback",         ft = "strudel" },
+    { "<leader>Zb", desc = "Strudel Set Current Buffer",    ft = "strudel" },
     { "<leader>Zx", desc = "Strudel Set Buffer and Update", ft = "strudel" },
   },
   build = function(plugin)
@@ -29,6 +29,7 @@ return {
       report_eval_errors = true,
       browser_exec_path = strudel_nix.chrome_path(),
       browser_data_dir = strudel_nix.browser_data_dir(),
+      headless = true
     })
 
     strudel_nix.setup_lifecycle(strudel)
