@@ -1,25 +1,30 @@
--- Integrates Strudel live coding (strudel.cc) with Neovim via Puppeteer-driven Chrome.
--- Self-bootstraps on Nix machines: lazy.nvim build + async first-run npm install via strudel/shell.nix.
--- Depends on Nix (nodejs_22), Google Chrome at the default macOS path, and lazy.nvim.
--- Loaded eagerly (not lazy) so `.str` / `.std` filetype registration works (gruvw/strudel.nvim#5).
-local strudel_nix = require("config.strudel-nix")
-
+-- Strudel live coding (strudel.cc) via Puppeteer + Chrome. Lazy-loaded for `.str` / `.std` only.
+-- Depends on config.strudel-nix (Nix shell), strudel-filetype (filetype registration), and strudel-lsp.
 return {
   "gruvw/strudel.nvim",
-  lazy = false,
+  ft = { "strudel" },
+  cmd = { "StrudelBuild", "StrudelHealth", "StrudelCleanup" },
+  keys = {
+    { "<leader>Zl", desc = "Launch Strudel", ft = "strudel" },
+    { "<leader>Zq", desc = "Quit Strudel", ft = "strudel" },
+    { "<leader>Zt", desc = "Strudel Toggle Play/Stop", ft = "strudel" },
+    { "<leader>Zu", desc = "Strudel Update", ft = "strudel" },
+    { "<leader>Zs", desc = "Strudel Stop Playback", ft = "strudel" },
+    { "<leader>Zb", desc = "Strudel Set Current Buffer", ft = "strudel" },
+    { "<leader>Zx", desc = "Strudel Set Buffer and Update", ft = "strudel" },
+  },
   build = function(plugin)
-    strudel_nix.build(plugin.dir, { notify = false })
+    require("config.strudel-nix").build(plugin.dir, { notify = false })
   end,
   config = function(plugin)
-    strudel_nix.bootstrap_async(plugin.dir)
-
+    local strudel_nix = require("config.strudel-nix")
     local strudel = require("strudel")
 
     strudel.setup({
       ui = {
         maximise_menu_panel = true,
       },
-      start_on_launch = true,
+      start_on_launch = false,
       sync_cursor = true,
       report_eval_errors = true,
       browser_exec_path = strudel_nix.chrome_path(),
@@ -33,7 +38,6 @@ return {
     local map = vim.keymap.set
     local opts = { noremap = true, silent = true }
 
-    -- `<leader>Z` avoids LazyVim's `<leader>s` search group; mirrors Kulala's `<leader>R` pattern.
     map("n", "<leader>Zl", launch, vim.tbl_extend("force", opts, { desc = "Launch Strudel" }))
     map("n", "<leader>Zq", quit, vim.tbl_extend("force", opts, { desc = "Quit Strudel" }))
     map("n", "<leader>Zt", strudel.toggle, vim.tbl_extend("force", opts, { desc = "Strudel Toggle Play/Stop" }))

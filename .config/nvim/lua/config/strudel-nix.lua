@@ -210,10 +210,9 @@ function M.build(plugin_dir, opts)
   return true
 end
 
---- Background bootstrap after clone/sync so the first launch is usually instant.
+--- Background bootstrap after clone/sync; only runs when deps are missing.
 function M.bootstrap_async(plugin_dir)
   if M.deps_installed(plugin_dir) then
-    M.apply_path()
     return
   end
 
@@ -340,6 +339,13 @@ function M.health(plugin_dir)
       add("DiagnosticOk", "Node: " .. vim.trim(node_ver))
     end
   end
+
+  local strudel_lsp = require("config.strudel-lsp")
+  add(
+    strudel_lsp.deps_installed() and strudel_lsp.types_installed() and "DiagnosticOk" or "DiagnosticWarn",
+    (strudel_lsp.deps_installed() and strudel_lsp.types_installed()) and "Strudel LSP: ready"
+      or "Strudel LSP: run :StrudelLspBuild"
+  )
 
   for _, line in ipairs(lines) do
     vim.api.nvim_echo({ line }, true, {})
