@@ -582,28 +582,32 @@ map("n", "<PageDown>", "20j", opts)
 map("n", "<PageUp>", "20k", opts)
 
 --================================================
--- TMUX NAVIGATION (vim-tmux-navigator)
--- Alt+arrow keys; requires matching bindings in ~/.config/tmux/tmux.conf.
+-- TMUX NAVIGATION (config/tmux-nav.lua)
+-- Alt+arrow keys; Neovim sets @vim on the tmux pane while running.
 --================================================
 
-map("n", "<A-Left>", "<cmd>TmuxNavigateLeft<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Left" }))
-map("n", "<A-Down>", "<cmd>TmuxNavigateDown<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Down" }))
-map("n", "<A-Up>", "<cmd>TmuxNavigateUp<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Up" }))
-map("n", "<A-Right>", "<cmd>TmuxNavigateRight<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Right" }))
-map(
-  "n",
-  "<C-\\>",
-  "<cmd>TmuxNavigatePrevious<cr>",
-  vim.tbl_extend("force", opts, { desc = "Tmux Navigate Previous" })
-)
+local tmux_nav = require("config.tmux-nav")
+local nav = function(direction)
+  return function()
+    tmux_nav.navigate(direction)
+  end
+end
+
+map("n", "<A-Left>", nav("h"), vim.tbl_extend("force", opts, { desc = "Tmux Navigate Left" }))
+map("n", "<A-Down>", nav("j"), vim.tbl_extend("force", opts, { desc = "Tmux Navigate Down" }))
+map("n", "<A-Up>", nav("k"), vim.tbl_extend("force", opts, { desc = "Tmux Navigate Up" }))
+map("n", "<A-Right>", nav("l"), vim.tbl_extend("force", opts, { desc = "Tmux Navigate Right" }))
 
 if vim.env.TMUX then
-  local tnav = function(cmd)
-    return "<C-\\><C-n><cmd>" .. cmd .. "<cr>"
+  local term_nav = function(direction)
+    return function()
+      vim.cmd("stopinsert")
+      tmux_nav.navigate(direction)
+    end
   end
-  map("t", "<A-Left>", tnav("TmuxNavigateLeft"), opts)
-  map("t", "<A-Down>", tnav("TmuxNavigateDown"), opts)
-  map("t", "<A-Up>", tnav("TmuxNavigateUp"), opts)
-  map("t", "<A-Right>", tnav("TmuxNavigateRight"), opts)
-  map("t", "<C-\\>", tnav("TmuxNavigatePrevious"), opts)
+
+  map("t", "<A-Left>", term_nav("h"), opts)
+  map("t", "<A-Down>", term_nav("j"), opts)
+  map("t", "<A-Up>", term_nav("k"), opts)
+  map("t", "<A-Right>", term_nav("l"), opts)
 end
