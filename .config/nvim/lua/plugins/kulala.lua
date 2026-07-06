@@ -12,9 +12,9 @@ return {
     { "<leader>Rr", desc = "Replay last request" },
     { "<leader>Ro", desc = "Open Kulala" },
     { "<leader>Rq", desc = "Close Kulala window", ft = { "http", "rest" } },
-    { "<leader>Rc", desc = "Copy as cURL", ft = { "http", "rest" } },
-    { "<leader>Re", desc = "Select environment", ft = { "http", "rest" } },
-    { "<leader>Rf", desc = "Find request", ft = { "http", "rest" } },
+    { "<leader>Rc", desc = "Copy as cURL",        ft = { "http", "rest" } },
+    { "<leader>Re", desc = "Select environment",  ft = { "http", "rest" } },
+    { "<leader>Rf", desc = "Find request",        ft = { "http", "rest" } },
   },
   -- See opts.lsp.enforce_external_script_naming_convention
   -- to restrict LSP capabilities to *.http, *.http.js, *.http.ts and *.http.lua files.
@@ -79,7 +79,7 @@ return {
       -- display mode: possible values: "split", "float"
       display_mode = "split",
       -- split direction: possible values: "above", "right", "below", "left", fun(): "above"|"right"|"below"|"left"
-      split_direction = "right",
+      split_direction = "below",
       -- window options to override win_config: width/height/split/vertical.., buffer/window options
       win_opts = { bo = {}, wo = {} }, ---@type kulala.ui.win_config
       -- default view: "body" or "headers" or "headers_body" or "verbose" or fun(response: Response)
