@@ -234,11 +234,8 @@ map("n", "<A-Backspace>", "dB", opts)
 -- Alt+Delete → EditorDeleteToWordEnd
 map("n", "<A-Del>", "dE", opts)
 
--- Ctrl+Z → $Undo
-map("n", "<C-z>", "u", opts)
-
--- Ctrl+Shift+Z → $Redo (note: standard vim uses Ctrl+R)
-map("n", "<C-S-z>", "<C-r>", opts)
+-- Ctrl+Z → suspend Neovim to background (Fish Ctrl+Z runs fg to return)
+map({ "n", "i", "v", "t" }, "<C-z>", "<cmd>suspend<cr>", opts)
 
 --================================================
 -- REFACTORING & CODE ACTIONS
