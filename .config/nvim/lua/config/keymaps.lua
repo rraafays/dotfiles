@@ -219,14 +219,11 @@ map("n", "<C-S-p>", vim.lsp.buf.hover, opts)
 -- Ctrl+Alt+Q → ToggleRenderedDocPresentation
 -- map("n", "<C-A-q>", ..., opts)  -- NOTE: requires rendered doc mode
 
--- Alt+Left → EditorPreviousWord
-map("n", "<A-Left>", "b", opts)
+-- Alt+Left / Alt+Right → vim-tmux-navigator (see TMUX NAVIGATION section below)
+-- Word motion: use b/w, or Alt+Shift+Left/Right with selection
 
 -- Alt+Shift+Left → EditorPreviousWordWithSelection
 map("n", "<A-S-Left>", "vb", opts)
-
--- Alt+Right → EditorNextWord
-map("n", "<A-Right>", "w", opts)
 
 -- Alt+Shift+Right → EditorNextWordWithSelection
 map("n", "<A-S-Right>", "vw", opts)
@@ -583,3 +580,30 @@ map("n", "<PageDown>", "20j", opts)
 
 -- Page_Up / Ctrl+Up → SearchEverywhere.NavigateToPrevGroup
 map("n", "<PageUp>", "20k", opts)
+
+--================================================
+-- TMUX NAVIGATION (vim-tmux-navigator)
+-- Alt+arrow keys; requires matching bindings in ~/.config/tmux/tmux.conf.
+--================================================
+
+map("n", "<A-Left>", "<cmd>TmuxNavigateLeft<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Left" }))
+map("n", "<A-Down>", "<cmd>TmuxNavigateDown<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Down" }))
+map("n", "<A-Up>", "<cmd>TmuxNavigateUp<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Up" }))
+map("n", "<A-Right>", "<cmd>TmuxNavigateRight<cr>", vim.tbl_extend("force", opts, { desc = "Tmux Navigate Right" }))
+map(
+  "n",
+  "<C-\\>",
+  "<cmd>TmuxNavigatePrevious<cr>",
+  vim.tbl_extend("force", opts, { desc = "Tmux Navigate Previous" })
+)
+
+if vim.env.TMUX then
+  local tnav = function(cmd)
+    return "<C-\\><C-n><cmd>" .. cmd .. "<cr>"
+  end
+  map("t", "<A-Left>", tnav("TmuxNavigateLeft"), opts)
+  map("t", "<A-Down>", tnav("TmuxNavigateDown"), opts)
+  map("t", "<A-Up>", tnav("TmuxNavigateUp"), opts)
+  map("t", "<A-Right>", tnav("TmuxNavigateRight"), opts)
+  map("t", "<C-\\>", tnav("TmuxNavigatePrevious"), opts)
+end
