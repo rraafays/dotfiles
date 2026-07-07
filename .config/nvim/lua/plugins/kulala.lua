@@ -73,27 +73,27 @@ return {
     response_format = {
       indent = 2,
       expand_tabs = true,
-      sort_keys = false,
+      sort_keys = true,
     },
     ui = {
       -- display mode: possible values: "split", "float"
       display_mode = "split",
       -- split direction: possible values: "above", "right", "below", "left", fun(): "above"|"right"|"below"|"left"
-      split_direction = "below",
+      split_direction = "right",
       -- window options to override win_config: width/height/split/vertical.., buffer/window options
       win_opts = { bo = {}, wo = {} }, ---@type kulala.ui.win_config
       -- default view: "body" or "headers" or "headers_body" or "verbose" or fun(response: Response)
-      default_view = "body", ---@type "body"|"headers"|"headers_body"|"verbose"|fun(response: Response)
+      default_view = "headers_body", ---@type "body"|"headers"|"headers_body"|"verbose"|fun(response: Response)
       -- enable winbar
       winbar = true,
       -- Specify the panes to be displayed by default
       -- Available panes are { "body", "headers", "headers_body", "script_output", "stats", "verbose", "report", "help" },
-      default_winbar_panes = { "body", "headers", "verbose", "script_output", "report" },
+      default_winbar_panes = { "headers_body", "stats", "report" },
       -- Winbar labels
       winbar_labels = {
         body = "Body",
         headers = "Headers",
-        headers_body = "All",
+        headers_body = "Response",
         verbose = "Verbose",
         script_output = "Script Output",
         stats = "Stats",
@@ -101,11 +101,11 @@ return {
         help = "Help",
       },
       -- show/hide winbar keymaps in labels
-      winbar_labels_keymaps = true,
+      winbar_labels_keymaps = false,
       -- enable/disable variable info text
       -- this will show the variable name and value as float
       -- possible values: false, "float"
-      show_variable_info_text = false,
+      show_variable_info_text = true,
       -- icons position: "signcolumn"|"on_request"|"above_request"|"below_request" or nil to disable
       show_icons = "on_request",
       -- default icons
