@@ -123,8 +123,6 @@ cask 'petrichor'
 cask 'soulseek'
 # Network filesystem client to connect to SSH servers
 cask 'sshfs-mac'
-# Web browser focusing on security
-cask 'tor-browser'
 # Open-source BitTorrent client
 cask 'transmission'
 # Virtual machines UI using QEMU
