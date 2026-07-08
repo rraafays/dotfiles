@@ -1,5 +1,4 @@
--- Leader: Space (shown in which-key popups). Local leader: backslash.
-vim.g.mapleader = " "
+vim.g.mapleader = vim.keycode("<S-F6>")
 vim.g.maplocalleader = "\\"
 if os.getenv("FORMAT") == "no" then
   vim.g.autoformat = false
