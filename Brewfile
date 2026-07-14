@@ -129,3 +129,5 @@ cask 'transmission'
 cask 'utm'
 # Compatibility layer to run Windows applications
 cask 'wine-stable'
+# Parser generator tool
+brew "tree-sitter-cli"
